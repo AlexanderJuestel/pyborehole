@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gml:FeatureCollection 
+	gml:id="collection.0" 
+	xmlns="http://www.infogeo.de/boreholeml/3.0" 
+	xmlns:gco="http://www.isotc211.org/2005/gco" 
+	xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+	xmlns:gml="http://www.opengis.net/gml/3.2" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0" 
+	xsi:schemaLocation="http://www.infogeo.de/boreholeml/3.0 http://www.bml3.nrw.de/boreholeml/schema/boreholeml/3.0/BoreholeML.xsd 
+	http://www.opengis.net/gml/3.2 http://www.bml3.nrw.de/boreholeml/schema/ogc/gml/3.2.1/gml.xsd 
+	http://www.opengis.net/gml/3.2 http://www.bml3.nrw.de/boreholeml/schema/ogc/gml/3.2.1/gml.xsd 
+	http://www.isotc211.org/2005/gco http://www.bml3.nrw.de/boreholeml/schema/ogc/iso/19139/20070417/gco/gco.xsd 
+	http://www.isotc211.org/2005/gmd http://www.bml3.nrw.de/boreholeml/schema/ogc/iso/19139/20070417/gmd/gmd.xsd 
+	urn:x-inspire:specification:gmlas:GeographicalNames:3.0 http://www.bml3.nrw.de/boreholeml/schema/boreholeml/3.0/GeographicalNames.xsd">
+	<gml:boundedBy>
+		<gml:Envelope srsName="EPSG:5555" srsDimension="3">
+			<gml:lowerCorner>490255.678 5693752.477 266</gml:lowerCorner>
+			<gml:upperCorner>490255.68 5693752.48 410</gml:upperCorner>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<gml:featureMember>
+		<!--===================================================================-->
+		<!--Authentic instance document BoreholeML 3.0.1 - FeatureType: Borehole with WFS-wrapper elements -->
+		<!--Date: 2013-04-18-->
+		<!--	Sample borehole instance document with strata details, groundwater data, geophysical logs and casing -->
+		<!--	derived from existing borehole in North Rhine-Westphalia - Germany-->
+		<!--																															-->
+		<!--===================================================================-->
+		<Borehole gml:id="DABO_138513">
+			<gml:identifier codeSpace="http://www.infogeo.de/">DABO_138513</gml:identifier>
+			<location>
+				<gml:Point gml:id="GEODIN_LOC_BMLGENIN.bmlid.DABO_138513.LOCATION.Geom_0">
+					<gml:pos>490255.678 5693752.477 410</gml:pos>
+				</gml:Point>
+			</location>
+			<boreholePath>
+				<gml:Curve gml:id="GEODIN_LOC_BMLGENIN.bmlid.DABO_138513.BPATH.Geom_0">
+					<gml:segments>
+						<gml:LineStringSegment>
+							<gml:posList>490255.68 5693752.48 410 490255.68 5693752.48 266</gml:posList>
+						</gml:LineStringSegment>
+					</gml:segments>
+				</gml:Curve>
+			</boreholePath>
+			<id>DABO_138513</id>
+			<language>
+				<gmd:LanguageCode codeList="http://www.infogeo.de/boreholeml/3.0/codelists/LanguageCode.xml" codeListValue="deu">deu</gmd:LanguageCode>
+			</language>
+			<shortName>
+				<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">1</gmd:LocalisedCharacterString>
+			</shortName>
+			<fullName>
+				<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">StAWA-Bohrung Leitmar 1                 </gmd:LocalisedCharacterString>
+			</fullName>
+			<databaseSource codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList.xml">DABO</databaseSource>
+			<totalLength uom="m">144</totalLength>
+			<exportDate>2013-03-06</exportDate>
+			<boreholeStatus codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList.xml">ka</boreholeStatus>
+			<groundwaterEncountered>true</groundwaterEncountered>
+			<boreholeSegment>
+				<BoreholeSegment>
+					<from uom="m">0</from>
+					<to uom="m">144</to>
+					<azimuth uom="deg">0</azimuth>
+					<inclination uom="deg">0</inclination>
+					<segmentDataQuality codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SegmentDataQualityList.xml">A</segmentDataQuality>
+				</BoreholeSegment>
+			</boreholeSegment>
+			<codingStandard codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/CodingStandardList.xml">DABO</codingStandard>
+			<organisation>
+				<BoreholeProvider>
+					<gmd:individualName>
+						<gco:CharacterString>Hr. Stephan Bach</gco:CharacterString>
+					</gmd:individualName>
+					<gmd:organisationName>
+						<gco:CharacterString>GD-NRW: Geologischer Dienst Nordrhein-Westfalen - Landesbetrieb -</gco:CharacterString>
+					</gmd:organisationName>
+					<gmd:contactInfo>
+						<gmd:CI_Contact>
+							<gmd:phone>
+								<gmd:CI_Telephone>
+									<gmd:voice>
+										<gco:CharacterString>+49 (0)2151 897 242</gco:CharacterString>
+									</gmd:voice>
+									<gmd:facsimile>
+										<gco:CharacterString>+49 (0)2151 897 505</gco:CharacterString>
+									</gmd:facsimile>
+								</gmd:CI_Telephone>
+							</gmd:phone>
+							<gmd:address>
+								<gmd:CI_Address>
+									<gmd:deliveryPoint>
+										<gco:CharacterString>De-Greiff Str. 195</gco:CharacterString>
+									</gmd:deliveryPoint>
+									<gmd:city>
+										<gco:CharacterString>Krefeld</gco:CharacterString>
+									</gmd:city>
+									<gmd:administrativeArea>
+										<gco:CharacterString>Nordrhein - Westfalen</gco:CharacterString>
+									</gmd:administrativeArea>
+									<gmd:postalCode>
+										<gco:CharacterString>47803</gco:CharacterString>
+									</gmd:postalCode>
+									<gmd:country>
+										<gco:CharacterString>Deutschland</gco:CharacterString>
+									</gmd:country>
+									<gmd:electronicMailAddress>
+										<gco:CharacterString>stephan.bach@gd.nrw.de</gco:CharacterString>
+									</gmd:electronicMailAddress>
+								</gmd:CI_Address>
+							</gmd:address>
+						</gmd:CI_Contact>
+					</gmd:contactInfo>
+					<gmd:role>
+						<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</gmd:CI_RoleCode>
+					</gmd:role>
+				</BoreholeProvider>
+			</organisation>
+			<groundwater>
+				<Groundwater>
+					<entryDepth uom="m">75.1</entryDepth>
+					<entryDateTime>1988-07-08T00:00:00</entryDateTime>
+				</Groundwater>
+			</groundwater>
+			<boreholeWebLink>http://www.gd.nrw.de/g_ddabo.htm</boreholeWebLink>
+			<locationName>
+				<gn:GeographicalName>
+					<gn:language>deu</gn:language>
+					<gn:nativeness>endonym</gn:nativeness>
+					<gn:nameStatus>official</gn:nameStatus>
+					<gn:sourceOfName>Verwaltungsgebiete 1:50.000 (VG50), Bundesamt für Kartographie</gn:sourceOfName>
+					<gn:pronunciation xsi:nil="true"/>
+					<gn:spelling>
+						<gn:SpellingOfName>
+							<gn:text>Stadt Marsberg; Gemeinde Leitmar</gn:text>
+							<gn:script>Latin</gn:script>
+						</gn:SpellingOfName>
+					</gn:spelling>
+					<gn:grammaticalGender xsi:nil="true"/>
+					<gn:grammaticalNumber xsi:nil="true"/>
+				</gn:GeographicalName>
+			</locationName>
+			<drillingMethod codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList.xml">BV</drillingMethod>
+			<drillingDate>1988-07-04</drillingDate>
+			<lastHorizon codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList.xml">d</lastHorizon>
+			<drillingPurpose codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList.xml">HY</drillingPurpose>
+			<owner>Staatliches Amt f. Wasser- u. Abfallwirtschaft (STAWA), Lippstadt</owner>
+			<project xsi:nil="true"/>
+			<layerDataLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">KE</layerDataLegalAvail>
+			<layerDataTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">J</layerDataTechAvail>
+			<installationLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">KE</installationLegalAvail>
+			<installationTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">J</installationTechAvail>
+			<groundwaterLevelDataLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">KE</groundwaterLevelDataLegalAvail>
+			<groundwaterLevelDataTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">J</groundwaterLevelDataTechAvail>
+			<boreholeMeasurementLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">KE</boreholeMeasurementLegalAvail>
+			<boreholeMeasurementTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">J</boreholeMeasurementTechAvail>
+			<archiveDataLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">AN</archiveDataLegalAvail>
+			<archiveDataTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">T</archiveDataTechAvail>
+			<scansLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">AN</scansLegalAvail>
+			<scansTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">T</scansTechAvail>
+			<samplesTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">N</samplesTechAvail>
+			<labDataLegalAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LegalAvailabilityList.xml">AN</labDataLegalAvail>
+			<labDataTechAvail codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/TechnicalAvailabilityList.xml">T</labDataTechAvail>
+			<origin>
+				<Origin>
+					<originalLocation srsName="31466" srsDimension="2">2699075.53 5699467.42</originalLocation>
+					<locationMethod codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LocationMethodList.xml">F</locationMethod>
+					<elevation srsName="5783" srsDimension="1">410</elevation>
+					<levelMethod codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LevelMethodList.xml">F</levelMethod>
+				</Origin>
+			</origin>
+			<intervalSeries>
+				<IntervalSeries>
+					<description>
+						<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Master-Schichtenverzeichnis</gmd:LocalisedCharacterString>
+					</description>
+					<version>1</version>
+					<layer>
+						<Interval>
+							<from uom="m">0</from>
+							<to uom="m">4.6</to>
+							<rockCode>FSZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Feinsandstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">0</from>
+									<to uom="m">4.6</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">4.6</from>
+							<to uom="m">13</to>
+							<rockCode>FSZ; UZ; K; 3</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Feinsandstein; Schluffstein; kalkig; mit ...</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">c1&amp;h4</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Ust</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">lK</rockName>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<descriptiveText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">rote Tonschmitzen</gmd:LocalisedCharacterString>
+									</descriptiveText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">4.6</from>
+									<to uom="m">13</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">c1</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">4.6</from>
+									<to uom="m">13</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">13</from>
+							<to uom="m">15</to>
+							<rockCode>UZ; FSZ; K; 3</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Schluffstein; Feinsandstein; kalkig; mit ...</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Ust</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h7&amp;h3</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">lK</rockName>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">15</from>
+							<to uom="m">18</to>
+							<rockCode>UZ; FSZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Schluffstein; Feinsandstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<descriptiveText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">rote Tonschmitzen</gmd:LocalisedCharacterString>
+							</descriptiveText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Ust</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">15</from>
+									<to uom="m">18</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">18</from>
+							<to uom="m">20</to>
+							<rockCode>FSZ; MSZ; K; 3</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Feinsandstein; Mittelsandstein; kalkig; mit ...</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<descriptiveText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">rote Tonschmitzen</gmd:LocalisedCharacterString>
+							</descriptiveText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">mSst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">lK</rockName>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">20</from>
+							<to uom="m">24</to>
+							<rockCode>FSZ; MSZ; K; 3</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Feinsandstein; Mittelsandstein; kalkig; mit ...</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">mSst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">lK</rockName>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>CA</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Calcit (Kalkspat)</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<descriptiveText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">zementiert</gmd:LocalisedCharacterString>
+									</descriptiveText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">20</from>
+									<to uom="m">24</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>UZ; TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Schluffstein; Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Ust</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+										</Lithology>
+									</lithology>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">20</from>
+									<to uom="m">24</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">24</from>
+							<to uom="m">25</to>
+							<rockCode>FSZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Feinsandstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">fSst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">T1I</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">25</from>
+							<to uom="m">30.4</to>
+							<rockCode>MSZ; GSZ; K; 3</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Mittelsandstein; Grobsandstein; kalkig; mit ...</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">mSst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h7&amp;h3</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">gSst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">c1&amp;h4</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">lK</rockName>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>TKI; SZ; QZ; 3</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kieselschiefer; Sandstein; Quarzit; mit ...</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<descriptiveText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">bis 1cm Größe</gmd:LocalisedCharacterString>
+									</descriptiveText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Qzt</rockName>
+										</Lithology>
+									</lithology>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Sst</rockName>
+										</Lithology>
+									</lithology>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Qzt</rockName>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">25</from>
+									<to uom="m">30.4</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">30.4</from>
+							<to uom="m">31</to>
+							<rockCode>KZ; DZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein; Dolomitstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h4</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8&amp;h4</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">31</from>
+							<to uom="m">37</to>
+							<rockCode>KZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">37</from>
+							<to uom="m">39</to>
+							<rockCode>KZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h4&amp;h3</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">39</from>
+							<to uom="m">40</to>
+							<rockCode>DZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Dolomitstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3&amp;h4</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">40</from>
+							<to uom="m">43.6</to>
+							<rockCode>KZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>DZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Dolomitstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">40</from>
+									<to uom="m">43.6</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">43.6</from>
+							<to uom="m">55.3</to>
+							<rockCode>TZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>UZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Schluffstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Ust</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">46</from>
+									<to uom="m">46</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>KZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">c1&amp;h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">52</from>
+									<to uom="m">53</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>DZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Dolomitstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8&amp;h3</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">54.2</from>
+									<to uom="m">54.8</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">c1&amp;h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">43.6</from>
+									<to uom="m">55.3</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">55.3</from>
+							<to uom="m">59</to>
+							<rockCode>DZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Dolomitstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<descriptiveText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Rosettendolomit</gmd:LocalisedCharacterString>
+							</descriptiveText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3&amp;h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>DZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Dolomitstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">c2</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">55.3</from>
+									<to uom="m">59</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">59</from>
+							<to uom="m">62.2</to>
+							<rockCode>KZ; DZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein; Dolomitstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8&amp;h4</rockColor>
+								</Lithology>
+							</lithology>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">62.2</from>
+							<to uom="m">64.8</to>
+							<rockCode>TZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>AY</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Bauschutt/ Straßenaufbruch</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<descriptiveText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">T2A</gmd:LocalisedCharacterString>
+									</descriptiveText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Bau</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">62.2</from>
+									<to uom="m">64.8</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">64.8</from>
+							<to uom="m">70.5</to>
+							<rockCode>TZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>GY; AY</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Gips; Bauschutt/ Straßenaufbruch</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Gyp</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+										</Lithology>
+									</lithology>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Bau</rockName>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">64.8</from>
+									<to uom="m">70.5</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">70.5</from>
+							<to uom="m">82</to>
+							<rockCode>TZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<descriptiveText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">? Nachfall</gmd:LocalisedCharacterString>
+							</descriptiveText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h6&amp;h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">71</from>
+									<to uom="m">73</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>DZ; KZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Dolomitstein; Kalkstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Dst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3</rockColor>
+										</Lithology>
+									</lithology>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3&amp;h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">70.5</from>
+									<to uom="m">82</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">82</from>
+							<to uom="m">90</to>
+							<rockCode>KV</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kernverlust</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<descriptiveText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">bis 87.9m nach Log: Tonstein (Chr. alt PZ1-PZ2)</gmd:LocalisedCharacterString>
+							</descriptiveText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">KV</rockName>
+									<percentage>40</percentage>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">90</from>
+							<to uom="m">91</to>
+							<rockCode>KZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8&amp;h3</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">91</from>
+							<to uom="m">97.5</to>
+							<rockCode>KZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3&amp;h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>KZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h3&amp;h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">91</from>
+									<to uom="m">97.5</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>KZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">91</from>
+									<to uom="m">97.5</to>
+								</Component>
+							</sublayer>
+							<sublayer>
+								<Component>
+									<rockCode>KZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">91</from>
+									<to uom="m">97.5</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">97.5</from>
+							<to uom="m">102</to>
+							<rockCode>KZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">102</from>
+							<to uom="m">109</to>
+							<rockCode>KZ; MEX</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein; MEX</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">P3, P3C, P3W</chronoStratigraphy>
+									<lithoStratigraphy>
+										<gmd:LocalisedCharacterString>:</gmd:LocalisedCharacterString>
+									</lithoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>KZ; MEX</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Kalkstein; MEX</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Kst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h1</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">102</from>
+									<to uom="m">109</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">109</from>
+							<to uom="m">115.2</to>
+							<rockCode>TZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<carbonateContent codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/CarbonateContentList.xml">k1</carbonateContent>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h8&amp;h5</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">D3</chronoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer xsi:nil="true"/>
+						</Interval>
+					</layer>
+					<layer>
+						<Interval>
+							<from uom="m">115.2</from>
+							<to uom="m">144</to>
+							<rockCode>TZ</rockCode>
+							<rockNameText>
+								<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+							</rockNameText>
+							<lithology>
+								<Lithology>
+									<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+									<percentage>40</percentage>
+									<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h2&amp;h4</rockColor>
+								</Lithology>
+							</lithology>
+							<stratigraphy>
+								<Stratigraphy>
+									<chronoStratigraphy codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList.xml">D3</chronoStratigraphy>
+								</Stratigraphy>
+							</stratigraphy>
+							<sublayer>
+								<Component>
+									<rockCode>TZ</rockCode>
+									<rockNameText>
+										<gmd:LocalisedCharacterString locale="http://www.infogeo.de/boreholeml/3.0/codelists/DE.xml">Tonstein</gmd:LocalisedCharacterString>
+									</rockNameText>
+									<lithology>
+										<Lithology>
+											<rockName codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockNameList.xml">Tst</rockName>
+											<rockColor codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/RockColorList.xml">h6&amp;h5</rockColor>
+										</Lithology>
+									</lithology>
+									<stratigraphy xsi:nil="true"/>
+									<from uom="m">115.2</from>
+									<to uom="m">144</to>
+								</Component>
+							</sublayer>
+						</Interval>
+					</layer>
+				</IntervalSeries>
+			</intervalSeries>
+			<drillingProcess>
+				<DrillingProcess>
+					<from uom="m">80</from>
+					<to uom="m">144</to>
+					<drillingMethod codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList.xml">SP</drillingMethod>
+					<drillingTool xsi:nil="true"/>
+					<drillholeDiameter xsi:nil="true" uom="mm"/>
+				</DrillingProcess>
+			</drillingProcess>
+			<drillingProcess>
+				<DrillingProcess>
+					<from uom="m">0</from>
+					<to uom="m">80</to>
+					<drillingMethod codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList.xml">DL</drillingMethod>
+					<drillingTool xsi:nil="true"/>
+					<drillholeDiameter xsi:nil="true" uom="mm"/>
+				</DrillingProcess>
+			</drillingProcess>
+			<installationDetail>
+				<InstallationDetails>
+					<casingString>
+						<CasingString>
+							<casingStringNumber>1</casingStringNumber>
+							<casingStringType codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/CasingStringTypeList.xml">un</casingStringType>
+							<casingStringSegment>
+								<CasingStringSegment>
+									<from uom="m">0</from>
+									<to uom="m">53</to>
+									<installationElement codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList.xml">RO</installationElement>
+									<diameter uom="mm">5</diameter>
+									<casingMaterial xsi:nil="true"/>
+									<wallThickness xsi:nil="true" uom="mm"/>
+								</CasingStringSegment>
+							</casingStringSegment>
+						</CasingString>
+					</casingString>
+					<casingString>
+						<CasingString>
+							<casingStringNumber>2</casingStringNumber>
+							<casingStringType codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/CasingStringTypeList.xml">un</casingStringType>
+							<casingStringSegment>
+								<CasingStringSegment>
+									<from uom="m">53</from>
+									<to uom="m">138</to>
+									<installationElement codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList.xml">FI</installationElement>
+									<diameter uom="mm">5</diameter>
+									<casingMaterial xsi:nil="true"/>
+									<wallThickness xsi:nil="true" uom="mm"/>
+								</CasingStringSegment>
+							</casingStringSegment>
+						</CasingString>
+					</casingString>
+					<casingString>
+						<CasingString>
+							<casingStringNumber>3</casingStringNumber>
+							<casingStringType codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/CasingStringTypeList.xml">un</casingStringType>
+							<casingStringSegment>
+								<CasingStringSegment>
+									<from uom="m">138</from>
+									<to uom="m">140</to>
+									<installationElement codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList.xml">RO</installationElement>
+									<diameter uom="mm">5</diameter>
+									<casingMaterial xsi:nil="true"/>
+									<wallThickness xsi:nil="true" uom="mm"/>
+								</CasingStringSegment>
+							</casingStringSegment>
+						</CasingString>
+					</casingString>
+					<installationDate>1988-07-08</installationDate>
+				</InstallationDetails>
+			</installationDetail>
+			<investigation>
+				<Investigation>
+					<from uom="m">0.01</from>
+					<to uom="m">144</to>
+					<investigationType codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList.xml">GC</investigationType>
+				</Investigation>
+			</investigation>
+			<investigation>
+				<Investigation>
+					<from uom="m">0.01</from>
+					<to uom="m">144</to>
+					<investigationType codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList.xml">GC</investigationType>
+				</Investigation>
+			</investigation>
+			<sampling xsi:nil="true"/>
+		</Borehole>
+	</gml:featureMember>
+</gml:FeatureCollection>
