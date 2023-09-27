@@ -3,6 +3,7 @@ import numpy as np
 from shapely.geometry import Point
 from pyproj import CRS
 import matplotlib.pyplot as plt
+from typing import Union
 
 
 class Borehole:
@@ -79,11 +80,6 @@ class Borehole:
                       path):
         # Creating well logs
         self.logs = Logs(path=path)
-
-    #def get_mesh_along_borehole_path(self,
-    #                                 log):
-
-
 
     # def read_boreholeml(self):
     # def write_boreholeml(self):
@@ -215,9 +211,9 @@ class Deviation():
             poly.lines = cells
             return poly
 
-        spline = lines_from_points(np.c_[self.easting_rel+x,
-                                         self.northing_rel+y,
-                                         self.tvd])
+        spline = lines_from_points(np.c_[self.easting_rel + x,
+                                         self.northing_rel + y,
+                                         -self.tvd])
 
         tube = spline.tube(radius=radius)
 
@@ -285,5 +281,180 @@ class Logs:
 
         return fig, ax
 
-    # def get_log_along_well_path(self):
-    # see GemGIS function
+    def plot_well_log_along_path(self,
+                                 log,
+                                 coordinates,
+                                 spacing=0.5,
+                                 radius_factor=75):
+
+        # Importing pyvista
+        try:
+            import pyvista as pv
+        except ModuleNotFoundError:
+            ModuleNotFoundError('PyVista package not installed')
+
+        if not {'Northing', 'Easting', 'True Vertical Depth Below Sea Level'}.issubset(coordinates.columns):
+            raise ValueError('The coordinates DataFrame must contain a northing, easting and true vertical depth '
+                             'below sea level column')
+
+        coordinates = coordinates[['Easting', 'Northing', 'True Vertical Depth Below Sea Level']].to_numpy()
+
+        logs = self.df.reset_index()[['MD', log]]
+
+        points = resample_between_well_deviation_points(coordinates=coordinates,
+                                                        spacing=spacing)
+
+        # polyline_well_path = polyline_from_points(points=coordinates)
+
+        polyline_well_path_resampled = pv.Spline(points)
+
+        points_along_spline = get_points_along_spline(spline=polyline_well_path_resampled,
+                                                      dist=logs['MD'].values)
+
+        polyline_along_spline = polyline_from_points(points=points_along_spline)
+
+        polyline_along_spline['values'] = logs[log].values
+
+        tube_along_spline = polyline_along_spline.tube(scalars='values',
+                                                       radius_factor=radius_factor)
+
+        return tube_along_spline
+
+
+def resample_between_well_deviation_points(coordinates: np.ndarray,
+                                           spacing: Union[float, int]) -> np.ndarray:
+    """Resampling between points that define the path of a well
+
+    Parameters
+    __________
+
+        coordinates: np.ndarray
+            Nx3 Numpy array containing the X, Y, and Z coordinates that define the path of a well
+
+
+    Returns
+    _______
+
+         points_resampled: np.ndarray
+            Resampled points along a well
+
+    .. versionadded:: 1.0.x
+
+    """
+
+    # Checking that the coordinates are provided as np.ndarray
+    if not isinstance(coordinates, np.ndarray):
+        raise TypeError('Coordinates must be provided as NumPy Array')
+
+    # Checking that three coordinates are provided for each point
+    if coordinates.shape[1] != 3:
+        raise ValueError('Three coordinates X, Y, and Z must be provided for each point')
+
+        # Creating list for storing points
+    list_points = []
+
+    # Iterating over points and creating additional points between all other points
+    for i in range(len(coordinates) - 1):
+        dist = np.linalg.norm(coordinates[i] - coordinates[i + 1])
+        num_points = int(dist // spacing)
+        points = np.linspace(coordinates[i], coordinates[i + 1], num_points + 1)
+        list_points.append(points)
+
+    # Converting lists of points into np.ndarray
+    points_resampled = np.array([item for sublist in list_points for item in sublist])
+
+    return points_resampled
+
+
+def polyline_from_points(points: np.ndarray):
+    """Creating PyVista PolyLine from points
+
+    Parameters
+    __________
+
+        points: np.ndarray
+            Points defining the PolyLine
+
+    Return
+    ______
+
+        poly: pv.core.pointset.PolyData
+
+    .. versionadded:: 1.0.x
+
+    """
+
+    # Importing pyvista
+    try:
+        import pyvista as pv
+    except ModuleNotFoundError:
+        ModuleNotFoundError('PyVista package not installed')
+
+    # Checking that the points are of type PolyData Pointset
+    if not isinstance(points, np.ndarray):
+        raise TypeError('The points must be provided as NumPy Array')
+
+    # Creating PolyData Object
+    poly = pv.PolyData()
+
+    # Assigning points
+    poly.points = points
+
+    # Creating line values
+    the_cell = np.arange(0, len(points), dtype=np.int_)
+    the_cell = np.insert(the_cell, 0, len(points))
+
+    # Assigning values to PolyData
+    poly.lines = the_cell
+
+    return poly
+
+
+def get_points_along_spline(spline,
+                            dist: np.ndarray):
+    """Returning the closest point on the spline a given a length along a spline.
+
+    Parameters
+    __________
+
+        spline: pv.core.pointset.PolyData
+            Spline with the resampled vertices
+
+        dist: np.ndarray
+            np.ndarray containing the measured depths (MD) of values along the well path
+
+    Return
+    ______
+
+        spline.points[idx_list]: pv.core.pyvista_ndarray.pyvista_ndarray
+            PyVista Array containing the selected points
+
+    .. versionadded:: 1.0.x
+
+    """
+
+    # Importing pyvista
+    try:
+        import pyvista as pv
+    except ModuleNotFoundError:
+        ModuleNotFoundError('PyVista package not installed')
+
+    # Checking that the spline is a PyVista PolyData Pointset
+    if not isinstance(spline, pv.core.pointset.PolyData):
+        raise TypeError('The well path/the spline must be provided as PyVista PolyData Pointset')
+
+    # Checking that the distances are provided as np.ndarray
+    if not isinstance(dist, np.ndarray):
+        raise TypeError('The distances must be provided as np.ndarray')
+
+    # Creating list for storing indices
+    idx_list = []
+
+    # Getting index of spline that match with a measured value and append index to list of indices
+    for distance in dist:
+        idx = np.argmin(np.abs(spline.point_data['arc_length'] - distance))
+        idx_list.append(idx)
+
+    points = spline.points[idx_list]
+
+    return points

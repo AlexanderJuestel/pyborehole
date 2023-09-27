@@ -414,6 +414,15 @@ class BoreholeML:
                                     for layer in child1:
                                         if layer.tag == '{http://www.infogeo.de/boreholeml/3.0}layer':
                                             for interval in layer:
+                                                lithology_rockname = []
+                                                lithology_percentage = []
+                                                lithology_rockColor = []
+                                                sublayer_rockcode = []
+                                                sublayer_rocknametext = []
+                                                sublayer_rockname = []
+                                                sublayer_rockColor = []
+                                                sublayer_from = []
+                                                sublayer_to = []
                                                 if interval.tag == '{http://www.infogeo.de/boreholeml/3.0}Interval':
                                                     for item in interval:
                                                         if item.tag == '{http://www.infogeo.de/boreholeml/3.0}from':
@@ -432,11 +441,11 @@ class BoreholeML:
                                                                 if subitem.tag == '{http://www.infogeo.de/boreholeml/3.0}Lithology':
                                                                     for subsubitem in subitem:
                                                                         if subsubitem.tag == '{http://www.infogeo.de/boreholeml/3.0}rockName':
-                                                                            rockname.append(subsubitem.text)
+                                                                            lithology_rockname.append(subsubitem.text)
                                                                         if subsubitem.tag == '{http://www.infogeo.de/boreholeml/3.0}percentage':
-                                                                            percentage.append(subsubitem.text)
+                                                                            lithology_percentage.append(subsubitem.text)
                                                                         if subsubitem.tag == '{http://www.infogeo.de/boreholeml/3.0}rockColor':
-                                                                            rockColor.append(subsubitem.text)
+                                                                            lithology_rockColor.append(subsubitem.text)
 
                                                         if item.tag == '{http://www.infogeo.de/boreholeml/3.0}stratigraphy':
                                                             for subitem in item:
@@ -448,16 +457,19 @@ class BoreholeML:
                                                                             for child in subsubitem:
                                                                                 if child.tag == '{http://www.isotc211.org/2005/gmd}LocalisedCharacterString':
                                                                                     lithostratigraphy.append(child.text)
+                                                                        else:
+                                                                            lithostratigraphy.append('')
+
                                                         if item.tag == '{http://www.infogeo.de/boreholeml/3.0}sublayer':
                                                             for child1 in item:
                                                                 if child1.tag == '{http://www.infogeo.de/boreholeml/3.0}Component':
                                                                     for child2 in child1:
                                                                         if child2.tag == '{http://www.infogeo.de/boreholeml/3.0}rockCode':
-                                                                            rockcode_sublayer.append(child2.text)
+                                                                            sublayer_rockcode.append(child2.text)
                                                                         if child2.tag == '{http://www.infogeo.de/boreholeml/3.0}rockNameText':
                                                                             for child3 in child2:
                                                                                 if child3.tag == '{http://www.isotc211.org/2005/gmd}LocalisedCharacterString':
-                                                                                    rocknametext_sublayer.append(
+                                                                                    sublayer_rocknametext.append(
                                                                                         child3.text)
 
                                                                         if child2.tag == '{http://www.infogeo.de/boreholeml/3.0}lithology':
@@ -465,16 +477,24 @@ class BoreholeML:
                                                                                 if child3.tag == '{http://www.infogeo.de/boreholeml/3.0}Lithology':
                                                                                     for subitem in child3:
                                                                                         if subitem.tag == '{http://www.infogeo.de/boreholeml/3.0}rockName':
-                                                                                            rockname_sublayer.append(
+                                                                                            sublayer_rockname.append(
                                                                                                 subitem.text)
                                                                                         if subitem.tag == '{http://www.infogeo.de/boreholeml/3.0}rockColor':
-                                                                                            rockColor_sublayer.append(
+                                                                                            sublayer_rockColor.append(
                                                                                                 subitem.text)
                                                                         if child2.tag == '{http://www.infogeo.de/boreholeml/3.0}from':
-                                                                            from_sublayer.append(child2.text)
+                                                                            sublayer_from.append(child2.text)
                                                                         if child2.tag == '{http://www.infogeo.de/boreholeml/3.0}to':
-                                                                            to_sublayer.append(child2.text)
-
+                                                                            sublayer_to.append(child2.text)
+                                                rockColor_sublayer.append(sublayer_rockColor)
+                                                from_sublayer.append(sublayer_from)
+                                                to_sublayer.append(sublayer_to)
+                                                rockname_sublayer.append(sublayer_rockname)
+                                                rocknametext_sublayer.append(sublayer_rocknametext)
+                                                rockcode_sublayer.append(sublayer_rockcode)
+                                                rockname.append(lithology_rockname)
+                                                percentage.append(lithology_percentage)
+                                                rockColor.append(lithology_rockColor)
                         if level4.tag == '{http://www.infogeo.de/boreholeml/3.0}drillingProcess':
                             for child1 in level4:
                                 if child1.tag == '{http://www.infogeo.de/boreholeml/3.0}DrillingProcess':
