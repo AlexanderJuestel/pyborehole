@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="DrillingPurposeList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Zweck bzw. Fachgebiet, für welches die Bohrung abgeteuft worden ist</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">DrillingPurposeList</gml:identifier>
+  <gml:name>Bohrungszweck</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40606">
+      <gml:description>Rohstofferkundung und –gewinnung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">RO</gml:identifier>
+      <gml:name>Rohstofferkundung und –gewinnung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40606_en">
+          <gml:description>Examination of the subsurface with regard to the availability of earth-borne raw materials in general and planning the extraction thereof. Business purposes are the exploration and potentially the exploitation of mineral resources.</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">RO</gml:identifier>
+          <gml:name>exploration and exploitation of feedstock</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>37</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40592">
+      <gml:description>Erkundung auf Abbau von Energierohstoffen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">EE</gml:identifier>
+      <gml:name>Erkundung auf Abbau von Energierohstoffen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40592_en">
+          <gml:description>Examination of the subsurface with regard to the availability of fossil energy resources (e.g. oil, gas) and planning the extraction thereof</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">EE</gml:identifier>
+          <gml:name>exploration of energy feedstock</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>41</bmlcl:keyID>
+      <bmlcl:parentID>37</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40593">
+      <gml:description>Erkundung auf Abbau von Erzen und Industriemineralen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">EM</gml:identifier>
+      <gml:name>Erkundung auf Abbau von Erzen und Industriemineralen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40593_en">
+          <gml:description>Examination of the subsurface with regard to the availability of ores and industrial minerals and planning the extraction thereof</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">EM</gml:identifier>
+          <gml:name>exploration of ores and industrial minerals</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>38</bmlcl:keyID>
+      <bmlcl:parentID>37</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40594">
+      <gml:description>Geologische Untersuchung, Erkundung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">G</gml:identifier>
+      <gml:name>Geologische Untersuchung, Erkundung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40594_en">
+          <gml:description>General examination of an area's geological entities</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">G</gml:identifier>
+          <gml:name>geological survey</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40595">
+      <gml:description>Geochemische Untersuchung, Analysen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GC</gml:identifier>
+      <gml:name>Geochemische Untersuchung, Analysen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40595_en">
+          <gml:description>Examination of surbsurface's chemical properties (e.g. the composition of ores and rock-forming minerals)</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GC</gml:identifier>
+          <gml:name>geochemical exploration and analyses</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40596">
+      <gml:description>Geophysikalische Untersuchung, Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GY</gml:identifier>
+      <gml:name>Geophysikalische Untersuchung, Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40596_en">
+          <gml:description>Examination of the subsurface's geophysical properties such as electric resistivity, seismicity, gravity, radiation, etc.</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GY</gml:identifier>
+          <gml:name>geophysical survey and exploration</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40597">
+      <gml:description>Hydrogeologische Untersuchung, Wasserwirtschaft</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">HY</gml:identifier>
+      <gml:name>Hydrogeologische Untersuchung, Wasserwirtschaft</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40597_en">
+          <gml:description>Examination of groundwater flow (i.e. the hydraulic characteristics of an aquifer), the chemical properties of ground water, and transport of particles, solutes, and energy, as well as the management of the sustainable use of ground water resources</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">HY</gml:identifier>
+          <gml:name>hydrogeological exploration, water management</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40598">
+      <gml:description>Erkundung auf Abbau von Steine-und-Erden</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">SE</gml:identifier>
+      <gml:name>Erkundung auf Abbau von Steine-und-Erden</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40598_en">
+          <gml:description>Examination of the subsurface with regard to the availability of nonmetallic mineral deposits such as building stones, gravel, sand, clay, etc. (mainly for construction purposes, ceramic industry, etc.) and planning the extraction thereof</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">SE</gml:identifier>
+          <gml:name>exploration of mineral deposits</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>49</bmlcl:keyID>
+      <bmlcl:parentID>37</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40599">
+      <gml:description>Sonstiger Zweck</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">SO</gml:identifier>
+      <gml:name>Sonstiger Zweck</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40599_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">SO</gml:identifier>
+          <gml:name>other purpose</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>54</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40600">
+      <gml:description>Erkundung von Untergrundspeichern</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">UG</gml:identifier>
+      <gml:name>Erkundung von Untergrundspeichern</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40600_en">
+          <gml:description>Examination of the subsurface's ability to store various materials such as natural gas, captured carbon, etc.</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">UG</gml:identifier>
+          <gml:name>exploration of subsurface storage</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>53</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40601">
+      <gml:description>unbekannt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">UN</gml:identifier>
+      <gml:name>unbekannt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40601_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">UN</gml:identifier>
+          <gml:name>unknown</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>55</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40602">
+      <gml:description>Altlasten, Umwelt, Deponiebau</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">AUD</gml:identifier>
+      <gml:name>Altlasten, Umwelt, Deponiebau</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40602_en">
+          <gml:description>Examination and remediation of contaminated sites, general environmental problems, and the construction, monitoring, and maintenance of landfills</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">AUD</gml:identifier>
+          <gml:name>brownfields, environment, land fills</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40603">
+      <gml:description>Bodenkundliche Untersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">BOD</gml:identifier>
+      <gml:name>Bodenkundliche Untersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40603_en">
+          <gml:description>Survey and characterization of soils, e.g. for agricultural purposes, ground water protection, etc.</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">BOD</gml:identifier>
+          <gml:name>pedological survey</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40604">
+      <gml:description>Geothermie, Wärmesonden</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GTH</gml:identifier>
+      <gml:name>Geothermie, Wärmesonden</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40604_en">
+          <gml:description>Exploration pertaining to the utiliztation of geothermal energy resources and design of geothermal heat pumps. Borehole heat exchangers are heat exchangers which are installed vertically or oblique in the underground.</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GTH</gml:identifier>
+          <gml:name>geothermal energy utilisation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9437_40605">
+      <gml:description>Geotechnische Untersuchung, Baugrund</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GTE</gml:identifier>
+      <gml:name>Geotechnische Untersuchung, Baugrund</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="_9437_40605_en">
+          <gml:description>Geotechnical investigations performed to obtain information on the physical properties of soil and rock around a site to design earthworks and foundations for propsed structures and for repair of distress to earthworks and structures caused.</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">GTE</gml:identifier>
+          <gml:name>geotechnical investigation, characterization of foundations</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList" gml:id="DrillingPurposeList_en">
+      <gml:description>purpose for sinking the borehole</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingPurposeList">DrillingPurposeList</gml:identifier>
+      <gml:name>drilling purpose</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

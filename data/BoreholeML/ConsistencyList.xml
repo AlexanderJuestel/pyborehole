@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="ConsistencyList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Zustandsform bindiger Lockergesteine</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">ConsistencyList</gml:identifier>
+  <gml:name>Konsistenz</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6337_26984">
+      <gml:description>breiig</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">bre</gml:identifier>
+      <gml:name>breiig</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="_6337_26984_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">bre</gml:identifier>
+          <gml:name>pulpy</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6337_26985">
+      <gml:description>fest</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">fe</gml:identifier>
+      <gml:name>fest</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="_6337_26985_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">fe</gml:identifier>
+          <gml:name>solid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6337_26986">
+      <gml:description>flüssig</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">flu</gml:identifier>
+      <gml:name>flüssig</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="_6337_26986_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">flu</gml:identifier>
+          <gml:name>liquid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6337_26987">
+      <gml:description>halbfest</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">hfe</gml:identifier>
+      <gml:name>halbfest</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="_6337_26987_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">hfe</gml:identifier>
+          <gml:name>semi-solid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6337_26988">
+      <gml:description>steif</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">stf</gml:identifier>
+      <gml:name>steif</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="_6337_26988_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">stf</gml:identifier>
+          <gml:name>stiff</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6337_26989">
+      <gml:description>weich</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">wh</gml:identifier>
+      <gml:name>weich</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="_6337_26989_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">wh</gml:identifier>
+          <gml:name>soft</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList" gml:id="ConsistencyList_en">
+      <gml:description>consistency of incohesive unconsolidated sediments</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ConsistencyList">ConsistencyList</gml:identifier>
+      <gml:name>consistency</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

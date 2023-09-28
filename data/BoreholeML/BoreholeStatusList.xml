@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="BoreholeStatusList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>aktueller Status der Bohrung</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">BoreholeStatusList</gml:identifier>
+  <gml:name>Bohrungsstatus</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26320">
+      <gml:description>Abschlusskappe erneuert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">akn</gml:identifier>
+      <gml:name>Abschlusskappe erneuert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26320_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">akn</gml:identifier>
+          <gml:name>well cap replaced</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26321">
+      <gml:description>Ausbau erneuert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">an</gml:identifier>
+      <gml:name>Ausbau erneuert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26321_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">an</gml:identifier>
+          <gml:name>casing replaced</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26322">
+      <gml:description>Ausbau teilweise erneuert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">atn</gml:identifier>
+      <gml:name>Ausbau teilweise erneuert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26322_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">atn</gml:identifier>
+          <gml:name>casing partially replaced</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26323">
+      <gml:description>ausgebaut</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">au</gml:identifier>
+      <gml:name>ausgebaut</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26323_en">
+          <gml:description>casing or gauge/monitoring equipment installed</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">au</gml:identifier>
+          <gml:name>cased/equipment installed</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26324">
+      <gml:description>Aufweiten</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">aw</gml:identifier>
+      <gml:name>Aufweiten</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26324_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">aw</gml:identifier>
+          <gml:name>widening</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26325">
+      <gml:description>Brunneninstallation erneuert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">bin</gml:identifier>
+      <gml:name>Brunneninstallation erneuert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26325_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">bin</gml:identifier>
+          <gml:name>well installation reconditioned</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26326">
+      <gml:description>gebohrt/abgeteuft</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">bo</gml:identifier>
+      <gml:name>gebohrt/abgeteuft</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26326_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">bo</gml:identifier>
+          <gml:name>drilling completed</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26327">
+      <gml:description>Brunnenstube erneuert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">bsn</gml:identifier>
+      <gml:name>Brunnenstube erneuert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26327_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">bsn</gml:identifier>
+          <gml:name>well chamber reconditioned</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26328">
+      <gml:description>Funktionsprüfung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">f</gml:identifier>
+      <gml:name>Funktionsprüfung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26328_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">f</gml:identifier>
+          <gml:name>performance test</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26329">
+      <gml:description>unbekannt / nicht angegeben</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ka</gml:identifier>
+      <gml:name>unbekannt / nicht angegeben</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26329_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ka</gml:identifier>
+          <gml:name>n/a</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>26</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26330">
+      <gml:description>geplant [def] Bohrung im Planungstatus</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">pla</gml:identifier>
+      <gml:name>geplant [def] Bohrung im Planungstatus</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26330_en">
+          <gml:description>Drilling projected</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">pla</gml:identifier>
+          <gml:name>projected</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26331">
+      <gml:description>Regenerierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">r</gml:identifier>
+      <gml:name>Regenerierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26331_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">r</gml:identifier>
+          <gml:name>recovery</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26332">
+      <gml:description>Rückbau</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rb</gml:identifier>
+      <gml:name>Rückbau</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26332_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rb</gml:identifier>
+          <gml:name>under deconstruction</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26333">
+      <gml:description>Reinigen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rei</gml:identifier>
+      <gml:name>Reinigen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26333_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rei</gml:identifier>
+          <gml:name>cleaning</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26334">
+      <gml:description>rückgebaut</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rg</gml:identifier>
+      <gml:name>rückgebaut</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26334_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rg</gml:identifier>
+          <gml:name>deconstructed</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26335">
+      <gml:description>teilweise rückgebaut</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rgt</gml:identifier>
+      <gml:name>teilweise rückgebaut</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26335_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">rgt</gml:identifier>
+          <gml:name>partly deconstructed</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26336">
+      <gml:description>Sanierung / Instandsetzung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">sa</gml:identifier>
+      <gml:name>Sanierung / Instandsetzung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26336_en">
+          <gml:description>remediation of contaminated sites</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">sa</gml:identifier>
+          <gml:name>restoration/workover</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26337">
+      <gml:description>Vertiefung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ti</gml:identifier>
+      <gml:name>Vertiefung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26337_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ti</gml:identifier>
+          <gml:name>deepening</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26338">
+      <gml:description>Überbohren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ueb</gml:identifier>
+      <gml:name>Überbohren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26338_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ueb</gml:identifier>
+          <gml:name>overdrilling/reaming</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26339">
+      <gml:description>Verfüllung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">v</gml:identifier>
+      <gml:name>Verfüllung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26339_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">v</gml:identifier>
+          <gml:name>backfilling / plugging</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>23</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26340">
+      <gml:description>verfüllt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">vf</gml:identifier>
+      <gml:name>verfüllt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26340_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">vf</gml:identifier>
+          <gml:name>refilled</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26341">
+      <gml:description>teilweise verfüllt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">vft</gml:identifier>
+      <gml:name>teilweise verfüllt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26341_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">vft</gml:identifier>
+          <gml:name>partly refilled</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>25</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26342">
+      <gml:description>Verwahrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">vw</gml:identifier>
+      <gml:name>Verwahrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26342_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">vw</gml:identifier>
+          <gml:name>abandoning</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>19</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26343">
+      <gml:description>Wartung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">w</gml:identifier>
+      <gml:name>Wartung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26343_en">
+          <gml:description>production stopped, installation is under maintenance</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">w</gml:identifier>
+          <gml:name>maintenance</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26344">
+      <gml:description>zur Zeit gebohrt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">zbo</gml:identifier>
+      <gml:name>zur Zeit gebohrt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26344_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">zbo</gml:identifier>
+          <gml:name>drilling currently in progress</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6324_26319">
+      <gml:description>angemeldet / angezeigt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ag</gml:identifier>
+      <gml:name>angemeldet / angezeigt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="_6324_26319_en">
+          <gml:description>registered, drilling not yet started (e.g. waiting for permission)</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">ag</gml:identifier>
+          <gml:name>filed</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList" gml:id="BoreholeStatusList_en">
+      <gml:description>currrent status of the borehole</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/BoreholeStatusList">BoreholeStatusList</gml:identifier>
+      <gml:name>borehole status</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="DrillingMethodList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Spezifisches Bohrverfahren nach technischer Ausführung</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DrillingMethodList</gml:identifier>
+  <gml:name>Bohrverfahren</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27013">
+      <gml:description>Kernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BK</gml:identifier>
+      <gml:name>Kernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27013_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BK</gml:identifier>
+          <gml:name>core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>41</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27014">
+      <gml:description>Bohrung mit beweglicher Kernumhüllung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BKB</gml:identifier>
+      <gml:name>Bohrung mit beweglicher Kernumhüllung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27014_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BKB</gml:identifier>
+          <gml:name>drilling with movable core encasement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>42</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27015">
+      <gml:description>Bohrung mit fester Kernumhüllung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BKF</gml:identifier>
+      <gml:name>Bohrung mit fester Kernumhüllung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27015_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BKF</gml:identifier>
+          <gml:name>drilling with fixed core encasement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>43</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27016">
+      <gml:description>Bohrung mit orientierter Kernentnahme</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BKR</gml:identifier>
+      <gml:name>Bohrung mit orientierter Kernentnahme</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27016_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BKR</gml:identifier>
+          <gml:name>drilling with oriented core sampling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>44</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27017">
+      <gml:description>Sondierbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BS</gml:identifier>
+      <gml:name>Sondierbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27017_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BS</gml:identifier>
+          <gml:name>sounding</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27018">
+      <gml:description>Druckbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BUB</gml:identifier>
+      <gml:name>Druckbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27018_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BUB</gml:identifier>
+          <gml:name>pressure drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>54</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27019">
+      <gml:description>Kombi-Bohrverfahren, allgemein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BV</gml:identifier>
+      <gml:name>Kombi-Bohrverfahren, allgemein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27019_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BV</gml:identifier>
+          <gml:name>combi drilling method, in general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>69</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27020">
+      <gml:description>Nassbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BW</gml:identifier>
+      <gml:name>Nassbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27020_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">BW</gml:identifier>
+          <gml:name>water drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>33</bmlcl:keyID>
+      <bmlcl:parentID>32</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27021">
+      <gml:description>Drillbohrung [Schnecke]</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DB</gml:identifier>
+      <gml:name>Drillbohrung [Schnecke]</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27021_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DB</gml:identifier>
+          <gml:name>helical auger drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>23</bmlcl:keyID>
+      <bmlcl:parentID>21</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27022">
+      <gml:description>Drehbohrverfahren (Rotationsbohrungen)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DBO</gml:identifier>
+      <gml:name>Drehbohrverfahren (Rotationsbohrungen)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27022_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DBO</gml:identifier>
+          <gml:name>rotary drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27023">
+      <gml:description>Counterflush-Bohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DC</gml:identifier>
+      <gml:name>Counterflush-Bohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27023_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DC</gml:identifier>
+          <gml:name>counterflush-drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>39</bmlcl:keyID>
+      <bmlcl:parentID>32</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27024">
+      <gml:description>Drehbohrung, allgemein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DD</gml:identifier>
+      <gml:name>Drehbohrung, allgemein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27024_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DD</gml:identifier>
+          <gml:name>rotary drilling, in general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>21</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27025">
+      <gml:description>Saugbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DG</gml:identifier>
+      <gml:name>Saugbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27025_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DG</gml:identifier>
+          <gml:name>suction drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>55</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27026">
+      <gml:description>Drehschlagbohren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DH</gml:identifier>
+      <gml:name>Drehschlagbohren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27026_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DH</gml:identifier>
+          <gml:name>rotary impact drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>21</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27027">
+      <gml:description>Druckkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DKB</gml:identifier>
+      <gml:name>Druckkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27027_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DKB</gml:identifier>
+          <gml:name>pressure core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>45</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27028">
+      <gml:description>Lufthebebohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DL</gml:identifier>
+      <gml:name>Lufthebebohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27028_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DL</gml:identifier>
+          <gml:name>airlift drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>56</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27029">
+      <gml:description>Druckluftrammbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DLRB</gml:identifier>
+      <gml:name>Druckluftrammbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27029_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DLRB</gml:identifier>
+          <gml:name>pneumatic hammer drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>19</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27030">
+      <gml:description>Drehspülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DR</gml:identifier>
+      <gml:name>Drehspülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27030_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DR</gml:identifier>
+          <gml:name>rotary flush drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>38</bmlcl:keyID>
+      <bmlcl:parentID>32</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27031">
+      <gml:description>Trockenbohrung, drehend</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DT</gml:identifier>
+      <gml:name>Trockenbohrung, drehend</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27031_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DT</gml:identifier>
+          <gml:name>dry drilling, with rotation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>31</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27032">
+      <gml:description>Saugstrahlbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DW</gml:identifier>
+      <gml:name>Saugstrahlbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27032_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DW</gml:identifier>
+          <gml:name>suction jet coring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>57</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27033">
+      <gml:description>Flügelbohrer-Bohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">FB</gml:identifier>
+      <gml:name>Flügelbohrer-Bohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27033_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">FB</gml:identifier>
+          <gml:name>wing auger drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27034">
+      <gml:description>Gestängefreifallbohrung, allgemein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">GF</gml:identifier>
+      <gml:name>Gestängefreifallbohrung, allgemein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27034_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">GF</gml:identifier>
+          <gml:name>falling rod drilling, in general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>60</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27035">
+      <gml:description>Handbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HB</gml:identifier>
+      <gml:name>Handbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27035_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HB</gml:identifier>
+          <gml:name>manual drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27036">
+      <gml:description>Handdrehbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HDB</gml:identifier>
+      <gml:name>Handdrehbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27036_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HDB</gml:identifier>
+          <gml:name>manual rotary drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27037">
+      <gml:description>Hand- und Kleinbohrverfahren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HK</gml:identifier>
+      <gml:name>Hand- und Kleinbohrverfahren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27037_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HK</gml:identifier>
+          <gml:name>manual and shallow drilling methods</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27038">
+      <gml:description>Handschachtung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HSB</gml:identifier>
+      <gml:name>Handschachtung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27038_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HSB</gml:identifier>
+          <gml:name>manual excavation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27039">
+      <gml:description>Handspülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HSPB</gml:identifier>
+      <gml:name>Handspülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27039_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">HSPB</gml:identifier>
+          <gml:name>manual water pump boring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27040">
+      <gml:description>Kernbohrungen (sofern nicht in anderen Kategorien)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KB</gml:identifier>
+      <gml:name>Kernbohrungen (sofern nicht in anderen Kategorien)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27040_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KB</gml:identifier>
+          <gml:name>core drilling (if not mentioned in other categories)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>40</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27041">
+      <gml:description>Kammerbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KBO</gml:identifier>
+      <gml:name>Kammerbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27041_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KBO</gml:identifier>
+          <gml:name>tube auger drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27042">
+      <gml:description>Kleindruckbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KDB</gml:identifier>
+      <gml:name>Kleindruckbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27042_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KDB</gml:identifier>
+          <gml:name>small pressure boring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27043">
+      <gml:description>Kleinrammbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KRB</gml:identifier>
+      <gml:name>Kleinrammbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27043_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KRB</gml:identifier>
+          <gml:name>small pile driven boring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27044">
+      <gml:description>Kombi Spül/Teilkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KST</gml:identifier>
+      <gml:name>Kombi Spül/Teilkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27044_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KST</gml:identifier>
+          <gml:name>combi flush/part core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>71</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27045">
+      <gml:description>Kombi Trocken/Doppelkernspülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTD</gml:identifier>
+      <gml:name>Kombi Trocken/Doppelkernspülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27045_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTD</gml:identifier>
+          <gml:name>combi dry/double core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>73</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27046">
+      <gml:description>Kombi Trocken/Handspülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTH</gml:identifier>
+      <gml:name>Kombi Trocken/Handspülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27046_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTH</gml:identifier>
+          <gml:name>combi dry/manual wash drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>74</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27047">
+      <gml:description>Kombi Trocken/Rotaryspülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTR</gml:identifier>
+      <gml:name>Kombi Trocken/Rotaryspülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27047_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTR</gml:identifier>
+          <gml:name>combi dry/rotary flush drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>75</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27048">
+      <gml:description>Kombi Trocken/Teilkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTT</gml:identifier>
+      <gml:name>Kombi Trocken/Teilkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27048_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KTT</gml:identifier>
+          <gml:name>combi dry/part core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>72</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27049">
+      <gml:description>Kombiverfahren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KV</gml:identifier>
+      <gml:name>Kombiverfahren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27049_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">KV</gml:identifier>
+          <gml:name>combi methods</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>68</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27050">
+      <gml:description>Lotbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">LB</gml:identifier>
+      <gml:name>Lotbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27050_en">
+          <gml:description>vertical drilling</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">LB</gml:identifier>
+          <gml:name>dolly sampling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>63</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27051">
+      <gml:description>Linnemann-Nutsondierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">LS</gml:identifier>
+      <gml:name>Linnemann-Nutsondierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27051_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">LS</gml:identifier>
+          <gml:name>Linnemann-grooved probe method</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27052">
+      <gml:description>Meißelbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">MB</gml:identifier>
+      <gml:name>Meißelbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27052_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">MB</gml:identifier>
+          <gml:name>chisel bit drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>64</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27053">
+      <gml:description>Marschenlöffel</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">ML</gml:identifier>
+      <gml:name>Marschenlöffel</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27053_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">ML</gml:identifier>
+          <gml:name>marsh spoon auger</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27054">
+      <gml:description>Moor- oder Marschenbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">MR</gml:identifier>
+      <gml:name>Moor- oder Marschenbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27054_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">MR</gml:identifier>
+          <gml:name>marsh auger drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27055">
+      <gml:description>Pürckhauer-Linnemann-Bohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">PL</gml:identifier>
+      <gml:name>Pürckhauer-Linnemann-Bohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27055_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">PL</gml:identifier>
+          <gml:name>Pürckhauer-Linnemann-auger</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>70</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27056">
+      <gml:description>Pürckhauer-Nutsondierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">PS</gml:identifier>
+      <gml:name>Pürckhauer-Nutsondierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27056_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">PS</gml:identifier>
+          <gml:name>Pürckhauer-grooved probe method</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27057">
+      <gml:description>Rammbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RB</gml:identifier>
+      <gml:name>Rammbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27057_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RB</gml:identifier>
+          <gml:name>pile driven boring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27058">
+      <gml:description>Rotationskernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RKB</gml:identifier>
+      <gml:name>Rotationskernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27058_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RKB</gml:identifier>
+          <gml:name>rotary core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>25</bmlcl:keyID>
+      <bmlcl:parentID>21</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27059">
+      <gml:description>Rammrotationskernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RRKB</gml:identifier>
+      <gml:name>Rammrotationskernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27059_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RRKB</gml:identifier>
+          <gml:name>pile driven rotary core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>26</bmlcl:keyID>
+      <bmlcl:parentID>21</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27060">
+      <gml:description>Ramm- und Schlagbohrverfahren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RS</gml:identifier>
+      <gml:name>Ramm- und Schlagbohrverfahren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27060_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RS</gml:identifier>
+          <gml:name>pile driven boring and percussion drilling methods</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27061">
+      <gml:description>Rotations-Trockenkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RTKB</gml:identifier>
+      <gml:name>Rotations-Trockenkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27061_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">RTKB</gml:identifier>
+          <gml:name>rotary dry core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>21</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27062">
+      <gml:description>Schlagbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SA</gml:identifier>
+      <gml:name>Schlagbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27062_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SA</gml:identifier>
+          <gml:name>percussion drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27063">
+      <gml:description>Sonderbohrverfahren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SB</gml:identifier>
+      <gml:name>Sonderbohrverfahren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27063_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SB</gml:identifier>
+          <gml:name>special drilling techniques</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>53</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27064">
+      <gml:description>Spülbohrungen (sofern nicht unter Drehbohrverfahren)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SBO</gml:identifier>
+      <gml:name>Spülbohrungen (sofern nicht unter Drehbohrverfahren)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27064_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SBO</gml:identifier>
+          <gml:name>flush boring (if not mentioned under rotary drilling)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>32</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27065">
+      <gml:description>Seilfreifallbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SF</gml:identifier>
+      <gml:name>Seilfreifallbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27065_en">
+          <gml:description>churn drill</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SF</gml:identifier>
+          <gml:name>yo-yo drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>59</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27066">
+      <gml:description>Hammerbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SH</gml:identifier>
+      <gml:name>Hammerbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27066_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SH</gml:identifier>
+          <gml:name>hammer drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27067">
+      <gml:description>Rammkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SK</gml:identifier>
+      <gml:name>Rammkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27067_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SK</gml:identifier>
+          <gml:name>pile driven core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>46</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27068">
+      <gml:description>Seilkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SKB</gml:identifier>
+      <gml:name>Seilkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27068_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SKB</gml:identifier>
+          <gml:name>wireline core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>48</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27069">
+      <gml:description>Schlauchkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SL</gml:identifier>
+      <gml:name>Schlauchkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27069_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SL</gml:identifier>
+          <gml:name>tube core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>49</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27070">
+      <gml:description>Spülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SP</gml:identifier>
+      <gml:name>Spülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27070_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SP</gml:identifier>
+          <gml:name>flush boring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>34</bmlcl:keyID>
+      <bmlcl:parentID>32</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27071">
+      <gml:description>Schappenbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SPB</gml:identifier>
+      <gml:name>Schappenbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27071_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SPB</gml:identifier>
+          <gml:name>auger boring</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>58</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27072">
+      <gml:description>Stechrohrkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SR</gml:identifier>
+      <gml:name>Stechrohrkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27072_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">SR</gml:identifier>
+          <gml:name>piston tube corer</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>47</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27073">
+      <gml:description>Bohrlochsprengung (Torpedieren)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">T</gml:identifier>
+      <gml:name>Bohrlochsprengung (Torpedieren)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27073_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">T</gml:identifier>
+          <gml:name>torpedoing</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>67</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27074">
+      <gml:description>Trockenbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TB</gml:identifier>
+      <gml:name>Trockenbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27074_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TB</gml:identifier>
+          <gml:name>dry drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>29</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27075">
+      <gml:description>Trockenbohrungen (sofern nicht unter Drehbohrverfahren)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TBG</gml:identifier>
+      <gml:name>Trockenbohrungen (sofern nicht unter Drehbohrverfahren)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27075_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TBG</gml:identifier>
+          <gml:name>dry drilling (if not mentioned under rotary drilling)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>28</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27076">
+      <gml:description>Trockenbohrung, nicht drehend</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TBND</gml:identifier>
+      <gml:name>Trockenbohrung, nicht drehend</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27076_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TBND</gml:identifier>
+          <gml:name>dry drilling, without rotation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27077">
+      <gml:description>Tellerbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TEB</gml:identifier>
+      <gml:name>Tellerbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27077_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TEB</gml:identifier>
+          <gml:name>earth auger</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>65</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27078">
+      <gml:description>Greiferbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TG</gml:identifier>
+      <gml:name>Greiferbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27078_en">
+          <gml:description>wire line sampler</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">TG</gml:identifier>
+          <gml:name>free fall sampler</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>66</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27079">
+      <gml:description>unbekanntes Bohrverfahren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">UN</gml:identifier>
+      <gml:name>unbekanntes Bohrverfahren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27079_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">UN</gml:identifier>
+          <gml:name>unknown drilling method</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>77</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27080">
+      <gml:description>Vibrobohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">VB</gml:identifier>
+      <gml:name>Vibrobohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27080_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">VB</gml:identifier>
+          <gml:name>vibrator drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27081">
+      <gml:description>Vollkern-Lufthebebohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">VKL</gml:identifier>
+      <gml:name>Vollkern-Lufthebebohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27081_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">VKL</gml:identifier>
+          <gml:name>full core airlift drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>50</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27082">
+      <gml:description>Vollkern-Rotary-Spülbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">VRS</gml:identifier>
+      <gml:name>Vollkern-Rotary-Spülbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27082_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">VRS</gml:identifier>
+          <gml:name>full core rotary flush drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>51</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27083">
+      <gml:description>sonstiges Bohrverfahren</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">W</gml:identifier>
+      <gml:name>sonstiges Bohrverfahren</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27083_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">W</gml:identifier>
+          <gml:name>other drilling method</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>76</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6340_27084">
+      <gml:description>Teilkernbohrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">ZKB</gml:identifier>
+      <gml:name>Teilkernbohrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="_6340_27084_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">ZKB</gml:identifier>
+          <gml:name>part core drilling</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>52</bmlcl:keyID>
+      <bmlcl:parentID>40</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList" gml:id="DrillingMethodList_en">
+      <gml:description>specific method of drilling</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DrillingMethodList">DrillingMethodList</gml:identifier>
+      <gml:name>drilling method</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="InvestigationTypeList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Art oder Methode einer im Bohrloch durchgeführten Untersuchung</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">InvestigationTypeList</gml:identifier>
+  <gml:name>Art der Bohrlochmessung</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27085">
+      <gml:description>seismische/akustische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">AK</gml:identifier>
+      <gml:name>seismische/akustische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27085_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">AK</gml:identifier>
+          <gml:name>seismic and acoustic logging</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27086">
+      <gml:description>bohrlochgeophysikalische Messungen, allg.</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">BGY</gml:identifier>
+      <gml:name>bohrlochgeophysikalische Messungen, allg.</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27086_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">BGY</gml:identifier>
+          <gml:name>geophysical borehole logging</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27087">
+      <gml:description>elektrische/magnetische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">EM</gml:identifier>
+      <gml:name>elektrische/magnetische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27087_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">EM</gml:identifier>
+          <gml:name>electrical and magnetic logging</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27088">
+      <gml:description>geochemische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">GC</gml:identifier>
+      <gml:name>geochemische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27088_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">GC</gml:identifier>
+          <gml:name>geochemical measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27089">
+      <gml:description>geometrische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">GM</gml:identifier>
+      <gml:name>geometrische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27089_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">GM</gml:identifier>
+          <gml:name>geometry measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27090">
+      <gml:description>geotechnische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">GT</gml:identifier>
+      <gml:name>geotechnische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27090_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">GT</gml:identifier>
+          <gml:name>geotechnical measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27091">
+      <gml:description>hydrochemische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">HC</gml:identifier>
+      <gml:name>hydrochemische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27091_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">HC</gml:identifier>
+          <gml:name>hydrochemical measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27092">
+      <gml:description>hydraulische Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">HY</gml:identifier>
+      <gml:name>hydraulische Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27092_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">HY</gml:identifier>
+          <gml:name>hydraulic measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27093">
+      <gml:description>Bochlochmessung (allgemein)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">LOG</gml:identifier>
+      <gml:name>Bochlochmessung (allgemein)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27093_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">LOG</gml:identifier>
+          <gml:name>log (general)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27094">
+      <gml:description>Radioaktivitätsmessungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">RA</gml:identifier>
+      <gml:name>Radioaktivitätsmessungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27094_en">
+          <gml:description>incl. Gamma ray</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">RA</gml:identifier>
+          <gml:name>radioactivity logging</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27095">
+      <gml:description>sonstige Messungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">SM</gml:identifier>
+      <gml:name>sonstige Messungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27095_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">SM</gml:identifier>
+          <gml:name>other measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27096">
+      <gml:description>Temperaturmessungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">TE</gml:identifier>
+      <gml:name>Temperaturmessungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27096_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">TE</gml:identifier>
+          <gml:name>temperature measurements</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6341_27097">
+      <gml:description>Kamerabefahrung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">TV</gml:identifier>
+      <gml:name>Kamerabefahrung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="_6341_27097_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">TV</gml:identifier>
+          <gml:name>camera inspection</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList" gml:id="InvestigationTypeList_en">
+      <gml:description>kind or method of an investigation in the borehole / borehole logging</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InvestigationTypeList">InvestigationTypeList</gml:identifier>
+      <gml:name>logging method</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

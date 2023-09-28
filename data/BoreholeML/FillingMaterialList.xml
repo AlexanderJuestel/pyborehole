@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="FillingMaterialList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Material der Bohrloch- bzw. Ringraumverfüllung</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FillingMaterialList</gml:identifier>
+  <gml:name>Füllmaterial</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26423">
+      <gml:description>Abdichtungsmaterial/Dämmer</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">A</gml:identifier>
+      <gml:name>Abdichtungsmaterial/Dämmer</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26423_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">A</gml:identifier>
+          <gml:name>sealing material</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26424">
+      <gml:description>Beton</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AB</gml:identifier>
+      <gml:name>Beton</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26424_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AB</gml:identifier>
+          <gml:name>concrete</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26425">
+      <gml:description>Halliburton-Tiefbohrzement</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AHZ</gml:identifier>
+      <gml:name>Halliburton-Tiefbohrzement</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26425_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AHZ</gml:identifier>
+          <gml:name>well cement (Halliburton)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26426">
+      <gml:description>Packer</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AP</gml:identifier>
+      <gml:name>Packer</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26426_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AP</gml:identifier>
+          <gml:name>packer</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>6</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26427">
+      <gml:description>Portlandzement</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">APZ</gml:identifier>
+      <gml:name>Portlandzement</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26427_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">APZ</gml:identifier>
+          <gml:name>Portland cement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26428">
+      <gml:description>Spezialzement</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ASPZ</gml:identifier>
+      <gml:name>Spezialzement</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26428_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ASPZ</gml:identifier>
+          <gml:name>special cement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26429">
+      <gml:description>Ton</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AT</gml:identifier>
+      <gml:name>Ton</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26429_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AT</gml:identifier>
+          <gml:name>clay</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>6</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26430">
+      <gml:description>Bentonit</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATB</gml:identifier>
+      <gml:name>Bentonit</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26430_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATB</gml:identifier>
+          <gml:name>bentonite</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26431">
+      <gml:description>Tiefbohrzement</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATBZ</gml:identifier>
+      <gml:name>Tiefbohrzement</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26431_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATBZ</gml:identifier>
+          <gml:name>deep well cement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26432">
+      <gml:description>Granulat</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATG</gml:identifier>
+      <gml:name>Granulat</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26432_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATG</gml:identifier>
+          <gml:name>granules</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26433">
+      <gml:description>Volltonkugeln</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATK</gml:identifier>
+      <gml:name>Volltonkugeln</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26433_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATK</gml:identifier>
+          <gml:name>clay balls</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26434">
+      <gml:description>luftgetrockneter Stückton</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATL</gml:identifier>
+      <gml:name>luftgetrockneter Stückton</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26434_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATL</gml:identifier>
+          <gml:name>air-dried clay lumps</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26435">
+      <gml:description>Mahlton</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATM</gml:identifier>
+      <gml:name>Mahlton</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26435_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATM</gml:identifier>
+          <gml:name>ground clay</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26436">
+      <gml:description>Pellets</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATP</gml:identifier>
+      <gml:name>Pellets</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26436_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATP</gml:identifier>
+          <gml:name>pellets</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>19</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26437">
+      <gml:description>Rohton</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATR</gml:identifier>
+      <gml:name>Rohton</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26437_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATR</gml:identifier>
+          <gml:name>crude clay</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26438">
+      <gml:description>Tonmehl</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATT</gml:identifier>
+      <gml:name>Tonmehl</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26438_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATT</gml:identifier>
+          <gml:name>dry ground clay</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26439">
+      <gml:description>Ton/Zement</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATZ</gml:identifier>
+      <gml:name>Ton/Zement</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26439_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">ATZ</gml:identifier>
+          <gml:name>clay, cement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26440">
+      <gml:description>Zement/Zementinjektion</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AZ</gml:identifier>
+      <gml:name>Zement/Zementinjektion</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26440_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">AZ</gml:identifier>
+          <gml:name>cement, cement injection</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>6</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26441">
+      <gml:description>Filtermaterial</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">F</gml:identifier>
+      <gml:name>Filtermaterial</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26441_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">F</gml:identifier>
+          <gml:name>filter material</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26442">
+      <gml:description>Gegenfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FGF</gml:identifier>
+      <gml:name>Gegenfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26442_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FGF</gml:identifier>
+          <gml:name>fine sand filter protection</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26443">
+      <gml:description>Filterkies/Zement</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FKi</gml:identifier>
+      <gml:name>Filterkies/Zement</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26443_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FKi</gml:identifier>
+          <gml:name>filter gravel/cement</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26444">
+      <gml:description>Filterkies</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FKIZ</gml:identifier>
+      <gml:name>Filterkies</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26444_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FKIZ</gml:identifier>
+          <gml:name>filter gravel</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26445">
+      <gml:description>Filtersand</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FS</gml:identifier>
+      <gml:name>Filtersand</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26445_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FS</gml:identifier>
+          <gml:name>filter sand</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26446">
+      <gml:description>Kiessand</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">GS</gml:identifier>
+      <gml:name>Kiessand</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26446_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">GS</gml:identifier>
+          <gml:name>gravelly sand</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>26</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26447">
+      <gml:description>kein Füllmaterial</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">K</gml:identifier>
+      <gml:name>kein Füllmaterial</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26447_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">K</gml:identifier>
+          <gml:name>no fill material</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>33</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26448">
+      <gml:description>Füllungsmaterial unbekannt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">NB</gml:identifier>
+      <gml:name>Füllungsmaterial unbekannt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26448_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">NB</gml:identifier>
+          <gml:name>unknown material</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>34</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26449">
+      <gml:description>Schotter/Splitt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">S</gml:identifier>
+      <gml:name>Schotter/Splitt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26449_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">S</gml:identifier>
+          <gml:name>gravel, grit</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>31</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26450">
+      <gml:description>Tailing</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">TAIL</gml:identifier>
+      <gml:name>Tailing</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26450_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">TAIL</gml:identifier>
+          <gml:name>tailing</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>32</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26451">
+      <gml:description>Ton-Beton-Mischung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">TB</gml:identifier>
+      <gml:name>Ton-Beton-Mischung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26451_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">TB</gml:identifier>
+          <gml:name>clay-concrete combination</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>25</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26452">
+      <gml:description>Verfüllmaterial</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">V</gml:identifier>
+      <gml:name>Verfüllmaterial</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26452_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">V</gml:identifier>
+          <gml:name>backfill</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>23</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26453">
+      <gml:description>Bohrgut</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VBG</gml:identifier>
+      <gml:name>Bohrgut</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26453_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VBG</gml:identifier>
+          <gml:name>cuttings</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>28</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26454">
+      <gml:description>bindiges Bohrgut</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VBGB</gml:identifier>
+      <gml:name>bindiges Bohrgut</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26454_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VBGB</gml:identifier>
+          <gml:name>cohesive cuttings</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26455">
+      <gml:description>Rolliges (sandiges) Bohrgut</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VBGR</gml:identifier>
+      <gml:name>Rolliges (sandiges) Bohrgut</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26455_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VBGR</gml:identifier>
+          <gml:name>sandy cuttings</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>29</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6333_26456">
+      <gml:description>Füllkies</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VKiS</gml:identifier>
+      <gml:name>Füllkies</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="_6333_26456_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">VKiS</gml:identifier>
+          <gml:name>filling gravel</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>23</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList" gml:id="FillingMaterialList_en">
+      <gml:description>material used for borehole filling or for filling the the annular space between the outside of the installation and the borehole</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FillingMaterialList">FillingMaterialList</gml:identifier>
+      <gml:name>filling material</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>
