@@ -2,46 +2,7 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 
 
-def parse_languagecode(path):
-    # Parse the XML file
-    tree = ET.parse('../data/BoreholeML/LanguageCode.xml')
-    root = tree.getroot()
-
-    # Define namespaces
-    namespaces = {
-        'gmx': 'http://www.isotc211.org/2005/gmx',
-        'gml': 'http://www.opengis.net/gml/3.2'
-    }
-
-    # Initialize lists for description and identifier
-    description = []
-    identifier = []
-
-    # Extract description and identifier using XPath
-    for code_entry in root.findall('.//gmx:codeEntry', namespaces):
-        code_definition = code_entry.find('./gmx:CodeDefinition', namespaces)
-        if code_definition is not None:
-            description_element = code_definition.find('./gml:description', namespaces)
-            identifier_element = code_definition.find('./gml:identifier', namespaces)
-            if description_element is not None:
-                description.append(description_element.text)
-            if identifier_element is not None:
-                identifier.append(identifier_element.text)
-
-    df = pd.DataFrame(list(zip(
-        description,
-        identifier,
-    )),
-        columns=[
-            'Description',
-            'Identifier'
-        ])
-
-    return df
-
-
-def parse_databasesourcelist(path):
-
+def parse_xml(path):
     tree = ET.parse(path)
     root = tree.getroot()
 
@@ -58,8 +19,14 @@ def parse_databasesourcelist(path):
     for code_entry in code_entries:
         description = code_entry.find('.//gml:description', namespaces=namespaces).text
         identifier = code_entry.find('.//gml:identifier', namespaces=namespaces).text
-        name = code_entry.find('.//gml:name', namespaces=namespaces).text
-        key_id = int(code_entry.find('.//bmlcl:keyID', namespaces=namespaces).text)
+        try:
+            name = code_entry.find('.//gml:name', namespaces=namespaces).text
+        except AttributeError:
+            name = None
+        try:
+            key_id = int(code_entry.find('.//bmlcl:keyID', namespaces=namespaces).text)
+        except AttributeError:
+            key_id = None
 
         alternative_expression = code_entry.find('.//gmx:alternativeExpression', namespaces=namespaces)
         if alternative_expression is not None:
