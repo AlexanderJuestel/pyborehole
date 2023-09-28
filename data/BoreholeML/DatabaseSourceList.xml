@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2.1 from 20140311 Added BDHB - Bohrdatenbank Bremen -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="DatabaseSourceList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Kurzbezeichnung der Quelldatenbank</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">DatabaseSourceList</gml:identifier>
+  <gml:name>Quelldatenbank</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44119">
+      <gml:description>Bohrdatenbank Baden-Württemberg</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">ADB</gml:identifier>
+      <gml:name>Bohrdatenbank Baden-Württemberg</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44119_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">ADB</gml:identifier>
+          <gml:name>borehole database of Baden-Wuerttemberg</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44120">
+      <gml:description>Bohrdatenbank Hessen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDHE</gml:identifier>
+      <gml:name>Bohrdatenbank Hessen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44120_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDHE</gml:identifier>
+          <gml:name>borehole database of Hessia</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44121">
+      <gml:description>Bohrdatenbank der Hansestadt Hamburg</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDHH</gml:identifier>
+      <gml:name>Bohrdatenbank der Hansestadt Hamburg</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44121_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDHH</gml:identifier>
+          <gml:name>borehole database of Hamburg</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44122">
+      <gml:description>Bohrdatenbank Niedersachsen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDN</gml:identifier>
+      <gml:name>Bohrdatenbank Niedersachsen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44122_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDN</gml:identifier>
+          <gml:name>borehole database of Lower Saxony</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44123">
+      <gml:description>Bohrdatenbank Rheinland-Pfalz</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDRP</gml:identifier>
+      <gml:name>Bohrdatenbank Rheinland-Pfalz</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44123_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDRP</gml:identifier>
+          <gml:name>borehole database of Rhineland-Palatinate</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44124">
+      <gml:description>Bohrdatenbank Schleswig-Holstein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDSH</gml:identifier>
+      <gml:name>Bohrdatenbank Schleswig-Holstein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44124_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDSH</gml:identifier>
+          <gml:name>borehole database of Schleswig-Holstein</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44125">
+      <gml:description>Bohrdatenbank Sachsen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDSN</gml:identifier>
+      <gml:name>Bohrdatenbank Sachsen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44125_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDSN</gml:identifier>
+          <gml:name>borehole database of Saxony</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44126">
+      <gml:description>Bohrdatenbank Thüringen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDTH</gml:identifier>
+      <gml:name>Bohrdatenbank Thüringen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44126_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDTH</gml:identifier>
+          <gml:name>borehole database of Thuringia</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44127">
+      <gml:description>Bodeninformationssystem Bayern</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BIS-BY</gml:identifier>
+      <gml:name>Bodeninformationssystem Bayern</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44127_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BIS-BY</gml:identifier>
+          <gml:name>soil information system of Bavaria</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44128">
+      <gml:description>Datenbank der Bohrungen in Nordrhein-Westfalen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">DABO</gml:identifier>
+      <gml:name>Datenbank der Bohrungen in Nordrhein-Westfalen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44128_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">DABO</gml:identifier>
+          <gml:name>borehole database of Northrhine-Westfalia</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44129">
+      <gml:description>Kohlenwasserstoff-Datenbank Deutschland</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">KWDB</gml:identifier>
+      <gml:name>Kohlenwasserstoff-Datenbank Deutschland</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44129_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">KWDB</gml:identifier>
+          <gml:name>hydrocarbon database Germany</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44130">
+      <gml:description>Bohrdatenbank Mecklenburg-Vorpommern</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">LDBS</gml:identifier>
+      <gml:name>Bohrdatenbank Mecklenburg-Vorpommern</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44130_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">LDBS</gml:identifier>
+          <gml:name>borehole database of Mecklenburg-West Pomerania</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44131">
+      <gml:description>Bohrdatenbank Sachsen-Anhalt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">SABIS</gml:identifier>
+      <gml:name>Bohrdatenbank Sachsen-Anhalt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44131_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">SABIS</gml:identifier>
+          <gml:name>borehole database of Saxony-Anhalt</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44132">
+      <gml:description>Bohrdatenbank Brandenburg</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDBB</gml:identifier>
+      <gml:name>Bohrdatenbank Brandenburg</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44132_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDBB</gml:identifier>
+          <gml:name>borehole database of Brandenburg</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44133">
+      <gml:description>Bohrdatenbank Berlin</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDBE</gml:identifier>
+      <gml:name>Bohrdatenbank Berlin</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44133_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDBE</gml:identifier>
+          <gml:name>borehole database of Berlin</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44134">
+      <gml:description>Bohrdatenbank Saarland</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDSL</gml:identifier>
+      <gml:name>Bohrdatenbank Saarland</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44134_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDSL</gml:identifier>
+          <gml:name>borehole database of Saarland</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44135">
+      <gml:description>Bundesanstalt für Wasserbau - Bohrdatenbank</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BAWBDB</gml:identifier>
+      <gml:name>Bundesanstalt für Wasserbau - Bohrdatenbank</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44135_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BAWBDB</gml:identifier>
+          <gml:name>Federal Waterways Engineering and Research Institute - borehole database</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_9659_44136">
+      <gml:description>Bohrdatenbank Bremen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDHB</gml:identifier>
+      <gml:name>Bohrdatenbank Bremen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="_9659_44136_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">BDHB</gml:identifier>
+          <gml:name>borehole database of Bremen</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList" gml:id="DatabaseSourceList_en">
+      <gml:description>short name of the database source</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/DatabaseSourceList">DatabaseSourceList</gml:identifier>
+      <gml:name>database source</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="InstallationElementList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Art des Rohres bzw. des Ausbauelements</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">InstallationElementList</gml:identifier>
+  <gml:name>Ausbauelement</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27328">
+      <gml:description>Abschluss</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">A</gml:identifier>
+      <gml:name>Abschluss</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27328_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">A</gml:identifier>
+          <gml:name>well cover</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>33</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27329">
+      <gml:description>Aufsatzrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">AUF</gml:identifier>
+      <gml:name>Aufsatzrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27329_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">AUF</gml:identifier>
+          <gml:name>attachment pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>40</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27330">
+      <gml:description>Abschluss mit Betonplatte</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">BEPL</gml:identifier>
+      <gml:name>Abschluss mit Betonplatte</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27330_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">BEPL</gml:identifier>
+          <gml:name>concrete slab cover</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>34</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27331">
+      <gml:description>Kappe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">BK</gml:identifier>
+      <gml:name>Kappe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27331_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">BK</gml:identifier>
+          <gml:name>closure cap</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>41</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27332">
+      <gml:description>Brunnenstube</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">BS</gml:identifier>
+      <gml:name>Brunnenstube</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27332_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">BS</gml:identifier>
+          <gml:name>well chamber</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>32</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27333">
+      <gml:description>Erdwärmesonde, allg.</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EW</gml:identifier>
+      <gml:name>Erdwärmesonde, allg.</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27333_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EW</gml:identifier>
+          <gml:name>borehole heat exchanger, general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>56</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27334">
+      <gml:description>Direktverdampfer</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWDV</gml:identifier>
+      <gml:name>Direktverdampfer</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27334_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWDV</gml:identifier>
+          <gml:name>direct evaporator</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>54</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27335">
+      <gml:description>Erdwärmekorb</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWK</gml:identifier>
+      <gml:name>Erdwärmekorb</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27335_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWK</gml:identifier>
+          <gml:name>geothermal energy basket</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>53</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27336">
+      <gml:description>Erdwärmesonde CO2</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWSC</gml:identifier>
+      <gml:name>Erdwärmesonde CO2</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27336_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWSC</gml:identifier>
+          <gml:name>borehole heat exchanger, CO2</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>51</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27337">
+      <gml:description>Erdwärmesonde Koaxial</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWSK</gml:identifier>
+      <gml:name>Erdwärmesonde Koaxial</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27337_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">EWSK</gml:identifier>
+          <gml:name>borehole heat exchanger, coaxial</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>52</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27338">
+      <gml:description>Filterrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FI</gml:identifier>
+      <gml:name>Filterrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27338_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FI</gml:identifier>
+          <gml:name>filter tube</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27339">
+      <gml:description>Gewebefilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIG</gml:identifier>
+      <gml:name>Gewebefilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27339_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIG</gml:identifier>
+          <gml:name>fabric filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>28</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27340">
+      <gml:description>Körpergewebe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIGK</gml:identifier>
+      <gml:name>Körpergewebe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27340_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIGK</gml:identifier>
+          <gml:name>fabric weaves</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>29</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27341">
+      <gml:description>Tressengewebe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIGT</gml:identifier>
+      <gml:name>Tressengewebe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27341_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIGT</gml:identifier>
+          <gml:name>plain dutch weaves</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27342">
+      <gml:description>Kiesfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKI</gml:identifier>
+      <gml:name>Kiesfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27342_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKI</gml:identifier>
+          <gml:name>gravel filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27343">
+      <gml:description>Kiesbelagfilter (Filterrohr, kiesbeklebt)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKIB</gml:identifier>
+      <gml:name>Kiesbelagfilter (Filterrohr, kiesbeklebt)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27343_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKIB</gml:identifier>
+          <gml:name>gravel pasted pipe filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>24</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27344">
+      <gml:description>Kiespackungsfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKIP</gml:identifier>
+      <gml:name>Kiespackungsfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27344_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKIP</gml:identifier>
+          <gml:name>gravel pack filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>26</bmlcl:keyID>
+      <bmlcl:parentID>24</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27345">
+      <gml:description>Kiestaschenfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKIT</gml:identifier>
+      <gml:name>Kiestaschenfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27345_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIKIT</gml:identifier>
+          <gml:name>gravel pocket filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>25</bmlcl:keyID>
+      <bmlcl:parentID>24</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27346">
+      <gml:description>Filterrohr, gelocht</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FILO</gml:identifier>
+      <gml:name>Filterrohr, gelocht</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27346_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FILO</gml:identifier>
+          <gml:name>perforated filter tube</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27347">
+      <gml:description>Langlochfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FILOL</gml:identifier>
+      <gml:name>Langlochfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27347_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FILOL</gml:identifier>
+          <gml:name>oblong hole filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27348">
+      <gml:description>Rundlochfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FILOR</gml:identifier>
+      <gml:name>Rundlochfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27348_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FILOR</gml:identifier>
+          <gml:name>round-hole filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27349">
+      <gml:description>Rippenfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIRI</gml:identifier>
+      <gml:name>Rippenfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27349_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIRI</gml:identifier>
+          <gml:name>ribbed filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27350">
+      <gml:description>Filterrohr mit Schlammfang</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISG</gml:identifier>
+      <gml:name>Filterrohr mit Schlammfang</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27350_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISG</gml:identifier>
+          <gml:name>filter tube with silt trap</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>10</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27351">
+      <gml:description>Filterrohr, geschlitzt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISL</gml:identifier>
+      <gml:name>Filterrohr, geschlitzt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27351_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISL</gml:identifier>
+          <gml:name>slotted filter tube</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27352">
+      <gml:description>Schlitzbrückenfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISLB</gml:identifier>
+      <gml:name>Schlitzbrückenfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27352_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISLB</gml:identifier>
+          <gml:name>bridge slot perforation filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>10</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27353">
+      <gml:description>Langlochschlitzfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISLL</gml:identifier>
+      <gml:name>Langlochschlitzfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27353_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISLL</gml:identifier>
+          <gml:name>oblong hole slotted filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>10</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27354">
+      <gml:description>Querschlitzfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISLQ</gml:identifier>
+      <gml:name>Querschlitzfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27354_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISLQ</gml:identifier>
+          <gml:name>transverse slot filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>10</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27355">
+      <gml:description>Steinzeugfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIST</gml:identifier>
+      <gml:name>Steinzeugfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27355_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIST</gml:identifier>
+          <gml:name>stoneware filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>19</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27356">
+      <gml:description>Bitterfelder Steinzeugfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISTB</gml:identifier>
+      <gml:name>Bitterfelder Steinzeugfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27356_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISTB</gml:identifier>
+          <gml:name>Bitterfeld stoneware filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27357">
+      <gml:description>Schönebecker Steinzeug-Rippenfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISTS</gml:identifier>
+      <gml:name>Schönebecker Steinzeug-Rippenfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27357_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FISTS</gml:identifier>
+          <gml:name>Schönebeck stoneware ribbed filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27358">
+      <gml:description>Winkelfilter</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIW</gml:identifier>
+      <gml:name>Winkelfilter</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27358_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIW</gml:identifier>
+          <gml:name>angle filter</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27359">
+      <gml:description>Wickeldrahtfilter (Johnsonfilter)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIWI</gml:identifier>
+      <gml:name>Wickeldrahtfilter (Johnsonfilter)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27359_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">FIWI</gml:identifier>
+          <gml:name>steel screen filter (Johnson filter)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>23</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27360">
+      <gml:description>kein Ausbau</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">KA</gml:identifier>
+      <gml:name>kein Ausbau</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27360_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">KA</gml:identifier>
+          <gml:name>no installation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>38</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27361">
+      <gml:description>Konus</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">KON</gml:identifier>
+      <gml:name>Konus</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27361_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">KON</gml:identifier>
+          <gml:name>cone</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>42</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27362">
+      <gml:description>nicht bekannt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">NB</gml:identifier>
+      <gml:name>nicht bekannt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27362_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">NB</gml:identifier>
+          <gml:name>unknown</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>39</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27363">
+      <gml:description>Packer</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">PAK</gml:identifier>
+      <gml:name>Packer</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27363_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">PAK</gml:identifier>
+          <gml:name>packer</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>43</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27364">
+      <gml:description>Vollwandrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">RO</gml:identifier>
+      <gml:name>Vollwandrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27364_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">RO</gml:identifier>
+          <gml:name>solid wall pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27365">
+      <gml:description>Futterrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROF</gml:identifier>
+      <gml:name>Futterrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27365_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROF</gml:identifier>
+          <gml:name>lining pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27366">
+      <gml:description>Lotrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROL</gml:identifier>
+      <gml:name>Lotrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27366_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROL</gml:identifier>
+          <gml:name>monitoring pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27367">
+      <gml:description>Sperrrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROR</gml:identifier>
+      <gml:name>Sperrrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27367_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROR</gml:identifier>
+          <gml:name>sealing pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27368">
+      <gml:description>Sumpfrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROS</gml:identifier>
+      <gml:name>Sumpfrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27368_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROS</gml:identifier>
+          <gml:name>sump pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27369">
+      <gml:description>Standrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROST</gml:identifier>
+      <gml:name>Standrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27369_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROST</gml:identifier>
+          <gml:name>standpipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27370">
+      <gml:description>Schutzrohr</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROT</gml:identifier>
+      <gml:name>Schutzrohr</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27370_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROT</gml:identifier>
+          <gml:name>protective tube</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27371">
+      <gml:description>Vollwandrohr, torpediert/perforiert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROTO</gml:identifier>
+      <gml:name>Vollwandrohr, torpediert/perforiert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27371_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ROTO</gml:identifier>
+          <gml:name>solid wall pipe, perforated</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27372">
+      <gml:description>Schieber</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">RVA</gml:identifier>
+      <gml:name>Schieber</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27372_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">RVA</gml:identifier>
+          <gml:name>valve</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>44</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27373">
+      <gml:description>Schacht</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">SCHT</gml:identifier>
+      <gml:name>Schacht</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27373_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">SCHT</gml:identifier>
+          <gml:name>shaft</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>31</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27374">
+      <gml:description>Abschluss mit SEBA-Kappe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">SEBA</gml:identifier>
+      <gml:name>Abschluss mit SEBA-Kappe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27374_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">SEBA</gml:identifier>
+          <gml:name>SEBA top cover</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>35</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27375">
+      <gml:description>Sondenfuß</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">SF</gml:identifier>
+      <gml:name>Sondenfuß</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27375_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">SF</gml:identifier>
+          <gml:name>probe foot</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>45</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27376">
+      <gml:description>Steigleitung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STL</gml:identifier>
+      <gml:name>Steigleitung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27376_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STL</gml:identifier>
+          <gml:name>riser pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>46</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27377">
+      <gml:description>Steigleitung, nass</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STLN</gml:identifier>
+      <gml:name>Steigleitung, nass</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27377_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STLN</gml:identifier>
+          <gml:name>wet riser pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>57</bmlcl:keyID>
+      <bmlcl:parentID>46</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27378">
+      <gml:description>Steigleitung, trocken</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STLTR</gml:identifier>
+      <gml:name>Steigleitung, trocken</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27378_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STLTR</gml:identifier>
+          <gml:name>dry riser pipe</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>58</bmlcl:keyID>
+      <bmlcl:parentID>46</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27379">
+      <gml:description>Abschluss mit Stahldeckel/Stahlplatte</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STPL</gml:identifier>
+      <gml:name>Abschluss mit Stahldeckel/Stahlplatte</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27379_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">STPL</gml:identifier>
+          <gml:name>steel plate cover</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>37</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27380">
+      <gml:description>Übergangsstück</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">UEB</gml:identifier>
+      <gml:name>Übergangsstück</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27380_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">UEB</gml:identifier>
+          <gml:name>transition element</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>47</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27381">
+      <gml:description>U-Sonde</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">US</gml:identifier>
+      <gml:name>U-Sonde</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27381_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">US</gml:identifier>
+          <gml:name>u-tube</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>48</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27382">
+      <gml:description>Doppel-U-Sonde</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">US2</gml:identifier>
+      <gml:name>Doppel-U-Sonde</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27382_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">US2</gml:identifier>
+          <gml:name>doubled u-tube</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>49</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27383">
+      <gml:description>Unterwassermotorpumpe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">UWM</gml:identifier>
+      <gml:name>Unterwassermotorpumpe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27383_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">UWM</gml:identifier>
+          <gml:name>submersible pump</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>55</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27384">
+      <gml:description>Abschluss verengt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">V</gml:identifier>
+      <gml:name>Abschluss verengt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27384_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">V</gml:identifier>
+          <gml:name>narrowed top element</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>36</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6347_27385">
+      <gml:description>Zentrierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ZEN</gml:identifier>
+      <gml:name>Zentrierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="_6347_27385_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">ZEN</gml:identifier>
+          <gml:name>centering</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>50</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList" gml:id="InstallationElementList_en">
+      <gml:description>type of the casing tube or the installation element</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/InstallationElementList">InstallationElementList</gml:identifier>
+      <gml:name>installation element</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

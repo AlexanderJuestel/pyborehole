@@ -1,0 +1,1936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="GenesisList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Bildungsbedingungen</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">GenesisList</gml:identifier>
+  <gml:name>Genese</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27544">
+      <gml:description>aquatisch-klastisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ak</gml:identifier>
+      <gml:name>aquatisch-klastisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27544_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ak</gml:identifier>
+          <gml:name>aquatic-clastic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27545">
+      <gml:description>seismitisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">akse</gml:identifier>
+      <gml:name>seismitisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27545_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">akse</gml:identifier>
+          <gml:name>seismic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>136</bmlcl:keyID>
+      <bmlcl:parentID>15</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27546">
+      <gml:description>tempestitisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">akte</gml:identifier>
+      <gml:name>tempestitisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27546_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">akte</gml:identifier>
+          <gml:name>tempestitic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>15</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27547">
+      <gml:description>turbiditisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">aktu</gml:identifier>
+      <gml:name>turbiditisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27547_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">aktu</gml:identifier>
+          <gml:name>turbitic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>15</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27548">
+      <gml:description>Alteration</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">al</gml:identifier>
+      <gml:name>Alteration</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27548_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">al</gml:identifier>
+          <gml:name>alteration</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>132</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27549">
+      <gml:description>Kaolinisierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">alka</gml:identifier>
+      <gml:name>Kaolinisierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27549_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">alka</gml:identifier>
+          <gml:name>kaolinization</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>141</bmlcl:keyID>
+      <bmlcl:parentID>132</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27550">
+      <gml:description>allochthon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">allo</gml:identifier>
+      <gml:name>allochthon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27550_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">allo</gml:identifier>
+          <gml:name>allochthonous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>152</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27551">
+      <gml:description>anthropogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">anth</gml:identifier>
+      <gml:name>anthropogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27551_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">anth</gml:identifier>
+          <gml:name>anthropogenic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27552">
+      <gml:description>äolisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ao</gml:identifier>
+      <gml:name>äolisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27552_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ao</gml:identifier>
+          <gml:name>aeolian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27553">
+      <gml:description>autochthon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">auto</gml:identifier>
+      <gml:name>autochthon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27553_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">auto</gml:identifier>
+          <gml:name>autochthonous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>151</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27554">
+      <gml:description>biogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bi</gml:identifier>
+      <gml:name>biogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27554_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bi</gml:identifier>
+          <gml:name>biogenic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>54</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27641">
+      <gml:description>vulkanisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vu</gml:identifier>
+      <gml:name>vulkanisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27641_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vu</gml:identifier>
+          <gml:name>volcanic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>117</bmlcl:keyID>
+      <bmlcl:parentID>116</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27642">
+      <gml:description>effusiv</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuef</gml:identifier>
+      <gml:name>effusiv</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27642_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuef</gml:identifier>
+          <gml:name>effusive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>119</bmlcl:keyID>
+      <bmlcl:parentID>117</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27643">
+      <gml:description>exhalativ</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vueh</gml:identifier>
+      <gml:name>exhalativ</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27643_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vueh</gml:identifier>
+          <gml:name>exhalative</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>125</bmlcl:keyID>
+      <bmlcl:parentID>117</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27644">
+      <gml:description>ejektiv</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuej</gml:identifier>
+      <gml:name>ejektiv</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27644_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuej</gml:identifier>
+          <gml:name>ejective</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>120</bmlcl:keyID>
+      <bmlcl:parentID>117</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27645">
+      <gml:description>explosiv</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuex</gml:identifier>
+      <gml:name>explosiv</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27645_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuex</gml:identifier>
+          <gml:name>explosive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>121</bmlcl:keyID>
+      <bmlcl:parentID>117</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27646">
+      <gml:description>ignimbritisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuig</gml:identifier>
+      <gml:name>ignimbritisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27646_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuig</gml:identifier>
+          <gml:name>ignimbritic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>124</bmlcl:keyID>
+      <bmlcl:parentID>117</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27647">
+      <gml:description>phreatomagmatisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuph</gml:identifier>
+      <gml:name>phreatomagmatisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27647_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vuph</gml:identifier>
+          <gml:name>phreatomagmatic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>123</bmlcl:keyID>
+      <bmlcl:parentID>121</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27648">
+      <gml:description>pyroklastisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vupy</gml:identifier>
+      <gml:name>pyroklastisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27648_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vupy</gml:identifier>
+          <gml:name>pyroclastic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>122</bmlcl:keyID>
+      <bmlcl:parentID>121</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27649">
+      <gml:description>Staukuppenbildung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vusk</gml:identifier>
+      <gml:name>Staukuppenbildung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27649_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vusk</gml:identifier>
+          <gml:name>plug dome formation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>118</bmlcl:keyID>
+      <bmlcl:parentID>117</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27650">
+      <gml:description>Impaktzerrüttung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zeim</gml:identifier>
+      <gml:name>Impaktzerrüttung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27650_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zeim</gml:identifier>
+          <gml:name>impact disintegration</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>91</bmlcl:keyID>
+      <bmlcl:parentID>85</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27651">
+      <gml:description>Zementation</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zem</gml:identifier>
+      <gml:name>Zementation</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27651_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zem</gml:identifier>
+          <gml:name>cementation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>67</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27652">
+      <gml:description>Zerrüttung (zerrütet)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zer</gml:identifier>
+      <gml:name>Zerrüttung (zerrütet)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27652_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zer</gml:identifier>
+          <gml:name>disintegration</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>85</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27653">
+      <gml:description>tektonische Zerrüttung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zete</gml:identifier>
+      <gml:name>tektonische Zerrüttung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27653_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zete</gml:identifier>
+          <gml:name>tectonic disintegration</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>90</bmlcl:keyID>
+      <bmlcl:parentID>85</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27654">
+      <gml:description>Kataklase</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zetk</gml:identifier>
+      <gml:name>Kataklase</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27654_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zetk</gml:identifier>
+          <gml:name>cataclasis</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>147</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27655">
+      <gml:description>Mylonitisierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zetm</gml:identifier>
+      <gml:name>Mylonitisierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27655_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zetm</gml:identifier>
+          <gml:name>mylonitization</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>148</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27656">
+      <gml:description>vulkanotektonische Zerrüttung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zevt</gml:identifier>
+      <gml:name>vulkanotektonische Zerrüttung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27656_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">zevt</gml:identifier>
+          <gml:name>volcano-tectonic disintegration</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>92</bmlcl:keyID>
+      <bmlcl:parentID>85</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27555">
+      <gml:description>phytogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">biph</gml:identifier>
+      <gml:name>phytogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27555_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">biph</gml:identifier>
+          <gml:name>phytogenic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>56</bmlcl:keyID>
+      <bmlcl:parentID>54</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27556">
+      <gml:description>sedentär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bise</gml:identifier>
+      <gml:name>sedentär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27556_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bise</gml:identifier>
+          <gml:name>sedentic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>57</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27557">
+      <gml:description>bioturbat</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bitu</gml:identifier>
+      <gml:name>bioturbat</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27557_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bitu</gml:identifier>
+          <gml:name>bioturbated</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>150</bmlcl:keyID>
+      <bmlcl:parentID>55</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27558">
+      <gml:description>zoogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bizo</gml:identifier>
+      <gml:name>zoogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27558_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">bizo</gml:identifier>
+          <gml:name>zoogenic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>55</bmlcl:keyID>
+      <bmlcl:parentID>54</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27559">
+      <gml:description>brackisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">brack</gml:identifier>
+      <gml:name>brackisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27559_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">brack</gml:identifier>
+          <gml:name>brackish</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>164</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27560">
+      <gml:description>chemisch-sedimentär (z.T.biogen)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">cs</gml:identifier>
+      <gml:name>chemisch-sedimentär (z.T.biogen)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27560_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">cs</gml:identifier>
+          <gml:name>chemical-sedimentary (partly biogenic)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>51</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27561">
+      <gml:description>evaporitisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">csev</gml:identifier>
+      <gml:name>evaporitisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27561_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">csev</gml:identifier>
+          <gml:name>evaporitic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>53</bmlcl:keyID>
+      <bmlcl:parentID>51</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27562">
+      <gml:description>präzipitär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">cspz</gml:identifier>
+      <gml:name>präzipitär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27562_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">cspz</gml:identifier>
+          <gml:name>precipitate</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>52</bmlcl:keyID>
+      <bmlcl:parentID>51</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27563">
+      <gml:description>Dedolomitisierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dedo</gml:identifier>
+      <gml:name>Dedolomitisierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27563_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dedo</gml:identifier>
+          <gml:name>dedolomitization</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>69</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27564">
+      <gml:description>Diagenese (diagenetisch)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dia</gml:identifier>
+      <gml:name>Diagenese (diagenetisch)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27564_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dia</gml:identifier>
+          <gml:name>diagenesis (diagenetic)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>61</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27565">
+      <gml:description>distal</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dist</gml:identifier>
+      <gml:name>distal</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27565_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dist</gml:identifier>
+          <gml:name>distal</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>153</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27566">
+      <gml:description>Dolomitisierung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dol</gml:identifier>
+      <gml:name>Dolomitisierung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27566_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">dol</gml:identifier>
+          <gml:name>dolomitization</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>68</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27567">
+      <gml:description>endogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">endo</gml:identifier>
+      <gml:name>endogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27567_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">endo</gml:identifier>
+          <gml:name>endogenous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>156</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27568">
+      <gml:description>exogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">exo</gml:identifier>
+      <gml:name>exogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27568_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">exo</gml:identifier>
+          <gml:name>exogenous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>155</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27569">
+      <gml:description>fluvial</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">fl</gml:identifier>
+      <gml:name>fluvial</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27569_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">fl</gml:identifier>
+          <gml:name>fluvial</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27570">
+      <gml:description>glazigen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">gl</gml:identifier>
+      <gml:name>glazigen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27570_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">gl</gml:identifier>
+          <gml:name>glacial</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27571">
+      <gml:description>Imprägnation</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">imp</gml:identifier>
+      <gml:name>Imprägnation</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27571_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">imp</gml:identifier>
+          <gml:name>impregnation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>73</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27572">
+      <gml:description>Inkohlung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ink</gml:identifier>
+      <gml:name>Inkohlung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27572_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ink</gml:identifier>
+          <gml:name>coalification</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>72</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27573">
+      <gml:description>impakt-sedimentär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">is</gml:identifier>
+      <gml:name>impakt-sedimentär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27573_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">is</gml:identifier>
+          <gml:name>impact-sedimentary</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>50</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27574">
+      <gml:description>klastisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">kla</gml:identifier>
+      <gml:name>klastisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27574_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">kla</gml:identifier>
+          <gml:name>clastic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27575">
+      <gml:description>Kompaktion</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ko</gml:identifier>
+      <gml:name>Kompaktion</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27575_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ko</gml:identifier>
+          <gml:name>compaction</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>62</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27576">
+      <gml:description>Konkretionsbildung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">kon</gml:identifier>
+      <gml:name>Konkretionsbildung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27576_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">kon</gml:identifier>
+          <gml:name>concretion formation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>71</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27577">
+      <gml:description>Kristallisation</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">kri</gml:identifier>
+      <gml:name>Kristallisation</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27577_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">kri</gml:identifier>
+          <gml:name>crystallization</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>66</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27578">
+      <gml:description>limnisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">li</gml:identifier>
+      <gml:name>limnisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27578_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">li</gml:identifier>
+          <gml:name>limnic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27579">
+      <gml:description>Gesteinslösung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">lo</gml:identifier>
+      <gml:name>Gesteinslösung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27579_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">lo</gml:identifier>
+          <gml:name>rock dissolution</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>75</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27580">
+      <gml:description>Drucklösung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">lodr</gml:identifier>
+      <gml:name>Drucklösung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27580_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">lodr</gml:identifier>
+          <gml:name>pressure dissolution</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>76</bmlcl:keyID>
+      <bmlcl:parentID>75</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27581">
+      <gml:description>Gipsauslaugung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">logi</gml:identifier>
+      <gml:name>Gipsauslaugung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27581_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">logi</gml:identifier>
+          <gml:name>gypsum lixiviation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>77</bmlcl:keyID>
+      <bmlcl:parentID>75</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27582">
+      <gml:description>Salzauslaugung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">losa</gml:identifier>
+      <gml:name>Salzauslaugung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27582_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">losa</gml:identifier>
+          <gml:name>salt lixiviation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>78</bmlcl:keyID>
+      <bmlcl:parentID>75</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27583">
+      <gml:description>Magmatismus (magmatisch)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mag</gml:identifier>
+      <gml:name>Magmatismus (magmatisch)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27583_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mag</gml:identifier>
+          <gml:name>magmatism (magmatic)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>116</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27584">
+      <gml:description>marin</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mar</gml:identifier>
+      <gml:name>marin</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27584_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mar</gml:identifier>
+          <gml:name>marine</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>160</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27585">
+      <gml:description>litoral</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mlt</gml:identifier>
+      <gml:name>litoral</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27585_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mlt</gml:identifier>
+          <gml:name>littoral</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>163</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27586">
+      <gml:description>neritisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mner</gml:identifier>
+      <gml:name>neritisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27586_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mner</gml:identifier>
+          <gml:name>neritic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>161</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27587">
+      <gml:description>Riff</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mrif</gml:identifier>
+      <gml:name>Riff</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27587_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mrif</gml:identifier>
+          <gml:name>reef</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>162</bmlcl:keyID>
+      <bmlcl:parentID>161</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27588">
+      <gml:description>hydrothermal-metasomatisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mshy</gml:identifier>
+      <gml:name>hydrothermal-metasomatisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27588_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mshy</gml:identifier>
+          <gml:name>hydrothermal-metasomatic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>114</bmlcl:keyID>
+      <bmlcl:parentID>113</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27589">
+      <gml:description>kontaktmetasomatisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mskt</gml:identifier>
+      <gml:name>kontaktmetasomatisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27589_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mskt</gml:identifier>
+          <gml:name>contact-metasomatic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>115</bmlcl:keyID>
+      <bmlcl:parentID>113</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27590">
+      <gml:description>Metasomatose (metasomatisch)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mso</gml:identifier>
+      <gml:name>Metasomatose (metasomatisch)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27590_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">mso</gml:identifier>
+          <gml:name>metasomatism (metasomatic)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>113</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27591">
+      <gml:description>nival</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">niv</gml:identifier>
+      <gml:name>nival</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27591_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">niv</gml:identifier>
+          <gml:name>nival</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>138</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27592">
+      <gml:description>palustrisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pal</gml:identifier>
+      <gml:name>palustrisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27592_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pal</gml:identifier>
+          <gml:name>palustrine</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>166</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27593">
+      <gml:description>pedogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pe</gml:identifier>
+      <gml:name>pedogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27593_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pe</gml:identifier>
+          <gml:name>pedogenic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>80</bmlcl:keyID>
+      <bmlcl:parentID>79</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27594">
+      <gml:description>in situ verwittert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">peis</gml:identifier>
+      <gml:name>in situ verwittert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27594_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">peis</gml:identifier>
+          <gml:name>in situ weathering</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>81</bmlcl:keyID>
+      <bmlcl:parentID>80</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27595">
+      <gml:description>pedogen verlagert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pevl</gml:identifier>
+      <gml:name>pedogen verlagert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27595_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pevl</gml:identifier>
+          <gml:name>pedogenic dislocation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>82</bmlcl:keyID>
+      <bmlcl:parentID>80</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27596">
+      <gml:description>plutonisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pl</gml:identifier>
+      <gml:name>plutonisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27596_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">pl</gml:identifier>
+          <gml:name>plutonic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>127</bmlcl:keyID>
+      <bmlcl:parentID>116</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27597">
+      <gml:description>hydrothermal</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plhy</gml:identifier>
+      <gml:name>hydrothermal</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27597_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plhy</gml:identifier>
+          <gml:name>hydrothermal</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>131</bmlcl:keyID>
+      <bmlcl:parentID>128</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27598">
+      <gml:description>liquidmagmatisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plli</gml:identifier>
+      <gml:name>liquidmagmatisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27598_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plli</gml:identifier>
+          <gml:name>liquid-magmatic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>129</bmlcl:keyID>
+      <bmlcl:parentID>128</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27599">
+      <gml:description>pegmatitisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plpe</gml:identifier>
+      <gml:name>pegmatitisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27599_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plpe</gml:identifier>
+          <gml:name>pegmatitic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>128</bmlcl:keyID>
+      <bmlcl:parentID>127</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27600">
+      <gml:description>pneumatolytisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plpn</gml:identifier>
+      <gml:name>pneumatolytisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27600_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">plpn</gml:identifier>
+          <gml:name>pneumatolytic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>130</bmlcl:keyID>
+      <bmlcl:parentID>128</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27601">
+      <gml:description>proximal</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">prox</gml:identifier>
+      <gml:name>proximal</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27601_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">prox</gml:identifier>
+          <gml:name>proximal</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>154</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27602">
+      <gml:description>reliktisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">rel</gml:identifier>
+      <gml:name>reliktisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27602_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">rel</gml:identifier>
+          <gml:name>relictal</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>84</bmlcl:keyID>
+      <bmlcl:parentID>79</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27603">
+      <gml:description>residual</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">res</gml:identifier>
+      <gml:name>residual</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27603_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">res</gml:identifier>
+          <gml:name>residual</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>83</bmlcl:keyID>
+      <bmlcl:parentID>79</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27604">
+      <gml:description>Sedimentation (sedimentär)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">sed</gml:identifier>
+      <gml:name>Sedimentation (sedimentär)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27604_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">sed</gml:identifier>
+          <gml:name>sedimentation (sedimentary)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27605">
+      <gml:description>speläogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">sp</gml:identifier>
+      <gml:name>speläogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27605_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">sp</gml:identifier>
+          <gml:name>speleogene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>58</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27606">
+      <gml:description>speläoklastisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">spkl</gml:identifier>
+      <gml:name>speläoklastisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27606_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">spkl</gml:identifier>
+          <gml:name>speleo-clastic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>59</bmlcl:keyID>
+      <bmlcl:parentID>58</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27607">
+      <gml:description>speläopräzipitär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">sppz</gml:identifier>
+      <gml:name>speläopräzipitär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27607_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">sppz</gml:identifier>
+          <gml:name>speleo-precipitated</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>60</bmlcl:keyID>
+      <bmlcl:parentID>58</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27608">
+      <gml:description>Süßwassermilieu</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">suess</gml:identifier>
+      <gml:name>Süßwassermilieu</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27608_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">suess</gml:identifier>
+          <gml:name>fresh-water environment</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>165</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27609">
+      <gml:description>subvulkanisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">suv</gml:identifier>
+      <gml:name>subvulkanisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27609_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">suv</gml:identifier>
+          <gml:name>subvolcanic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>126</bmlcl:keyID>
+      <bmlcl:parentID>116</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27610">
+      <gml:description>terrestrisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">t</gml:identifier>
+      <gml:name>terrestrisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27610_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">t</gml:identifier>
+          <gml:name>terrestrial</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>158</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27611">
+      <gml:description>tidal</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tid</gml:identifier>
+      <gml:name>tidal</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27611_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tid</gml:identifier>
+          <gml:name>tidal</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>137</bmlcl:keyID>
+      <bmlcl:parentID>15</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27612">
+      <gml:description>terrestrisch bis marin</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tm</gml:identifier>
+      <gml:name>terrestrisch bis marin</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27612_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tm</gml:identifier>
+          <gml:name>terrestrial-marine</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>159</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27613">
+      <gml:description>periglazial</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tpg</gml:identifier>
+      <gml:name>periglazial</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27613_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tpg</gml:identifier>
+          <gml:name>periglacial</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>157</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27614">
+      <gml:description>terrestrisch umgelagert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tu</gml:identifier>
+      <gml:name>terrestrisch umgelagert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27614_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tu</gml:identifier>
+          <gml:name>terrestrially relocated</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27615">
+      <gml:description>erosiv</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tue</gml:identifier>
+      <gml:name>erosiv</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27615_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tue</gml:identifier>
+          <gml:name>erosive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>142</bmlcl:keyID>
+      <bmlcl:parentID>30</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27616">
+      <gml:description>gravitativ</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tugr</gml:identifier>
+      <gml:name>gravitativ</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27616_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tugr</gml:identifier>
+          <gml:name>gravitative</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>40</bmlcl:keyID>
+      <bmlcl:parentID>30</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27617">
+      <gml:description>kryogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tukg</gml:identifier>
+      <gml:name>kryogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27617_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tukg</gml:identifier>
+          <gml:name>cryogenic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>31</bmlcl:keyID>
+      <bmlcl:parentID>30</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27618">
+      <gml:description>solifluktiv</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tusf</gml:identifier>
+      <gml:name>solifluktiv</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27618_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tusf</gml:identifier>
+          <gml:name>solifluctive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>32</bmlcl:keyID>
+      <bmlcl:parentID>30</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27619">
+      <gml:description>verspült</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tuvs</gml:identifier>
+      <gml:name>verspült</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27619_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">tuvs</gml:identifier>
+          <gml:name>water eroded</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>48</bmlcl:keyID>
+      <bmlcl:parentID>30</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27620">
+      <gml:description>Metamorphose (metamorph)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">u</gml:identifier>
+      <gml:name>Metamorphose (metamorph)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27620_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">u</gml:identifier>
+          <gml:name>metamorphism (metamorphic)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>93</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27621">
+      <gml:description>anchimetamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uan</gml:identifier>
+      <gml:name>anchimetamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27621_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uan</gml:identifier>
+          <gml:name>anchimetamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>94</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27622">
+      <gml:description>anatektisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uana</gml:identifier>
+      <gml:name>anatektisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27622_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uana</gml:identifier>
+          <gml:name>anatectic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>108</bmlcl:keyID>
+      <bmlcl:parentID>107</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27623">
+      <gml:description>Impaktmetamorphose (impaktmetamorph)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uim</gml:identifier>
+      <gml:name>Impaktmetamorphose (impaktmetamorph)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27623_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uim</gml:identifier>
+          <gml:name>impact metamorphism (impact metamorphic)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>112</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27624">
+      <gml:description>kinetometamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uki</gml:identifier>
+      <gml:name>kinetometamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27624_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uki</gml:identifier>
+          <gml:name>kinetometamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>95</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27625">
+      <gml:description>kontaktmetamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uko</gml:identifier>
+      <gml:name>kontaktmetamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27625_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uko</gml:identifier>
+          <gml:name>contact metamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>96</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27626">
+      <gml:description>migmatitisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">umig</gml:identifier>
+      <gml:name>migmatitisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27626_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">umig</gml:identifier>
+          <gml:name>burial metamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>107</bmlcl:keyID>
+      <bmlcl:parentID>106</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27627">
+      <gml:description>ultrametamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">umm</gml:identifier>
+      <gml:name>ultrametamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27627_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">umm</gml:identifier>
+          <gml:name>ultra metamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>106</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27628">
+      <gml:description>unbestimmt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">unb</gml:identifier>
+      <gml:name>unbestimmt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27628_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">unb</gml:identifier>
+          <gml:name>undetermined</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27629">
+      <gml:description>palingenetisch</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">upal</gml:identifier>
+      <gml:name>palingenetisch</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27629_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">upal</gml:identifier>
+          <gml:name>palingenetic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>111</bmlcl:keyID>
+      <bmlcl:parentID>107</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27630">
+      <gml:description>regionalmetamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ur</gml:identifier>
+      <gml:name>regionalmetamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27630_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ur</gml:identifier>
+          <gml:name>regional metamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>97</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27631">
+      <gml:description>retrometamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ure</gml:identifier>
+      <gml:name>retrometamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27631_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">ure</gml:identifier>
+          <gml:name>retro metamorphic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>105</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27632">
+      <gml:description>versenkungsmetamorph</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uve</gml:identifier>
+      <gml:name>versenkungsmetamorph</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27632_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">uve</gml:identifier>
+          <gml:name>countersink metamorphism</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>104</bmlcl:keyID>
+      <bmlcl:parentID>93</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27633">
+      <gml:description>Vergipsung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verg</gml:identifier>
+      <gml:name>Vergipsung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27633_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verg</gml:identifier>
+          <gml:name>gypsification</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>74</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27634">
+      <gml:description>Verkieselung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verk</gml:identifier>
+      <gml:name>Verkieselung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27634_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verk</gml:identifier>
+          <gml:name>silicification</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>70</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27635">
+      <gml:description>Verlehmung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verl</gml:identifier>
+      <gml:name>Verlehmung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27635_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verl</gml:identifier>
+          <gml:name>loamification</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>139</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27636">
+      <gml:description>Verockerung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vero</gml:identifier>
+      <gml:name>Verockerung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27636_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vero</gml:identifier>
+          <gml:name>iron hydroxidation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>140</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27637">
+      <gml:description>Verwitterung (verwittert)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verw</gml:identifier>
+      <gml:name>Verwitterung (verwittert)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27637_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">verw</gml:identifier>
+          <gml:name>weathering</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>79</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27638">
+      <gml:description>vulkanosedimentär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vs</gml:identifier>
+      <gml:name>vulkanosedimentär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27638_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vs</gml:identifier>
+          <gml:name>volcano-sedimentary</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>49</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27639">
+      <gml:description>agglomeriert</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vsag</gml:identifier>
+      <gml:name>agglomeriert</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27639_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vsag</gml:identifier>
+          <gml:name>agglomerated</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>167</bmlcl:keyID>
+      <bmlcl:parentID>49</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6351_27640">
+      <gml:description>Laharbildung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vsla</gml:identifier>
+      <gml:name>Laharbildung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="_6351_27640_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">vsla</gml:identifier>
+          <gml:name>lahar formation</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>133</bmlcl:keyID>
+      <bmlcl:parentID>49</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList" gml:id="GenesisList_en">
+      <gml:description>genesis of stratigraphic horizon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/GenesisList">GenesisList</gml:identifier>
+      <gml:name>genesis</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

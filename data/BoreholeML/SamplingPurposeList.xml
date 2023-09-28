@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="SamplingPurposeList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Art der (vorgesehenen) Untersuchungen an einer Probe</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">SamplingPurposeList</gml:identifier>
+  <gml:name>Beprobungszweck</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26375">
+      <gml:description>Absolute Altersbestimmung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">AA</gml:identifier>
+      <gml:name>Absolute Altersbestimmung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26375_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">AA</gml:identifier>
+          <gml:name>absolute age detection</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26376">
+      <gml:description>Archäologische Untersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">AR</gml:identifier>
+      <gml:name>Archäologische Untersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26376_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">AR</gml:identifier>
+          <gml:name>archaeological analysis</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>44</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26377">
+      <gml:description>Belegprobe / Kernlager</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">BEL</gml:identifier>
+      <gml:name>Belegprobe / Kernlager</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26377_en">
+          <gml:description>proof stored</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">BEL</gml:identifier>
+          <gml:name>proof sample, core repository</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>46</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26378">
+      <gml:description>Bodenkundliche Untersuchung, allgemein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">BK</gml:identifier>
+      <gml:name>Bodenkundliche Untersuchung, allgemein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26378_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">BK</gml:identifier>
+          <gml:name>soilscientific analyses in general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26379">
+      <gml:description>Geochemische Untersuchung, allgemein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">GC</gml:identifier>
+      <gml:name>Geochemische Untersuchung, allgemein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26379_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">GC</gml:identifier>
+          <gml:name>geochemical analyses in general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26380">
+      <gml:description>Geophysikalische Untersuchung, allgemein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">GP</gml:identifier>
+      <gml:name>Geophysikalische Untersuchung, allgemein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26380_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">GP</gml:identifier>
+          <gml:name>geophysical analyses in general</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26381">
+      <gml:description>Ingenieurgeologisch/Geotechnische Untersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">GT</gml:identifier>
+      <gml:name>Ingenieurgeologisch/Geotechnische Untersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26381_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">GT</gml:identifier>
+          <gml:name>engineering geology</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26382">
+      <gml:description>Hydrogeologische Untersuchungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">HY</gml:identifier>
+      <gml:name>Hydrogeologische Untersuchungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26382_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">HY</gml:identifier>
+          <gml:name>hydrogeological analyses</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26383">
+      <gml:description>Mineralogische und Petrographische Untersuchungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">MN</gml:identifier>
+      <gml:name>Mineralogische und Petrographische Untersuchungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26383_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">MN</gml:identifier>
+          <gml:name>mineralogical and petrographical analyses</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26384">
+      <gml:description>Paläontologische Untersuchungen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">PA</gml:identifier>
+      <gml:name>Paläontologische Untersuchungen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26384_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">PA</gml:identifier>
+          <gml:name>paleontological analyses</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26385">
+      <gml:description>Rohstoffgeologische Untersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">ROH</gml:identifier>
+      <gml:name>Rohstoffgeologische Untersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26385_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">ROH</gml:identifier>
+          <gml:name>mineral resources</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>41</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26386">
+      <gml:description>sonstige Untersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">SON</gml:identifier>
+      <gml:name>sonstige Untersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26386_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">SON</gml:identifier>
+          <gml:name>other purpose</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>45</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26387">
+      <gml:description>Petrophysikalische Untersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">SPH</gml:identifier>
+      <gml:name>Petrophysikalische Untersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26387_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">SPH</gml:identifier>
+          <gml:name>petrophysical analysis</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>42</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26388">
+      <gml:description>Untersuchungen zur technischen Verwendbarkeit</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">TV</gml:identifier>
+      <gml:name>Untersuchungen zur technischen Verwendbarkeit</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26388_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">TV</gml:identifier>
+          <gml:name>technical usability analyses</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>40</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6328_26389">
+      <gml:description>Wasseruntersuchung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">WU</gml:identifier>
+      <gml:name>Wasseruntersuchung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="_6328_26389_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">WU</gml:identifier>
+          <gml:name>water analysis</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>43</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList" gml:id="SamplingPurposeList_en">
+      <gml:description>sampling purpose</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/SamplingPurposeList">SamplingPurposeList</gml:identifier>
+      <gml:name>sampling purpose</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

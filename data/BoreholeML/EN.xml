@@ -1,0 +1,8 @@
+<gmd:PT_Locale id="EN" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"> 
+	<gmd:languageCode> 
+		<gmd:LanguageCode codeListValue="eng" codeList="http://www.infogeo.de/boreholeml/3.0/codelists/LanguageCode.xml">English</gmd:LanguageCode> 
+	</gmd:languageCode> 
+	<gmd:characterEncoding> 
+		<gmd:MD_CharacterSetCode codeListValue="utf8" codeList="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">UTF8</gmd:MD_CharacterSetCode> 
+	</gmd:characterEncoding> 
+</gmd:PT_Locale> 

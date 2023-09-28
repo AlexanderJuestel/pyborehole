@@ -1,0 +1,2253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="ChronoStratigraphyList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>chronostratigraphische Einstufung der Schicht</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">ChronoStratigraphyList</gml:identifier>
+  <gml:name>Chronostratigraphie</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30184">
+      <gml:description>Ordovizium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O</gml:identifier>
+      <gml:name>Ordovizium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30184_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O</gml:identifier>
+          <gml:name>Ordovician</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>99</bmlcl:keyID>
+      <bmlcl:parentID>59</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>0,146,112</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30185">
+      <gml:description>Kambrium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Cb</gml:identifier>
+      <gml:name>Kambrium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30185_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Cb</gml:identifier>
+          <gml:name>Cambrian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>110</bmlcl:keyID>
+      <bmlcl:parentID>59</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>127,160,86</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30186">
+      <gml:description>Ediacarium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NPIII</gml:identifier>
+      <gml:name>Ediacarium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30186_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NPIII</gml:identifier>
+          <gml:name>Ediacaran</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>116</bmlcl:keyID>
+      <bmlcl:parentID>115</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,230,128</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30187">
+      <gml:description>Kryogenium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NPII</gml:identifier>
+      <gml:name>Kryogenium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30187_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NPII</gml:identifier>
+          <gml:name>Cryogenian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>117</bmlcl:keyID>
+      <bmlcl:parentID>115</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,217,115</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30188">
+      <gml:description>Tonium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NPI</gml:identifier>
+      <gml:name>Tonium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30188_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NPI</gml:identifier>
+          <gml:name>Tonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>118</bmlcl:keyID>
+      <bmlcl:parentID>115</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>254,191,89</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30189">
+      <gml:description>Holozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q2</gml:identifier>
+      <gml:name>Holozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30189_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q2</gml:identifier>
+          <gml:name>Holocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>3</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>254,242,224</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30190">
+      <gml:description>Pleistozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1</gml:identifier>
+      <gml:name>Pleistozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30190_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1</gml:identifier>
+          <gml:name>Pleistocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>3</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,255,153</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30191">
+      <gml:description>Neogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">N</gml:identifier>
+      <gml:name>Neogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30191_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">N</gml:identifier>
+          <gml:name>Neogene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,230,25</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30192">
+      <gml:description>Paläogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E</gml:identifier>
+      <gml:name>Paläogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30192_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E</gml:identifier>
+          <gml:name>Paleogene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>253,154,82</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30193">
+      <gml:description>Oberkreide</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2</gml:identifier>
+      <gml:name>Oberkreide</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30193_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2</gml:identifier>
+          <gml:name>Upper Cretaceous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>19</bmlcl:keyID>
+      <bmlcl:parentID>18</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>166,216,74</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30194">
+      <gml:description>Unterkreide</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1</gml:identifier>
+      <gml:name>Unterkreide</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30194_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1</gml:identifier>
+          <gml:name>Lower Cretaceous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>26</bmlcl:keyID>
+      <bmlcl:parentID>18</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>140,205,87</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30195">
+      <gml:description>Oberjura</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3</gml:identifier>
+      <gml:name>Oberjura</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30195_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3</gml:identifier>
+          <gml:name>Upper Jurassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>34</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>52,178,201</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30196">
+      <gml:description>Mitteljura</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2</gml:identifier>
+      <gml:name>Mitteljura</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30196_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2</gml:identifier>
+          <gml:name>Middle Jurassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>38</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>128,207,216</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30197">
+      <gml:description>Unterjura</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1</gml:identifier>
+      <gml:name>Unterjura</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30197_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1</gml:identifier>
+          <gml:name>Lower Jurassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>43</bmlcl:keyID>
+      <bmlcl:parentID>33</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>66,174,208</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30198">
+      <gml:description>Obertrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3</gml:identifier>
+      <gml:name>Obertrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30198_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3</gml:identifier>
+          <gml:name>Upper Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>49</bmlcl:keyID>
+      <bmlcl:parentID>48</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>189,140,195</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30199">
+      <gml:description>Mitteltrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T2</gml:identifier>
+      <gml:name>Mitteltrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30199_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T2</gml:identifier>
+          <gml:name>Middle Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>53</bmlcl:keyID>
+      <bmlcl:parentID>48</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>177,104,177</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30200">
+      <gml:description>Untertrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T1</gml:identifier>
+      <gml:name>Untertrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30200_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T1</gml:identifier>
+          <gml:name>Lower Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>56</bmlcl:keyID>
+      <bmlcl:parentID>48</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>152,57,153</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30201">
+      <gml:description>Lopingium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P3</gml:identifier>
+      <gml:name>Lopingium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30201_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P3</gml:identifier>
+          <gml:name>Lopingian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>61</bmlcl:keyID>
+      <bmlcl:parentID>60</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>251,167,148</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30202">
+      <gml:description>Guadalupium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2</gml:identifier>
+      <gml:name>Guadalupium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30202_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2</gml:identifier>
+          <gml:name>Guadalupian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>64</bmlcl:keyID>
+      <bmlcl:parentID>60</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>251,116,92</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30203">
+      <gml:description>Cisuralium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1</gml:identifier>
+      <gml:name>Cisuralium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30203_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1</gml:identifier>
+          <gml:name>Cisuralian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>68</bmlcl:keyID>
+      <bmlcl:parentID>60</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>239,88,69</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30204">
+      <gml:description>Pennsylvanium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2</gml:identifier>
+      <gml:name>Pennsylvanium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30204_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2</gml:identifier>
+          <gml:name>Pennsylvanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>74</bmlcl:keyID>
+      <bmlcl:parentID>73</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,194,181</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30205">
+      <gml:description>Mississippium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1</gml:identifier>
+      <gml:name>Mississippium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30205_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1</gml:identifier>
+          <gml:name>Mississippian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>79</bmlcl:keyID>
+      <bmlcl:parentID>73</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>103,143,102</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30206">
+      <gml:description>Oberdevon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D3</gml:identifier>
+      <gml:name>Oberdevon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30206_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D3</gml:identifier>
+          <gml:name>Upper Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>84</bmlcl:keyID>
+      <bmlcl:parentID>83</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>241,225,157</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30207">
+      <gml:description>Mitteldevon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D2</gml:identifier>
+      <gml:name>Mitteldevon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30207_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D2</gml:identifier>
+          <gml:name>Middle Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>87</bmlcl:keyID>
+      <bmlcl:parentID>83</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>241,200,104</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30208">
+      <gml:description>Unterdevon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1</gml:identifier>
+      <gml:name>Unterdevon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30208_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1</gml:identifier>
+          <gml:name>Lower Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>90</bmlcl:keyID>
+      <bmlcl:parentID>83</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>229,172,77</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30209">
+      <gml:description>Pridoli</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S4</gml:identifier>
+      <gml:name>Pridoli</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30209_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S4</gml:identifier>
+          <gml:name>Pridoli</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>95</bmlcl:keyID>
+      <bmlcl:parentID>94</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>230,245,225</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30210">
+      <gml:description>Ludlow</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S3</gml:identifier>
+      <gml:name>Ludlow</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30210_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S3</gml:identifier>
+          <gml:name>Ludlow</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>96</bmlcl:keyID>
+      <bmlcl:parentID>94</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,230,207</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30211">
+      <gml:description>Wenlock</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S2</gml:identifier>
+      <gml:name>Wenlock</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30211_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S2</gml:identifier>
+          <gml:name>Wenlock</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>97</bmlcl:keyID>
+      <bmlcl:parentID>94</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,225,194</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30212">
+      <gml:description>Llandovery</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S1</gml:identifier>
+      <gml:name>Llandovery</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30212_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S1</gml:identifier>
+          <gml:name>Llandovery</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>98</bmlcl:keyID>
+      <bmlcl:parentID>94</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,215,179</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30213">
+      <gml:description>Oberordovizium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3</gml:identifier>
+      <gml:name>Oberordovizium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30213_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3</gml:identifier>
+          <gml:name>Upper Ordovician</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>100</bmlcl:keyID>
+      <bmlcl:parentID>99</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>127,202,147</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30214">
+      <gml:description>Mittelordovizium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O2</gml:identifier>
+      <gml:name>Mittelordovizium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30214_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O2</gml:identifier>
+          <gml:name>Middle Ordovician</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>104</bmlcl:keyID>
+      <bmlcl:parentID>99</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>77,180,126</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30215">
+      <gml:description>Unterordovizium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O1</gml:identifier>
+      <gml:name>Unterordovizium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30215_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O1</gml:identifier>
+          <gml:name>Lower Ordovician</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>107</bmlcl:keyID>
+      <bmlcl:parentID>99</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>26,157,111</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30216">
+      <gml:description>Furongium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">CbF</gml:identifier>
+      <gml:name>Furongium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30216_en">
+          <gml:description>Upper Cambrian</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">CbF</gml:identifier>
+          <gml:name>Furongian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>111</bmlcl:keyID>
+      <bmlcl:parentID>110</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,224,149</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30217">
+      <gml:description>Serie3</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Cb3</gml:identifier>
+      <gml:name>Serie3</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30217_en">
+          <gml:description>Middle Cambrian</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Cb3</gml:identifier>
+          <gml:name>Series3</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>124</bmlcl:keyID>
+      <bmlcl:parentID>110</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>166,207,134</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30218">
+      <gml:description>Serie2</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Cb2</gml:identifier>
+      <gml:name>Serie2</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30218_en">
+          <gml:description>Lower Cambrian 2</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Cb2</gml:identifier>
+          <gml:name>Series2</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>112</bmlcl:keyID>
+      <bmlcl:parentID>110</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,192,120</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30219">
+      <gml:description>Terreneuvium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">CbT</gml:identifier>
+      <gml:name>Terreneuvium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30219_en">
+          <gml:description>Lower Cambrian 1</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">CbT</gml:identifier>
+          <gml:name>Terreneuvian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>113</bmlcl:keyID>
+      <bmlcl:parentID>110</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>140,176,108</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30220">
+      <gml:description>Oberpleistozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1o</gml:identifier>
+      <gml:name>Oberpleistozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30220_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1o</gml:identifier>
+          <gml:name>Upper Pleistocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,242,211</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30221">
+      <gml:description>Mittelpleistozän ("Ionium")</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1m</gml:identifier>
+      <gml:name>Mittelpleistozän ("Ionium")</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30221_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1m</gml:identifier>
+          <gml:name>Middle Pleistocene ("Ionian")</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,242,199</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30222">
+      <gml:description>Calabrium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1C</gml:identifier>
+      <gml:name>Calabrium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30222_en">
+          <gml:description>Lower Pleistocene</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1C</gml:identifier>
+          <gml:name>Calabrian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,242,186</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30223">
+      <gml:description>Gelasium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1G</gml:identifier>
+      <gml:name>Gelasium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30223_en">
+          <gml:description>Lower Pleistocene /Upper Pliocene</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q1G</gml:identifier>
+          <gml:name>Gelasian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>123</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,255,204</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30224">
+      <gml:description>Pliozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">N2</gml:identifier>
+      <gml:name>Pliozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30224_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">N2</gml:identifier>
+          <gml:name>Pliocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>10</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,242,174</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30225">
+      <gml:description>Miozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">N1</gml:identifier>
+      <gml:name>Miozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30225_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">N1</gml:identifier>
+          <gml:name>Miocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>10</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,255,0</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30226">
+      <gml:description>Oligiozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E3</gml:identifier>
+      <gml:name>Oligiozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30226_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E3</gml:identifier>
+          <gml:name>Oligocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>253,192,122</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30227">
+      <gml:description>Eozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E2</gml:identifier>
+      <gml:name>Eozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30227_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E2</gml:identifier>
+          <gml:name>Eocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>253,180,108</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30228">
+      <gml:description>Paleozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E1</gml:identifier>
+      <gml:name>Paleozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30228_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">E1</gml:identifier>
+          <gml:name>Paleocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>253,167,95</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30229">
+      <gml:description>Maastrichtium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2M</gml:identifier>
+      <gml:name>Maastrichtium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30229_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2M</gml:identifier>
+          <gml:name>Maastrichtian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,250,140</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30230">
+      <gml:description>Campanium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2Ca</gml:identifier>
+      <gml:name>Campanium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30230_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2Ca</gml:identifier>
+          <gml:name>Campanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>230,244,127</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30231">
+      <gml:description>Santonium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2S</gml:identifier>
+      <gml:name>Santonium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30231_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2S</gml:identifier>
+          <gml:name>Santonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>217,239,116</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30232">
+      <gml:description>Coniacium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2Cc</gml:identifier>
+      <gml:name>Coniacium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30232_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2Cc</gml:identifier>
+          <gml:name>Coniacian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>23</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>204,233,104</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30233">
+      <gml:description>Turonium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2T</gml:identifier>
+      <gml:name>Turonium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30233_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2T</gml:identifier>
+          <gml:name>Turonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,222,83</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30234">
+      <gml:description>Cenomanium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2Cn</gml:identifier>
+      <gml:name>Cenomanium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30234_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K2Cn</gml:identifier>
+          <gml:name>Cenomanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>25</bmlcl:keyID>
+      <bmlcl:parentID>19</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,222,83</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30235">
+      <gml:description>Albium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Al</gml:identifier>
+      <gml:name>Albium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30235_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Al</gml:identifier>
+          <gml:name>Albian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>26</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>204,234,151</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30165">
+      <gml:description>Phanerozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PH</gml:identifier>
+      <gml:name>Phanerozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30165_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PH</gml:identifier>
+          <gml:name>Phanerozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>154,217,221</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30166">
+      <gml:description>Proterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PR</gml:identifier>
+      <gml:name>Proterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30166_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PR</gml:identifier>
+          <gml:name>Proterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>114</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>247,53,99</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30167">
+      <gml:description>Archaikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">AR</gml:identifier>
+      <gml:name>Archaikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30167_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">AR</gml:identifier>
+          <gml:name>Archean</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>121</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>240,4,127</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30168">
+      <gml:description>nicht eingestuft</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">nb</gml:identifier>
+      <gml:name>nicht eingestuft</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30168_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">nb</gml:identifier>
+          <gml:name>unclassified</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>122</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>255,255,255</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30169">
+      <gml:description>Känozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">CZ</gml:identifier>
+      <gml:name>Känozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30169_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">CZ</gml:identifier>
+          <gml:name>Cenozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,249,29</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30170">
+      <gml:description>Mesozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">MZ</gml:identifier>
+      <gml:name>Mesozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30170_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">MZ</gml:identifier>
+          <gml:name>Mesozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>103,197,202</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30171">
+      <gml:description>Paläozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PZ</gml:identifier>
+      <gml:name>Paläozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30171_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PZ</gml:identifier>
+          <gml:name>Paleozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>59</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,192,141</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30172">
+      <gml:description>Neoproterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NP</gml:identifier>
+      <gml:name>Neoproterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30172_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">NP</gml:identifier>
+          <gml:name>Neoproterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>115</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>254,179,66</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30173">
+      <gml:description>Mesoproterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">MP</gml:identifier>
+      <gml:name>Mesoproterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30173_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">MP</gml:identifier>
+          <gml:name>Mesoproterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>119</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,178,115</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30174">
+      <gml:description>Paläoproterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PP</gml:identifier>
+      <gml:name>Paläoproterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30174_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">PP</gml:identifier>
+          <gml:name>Paleoproterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>120</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>247,67,112</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30236">
+      <gml:description>Aptium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Ap</gml:identifier>
+      <gml:name>Aptium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30236_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Ap</gml:identifier>
+          <gml:name>Aptian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>28</bmlcl:keyID>
+      <bmlcl:parentID>26</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,228,138</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30237">
+      <gml:description>Barrêmium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Ba</gml:identifier>
+      <gml:name>Barrêmium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30237_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Ba</gml:identifier>
+          <gml:name>Barremian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>29</bmlcl:keyID>
+      <bmlcl:parentID>26</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,223,127</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30238">
+      <gml:description>Hauterivium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1H</gml:identifier>
+      <gml:name>Hauterivium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30238_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1H</gml:identifier>
+          <gml:name>Hauterivian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>26</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>168,217,117</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30239">
+      <gml:description>Valanginium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1V</gml:identifier>
+      <gml:name>Valanginium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30239_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1V</gml:identifier>
+          <gml:name>Valanginian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>31</bmlcl:keyID>
+      <bmlcl:parentID>26</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,211,106</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30240">
+      <gml:description>Berriasium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Be</gml:identifier>
+      <gml:name>Berriasium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30240_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K1Be</gml:identifier>
+          <gml:name>Berriasian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>32</bmlcl:keyID>
+      <bmlcl:parentID>26</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>140,205,96</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30241">
+      <gml:description>Tithonium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3T</gml:identifier>
+      <gml:name>Tithonium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30241_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3T</gml:identifier>
+          <gml:name>Tithonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>35</bmlcl:keyID>
+      <bmlcl:parentID>34</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>217,241,247</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30242">
+      <gml:description>Kimmeridgium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3K</gml:identifier>
+      <gml:name>Kimmeridgium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30242_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3K</gml:identifier>
+          <gml:name>Kimmeridgian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>36</bmlcl:keyID>
+      <bmlcl:parentID>34</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>204,235,244</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30243">
+      <gml:description>Oxfordium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3O</gml:identifier>
+      <gml:name>Oxfordium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30243_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J3O</gml:identifier>
+          <gml:name>Oxfordian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>37</bmlcl:keyID>
+      <bmlcl:parentID>34</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,231,241</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30244">
+      <gml:description>Callovium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2C</gml:identifier>
+      <gml:name>Callovium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30244_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2C</gml:identifier>
+          <gml:name>Callovian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>39</bmlcl:keyID>
+      <bmlcl:parentID>38</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,231,229</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30245">
+      <gml:description>Bathonium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2Bt</gml:identifier>
+      <gml:name>Bathonium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30245_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2Bt</gml:identifier>
+          <gml:name>Bathonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>40</bmlcl:keyID>
+      <bmlcl:parentID>38</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,226,227</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30246">
+      <gml:description>Bajocium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2Bj</gml:identifier>
+      <gml:name>Bajocium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30246_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2Bj</gml:identifier>
+          <gml:name>Bajocian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>41</bmlcl:keyID>
+      <bmlcl:parentID>38</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>166,221,224</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30247">
+      <gml:description>Aalenium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2A</gml:identifier>
+      <gml:name>Aalenium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30247_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J2A</gml:identifier>
+          <gml:name>Aalenian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>42</bmlcl:keyID>
+      <bmlcl:parentID>38</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>154,221,224</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30248">
+      <gml:description>Toarcium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1T</gml:identifier>
+      <gml:name>Toarcium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30248_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1T</gml:identifier>
+          <gml:name>Toarcian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>44</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,206,227</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30249">
+      <gml:description>Pliensbachium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1P</gml:identifier>
+      <gml:name>Pliensbachium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30249_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1P</gml:identifier>
+          <gml:name>Pliensbachian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>45</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>128,197,221</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30250">
+      <gml:description>Sinemurium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1S</gml:identifier>
+      <gml:name>Sinemurium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30250_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1S</gml:identifier>
+          <gml:name>Sinemurian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>46</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>103,188,216</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30251">
+      <gml:description>Hettangium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1H</gml:identifier>
+      <gml:name>Hettangium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30251_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J1H</gml:identifier>
+          <gml:name>Hettangian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>47</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>78,179,211</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30252">
+      <gml:description>Rhaetium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3R</gml:identifier>
+      <gml:name>Rhaetium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30252_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3R</gml:identifier>
+          <gml:name>Rhaetian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>50</bmlcl:keyID>
+      <bmlcl:parentID>49</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>227,185,219</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30253">
+      <gml:description>Norium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3N</gml:identifier>
+      <gml:name>Norium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30253_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3N</gml:identifier>
+          <gml:name>Norian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>51</bmlcl:keyID>
+      <bmlcl:parentID>49</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>214,170,211</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30254">
+      <gml:description>Karnium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3K</gml:identifier>
+      <gml:name>Karnium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30254_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T3K</gml:identifier>
+          <gml:name>Carnian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>52</bmlcl:keyID>
+      <bmlcl:parentID>49</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>201,155,203</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30255">
+      <gml:description>Landinium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T2L</gml:identifier>
+      <gml:name>Landinium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30255_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T2L</gml:identifier>
+          <gml:name>Ladinian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>54</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>201,131,191</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30256">
+      <gml:description>Anisium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T2A</gml:identifier>
+      <gml:name>Anisium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30256_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T2A</gml:identifier>
+          <gml:name>Anisian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>55</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>188,117,183</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30257">
+      <gml:description>Olenekium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T1O</gml:identifier>
+      <gml:name>Olenekium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30257_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T1O</gml:identifier>
+          <gml:name>Olenekian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>57</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>176,81,165</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30258">
+      <gml:description>Indusium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T1I</gml:identifier>
+      <gml:name>Indusium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30258_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T1I</gml:identifier>
+          <gml:name>Induan</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>58</bmlcl:keyID>
+      <bmlcl:parentID>56</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>164,70,159</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30259">
+      <gml:description>Changhsingium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P3C</gml:identifier>
+      <gml:name>Changhsingium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30259_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P3C</gml:identifier>
+          <gml:name>Changhsingian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>62</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>252,192,178</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30260">
+      <gml:description>Wuchiapingium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P3W</gml:identifier>
+      <gml:name>Wuchiapingium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30260_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P3W</gml:identifier>
+          <gml:name>Wuchiapingian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>63</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>252,180,162</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30261">
+      <gml:description>Capitanium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2C</gml:identifier>
+      <gml:name>Capitanium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30261_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2C</gml:identifier>
+          <gml:name>Capitanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>65</bmlcl:keyID>
+      <bmlcl:parentID>64</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>251,154,133</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30262">
+      <gml:description>Wordium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2W</gml:identifier>
+      <gml:name>Wordium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30262_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2W</gml:identifier>
+          <gml:name>Wordian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>66</bmlcl:keyID>
+      <bmlcl:parentID>64</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>251,141,118</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30263">
+      <gml:description>Roadium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2R</gml:identifier>
+      <gml:name>Roadium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30263_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P2R</gml:identifier>
+          <gml:name>Roadian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>67</bmlcl:keyID>
+      <bmlcl:parentID>64</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>251,128,105</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30264">
+      <gml:description>Kungurium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1K</gml:identifier>
+      <gml:name>Kungurium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30264_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1K</gml:identifier>
+          <gml:name>Kungurian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>69</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>227,135,118</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30265">
+      <gml:description>Artinskium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1Ar</gml:identifier>
+      <gml:name>Artinskium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30265_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1Ar</gml:identifier>
+          <gml:name>Artinskian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>70</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>227,123,104</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30266">
+      <gml:description>Sakmarium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1S</gml:identifier>
+      <gml:name>Sakmarium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30266_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1S</gml:identifier>
+          <gml:name>Sakmarian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>71</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>227,111,92</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30267">
+      <gml:description>Asselium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1As</gml:identifier>
+      <gml:name>Asselium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30267_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P1As</gml:identifier>
+          <gml:name>Asselian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>72</bmlcl:keyID>
+      <bmlcl:parentID>68</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>227,99,80</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30268">
+      <gml:description>Gzhelium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2G</gml:identifier>
+      <gml:name>Gzhelium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30268_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2G</gml:identifier>
+          <gml:name>Gzhelian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>75</bmlcl:keyID>
+      <bmlcl:parentID>74</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>204,212,199</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30269">
+      <gml:description>Kasimovium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2K</gml:identifier>
+      <gml:name>Kasimovium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30269_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2K</gml:identifier>
+          <gml:name>Kasimovian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>76</bmlcl:keyID>
+      <bmlcl:parentID>74</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,208,197</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30270">
+      <gml:description>Moskovium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2M</gml:identifier>
+      <gml:name>Moskovium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30270_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2M</gml:identifier>
+          <gml:name>Moscovian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>77</bmlcl:keyID>
+      <bmlcl:parentID>74</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,203,185</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30271">
+      <gml:description>Bashkirium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2B</gml:identifier>
+      <gml:name>Bashkirium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30271_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C2B</gml:identifier>
+          <gml:name>Bashkirian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>78</bmlcl:keyID>
+      <bmlcl:parentID>74</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,194,181</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30272">
+      <gml:description>Serpukhovium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1S</gml:identifier>
+      <gml:name>Serpukhovium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30272_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1S</gml:identifier>
+          <gml:name>Serpukhovian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>80</bmlcl:keyID>
+      <bmlcl:parentID>79</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>191,194,107</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30273">
+      <gml:description>Viséum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1V</gml:identifier>
+      <gml:name>Viséum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30273_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1V</gml:identifier>
+          <gml:name>Viséan</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>81</bmlcl:keyID>
+      <bmlcl:parentID>79</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>166,185,108</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30274">
+      <gml:description>Tournaisium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1T</gml:identifier>
+      <gml:name>Tournaisium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30274_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C1T</gml:identifier>
+          <gml:name>Tournaisian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>82</bmlcl:keyID>
+      <bmlcl:parentID>79</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>140,176,108</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30275">
+      <gml:description>Famennium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D3Fm</gml:identifier>
+      <gml:name>Famennium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30275_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D3Fm</gml:identifier>
+          <gml:name>Famennian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>85</bmlcl:keyID>
+      <bmlcl:parentID>84</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,237,197</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30276">
+      <gml:description>Frasnium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D3Fr</gml:identifier>
+      <gml:name>Frasnium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30276_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D3Fr</gml:identifier>
+          <gml:name>Frasnian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>86</bmlcl:keyID>
+      <bmlcl:parentID>84</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,237,173</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30277">
+      <gml:description>Givetium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D2G</gml:identifier>
+      <gml:name>Givetium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30277_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D2G</gml:identifier>
+          <gml:name>Givetian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>88</bmlcl:keyID>
+      <bmlcl:parentID>87</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>241,225,133</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30278">
+      <gml:description>Eifelium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D2E</gml:identifier>
+      <gml:name>Eifelium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30278_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D2E</gml:identifier>
+          <gml:name>Eifelian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>89</bmlcl:keyID>
+      <bmlcl:parentID>87</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,213,118</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30279">
+      <gml:description>Emsium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1E</gml:identifier>
+      <gml:name>Emsium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30279_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1E</gml:identifier>
+          <gml:name>Emsian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>91</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>229,208,117</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30280">
+      <gml:description>Pragium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1P</gml:identifier>
+      <gml:name>Pragium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30280_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1P</gml:identifier>
+          <gml:name>Pragian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>92</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>229,196,104</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30281">
+      <gml:description>Lochkovium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1L</gml:identifier>
+      <gml:name>Lochkovium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30281_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D1L</gml:identifier>
+          <gml:name>Lochkovian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>93</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>229,183,90</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30282">
+      <gml:description>Hirnantium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3H</gml:identifier>
+      <gml:name>Hirnantium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30282_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3H</gml:identifier>
+          <gml:name>Hirnantian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>101</bmlcl:keyID>
+      <bmlcl:parentID>100</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>166,219,171</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30283">
+      <gml:description>Katium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3K</gml:identifier>
+      <gml:name>Katium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30283_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3K</gml:identifier>
+          <gml:name>Katian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>102</bmlcl:keyID>
+      <bmlcl:parentID>100</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>153,214,159</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30284">
+      <gml:description>Sandbium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3S</gml:identifier>
+      <gml:name>Sandbium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30284_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O3S</gml:identifier>
+          <gml:name>Sandbian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>103</bmlcl:keyID>
+      <bmlcl:parentID>100</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>140,208,148</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30285">
+      <gml:description>Darriwilium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O2D</gml:identifier>
+      <gml:name>Darriwilium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30285_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O2D</gml:identifier>
+          <gml:name>Darriwilian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>105</bmlcl:keyID>
+      <bmlcl:parentID>104</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>116,198,156</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30286">
+      <gml:description>Dapingium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O2Dp</gml:identifier>
+      <gml:name>Dapingium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30286_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O2Dp</gml:identifier>
+          <gml:name>Dapingian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>106</bmlcl:keyID>
+      <bmlcl:parentID>104</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>102,192,146</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30287">
+      <gml:description>Floium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O1F</gml:identifier>
+      <gml:name>Floium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30287_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O1F</gml:identifier>
+          <gml:name>Floian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>108</bmlcl:keyID>
+      <bmlcl:parentID>107</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>65,176,135</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30288">
+      <gml:description>Tremadocium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O1T</gml:identifier>
+      <gml:name>Tremadocium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30288_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">O1T</gml:identifier>
+          <gml:name>Tremadocian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>109</bmlcl:keyID>
+      <bmlcl:parentID>107</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>51,169,128</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30175">
+      <gml:description>Quartär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q</gml:identifier>
+      <gml:name>Quartär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30175_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">Q</gml:identifier>
+          <gml:name>Quaternary</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>249,249,127</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30176">
+      <gml:description>Tertiär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">B</gml:identifier>
+      <gml:name>Tertiär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30176_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">B</gml:identifier>
+          <gml:name>Tertiary</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>242,249,29</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30177">
+      <gml:description>Kreide</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K</gml:identifier>
+      <gml:name>Kreide</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30177_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">K</gml:identifier>
+          <gml:name>Cretaceous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>17</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>127,198,78</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30178">
+      <gml:description>Jura</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J</gml:identifier>
+      <gml:name>Jura</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30178_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">J</gml:identifier>
+          <gml:name>Jurassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>33</bmlcl:keyID>
+      <bmlcl:parentID>17</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>52,197,202</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30179">
+      <gml:description>Trias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T</gml:identifier>
+      <gml:name>Trias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30179_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">T</gml:identifier>
+          <gml:name>Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>48</bmlcl:keyID>
+      <bmlcl:parentID>17</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>129,43,146</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30180">
+      <gml:description>Perm</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P</gml:identifier>
+      <gml:name>Perm</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30180_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">P</gml:identifier>
+          <gml:name>Permian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>60</bmlcl:keyID>
+      <bmlcl:parentID>59</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>240,64,40</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30181">
+      <gml:description>Karbon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C</gml:identifier>
+      <gml:name>Karbon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30181_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">C</gml:identifier>
+          <gml:name>Carboniferous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>73</bmlcl:keyID>
+      <bmlcl:parentID>59</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>103,165,153</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30182">
+      <gml:description>Devon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D</gml:identifier>
+      <gml:name>Devon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30182_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">D</gml:identifier>
+          <gml:name>Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>83</bmlcl:keyID>
+      <bmlcl:parentID>59</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>203,140,55</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6334_30183">
+      <gml:description>Silur</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S</gml:identifier>
+      <gml:name>Silur</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="_6334_30183_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">S</gml:identifier>
+          <gml:name>Silurian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>94</bmlcl:keyID>
+      <bmlcl:parentID>59</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+      <bmlcl:colorCode>179,225,182</bmlcl:colorCode>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList" gml:id="ChronoStratigraphyList_en">
+      <gml:description>chronostratigraphy</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/ChronoStratigraphyList">ChronoStratigraphyList</gml:identifier>
+      <gml:name>chronostratigraphy</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="FlushingTypeList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Art der Spülung</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">FlushingTypeList</gml:identifier>
+  <gml:name>Spülung</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_26996">
+      <gml:description>beschwerte Spülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">BS</gml:identifier>
+      <gml:name>beschwerte Spülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_26996_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">BS</gml:identifier>
+          <gml:name>drilling fluid with weighting material (heavy spar)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_26997">
+      <gml:description>Kaliumkarbonat-Spülung </gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">KS</gml:identifier>
+      <gml:name>Kaliumkarbonat-Spülung </gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_26997_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">KS</gml:identifier>
+          <gml:name>potassium carbonate drilling fluid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_26998">
+      <gml:description>Luftspülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">LS</gml:identifier>
+      <gml:name>Luftspülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_26998_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">LS</gml:identifier>
+          <gml:name>compressed air, air flushing</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_26999">
+      <gml:description>Art der Spülhilfe nicht bekannt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">NB</gml:identifier>
+      <gml:name>Art der Spülhilfe nicht bekannt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_26999_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">NB</gml:identifier>
+          <gml:name>type of drilling fluid unknown</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27000">
+      <gml:description>ohne Spülhilfe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">OS</gml:identifier>
+      <gml:name>ohne Spülhilfe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27000_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">OS</gml:identifier>
+          <gml:name>without drilling fluid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27001">
+      <gml:description>mit Spülhilfe</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">S</gml:identifier>
+      <gml:name>mit Spülhilfe</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27001_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">S</gml:identifier>
+          <gml:name>with drilling fluid (flushing)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27002">
+      <gml:description>Bentonit-Antisol-Spülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SA</gml:identifier>
+      <gml:name>Bentonit-Antisol-Spülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27002_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SA</gml:identifier>
+          <gml:name>bentonite drilling fluid with Antisol additive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27003">
+      <gml:description>Bentonit-Spülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SB</gml:identifier>
+      <gml:name>Bentonit-Spülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27003_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SB</gml:identifier>
+          <gml:name>bentonite drilling fluid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27004">
+      <gml:description>Bentonit-CMC-Spülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SC</gml:identifier>
+      <gml:name>Bentonit-CMC-Spülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27004_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SC</gml:identifier>
+          <gml:name>bentonite drilling fluid with CMC additive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>9</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27005">
+      <gml:description>Klarwasserspülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SK</gml:identifier>
+      <gml:name>Klarwasserspülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27005_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SK</gml:identifier>
+          <gml:name>clear-water flushing</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27006">
+      <gml:description>Klarwasserspülung mit Antisol-Zusatz</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKA</gml:identifier>
+      <gml:name>Klarwasserspülung mit Antisol-Zusatz</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27006_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKA</gml:identifier>
+          <gml:name>water flushing with Antisol additive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27007">
+      <gml:description>Klarwasserspülung mit CMC-Zusatz</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKC</gml:identifier>
+      <gml:name>Klarwasserspülung mit CMC-Zusatz</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27007_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKC</gml:identifier>
+          <gml:name>water flushing with CMC additive</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27008">
+      <gml:description>Klarwasserspülung mit sonstigem Zusatz</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKS</gml:identifier>
+      <gml:name>Klarwasserspülung mit sonstigem Zusatz</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27008_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKS</gml:identifier>
+          <gml:name>water flushing with other additives</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>5</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27009">
+      <gml:description>Klarwasserspülung mit Zusätzen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKZ</gml:identifier>
+      <gml:name>Klarwasserspülung mit Zusätzen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27009_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SKZ</gml:identifier>
+          <gml:name>water flushing with additives</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27010">
+      <gml:description>Schaumspülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SS</gml:identifier>
+      <gml:name>Schaumspülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27010_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SS</gml:identifier>
+          <gml:name>drilling foam, foam flushing</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27011">
+      <gml:description>salzstabile Spülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SSA</gml:identifier>
+      <gml:name>salzstabile Spülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27011_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">SSA</gml:identifier>
+          <gml:name>salt stabilizing drilling fluid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6339_27012">
+      <gml:description>tonstabile Spülung</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">ST</gml:identifier>
+      <gml:name>tonstabile Spülung</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="_6339_27012_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">ST</gml:identifier>
+          <gml:name>clay stabilizing drilling fluid, clay inhibiting drilling fluid</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList" gml:id="FlushingTypeList_en">
+      <gml:description>type of drilling fluid</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/FlushingTypeList">FlushingTypeList</gml:identifier>
+      <gml:name>drilling fluid</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

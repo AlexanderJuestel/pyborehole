@@ -1,0 +1,2144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.2 from 20130423 -->
+<gmx:ML_CodeListDictionary xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:bmlcl="http://www.infogeo.de/boreholeml/3.0/codelists" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="LastHorizonList" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.infogeo.de/boreholeml/3.0/codelists http://www.infogeo.de/boreholeml/3.0/codelists/codelistItem_BMLCL.xsd">
+  <gml:description>Stratigraphie der letzten bei der Bohrung erschlossenen Schicht</gml:description>
+  <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">LastHorizonList</gml:identifier>
+  <gml:name>Stratigraphie Endhorizont</gml:name>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27400">
+      <gml:description>Archaikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ar</gml:identifier>
+      <gml:name>Archaikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27400_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ar</gml:identifier>
+          <gml:name>Archean</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>125</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27401">
+      <gml:description>Karbon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">c</gml:identifier>
+      <gml:name>Karbon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27401_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">c</gml:identifier>
+          <gml:name>Carboniferous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>81</bmlcl:keyID>
+      <bmlcl:parentID>65</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27402">
+      <gml:description>Kambrium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cb</gml:identifier>
+      <gml:name>Kambrium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27402_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cb</gml:identifier>
+          <gml:name>Cambrian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>114</bmlcl:keyID>
+      <bmlcl:parentID>65</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27403">
+      <gml:description>Serie2</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cb2</gml:identifier>
+      <gml:name>Serie2</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27403_en">
+          <gml:description>Lower Cambrian 2</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cb2</gml:identifier>
+          <gml:name>Series2</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>117</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27404">
+      <gml:description>Serie3</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cb3</gml:identifier>
+      <gml:name>Serie3</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27404_en">
+          <gml:description>Middle Cambrian</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cb3</gml:identifier>
+          <gml:name>Series3</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>116</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27405">
+      <gml:description>Furongium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cbF</gml:identifier>
+      <gml:name>Furongium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27405_en">
+          <gml:description>Upper Cambrian</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cbF</gml:identifier>
+          <gml:name>Furongian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>115</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27406">
+      <gml:description>Terreneuvium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cbT</gml:identifier>
+      <gml:name>Terreneuvium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27406_en">
+          <gml:description>Lower Cambrian 1</gml:description>
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cbT</gml:identifier>
+          <gml:name>Terreneuvian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>127</bmlcl:keyID>
+      <bmlcl:parentID>114</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27407">
+      <gml:description>Oberkarbon (Siles)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">co</gml:identifier>
+      <gml:name>Oberkarbon (Siles)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27407_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">co</gml:identifier>
+          <gml:name>Upper Carboniferous (Silesian)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>82</bmlcl:keyID>
+      <bmlcl:parentID>81</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27408">
+      <gml:description>Namur</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">coNm</gml:identifier>
+      <gml:name>Namur</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27408_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">coNm</gml:identifier>
+          <gml:name>Namurian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>85</bmlcl:keyID>
+      <bmlcl:parentID>82</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27409">
+      <gml:description>Stefan</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">coSt</gml:identifier>
+      <gml:name>Stefan</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27409_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">coSt</gml:identifier>
+          <gml:name>Stephanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>83</bmlcl:keyID>
+      <bmlcl:parentID>82</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27410">
+      <gml:description>Westfal</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">coWe</gml:identifier>
+      <gml:name>Westfal</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27410_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">coWe</gml:identifier>
+          <gml:name>Westphalian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>84</bmlcl:keyID>
+      <bmlcl:parentID>82</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27411">
+      <gml:description>Unterkarbon (Dinant)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cu</gml:identifier>
+      <gml:name>Unterkarbon (Dinant)</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27411_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cu</gml:identifier>
+          <gml:name>Lower Carboniferous (Dinantian)</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>86</bmlcl:keyID>
+      <bmlcl:parentID>81</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27412">
+      <gml:description>Tournai</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cuTn</gml:identifier>
+      <gml:name>Tournai</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27412_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cuTn</gml:identifier>
+          <gml:name>Tournaisian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>88</bmlcl:keyID>
+      <bmlcl:parentID>86</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27413">
+      <gml:description>Visé</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cuVi</gml:identifier>
+      <gml:name>Visé</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27413_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">cuVi</gml:identifier>
+          <gml:name>Viséan</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>87</bmlcl:keyID>
+      <bmlcl:parentID>86</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27414">
+      <gml:description>Devon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">d</gml:identifier>
+      <gml:name>Devon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27414_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">d</gml:identifier>
+          <gml:name>Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>89</bmlcl:keyID>
+      <bmlcl:parentID>65</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27415">
+      <gml:description>Mitteldevon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">dm</gml:identifier>
+      <gml:name>Mitteldevon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27415_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">dm</gml:identifier>
+          <gml:name>Middle Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>96</bmlcl:keyID>
+      <bmlcl:parentID>89</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27416">
+      <gml:description>Eifel</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">dmEf</gml:identifier>
+      <gml:name>Eifel</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27416_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">dmEf</gml:identifier>
+          <gml:name>Eifelian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>98</bmlcl:keyID>
+      <bmlcl:parentID>96</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27417">
+      <gml:description>Givet</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">dmGv</gml:identifier>
+      <gml:name>Givet</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27417_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">dmGv</gml:identifier>
+          <gml:name>Givetian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>97</bmlcl:keyID>
+      <bmlcl:parentID>96</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27418">
+      <gml:description>Oberdevon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">do</gml:identifier>
+      <gml:name>Oberdevon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27418_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">do</gml:identifier>
+          <gml:name>Upper Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>90</bmlcl:keyID>
+      <bmlcl:parentID>89</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27419">
+      <gml:description>Adorf</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doAd</gml:identifier>
+      <gml:name>Adorf</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27419_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doAd</gml:identifier>
+          <gml:name>Adorfian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>95</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27420">
+      <gml:description>Dasberg</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doDa</gml:identifier>
+      <gml:name>Dasberg</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27420_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doDa</gml:identifier>
+          <gml:name>Dasbergian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>92</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27421">
+      <gml:description>Hemberg</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doHe</gml:identifier>
+      <gml:name>Hemberg</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27421_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doHe</gml:identifier>
+          <gml:name>Hembergian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>93</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27422">
+      <gml:description>Nehden</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doNe</gml:identifier>
+      <gml:name>Nehden</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27422_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doNe</gml:identifier>
+          <gml:name>Nehdenian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>94</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27423">
+      <gml:description>Wocklum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doWc</gml:identifier>
+      <gml:name>Wocklum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27423_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">doWc</gml:identifier>
+          <gml:name>Wocklumian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>91</bmlcl:keyID>
+      <bmlcl:parentID>90</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27424">
+      <gml:description>Unterdevon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">du</gml:identifier>
+      <gml:name>Unterdevon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27424_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">du</gml:identifier>
+          <gml:name>Lower Devonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>99</bmlcl:keyID>
+      <bmlcl:parentID>89</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27425">
+      <gml:description>Ems</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">duEm</gml:identifier>
+      <gml:name>Ems</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27425_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">duEm</gml:identifier>
+          <gml:name>Emsian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>100</bmlcl:keyID>
+      <bmlcl:parentID>99</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27426">
+      <gml:description>Gedinne</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">duGd</gml:identifier>
+      <gml:name>Gedinne</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27426_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">duGd</gml:identifier>
+          <gml:name>Gedinnian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>102</bmlcl:keyID>
+      <bmlcl:parentID>99</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27427">
+      <gml:description>Siegen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">duSi</gml:identifier>
+      <gml:name>Siegen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27427_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">duSi</gml:identifier>
+          <gml:name>Siegenian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>101</bmlcl:keyID>
+      <bmlcl:parentID>99</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27428">
+      <gml:description>Jura</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">j</gml:identifier>
+      <gml:name>Jura</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27428_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">j</gml:identifier>
+          <gml:name>Jurassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>43</bmlcl:keyID>
+      <bmlcl:parentID>27</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27429">
+      <gml:description>Dogger</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">jm</gml:identifier>
+      <gml:name>Dogger</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27429_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">jm</gml:identifier>
+          <gml:name>Dogger</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>45</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27430">
+      <gml:description>Malm</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">jo</gml:identifier>
+      <gml:name>Malm</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27430_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">jo</gml:identifier>
+          <gml:name>Malm</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>44</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27431">
+      <gml:description>Lias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ju</gml:identifier>
+      <gml:name>Lias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27431_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ju</gml:identifier>
+          <gml:name>Lias</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>46</bmlcl:keyID>
+      <bmlcl:parentID>43</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27432">
+      <gml:description>Keuper</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">k</gml:identifier>
+      <gml:name>Keuper</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27432_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">k</gml:identifier>
+          <gml:name>Keuper</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>53</bmlcl:keyID>
+      <bmlcl:parentID>52</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27433">
+      <gml:description>Mittlerer Keuper</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">km</gml:identifier>
+      <gml:name>Mittlerer Keuper</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27433_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">km</gml:identifier>
+          <gml:name>Middle Keuper</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>55</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27434">
+      <gml:description>Oberer Keuper</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ko</gml:identifier>
+      <gml:name>Oberer Keuper</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27434_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ko</gml:identifier>
+          <gml:name>Upper Keuper</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>54</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27435">
+      <gml:description>Kreide</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kr</gml:identifier>
+      <gml:name>Kreide</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27435_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kr</gml:identifier>
+          <gml:name>Cretaceous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>28</bmlcl:keyID>
+      <bmlcl:parentID>27</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27436">
+      <gml:description>Alb</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kral</gml:identifier>
+      <gml:name>Alb</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27436_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kral</gml:identifier>
+          <gml:name>Albian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>37</bmlcl:keyID>
+      <bmlcl:parentID>36</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27437">
+      <gml:description>Apt</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krap</gml:identifier>
+      <gml:name>Apt</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27437_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krap</gml:identifier>
+          <gml:name>Aptian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>38</bmlcl:keyID>
+      <bmlcl:parentID>36</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27438">
+      <gml:description>Barrême</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krba</gml:identifier>
+      <gml:name>Barrême</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27438_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krba</gml:identifier>
+          <gml:name>Barremian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>39</bmlcl:keyID>
+      <bmlcl:parentID>36</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27439">
+      <gml:description>Berrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krbe</gml:identifier>
+      <gml:name>Berrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27439_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krbe</gml:identifier>
+          <gml:name>Berriasian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>42</bmlcl:keyID>
+      <bmlcl:parentID>36</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27440">
+      <gml:description>Campan</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krca</gml:identifier>
+      <gml:name>Campan</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27440_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krca</gml:identifier>
+          <gml:name>Campanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>31</bmlcl:keyID>
+      <bmlcl:parentID>29</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27441">
+      <gml:description>Coniac</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krcc</gml:identifier>
+      <gml:name>Coniac</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27441_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krcc</gml:identifier>
+          <gml:name>Coniacian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>33</bmlcl:keyID>
+      <bmlcl:parentID>29</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27442">
+      <gml:description>Cenoman</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krcn</gml:identifier>
+      <gml:name>Cenoman</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27442_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krcn</gml:identifier>
+          <gml:name>Cenomanian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>35</bmlcl:keyID>
+      <bmlcl:parentID>29</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27443">
+      <gml:description>Hauterive</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krht</gml:identifier>
+      <gml:name>Hauterive</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27443_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krht</gml:identifier>
+          <gml:name>Hauterivian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>40</bmlcl:keyID>
+      <bmlcl:parentID>36</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27444">
+      <gml:description>Maastricht</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krma</gml:identifier>
+      <gml:name>Maastricht</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27444_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krma</gml:identifier>
+          <gml:name>Maastrichtian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>30</bmlcl:keyID>
+      <bmlcl:parentID>29</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27445">
+      <gml:description>Oberkreide</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kro</gml:identifier>
+      <gml:name>Oberkreide</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27445_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kro</gml:identifier>
+          <gml:name>Upper Cretaceous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>29</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27446">
+      <gml:description>Santon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krsa</gml:identifier>
+      <gml:name>Santon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27446_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krsa</gml:identifier>
+          <gml:name>Santonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>32</bmlcl:keyID>
+      <bmlcl:parentID>29</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27447">
+      <gml:description>Turon</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krtn</gml:identifier>
+      <gml:name>Turon</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27447_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krtn</gml:identifier>
+          <gml:name>Turonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>34</bmlcl:keyID>
+      <bmlcl:parentID>29</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27448">
+      <gml:description>Unterkreide</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kru</gml:identifier>
+      <gml:name>Unterkreide</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27448_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kru</gml:identifier>
+          <gml:name>Lower Cretaceous</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>36</bmlcl:keyID>
+      <bmlcl:parentID>28</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27449">
+      <gml:description>Valangin</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krva</gml:identifier>
+      <gml:name>Valangin</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27449_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">krva</gml:identifier>
+          <gml:name>Valanginian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>41</bmlcl:keyID>
+      <bmlcl:parentID>36</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27450">
+      <gml:description>Unterer Keuper</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ku</gml:identifier>
+      <gml:name>Unterer Keuper</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27450_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ku</gml:identifier>
+          <gml:name>Lower Keuper</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>56</bmlcl:keyID>
+      <bmlcl:parentID>53</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27451">
+      <gml:description>Känozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kz</gml:identifier>
+      <gml:name>Känozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27451_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">kz</gml:identifier>
+          <gml:name>Cenozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>2</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27452">
+      <gml:description>Muschelkalk</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">m</gml:identifier>
+      <gml:name>Muschelkalk</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27452_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">m</gml:identifier>
+          <gml:name>Muschelkalk</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>57</bmlcl:keyID>
+      <bmlcl:parentID>52</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27453">
+      <gml:description>Mittlerer Muschelkalk</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mm</gml:identifier>
+      <gml:name>Mittlerer Muschelkalk</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27453_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mm</gml:identifier>
+          <gml:name>Middle Muschelkalk</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>59</bmlcl:keyID>
+      <bmlcl:parentID>57</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27454">
+      <gml:description>Oberer Muschelkalk</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mo</gml:identifier>
+      <gml:name>Oberer Muschelkalk</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27454_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mo</gml:identifier>
+          <gml:name>Upper Muschelkalk</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>58</bmlcl:keyID>
+      <bmlcl:parentID>57</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27455">
+      <gml:description>Mesoproterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mp</gml:identifier>
+      <gml:name>Mesoproterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27455_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mp</gml:identifier>
+          <gml:name>Mesoproterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>123</bmlcl:keyID>
+      <bmlcl:parentID>118</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27456">
+      <gml:description>Unterer Muschelkalk</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mu</gml:identifier>
+      <gml:name>Unterer Muschelkalk</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27456_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mu</gml:identifier>
+          <gml:name>Lower Muschelkalk</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>60</bmlcl:keyID>
+      <bmlcl:parentID>57</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27457">
+      <gml:description>Mesozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mz</gml:identifier>
+      <gml:name>Mesozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27457_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">mz</gml:identifier>
+          <gml:name>Mesozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>27</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27458">
+      <gml:description>nicht eingestuft</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">nb</gml:identifier>
+      <gml:name>nicht eingestuft</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27458_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">nb</gml:identifier>
+          <gml:name>unclassified</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>126</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27459">
+      <gml:description>Neoproterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">np</gml:identifier>
+      <gml:name>Neoproterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27459_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">np</gml:identifier>
+          <gml:name>Neoproterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>119</bmlcl:keyID>
+      <bmlcl:parentID>118</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27460">
+      <gml:description>Tonium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">npI</gml:identifier>
+      <gml:name>Tonium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27460_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">npI</gml:identifier>
+          <gml:name>Tonian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>122</bmlcl:keyID>
+      <bmlcl:parentID>119</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27461">
+      <gml:description>Kryogenium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">npII</gml:identifier>
+      <gml:name>Kryogenium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27461_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">npII</gml:identifier>
+          <gml:name>Cryogenian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>121</bmlcl:keyID>
+      <bmlcl:parentID>119</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27462">
+      <gml:description>Ediacarium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">npIII</gml:identifier>
+      <gml:name>Ediacarium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27462_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">npIII</gml:identifier>
+          <gml:name>Ediacarian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>120</bmlcl:keyID>
+      <bmlcl:parentID>119</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27463">
+      <gml:description>Ordovizium</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">o</gml:identifier>
+      <gml:name>Ordovizium</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27463_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">o</gml:identifier>
+          <gml:name>Ordovician</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>108</bmlcl:keyID>
+      <bmlcl:parentID>65</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27464">
+      <gml:description>Arenig</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oAr</gml:identifier>
+      <gml:name>Arenig</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27464_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oAr</gml:identifier>
+          <gml:name>Arenigian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>112</bmlcl:keyID>
+      <bmlcl:parentID>108</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27465">
+      <gml:description>Ashgill</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oAs</gml:identifier>
+      <gml:name>Ashgill</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27465_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oAs</gml:identifier>
+          <gml:name>Ashgillian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>109</bmlcl:keyID>
+      <bmlcl:parentID>108</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27466">
+      <gml:description>Obere Brackwassermolasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">OBM</gml:identifier>
+      <gml:name>Obere Brackwassermolasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27466_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">OBM</gml:identifier>
+          <gml:name>Upper Brackish Water Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>22</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27467">
+      <gml:description>Caradoc</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oCa</gml:identifier>
+      <gml:name>Caradoc</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27467_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oCa</gml:identifier>
+          <gml:name>Caradocian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>110</bmlcl:keyID>
+      <bmlcl:parentID>108</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27468">
+      <gml:description>Llanvirn</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oLv</gml:identifier>
+      <gml:name>Llanvirn</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27468_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oLv</gml:identifier>
+          <gml:name>Llanvirnian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>111</bmlcl:keyID>
+      <bmlcl:parentID>108</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27469">
+      <gml:description>Obere Meeresmolasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">OMM</gml:identifier>
+      <gml:name>Obere Meeresmolasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27469_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">OMM</gml:identifier>
+          <gml:name>Upper Marine Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>23</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27470">
+      <gml:description>Obere Süßwassermolasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">OSM</gml:identifier>
+      <gml:name>Obere Süßwassermolasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27470_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">OSM</gml:identifier>
+          <gml:name>Upper Fresh Water Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>21</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27471">
+      <gml:description>Tremadoc</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oTr</gml:identifier>
+      <gml:name>Tremadoc</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27471_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">oTr</gml:identifier>
+          <gml:name>Tremadocian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>113</bmlcl:keyID>
+      <bmlcl:parentID>108</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27472">
+      <gml:description>Perm</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">p</gml:identifier>
+      <gml:name>Perm</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27472_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">p</gml:identifier>
+          <gml:name>Permian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>66</bmlcl:keyID>
+      <bmlcl:parentID>65</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27473">
+      <gml:description>Germanisches Perm</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pG</gml:identifier>
+      <gml:name>Germanisches Perm</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27473_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pG</gml:identifier>
+          <gml:name>Germanic Permian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>69</bmlcl:keyID>
+      <bmlcl:parentID>66</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27474">
+      <gml:description>Phanerozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ph</gml:identifier>
+      <gml:name>Phanerozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27474_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ph</gml:identifier>
+          <gml:name>Phanerozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>1</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27475">
+      <gml:description>Paläoproterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pp</gml:identifier>
+      <gml:name>Paläoproterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27475_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pp</gml:identifier>
+          <gml:name>Paleoproterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>124</bmlcl:keyID>
+      <bmlcl:parentID>118</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27476">
+      <gml:description>Proterozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pr</gml:identifier>
+      <gml:name>Proterozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27476_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pr</gml:identifier>
+          <gml:name>Proterozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>118</bmlcl:keyID>
+      <bmlcl:parentID>0</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>1</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27477">
+      <gml:description>Paläozoikum</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pz</gml:identifier>
+      <gml:name>Paläozoikum</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27477_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">pz</gml:identifier>
+          <gml:name>Paleozoic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>65</bmlcl:keyID>
+      <bmlcl:parentID>1</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>2</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27478">
+      <gml:description>Quartär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">q</gml:identifier>
+      <gml:name>Quartär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27478_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">q</gml:identifier>
+          <gml:name>Quaternary</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>3</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27479">
+      <gml:description>Holozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qh</gml:identifier>
+      <gml:name>Holozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27479_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qh</gml:identifier>
+          <gml:name>Holocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>4</bmlcl:keyID>
+      <bmlcl:parentID>3</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27480">
+      <gml:description>Mittelholozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qhm</gml:identifier>
+      <gml:name>Mittelholozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27480_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qhm</gml:identifier>
+          <gml:name>Middle Holocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>6</bmlcl:keyID>
+      <bmlcl:parentID>4</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27481">
+      <gml:description>Oberholozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qho</gml:identifier>
+      <gml:name>Oberholozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27481_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qho</gml:identifier>
+          <gml:name>Upper Holocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>5</bmlcl:keyID>
+      <bmlcl:parentID>4</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27482">
+      <gml:description>Unterholozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qhu</gml:identifier>
+      <gml:name>Unterholozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27482_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qhu</gml:identifier>
+          <gml:name>Lower Holocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>7</bmlcl:keyID>
+      <bmlcl:parentID>4</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27483">
+      <gml:description>Pleistozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qp</gml:identifier>
+      <gml:name>Pleistozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27483_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qp</gml:identifier>
+          <gml:name>Pleistocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>8</bmlcl:keyID>
+      <bmlcl:parentID>3</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27484">
+      <gml:description>Mittelpleistozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qpm</gml:identifier>
+      <gml:name>Mittelpleistozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27484_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qpm</gml:identifier>
+          <gml:name>Middle Pleistocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>10</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27485">
+      <gml:description>Oberpleistozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qpo</gml:identifier>
+      <gml:name>Oberpleistozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27485_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qpo</gml:identifier>
+          <gml:name>Upper Pleistocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>9</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27486">
+      <gml:description>Unterpleistozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qpu</gml:identifier>
+      <gml:name>Unterpleistozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27486_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">qpu</gml:identifier>
+          <gml:name>Lower Pleistocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>11</bmlcl:keyID>
+      <bmlcl:parentID>8</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27487">
+      <gml:description>Rotliegend</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">r</gml:identifier>
+      <gml:name>Rotliegend</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27487_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">r</gml:identifier>
+          <gml:name>Rotliegend</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>78</bmlcl:keyID>
+      <bmlcl:parentID>69</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27488">
+      <gml:description>Oberrotliegend</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ro</gml:identifier>
+      <gml:name>Oberrotliegend</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27488_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ro</gml:identifier>
+          <gml:name>Upper Rotliegend</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>79</bmlcl:keyID>
+      <bmlcl:parentID>78</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27489">
+      <gml:description>Unterrotliegend</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ru</gml:identifier>
+      <gml:name>Unterrotliegend</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27489_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">ru</gml:identifier>
+          <gml:name>Lower Rotliegend</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>80</bmlcl:keyID>
+      <bmlcl:parentID>78</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27490">
+      <gml:description>Buntsandstein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">s</gml:identifier>
+      <gml:name>Buntsandstein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27490_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">s</gml:identifier>
+          <gml:name>Buntsandstein</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>61</bmlcl:keyID>
+      <bmlcl:parentID>52</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27491">
+      <gml:description>Silur</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">si</gml:identifier>
+      <gml:name>Silur</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27491_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">si</gml:identifier>
+          <gml:name>Silurian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>103</bmlcl:keyID>
+      <bmlcl:parentID>65</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27492">
+      <gml:description>Ludlow</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siLd</gml:identifier>
+      <gml:name>Ludlow</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27492_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siLd</gml:identifier>
+          <gml:name>Ludlowian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>105</bmlcl:keyID>
+      <bmlcl:parentID>103</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27493">
+      <gml:description>Llandovery</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siLl</gml:identifier>
+      <gml:name>Llandovery</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27493_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siLl</gml:identifier>
+          <gml:name>Llandoverian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>107</bmlcl:keyID>
+      <bmlcl:parentID>103</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27494">
+      <gml:description>Pridoli</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siPr</gml:identifier>
+      <gml:name>Pridoli</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27494_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siPr</gml:identifier>
+          <gml:name>Pridolian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>104</bmlcl:keyID>
+      <bmlcl:parentID>103</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27495">
+      <gml:description>Wenlock</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siWl</gml:identifier>
+      <gml:name>Wenlock</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27495_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">siWl</gml:identifier>
+          <gml:name>Wenlockian</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>106</bmlcl:keyID>
+      <bmlcl:parentID>103</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27496">
+      <gml:description>Mittlerer Buntsandstein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">sm</gml:identifier>
+      <gml:name>Mittlerer Buntsandstein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27496_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">sm</gml:identifier>
+          <gml:name>Middle Buntsandstein</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>63</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27497">
+      <gml:description>Oberer Buntsandstein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">so</gml:identifier>
+      <gml:name>Oberer Buntsandstein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27497_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">so</gml:identifier>
+          <gml:name>Upper Buntsandstein</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>62</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27498">
+      <gml:description>Unterer Buntsandstein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">su</gml:identifier>
+      <gml:name>Unterer Buntsandstein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27498_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">su</gml:identifier>
+          <gml:name>Lower Buntsandstein</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>64</bmlcl:keyID>
+      <bmlcl:parentID>61</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27499">
+      <gml:description>Tertiär</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">t</gml:identifier>
+      <gml:name>Tertiär</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27499_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">t</gml:identifier>
+          <gml:name>Tertiary</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>12</bmlcl:keyID>
+      <bmlcl:parentID>2</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27500">
+      <gml:description>Eozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">teo</gml:identifier>
+      <gml:name>Eozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27500_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">teo</gml:identifier>
+          <gml:name>Eocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>18</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27501">
+      <gml:description>Tertiär-Molasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tM</gml:identifier>
+      <gml:name>Tertiär-Molasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27501_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tM</gml:identifier>
+          <gml:name>Tertiary Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>20</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27502">
+      <gml:description>Miozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tmi</gml:identifier>
+      <gml:name>Miozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27502_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tmi</gml:identifier>
+          <gml:name>Miocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>15</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27503">
+      <gml:description>Neogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tng</gml:identifier>
+      <gml:name>Neogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27503_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tng</gml:identifier>
+          <gml:name>Neogene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>13</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27504">
+      <gml:description>Oligiozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tol</gml:identifier>
+      <gml:name>Oligiozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27504_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tol</gml:identifier>
+          <gml:name>Oligocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>17</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27505">
+      <gml:description>Paleozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tpa</gml:identifier>
+      <gml:name>Paleozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27505_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tpa</gml:identifier>
+          <gml:name>Paleocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>19</bmlcl:keyID>
+      <bmlcl:parentID>16</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27506">
+      <gml:description>Paläogen</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tpg</gml:identifier>
+      <gml:name>Paläogen</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27506_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tpg</gml:identifier>
+          <gml:name>Paleogene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>16</bmlcl:keyID>
+      <bmlcl:parentID>12</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27507">
+      <gml:description>Pliozän</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tpl</gml:identifier>
+      <gml:name>Pliozän</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27507_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tpl</gml:identifier>
+          <gml:name>Pliocene</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>14</bmlcl:keyID>
+      <bmlcl:parentID>13</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27508">
+      <gml:description>Trias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tr</gml:identifier>
+      <gml:name>Trias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27508_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tr</gml:identifier>
+          <gml:name>Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>47</bmlcl:keyID>
+      <bmlcl:parentID>27</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>3</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27509">
+      <gml:description>Alpine Trias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">trA</gml:identifier>
+      <gml:name>Alpine Trias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27509_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">trA</gml:identifier>
+          <gml:name>Alpine Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>48</bmlcl:keyID>
+      <bmlcl:parentID>47</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27510">
+      <gml:description>Germanische Trias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">trG</gml:identifier>
+      <gml:name>Germanische Trias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27510_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">trG</gml:identifier>
+          <gml:name>Germanic Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>52</bmlcl:keyID>
+      <bmlcl:parentID>47</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>4</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27511">
+      <gml:description>Mitteltrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">trm</gml:identifier>
+      <gml:name>Mitteltrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27511_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">trm</gml:identifier>
+          <gml:name>Middle Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>50</bmlcl:keyID>
+      <bmlcl:parentID>48</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27512">
+      <gml:description>Obertrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tro</gml:identifier>
+      <gml:name>Obertrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27512_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tro</gml:identifier>
+          <gml:name>Upper Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>49</bmlcl:keyID>
+      <bmlcl:parentID>48</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27513">
+      <gml:description>Untertrias</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tru</gml:identifier>
+      <gml:name>Untertrias</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27513_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">tru</gml:identifier>
+          <gml:name>Lower Triassic</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>51</bmlcl:keyID>
+      <bmlcl:parentID>48</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27514">
+      <gml:description>Untere Brackwassermolasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">UBM</gml:identifier>
+      <gml:name>Untere Brackwassermolasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27514_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">UBM</gml:identifier>
+          <gml:name>Lower Brackish Water Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>25</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27515">
+      <gml:description>Untere Meeresmolasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">UMM</gml:identifier>
+      <gml:name>Untere Meeresmolasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27515_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">UMM</gml:identifier>
+          <gml:name>Lower Marine Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>26</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27516">
+      <gml:description>Untere Süßwassermolasse</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">USM</gml:identifier>
+      <gml:name>Untere Süßwassermolasse</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27516_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">USM</gml:identifier>
+          <gml:name>Lower Fresh Water Molasse</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>24</bmlcl:keyID>
+      <bmlcl:parentID>20</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27517">
+      <gml:description>Zechstein</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z</gml:identifier>
+      <gml:name>Zechstein</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27517_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z</gml:identifier>
+          <gml:name>Zechstein</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>70</bmlcl:keyID>
+      <bmlcl:parentID>69</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>5</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27518">
+      <gml:description>Zechstein 1</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z1</gml:identifier>
+      <gml:name>Zechstein 1</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27518_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z1</gml:identifier>
+          <gml:name>Zechstein 1</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>77</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27519">
+      <gml:description>Zechstein 2</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z2</gml:identifier>
+      <gml:name>Zechstein 2</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27519_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z2</gml:identifier>
+          <gml:name>Zechstein 2</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>76</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27520">
+      <gml:description>Zechstein 3</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z3</gml:identifier>
+      <gml:name>Zechstein 3</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27520_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z3</gml:identifier>
+          <gml:name>Zechstein 3</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>75</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27521">
+      <gml:description>Zechstein 4</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z4</gml:identifier>
+      <gml:name>Zechstein 4</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27521_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z4</gml:identifier>
+          <gml:name>Zechstein 4</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>74</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27522">
+      <gml:description>Zechstein 5</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z5</gml:identifier>
+      <gml:name>Zechstein 5</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27522_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z5</gml:identifier>
+          <gml:name>Zechstein 5</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>73</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27523">
+      <gml:description>Zechstein 6</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z6</gml:identifier>
+      <gml:name>Zechstein 6</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27523_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z6</gml:identifier>
+          <gml:name>Zechstein 6</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>72</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:codeEntry>
+    <bmlcl:BMLML_CodeDefinition gml:id="_6349_27524">
+      <gml:description>Zechstein 7</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z7</gml:identifier>
+      <gml:name>Zechstein 7</gml:name>
+      <gmx:alternativeExpression>
+        <gmx:CodeAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="_6349_27524_en">
+          <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">z7</gml:identifier>
+          <gml:name>Zechstein 7</gml:name>
+          <gmx:locale xlink:href="EN.xml"/>
+        </gmx:CodeAlternativeExpression>
+      </gmx:alternativeExpression>
+      <bmlcl:keyID>71</bmlcl:keyID>
+      <bmlcl:parentID>70</bmlcl:parentID>
+      <bmlcl:hierarchyLevel>6</bmlcl:hierarchyLevel>
+    </bmlcl:BMLML_CodeDefinition>
+  </gmx:codeEntry>
+  <gmx:alternativeExpression>
+    <gmx:ClAlternativeExpression codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList" gml:id="LastHorizonList_en">
+      <gml:description>stratigraphy of the last horizon (final layer)</gml:description>
+      <gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LastHorizonList">LastHorizonList</gml:identifier>
+      <gml:name>stratigraphy of last horizon</gml:name>
+      <gmx:locale xlink:href="EN.xml"/>
+    </gmx:ClAlternativeExpression>
+  </gmx:alternativeExpression>
+</gmx:ML_CodeListDictionary>

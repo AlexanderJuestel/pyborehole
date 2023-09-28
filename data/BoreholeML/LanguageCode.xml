@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmx:CodeListDictionary gml:id="LanguageCode" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
+	<gml:description>Language Codes</gml:description>
+	<gml:identifier codeSpace="urn:iso:std:iso:639:-2">LanguageCode</gml:identifier>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="LanguageCode_English">
+			<gml:description>English</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LanguageCode.xml">eng</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="LanguageCode_German">
+			<gml:description>German</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/LanguageCode.xml">deu</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+</gmx:CodeListDictionary>

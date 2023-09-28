@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmx:CodeListDictionary gml:id="MD_CharacterSetCode" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmx http://schemas.opengis.net/iso/19139/20070417/gmx/gmx.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
+	<gml:description>Name of the character coding standard used in the resource</gml:description>
+	<gml:identifier codeSpace="urn:iso:std:iso:ISO:191x15">MD_CharacterSetCode</gml:identifier>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_ucs2">
+			<gml:description>16-bit fixed size Universal Character Set, based on ISO/IEC 10646</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">ucs2</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_ucs4">
+			<gml:description>32-bit fixed size Universal Character Set, based on ISO/IEC 10646</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">ucs4</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_utf7">
+			<gml:description>7-bit variable size UCS Transfer Format, based on ISO/IEC 10646</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">utf7</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_utf8">
+			<gml:description>8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">utf8</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_utf16">
+			<gml:description>16-bit variable size UCS Transfer Format, based on ISO/IEC 10646</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">utf16</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part1">
+			<gml:description>ISO/IEC 8859-1, Information technology - 8-bit single byte coded graphic character sets - Part 1 : Latin alphabet No.1</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part1</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part2">
+			<gml:description>ISO/IEC 8859-2, Information technology - 8-bit single byte coded graphic character sets - Part 2 : Latin alphabet No.2</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part2</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part3">
+			<gml:description>ISO/IEC 8859-3, Information technology - 8-bit single byte coded graphic character sets - Part 3 : Latin alphabet No.3</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part3</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part4">
+			<gml:description>ISO/IEC 8859-4, Information technology - 8-bit single byte coded graphic character sets - Part 4 : Latin alphabet No.4</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part4</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part5">
+			<gml:description>ISO/IEC 8859-5, Information technology - 8-bit single byte coded graphic character sets - Part 5 : Latin/Cyrillic alphabet</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part5</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part6">
+			<gml:description>ISO/IEC 8859-6, Information technology - 8-bit single byte coded graphic character sets - Part 6 : Latin/Arabic alphabet</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part6</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part7">
+			<gml:description>ISO/IEC 8859-7, Information technology - 8-bit single byte coded graphic character sets - Part 7 : Latin/Greek alphabet</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part7</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part8">
+			<gml:description>ISO/IEC 8859-8, Information technology - 8-bit single byte coded graphic character sets - Part 8 : Latin/Hebrew alphabet</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part8</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part9">
+			<gml:description>ISO/IEC 8859-9, Information technology - 8-bit single byte coded graphic character sets - Part 9 : Latin alphabet No.5</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part9</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part10">
+			<gml:description>ISO/IEC 8859-10, Information technology - 8-bit single byte coded graphic character sets - Part 10 : Latin alphabet No.6</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part10</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part11">
+			<gml:description>ISO/IEC 8859-11, Information technology - 8-bit single byte coded graphic character sets - Part 11 : Latin/Thai alphabet</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part11</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<!-- <gmx:codeEntry>
+<gmx:CodeDefinition gml:id="(reserved)">
+<gml:description>a future ISO/IEC 8-bit single byte coded graphic character set (e.g. possibly 8859 part 12</gml:description><gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">(reserved)</gml:identifier>
+</gmx:CodeDefinition>
+</gmx:codeEntry> -->
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part13">
+			<gml:description>ISO/IEC 8859-13, Information technology - 8-bit single byte coded graphic character sets - Part 13 : Latin alphabet No.7</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part13</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part14">
+			<gml:description>ISO/IEC 8859-14, Information technology - 8-bit single byte coded graphic character sets - Part 14 : Latin alphabet No.8 (Celtic)</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part14</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part15">
+			<gml:description>ISO/IEC 8859-15, Information technology - 8-bit single byte coded graphic character sets - Part 15 : Latin alphabet No.9</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part15</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_8859part16">
+			<gml:description>ISO/IEC 8859-16, Information technology - 8-bit single byte coded graphic character sets - Part 16 : Latin alphabet No.10</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">8859part16</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_jis">
+			<gml:description>japanese code set used for electronic transmission</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">jis</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_shiftJIS">
+			<gml:description>japanese code set used on MS-DOS machines</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">shiftJIS</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_eucJP">
+			<gml:description>japanese code set used on UNIX based machines</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">eucJP</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_usAscii">
+			<gml:description>United States ASCII code set (ISO 646 US)</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">usAscii</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_ebcdic">
+			<gml:description>IBM mainframe code set</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">ebcdic</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_eucKR">
+			<gml:description>Korean code set</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">eucKR</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_big5">
+			<gml:description>traditional Chinese code set used in Taiwan, Hong Kong of China and other areas</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">big5</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+	<gmx:codeEntry>
+		<gmx:CodeDefinition gml:id="MD_CharacterSetCode_GB2312">
+			<gml:description>simplified Chinese code set</gml:description>
+			<gml:identifier codeSpace="http://www.infogeo.de/boreholeml/3.0/codelists/MD_CharacterSetCode.xml">GB2312</gml:identifier>
+		</gmx:CodeDefinition>
+	</gmx:codeEntry>
+</gmx:CodeListDictionary>
