@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=68.1.2",
+            "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [ "pyborehole" ]
+
+[project]
+name = "PyBorehole"
+
+maintainers = [
+    {name = "Alexander Jüstel", email = "alexander.juestel@rwth-aachen.de"},
+]
+
+description = "Processing Tool for Borehole Data"
+keywords = ["dataprocessing", "boreholes", "wells", "welllogs"]
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ['version']
+requires-python = ">=3.10"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Science/Research',
+    'Topic :: Scientific/Engineering :: Information Analysis',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+    'Operating System :: OS Independent',
+]
+# These dependencies are needed to import PyHeatDemand successfully
+# These dependencies will automatically install other packages like numpy, pandas or matplotlib
+dependencies = [
+    'geopandas',
+    'matplotlib',
+]
+
+[project.optional-dependencies]
+optionals = [
+    'wellpathpy',
+    'pyvista',
+    'lasio'
+    ]
+
+build = [
+    'setuptools',
+    'wheel',
+    'twine',
+    'build'
+      ]
+
+test = [
+    'pytest',
+    'pytest-cov',
+    'geopandas',
+    'matplotlib',
+    'wellpathpy',
+    'pyvista',
+    'lasio'
+    ]
+
+[project.urls]
+Documentation = 'https://pyhd.readthedocs.io/en/latest/index.html'
+Home = 'https://pyhd.readthedocs.io/en/latest/index.html'
+"Bug Tracker" = 'https://github.com/AlexanderJuestel/pyheatdemand/issues'
+Repository = 'https://github.com/AlexanderJuestel/pyheatdemand'
+"Source Code" = 'https://github.com/AlexanderJuestel/pyheatdemand'
+
+[tool.setuptools_scm]
+# Make sure setuptools uses version based on the last created tag
+version_scheme = "post-release"
+# Make sure scm doesn't use local scheme version for push to pypi
+# (so there isn't a + in the version)
+local_scheme = "no-local-version"
+# This _version_generated.py file is a file that you'll never want to add to version control - so you'll want to add it to your gitignore file. but when you build your package, setuptools_Scm creates it. and it contains version information that you will pull into your package below.
+write_to = "pyheatdemand/_version_generated.py"
+write_to_template = '__version__ = "v{version}"'
+
