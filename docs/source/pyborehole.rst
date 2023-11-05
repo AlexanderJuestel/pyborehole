@@ -1,8 +1,6 @@
-pyborehole package
-==================
+PyBorehole API Reference
+========================
 
-Submodules
-----------
 
 pyborehole.borehole module
 --------------------------
