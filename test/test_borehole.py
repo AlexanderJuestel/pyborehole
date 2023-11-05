@@ -28,8 +28,8 @@ def test_borehole_class():
     assert isinstance(borehole.crs_pyproj, pyproj.crs.crs.CRS)
     assert borehole.altitude_above_sea_level == 136
     assert isinstance(borehole.altitude_above_sea_level, float)
-    assert borehole.deviation == None
-    assert borehole.logs == None
+    assert borehole.deviation is None
+    assert borehole.logs is None
     assert isinstance(borehole.df, pd.DataFrame)
 
 
