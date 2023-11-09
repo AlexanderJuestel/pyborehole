@@ -150,7 +150,8 @@ class Borehole:
 
         """
         # Create deviation
-        self.deviation = Deviation(path=path,
+        self.deviation = Deviation(self,
+                                   path=path,
                                    delimiter=delimiter,
                                    step=step)
 
@@ -158,7 +159,7 @@ class Borehole:
         self.update_df(self.deviation.data_dict)
 
     def add_well_logs(self,
-                      path):
+                      path: str):
         """Add Well Logs to the Borehole Object.
 
         Parameters
@@ -167,13 +168,29 @@ class Borehole:
                 Path to the well log file
         """
         # Creating well logs
-        self.logs = Logs(path=path)
+        self.logs = Logs(self,
+                         path=path)
+
+    def add_well_tops(self,
+                      path: str,
+                      delimiter: str = ','):
+        """Add Well Tops to the Borehole Object.
+
+        Parameters
+        __________
+            path : str
+                Path to the well top file
+            delimiter : str
+        """
+        # Creating well tops
+        self.well_tops = WellTops(path=path,
+                                  delimiter=delimiter)
 
     # def read_boreholeml(self):
     # def write_boreholeml(self):
 
 
-class Deviation():
+class Deviation(Borehole):
     """Class to initiate a Deviation object.
 
     Parameters
@@ -186,7 +203,9 @@ class Deviation():
                 Step for resampling the deviation data, e.g. ``step=5``.
 
     """
+
     def __init__(self,
+                 borehole,
                  path: str,
                  delimiter: str,
                  step: float = 5):
@@ -253,10 +272,14 @@ class Deviation():
                                                     orient='columns',
                                                     )
 
+        self.x = borehole.x
+        self.y = borehole.y
+        self.z = borehole.altitude_above_sea_level
+
     def add_origin_to_desurveying(self,
-                                  x: float =0,
-                                  y: float =0,
-                                  z: float =0):
+                                  x: float = None,
+                                  y: float = None,
+                                  z: float = None):
         """Add origin to desurveying.
 
         Parameters
@@ -269,6 +292,14 @@ class Deviation():
                 Altitude of the origin, e.g. ``z=200``.
 
         """
+
+        if not x:
+            x = self.x
+        if not y:
+            y = self.y
+        if not z:
+            z = self.z
+
         # Adding the X coordinate
         self.desurveyed_df['Northing'] = self.desurveyed_df['Northing_rel'] + y
 
@@ -390,12 +421,28 @@ class Deviation():
         tube = spline.tube(radius=radius)
 
         # Assigning depth values
-        tube['TVD'] = tube.points[:,2]
+        tube['TVD'] = tube.points[:, 2]
 
         return tube
 
 
-class Logs:
+class WellTops(Borehole):
+    """Class to initiate Well Tops.
+
+    Parameters
+    __________
+        path : str
+            Path to the well tops, e.g. ``path='Well_Tops.csv'``.
+
+    """
+
+    def __init__(self,
+                 path: str,
+                 delimiter: str = ','):
+        self.df = pd.read_csv(path, delimiter=delimiter)
+
+
+class Logs(Borehole):
     """Class to initiate a Well Log Object.
 
     Parameters
@@ -404,7 +451,10 @@ class Logs:
             Path to the well logs, e.g. ``path='logs.las'``.
 
     """
-    def __init__(self, path: str):
+
+    def __init__(self,
+                 borehole,
+                 path: str):
 
         # Importing lasio
         try:
@@ -448,31 +498,116 @@ class Logs:
                                             'value',
                                             'descr'])
 
+        self.well_tops = borehole.well_tops
+
     def plot_well_logs(self,
-                       tracks: Union[str, list]):
+                       tracks: Union[str, list],
+                       depth_column: str = 'MD',
+                       colors: Union[str, list] = None,
+                       add_well_tops: bool = False,
+                       fill_between: int = None):
         """Plot well logs
 
         Parameters
         __________
 
         tracks : Union[str, list]
-            Name/s of the logs to be plotted
+            Name/s of the logs to be plotted, e.g. ``tracks='SGR'`` or ``tracks=['SGR', 'K'].
+        depth_column : str
+            Name of the column holding the depths, e.g. ``depth_column='MD'``.
+        colors : Union[str, list]
+            Colors of the logs, e.g. ``colors='black'`` or ``colors=['black', 'blue'].
+        add_well_tops : bool, default = False
+            Boolean to add well tops to the plot.
         """
         # Selecting tracks
         df = self.df[tracks].reset_index()
 
-        # Creating plot
-        fig, ax = plt.subplots(1, len(tracks), figsize=(len(tracks) * 2, 8))
+        if isinstance(tracks, str):
+            # Creating plot
+            fig, ax = plt.subplots(1, 1, figsize=(1 * 2, 8))
 
-        # Plotting tracks
-        for i in range(len(tracks)):
-            ax[i].plot(df[tracks[i]], df['MD'])
-            ax[i].grid()
-            ax[i].invert_yaxis()
-            buffer = (max(df['MD']) - min(df['MD'])) / 20
-            ax[i].set_ylim(max(df['MD']) + buffer, min(df['MD']) - buffer)
+            ax.plot(df[tracks], df[depth_column], color=colors)
+            ax.grid()
+            ax.invert_yaxis()
+            buffer = (max(df[depth_column]) - min(df[depth_column])) / 20
+            ax.set_ylim(max(df[depth_column]) + buffer, min(df[depth_column]) - buffer)
+            ax.tick_params(top=True, labeltop=True, bottom=False, labelbottom=False)
+            ax.xaxis.set_label_position('top')
+            ax.set_xlabel(tracks + ' [%s]' %
+                          self.curves[self.curves['original_mnemonic'] == tracks].reset_index(drop=True)['unit'].iloc[
+                              0], color='black')
+            ax.set_ylabel(depth_column + ' [m]')
 
-        return fig, ax
+            if fill_between:
+                left_col_value = np.min(df[tracks].dropna().values)
+                right_col_value = np.max(df[tracks].dropna().values)
+                span = abs(left_col_value - right_col_value)
+                cmap = plt.get_cmap('hot_r')
+                color_index = np.arange(left_col_value, right_col_value, span / 100)
+                # loop through each value in the color_index
+                for index in sorted(color_index):
+                    index_value = (index - left_col_value) / span
+                    color = cmap(index_value)  # obtain color for color index value
+                    ax.fill_betweenx(df[depth_column], df[tracks], left_col_value, where=df[tracks] >= index,
+                                     color=color)
+
+            return fig, ax
+
+        elif isinstance(tracks, list):
+
+            if add_well_tops:
+                j = 1
+            else:
+                j = 0
+
+            # Creating plot
+            fig, ax = plt.subplots(1,
+                                   len(tracks) + j,
+                                   figsize=(len(tracks) * 1.8, 8),
+                                   sharey=True)
+
+            if not colors:
+                colors = [None] * len(tracks)
+
+            # Helping variable for adding well tops
+            if add_well_tops:
+                for index, row in self.well_tops.df.iterrows():
+                    ax[0].axhline(row[self.well_tops.df.columns[1]], 0, 1, color='black')
+                    ax[0].text(0.05, row[self.well_tops.df.columns[1]] - 1, s=row[self.well_tops.df.columns[0]],
+                               fontsize=6)
+                    ax[0].grid()
+                    ax[0].axes.get_xaxis().set_ticks([])
+
+            # Plotting tracks
+            for i in range(len(tracks)):
+                ax[i + j].plot(df[tracks[i]], df[depth_column], color=colors[i])
+                ax[i + j].grid()
+                ax[i + j].invert_yaxis()
+                buffer = (max(df[depth_column]) - min(df[depth_column])) / 20
+                ax[i + j].set_ylim(max(df[depth_column]) + buffer, min(df[depth_column]) - buffer)
+                ax[i + j].tick_params(top=True, labeltop=True, bottom=False, labelbottom=False)
+                ax[i + j].xaxis.set_label_position('top')
+                ax[i + j].set_xlabel(tracks[i] + ' [%s]' %
+                                     self.curves[self.curves['original_mnemonic'] == tracks[i]].reset_index(drop=True)[
+                                         'unit'].iloc[0],
+                                     color='black' if isinstance(colors[i], type(None)) else colors[i])
+                ax[0].set_ylabel(depth_column + ' [m]')
+
+            if fill_between is not None:
+                left_col_value = np.min(df[tracks[fill_between]].dropna().values)
+                right_col_value = np.max(df[tracks[fill_between]].dropna().values)
+                span = abs(left_col_value - right_col_value)
+                cmap = plt.get_cmap('hot_r')
+                color_index = np.arange(left_col_value, right_col_value, span / 100)
+                # loop through each value in the color_index
+                for index in sorted(color_index):
+                    index_value = (index - left_col_value) / span
+                    color = cmap(index_value)  # obtain color for color index value
+                    ax[fill_between+j].fill_betweenx(df[depth_column], df[tracks[fill_between]], left_col_value, where=df[tracks[fill_between]] >= index,
+                                     color=color)
+
+            return fig, ax
 
     def plot_well_log_along_path(self,
                                  log: str,
@@ -688,10 +823,10 @@ def resample_log(line: Union[gpd.GeoDataFrame, LineString],
 
     gdf_resampled = pd.concat([pd.DataFrame.from_dict(
         {'geometry': Point(x[0], y[0]), 'X': [x[0]], 'Y': [y[0]]}, orient='columns'),
-                               gdf_resampled,
-                               pd.DataFrame.from_dict(
-                                   {'geometry': Point(x[-1], y[-1]), 'X': [x[-1]], 'Y': [y[-1]]},
-                                   orient='columns')
-                               ], ignore_index=True)
+        gdf_resampled,
+        pd.DataFrame.from_dict(
+            {'geometry': Point(x[-1], y[-1]), 'X': [x[-1]], 'Y': [y[-1]]},
+            orient='columns')
+    ], ignore_index=True)
 
     return gdf_resampled
