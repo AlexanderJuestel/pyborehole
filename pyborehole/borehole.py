@@ -94,6 +94,21 @@ class Borehole:
             df : pd.DataFrame
                 DataFrame containing the Borehole Metadata.
 
+        Examples
+        ________
+            >>> borehole.create_df()
+            >>> borehole.df
+                                                Value
+            Name                                RWE EB1
+            Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
+            Location                            POINT (6.313031 50.835676)
+            X                                   6.313031
+            Y                                   50.835676
+            Coordinate Reference System         EPSG:4326
+            Coordinate Reference System PyProj  EPSG:4326
+            Altitude above sea level            136
+            Altitude above KB                   None
+
         """
         # Create dict from attributes
         df_dict = {'Name': self.name,
@@ -133,9 +148,12 @@ class Borehole:
                              df])
 
     def add_deviation(self,
-                      path: str,
-                      delimiter: str,
-                      step: float):
+                      path: Union[str, pd.DataFrame],
+                      delimiter: str = '',
+                      step: float = 1,
+                      md_column: str = 'MD',
+                      dip_column: str = 'DIP',
+                      azimuth_column: str = 'AZI'):
         """Add deviation to the Borehole Object.
 
         Parameters
@@ -153,7 +171,10 @@ class Borehole:
         self.deviation = Deviation(self,
                                    path=path,
                                    delimiter=delimiter,
-                                   step=step)
+                                   step=step,
+                                   md_column=md_column,
+                                   dip_column=dip_column,
+                                   azimuth_column=azimuth_column)
 
         # Updating DataFrame
         self.update_df(self.deviation.data_dict)
@@ -206,9 +227,12 @@ class Deviation(Borehole):
 
     def __init__(self,
                  borehole,
-                 path: str,
+                 path: Union[str, pd.DataFrame],
                  delimiter: str,
-                 step: float = 5):
+                 step: float = 5,
+                 md_column: str = 'MD',
+                 dip_column: str = 'DIP',
+                 azimuth_column: str = 'AZI'):
 
         # Importing wellpathpy
         try:
@@ -217,8 +241,16 @@ class Deviation(Borehole):
             ModuleNotFoundError('wellpathpy package not installed')
 
         # Opening deviation file
-        md, inc, azi = wp.read_csv(fname=path,
-                                   delimiter=delimiter)
+        if isinstance(path, str):
+            md, inc, azi = wp.read_csv(fname=path,
+                                       delimiter=delimiter)
+
+        # Opening Pandas DataFrame
+        if isinstance(path, pd.DataFrame):
+            md = path[md_column].values
+            inc = path[dip_column].values
+            azi = path[azimuth_column].values
+
 
         # Creating deviation
         dev = wp.deviation(
@@ -561,14 +593,14 @@ class Logs(Borehole):
             else:
                 j = 0
 
+            if not colors:
+                colors = [None] * len(tracks)
+
             # Creating plot
             fig, ax = plt.subplots(1,
                                    len(tracks) + j,
                                    figsize=(len(tracks) * 1.8, 8),
                                    sharey=True)
-
-            if not colors:
-                colors = [None] * len(tracks)
 
             # Helping variable for adding well tops
             if add_well_tops:
@@ -606,6 +638,8 @@ class Logs(Borehole):
                     color = cmap(index_value)  # obtain color for color index value
                     ax[fill_between+j].fill_betweenx(df[depth_column], df[tracks[fill_between]], left_col_value, where=df[tracks[fill_between]] >= index,
                                      color=color)
+
+            plt.tight_layout()
 
             return fig, ax
 
