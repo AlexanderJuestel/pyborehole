@@ -75,6 +75,6 @@ version_scheme = "post-release"
 # (so there isn't a + in the version)
 local_scheme = "no-local-version"
 # This _version_generated.py file is a file that you'll never want to add to version control - so you'll want to add it to your gitignore file. but when you build your package, setuptools_Scm creates it. and it contains version information that you will pull into your package below.
-write_to = "pyheatdemand/_version_generated.py"
+write_to = "pyborehole/_version_generated.py"
 write_to_template = '__version__ = "v{version}"'
 

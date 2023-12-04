@@ -7,4 +7,7 @@ dependencies:
   - pip
   - pip:
     - matplotlib
+    - sphinx_book_theme==0.3.3
+    - sphinx_copybutton
+    - nbsphinx
 

@@ -28,9 +28,25 @@ def test_borehole_class():
     assert isinstance(borehole.crs_pyproj, pyproj.crs.crs.CRS)
     assert borehole.altitude_above_sea_level == 136
     assert isinstance(borehole.altitude_above_sea_level, float)
-    assert borehole.deviation == None
-    assert borehole.logs == None
+    assert borehole.deviation is None
+    assert borehole.logs is None
     assert isinstance(borehole.df, pd.DataFrame)
+    assert borehole.__str__() == 'Weisweiler R1'
+
+    borehole.update_df({'newname': 'Weisweiler R2'})
+    assert borehole.df.T['newname'].iloc[0] == 'Weisweiler R2'
+
+    data = {'MD': [0, 50, 100],
+            'DIP': [2, 2, 2],
+            'AZI': [5, 5, 5]}
+
+    df_dev = pd.DataFrame.from_dict(data)
+
+    borehole.add_deviation(path=df_dev,
+                           step=25,
+                           md_column='MD',
+                           dip_column='DIP',
+                           azimuth_column='AZI')
 
 
 def test_borehole_class_error():
