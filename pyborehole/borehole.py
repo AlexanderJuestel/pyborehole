@@ -1141,22 +1141,28 @@ def resample_log(log: Union[gpd.GeoDataFrame, LineString, pd.DataFrame],
 
 
     """
-    # Extracting Linestring from gdf
+    # Creating gdf from values
     if isinstance(log, pd.DataFrame):
         log = gpd.GeoDataFrame(geometry=[LineString(log[[column_name, 'DEPT']].values)])
+    # Extracting LineString from Value and assigning column name
     if isinstance(log, gpd.GeoDataFrame):
         if not column_name:
             column_name = 'X'
         log = log.geometry.iloc[0]
+    # Assigning column name
     elif isinstance(log, shapely.geometry.LineString):
-        column_name = 'X'
+        if not column_name:
+            column_name = 'X'
 
+    # Extracting coordinates
     x = [coords[0] for coords in list(log.coords)]
     y = [coords[1] for coords in list(log.coords)]
 
+    # Getting last position for resampling
     if not resampling_end:
         resampling_end = np.negative(np.floor(y[-1]), where=False)
 
+    # Create LineStrings along Log
     linestrings = [LineString([(min(x),
                                 y_sample),
                                (max(x),
@@ -1164,14 +1170,19 @@ def resample_log(log: Union[gpd.GeoDataFrame, LineString, pd.DataFrame],
                                                                       resampling_end,
                                                                       -resampling)]
 
+    # Create intersection points between LineStrings and log
     points = [
         shapely.wkt.loads(shapely.wkt.dumps(log.intersection(line_intersect), rounding_precision=rounding_precision))
         for line_intersect in linestrings if not log.intersection(line_intersect).is_empty]
 
+    # Creating GeoDataFrame from log
     gdf_resampled = gpd.GeoDataFrame(geometry=points)
+
+    # Setting columns
     gdf_resampled[column_name] = gdf_resampled.geometry.centroid.x
     gdf_resampled['Y'] = np.round(gdf_resampled.geometry.centroid.y, 1)
 
+    # Concatenating GeoDataFrames
     gdf_resampled = pd.concat([pd.DataFrame.from_dict(
         {'geometry': Point(x[0], y[0]), column_name: [x[0]], 'Y': [y[0]]}, orient='columns'),
         gdf_resampled,
@@ -1180,11 +1191,14 @@ def resample_log(log: Union[gpd.GeoDataFrame, LineString, pd.DataFrame],
             orient='columns')
     ], ignore_index=True)
 
+    # Dropping duplicates and resetting index
     gdf_resampled = gdf_resampled.drop_duplicates().reset_index(drop=True)
 
+    # Dropping first depth
     if drop_first:
-        gdf_resampled = gdf_resampled[1:]
+        gdf_resampled = gdf_resampled[1:].reset_index(drop=True)
 
+    # Dropping last depth
     if drop_last:
         gdf_resampled = gdf_resampled[:-1]
 
@@ -1198,6 +1212,8 @@ def resample_logs(logs: pd.DataFrame,
                   rounding_precision=5,
                   drop_first: bool = True,
                   drop_last: bool = True, ):
+
+    # Resampling DataFrames
     dfs = [resample_log(log=logs[['DEPT', column]],
                         resampling=resampling,
                         column_name=column,
@@ -1207,17 +1223,17 @@ def resample_logs(logs: pd.DataFrame,
                         drop_first=drop_first,
                         drop_last=drop_last) for column in logs.columns.drop('DEPT')]
 
+    # Concatenating DataFrames
     df = pd.concat(dfs, axis=1).drop('geometry', axis=1)
 
+    # Dropping duplicate columns
     df = df.loc[:, ~df.columns.duplicated()]
 
     return df
 
 
 def merge_logs(paths: List[str],
-               resampling: float,
-
-               ):
+               resampling: Union[float, int]) -> pd.DataFrame:
     try:
         import lasio
     except ModuleNotFoundError:
@@ -1236,7 +1252,7 @@ def merge_logs(paths: List[str],
     miny = [df.describe().loc['min']['Y'] for df in dfs_resampled]
     maxy = [df.describe().loc['max']['Y'] for df in dfs_resampled]
 
-    # Creating DataFrame raning across the entire depth range
+    # Creating DataFrame ranging across the entire depth range
     df_depth = pd.DataFrame(np.arange(min(miny), max(maxy) + 1, 1), columns=['Y'])
 
     # Copying depth DataFrame
