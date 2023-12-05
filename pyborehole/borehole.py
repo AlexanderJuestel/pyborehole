@@ -5,7 +5,7 @@ from shapely.geometry import Point, LineString
 from pyproj import CRS
 import pyproj
 import matplotlib.pyplot as plt
-from typing import Union
+from typing import Union, List
 import geopandas as gpd
 
 
@@ -27,12 +27,29 @@ class Borehole:
 
     Returns
     _______
-        Borhole object.
+        Borehole object.
+
+
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
 
     Examples
     ________
         >>> from pyborehole.borehole import Borehole
         >>> borehole = Borehole(name='Weisweiler R1', address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+        >>> borehole.df
+                                                Value
+            Name                                RWE EB1
+            Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
+            Location                            POINT (6.313031 50.835676)
+            X                                   6.313031
+            Y                                   50.835676
+            Coordinate Reference System         EPSG:4326
+            Coordinate Reference System PyProj  EPSG:4326
+            Altitude above sea level            136
+            Altitude above KB                   None
 
     .. versionadded:: 0.0.1
 
@@ -76,9 +93,10 @@ class Borehole:
         self.altitude_above_sea_level = altitude_above_sea_level
         self.altitude_above_kb = None
 
-        # Add Deviation and well logs
+        # Add Deviation, well logs and well tops
         self.deviation = None
         self.logs = None
+        self.well_tops = None
 
         # Create borehole DataFrame
         self.df = self.create_df()
@@ -110,7 +128,7 @@ class Borehole:
             Altitude above KB                   None
 
         """
-        # Create dict from attributes
+        # Creating dict from attributes
         df_dict = {'Name': self.name,
                    'Address': self.address,
                    'Location': self.location,
@@ -129,7 +147,8 @@ class Borehole:
 
         return df
 
-    def update_df(self, data_dict: dict):
+    def update_df(self,
+                  data_dict: dict):
         """Update DataFrame with data from data_dict.
 
         Parameters
@@ -137,7 +156,32 @@ class Borehole:
             data_dict : dict
                 Dictionary containing the new data.
 
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.update_df(data_dict={'Date': 2023})
+            >>> borehole.df
+                                                Value
+            Name                                RWE EB1
+            Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
+            Location                            POINT (6.313031 50.835676)
+            X                                   6.313031
+            Y                                   50.835676
+            Coordinate Reference System         EPSG:4326
+            Coordinate Reference System PyProj  EPSG:4326
+            Altitude above sea level            136
+            Altitude above KB                   None
+            Data                                2023
+
         """
+        # Checking that the data dict is a dict
+        if not isinstance(data_dict, dict):
+            raise TypeError('data_dict must be a dict')
+
         # Create DataFrame from dict
         df = pd.DataFrame.from_dict(data=data_dict,
                                     orient='index',
@@ -150,7 +194,7 @@ class Borehole:
     def add_deviation(self,
                       path: Union[str, pd.DataFrame],
                       delimiter: str = '',
-                      step: float = 1,
+                      step: Union[float, int] = 1,
                       md_column: str = 'MD',
                       dip_column: str = 'DIP',
                       azimuth_column: str = 'AZI'):
@@ -160,13 +204,60 @@ class Borehole:
         __________
             path : str
                 Path to the deviation file, e.g. ``path='logs.las'``.
-            delimiter : str
+            delimiter : str, default: ``''``
                 Delimiter to read the deviation file correctly, e.g. ``delimiter=';'``.
-            step : float
+            step : Union[float, int], default: ``1``
                 Step for resampling the deviation data, e.g. ``step=5``.
+            md_column : str, default: ``'MD'``
+                Column containing the measured depths.
+            dip_column : str, default: ``'DIP'``
+                Column containing the dip values.
+            azimuth_column : str, default: ``'AZI'``
+                Column containing the azimuth values.
 
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
 
+        Examples
+        ________
+            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
+            >>> borehole.deviation.deviation_df
+                Measured Depth  Inclination  Azimuth
+            0   0.05            0.0          0.0
+            1   0.10            0.0          0.0
+            2   0.15            0.0          0.0
         """
+        # Checking that the path is of type str or a Pandas DataFrame
+        if not isinstance(path, (str, pd.DataFrame)):
+            raise TypeError('path must be provided as string or Pandas DataFrame')
+
+        # Checking that the delimiter is of type string
+        if not isinstance(delimiter, str):
+            raise TypeError('delimiter must be of type string')
+
+        # Checking that the step is of type float or int
+        if not isinstance(step, (float, int)):
+            raise TypeError('step must be provided as float or int')
+
+        # Checking that the md_column is of type str
+        if not isinstance(md_column, str):
+            raise TypeError('md_column must be provided as str')
+
+        # Checking that the dip_column is of type str
+        if not isinstance(dip_column, str):
+            raise TypeError('dip_column must be provided as str')
+
+        # Checking that the azimuth_column is of type str
+        if not isinstance(azimuth_column, str):
+            raise TypeError('azimuth_column must be provided as str')
+
+        # Checking that the DataFrame contains the columns
+        if isinstance(path, pd.DataFrame):
+            if not {md_column, dip_column, azimuth_column}.issubset(path.columns):
+                raise ValueError('Provided columns are not within the DataFrame')
+
         # Create deviation
         self.deviation = Deviation(self,
                                    path=path,
@@ -177,7 +268,7 @@ class Borehole:
                                    azimuth_column=azimuth_column)
 
         # Updating DataFrame
-        self.update_df(self.deviation.data_dict)
+        self.update_df(data_dict=self.deviation.data_dict)
 
     def add_well_logs(self,
                       path: str):
@@ -186,8 +277,36 @@ class Borehole:
         Parameters
         __________
             path : str
-                Path to the well log file
+                Path to the well log file.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.add_well_logs(path='Well_logs.las')
+            >>> borehole.logs.well_header
+                mnemonic   unit   value               descr
+            0   STRT       M      100.0               Log Start Depth
+            1   STOP       M      0.05                Log Stop Depth
+            2   STEP       M      -0.05               Log Increment
+            3   NULL              -999.25             Null Value
+            4   COMP              RWE Power           Company Name
+            5   WELL              EB 1                Well Name
+            6   FLD               KW Weisweiler       Field Name
+            7   LOC                                   Location
+            8   PROV                                  Province
+            9   SRVC                                  Service Company
+            10  DATE              26-Oct-2023         Date
+            11  UWI                                   Unique Well ID
+
         """
+        # Checking that the path is of type string
+        if not isinstance(path, str):
+            raise TypeError('path must be provided as str')
+
         # Creating well logs
         self.logs = Logs(self,
                          path=path)
@@ -200,15 +319,36 @@ class Borehole:
         Parameters
         __________
             path : str
-                Path to the well top file
-            delimiter : str
+                Path to the well top file.
+            delimiter : str, default: ``'``
+                Delimiter for the well top file, e.g. ``delimiter=','``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.add_well_tops(path='Well_Tops.csv', delimiter=';')
+            >>> borehole.well_tops
+                Top              MD
+            0   Infill           3.0
+            1   Base Quaternary  9.5
+            2   Sand 1           28.5
+            3   Clay             32.0
         """
+        # Checking that the path is of type string
+        if not isinstance(path, str):
+            raise TypeError('path must be provided as str')
+
+        # Checking that the delimiter is of type str
+        if not isinstance(delimiter, str):
+            raise TypeError('delimiter must be of type str')
+
         # Creating well tops
         self.well_tops = WellTops(path=path,
                                   delimiter=delimiter)
-
-    # def read_boreholeml(self):
-    # def write_boreholeml(self):
 
 
 class Deviation(Borehole):
@@ -250,7 +390,6 @@ class Deviation(Borehole):
             md = path[md_column].values
             inc = path[dip_column].values
             azi = path[azimuth_column].values
-
 
         # Creating deviation
         dev = wp.deviation(
@@ -636,8 +775,9 @@ class Logs(Borehole):
                 for index in sorted(color_index):
                     index_value = (index - left_col_value) / span
                     color = cmap(index_value)  # obtain color for color index value
-                    ax[fill_between+j].fill_betweenx(df[depth_column], df[tracks[fill_between]], left_col_value, where=df[tracks[fill_between]] >= index,
-                                     color=color)
+                    ax[fill_between + j].fill_betweenx(df[depth_column], df[tracks[fill_between]], left_col_value,
+                                                       where=df[tracks[fill_between]] >= index,
+                                                       color=color)
 
             plt.tight_layout()
 
@@ -824,18 +964,32 @@ def get_points_along_spline(spline,
     return points
 
 
-def resample_log(line: Union[gpd.GeoDataFrame, LineString],
+def resample_log(log: Union[gpd.GeoDataFrame, LineString, pd.DataFrame],
                  resampling: int,
+                 column_name: str = None,
                  resampling_start=0,
                  resampling_end=None,
                  rounding_precision=5,
+                 drop_first: bool = False,
+                 drop_last: bool = False,
                  ) -> gpd.GeoDataFrame:
-    # Extracting Linestring from gdf
-    if isinstance(line, gpd.GeoDataFrame):
-        line = line.geometry.iloc[0]
+    """Resample one log. Data must be provided as GeoDataFrame with the log Data as Shapely Points.
 
-    x = [coords[0] for coords in list(line.coords)]
-    y = [coords[1] for coords in list(line.coords)]
+
+
+    """
+    # Extracting Linestring from gdf
+    if isinstance(log, pd.DataFrame):
+        log = gpd.GeoDataFrame(geometry=[LineString(log[[column_name, 'DEPT']].values)])
+    if isinstance(log, gpd.GeoDataFrame):
+        if not column_name:
+            column_name = 'X'
+        log = log.geometry.iloc[0]
+    elif isinstance(log, shapely.geometry.LineString):
+        column_name = 'X'
+
+    x = [coords[0] for coords in list(log.coords)]
+    y = [coords[1] for coords in list(log.coords)]
 
     if not resampling_end:
         resampling_end = np.negative(np.floor(y[-1]), where=False)
@@ -848,19 +1002,89 @@ def resample_log(line: Union[gpd.GeoDataFrame, LineString],
                                                                       -resampling)]
 
     points = [
-        shapely.wkt.loads(shapely.wkt.dumps(line.intersection(line_intersect), rounding_precision=rounding_precision))
-        for line_intersect in linestrings if not line.intersection(line_intersect).is_empty]
+        shapely.wkt.loads(shapely.wkt.dumps(log.intersection(line_intersect), rounding_precision=rounding_precision))
+        for line_intersect in linestrings if not log.intersection(line_intersect).is_empty]
 
     gdf_resampled = gpd.GeoDataFrame(geometry=points)
-    gdf_resampled['X'] = gdf_resampled.geometry.centroid.x
+    gdf_resampled[column_name] = gdf_resampled.geometry.centroid.x
     gdf_resampled['Y'] = np.round(gdf_resampled.geometry.centroid.y, 1)
 
     gdf_resampled = pd.concat([pd.DataFrame.from_dict(
-        {'geometry': Point(x[0], y[0]), 'X': [x[0]], 'Y': [y[0]]}, orient='columns'),
+        {'geometry': Point(x[0], y[0]), column_name: [x[0]], 'Y': [y[0]]}, orient='columns'),
         gdf_resampled,
         pd.DataFrame.from_dict(
-            {'geometry': Point(x[-1], y[-1]), 'X': [x[-1]], 'Y': [y[-1]]},
+            {'geometry': Point(x[-1], y[-1]), column_name: [x[-1]], 'Y': [y[-1]]},
             orient='columns')
     ], ignore_index=True)
 
+    gdf_resampled = gdf_resampled.drop_duplicates().reset_index(drop=True)
+
+    if drop_first:
+        gdf_resampled = gdf_resampled[1:]
+
+    if drop_last:
+        gdf_resampled = gdf_resampled[:-1]
+
     return gdf_resampled
+
+
+def resample_logs(logs: pd.DataFrame,
+                  resampling: int,
+                  resampling_start=0,
+                  resampling_end=None,
+                  rounding_precision=5,
+                  drop_first: bool = True,
+                  drop_last: bool = True, ):
+    dfs = [resample_log(log=logs[['DEPT', column]],
+                        resampling=resampling,
+                        column_name=column,
+                        resampling_start=resampling_start,
+                        resampling_end=resampling_end,
+                        rounding_precision=rounding_precision,
+                        drop_first=drop_first,
+                        drop_last=drop_last) for column in logs.columns.drop('DEPT')]
+
+    df = pd.concat(dfs, axis=1).drop('geometry', axis=1)
+
+    df = df.loc[:, ~df.columns.duplicated()]
+
+    return df
+
+
+def merge_logs(paths: List[str],
+               resampling: float,
+
+               ):
+    try:
+        import lasio
+    except ModuleNotFoundError:
+        ModuleNotFoundError('lasio package not installed')
+
+    # Opening LAS Files as DataFrames
+    dfs = [lasio.read(path).df().reset_index() for path in paths]
+
+    # Resampling logs
+    dfs_resampled = [resample_logs(logs=df,
+                                   resampling=-resampling,
+                                   drop_first=True,
+                                   drop_last=True) for df in dfs]
+
+    # Getting minimum und maximum depth
+    miny = [df.describe().loc['min']['Y'] for df in dfs_resampled]
+    maxy = [df.describe().loc['max']['Y'] for df in dfs_resampled]
+
+    # Creating DataFrame raning across the entire depth range
+    df_depth = pd.DataFrame(np.arange(min(miny), max(maxy) + 1, 1), columns=['Y'])
+
+    # Copying depth DataFrame
+    merged_df = df_depth.copy(deep=True)
+
+    # Merging DataFrames
+    for i in range(len(dfs_resampled)):
+        dfs_resampled[i] = dfs_resampled[i].rename(columns={'X': 'X_%s' % i})
+        merged_df = pd.merge(merged_df, dfs_resampled[i], on='Y', how='outer')
+
+    # Renaming column and setting index
+    merged_df = merged_df.rename(columns={'Y': 'DEPT'}).set_index('DEPT')
+
+    return merged_df
