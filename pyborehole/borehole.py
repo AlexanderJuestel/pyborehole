@@ -23,7 +23,7 @@ class Borehole:
         crs : Union[str, pyproj.crs.crs.CRS]
             Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
         altitude_above_sea_level : Union[int, float]
-            Altitude above sea level, e.g. ``'altitude_above_sea_level=136``.
+            Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
 
     Returns
     _______
@@ -61,7 +61,49 @@ class Borehole:
                  location: tuple,
                  crs: Union[str, pyproj.crs.crs.CRS],
                  altitude_above_sea_level: Union[int, float]):
+        """Initiate borehole class.
 
+        Parameters
+        __________
+            name : str
+                Name of the Borehole, e.g. ``name='Weisweiler R1'``.
+            address : str
+                Address of the Borehole, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
+            location : tuple
+                Coordinates tuple representing the location of the Borehole, e.g. ``location=(6.313031, 50.835676)``.
+            crs : Union[str, pyproj.crs.crs.CRS]
+                Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
+            altitude_above_sea_level : Union[int, float]
+                Altitude above sea level, e.g. ``'altitude_above_sea_level=136``.
+
+        Returns
+        _______
+            Borehole object.
+
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1', address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.df
+                                                    Value
+                Name                                RWE EB1
+                Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
+                Location                            POINT (6.313031 50.835676)
+                X                                   6.313031
+                Y                                   50.835676
+                Coordinate Reference System         EPSG:4326
+                Coordinate Reference System PyProj  EPSG:4326
+                Altitude above sea level            136
+                Altitude above KB                   None
+
+        .. versionadded:: 0.0.1
+        """
         # Checking that the name is provided as string
         if not isinstance(name, str):
             raise TypeError('The name of the borehole must be provided as string')
@@ -102,6 +144,15 @@ class Borehole:
         self.df = self.create_df()
 
     def __str__(self):
+        """Return name of borehole
+
+        Returns
+        _______
+            borehole.name : str
+                Name of the borehole.
+
+        .. versionadded:: 0.0.1
+        """
         return f"{self.name}"
 
     def create_df(self):
@@ -127,6 +178,7 @@ class Borehole:
             Altitude above sea level            136
             Altitude above KB                   None
 
+        .. versionadded:: 0.0.1
         """
         # Creating dict from attributes
         df_dict = {'Name': self.name,
@@ -154,7 +206,7 @@ class Borehole:
         Parameters
         __________
             data_dict : dict
-                Dictionary containing the new data.
+                Dictionary containing the new data, e.g. ``data_dict={'Date': 2023}``.
 
         Raises
         ______
@@ -177,6 +229,7 @@ class Borehole:
             Altitude above KB                   None
             Data                                2023
 
+        .. versionadded:: 0.0.1
         """
         # Checking that the data dict is a dict
         if not isinstance(data_dict, dict):
@@ -209,11 +262,11 @@ class Borehole:
             step : Union[float, int], default: ``1``
                 Step for resampling the deviation data, e.g. ``step=5``.
             md_column : str, default: ``'MD'``
-                Column containing the measured depths.
+                Column containing the measured depths, e.g. ``md_column='MD'``.
             dip_column : str, default: ``'DIP'``
-                Column containing the dip values.
+                Column containing the dip values, e.g. ``dip_column='DIP'``.
             azimuth_column : str, default: ``'AZI'``
-                Column containing the azimuth values.
+                Column containing the azimuth values, e.g. ``azimuth_column='AZI'``.
 
         Raises
         ______
@@ -228,6 +281,8 @@ class Borehole:
             0   0.05            0.0          0.0
             1   0.10            0.0          0.0
             2   0.15            0.0          0.0
+
+        .. versionadded:: 0.0.1
         """
         # Checking that the path is of type str or a Pandas DataFrame
         if not isinstance(path, (str, pd.DataFrame)):
@@ -277,7 +332,7 @@ class Borehole:
         Parameters
         __________
             path : str
-                Path to the well log file.
+                Path to the well log file, e.g. ``path='Well_Logs.las'``.
 
         Raises
         ______
@@ -302,6 +357,7 @@ class Borehole:
             10  DATE              26-Oct-2023         Date
             11  UWI                                   Unique Well ID
 
+        .. versionadded:: 0.0.1
         """
         # Checking that the path is of type string
         if not isinstance(path, str):
@@ -319,7 +375,7 @@ class Borehole:
         Parameters
         __________
             path : str
-                Path to the well top file.
+                Path to the well top file, e.g. ``path='Well_Tops.csv'``.
             delimiter : str, default: ``'``
                 Delimiter for the well top file, e.g. ``delimiter=','``.
 
@@ -337,6 +393,8 @@ class Borehole:
             1   Base Quaternary  9.5
             2   Sand 1           28.5
             3   Clay             32.0
+
+        .. versionadded:: 0.0.1
         """
         # Checking that the path is of type string
         if not isinstance(path, str):
@@ -357,22 +415,104 @@ class Deviation(Borehole):
     Parameters
     __________
         path : str
-            Path to the deviation file, e.g. ``path='logs.las'``.
+            Path to the deviation file, e.g. ``path='Well_deviation.csv'``.
         delimiter : str
             Delimiter to read the deviation file correctly, e.g. ``delimiter=';'``.
-        step : float
+        step : float, default: ``5``
                 Step for resampling the deviation data, e.g. ``step=5``.
+        md_column : str, default: ``'MD'``
+                Column containing the measured depths.
+        dip_column : str, default: ``'DIP'``
+            Column containing the dip values.
+        azimuth_column : str, default: ``'AZI'``
+            Column containing the azimuth values.
 
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
+
+    Examples
+    ________
+        >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
+        >>> borehole.deviation.deviation_df
+            Measured Depth  Inclination  Azimuth
+        0   0.05            0.0          0.0
+        1   0.10            0.0          0.0
+        2   0.15            0.0          0.0
+
+    .. versionadded:: 0.0.1
     """
-
     def __init__(self,
                  borehole,
                  path: Union[str, pd.DataFrame],
                  delimiter: str,
-                 step: float = 5,
+                 step: Union[float, int] = 5,
                  md_column: str = 'MD',
                  dip_column: str = 'DIP',
                  azimuth_column: str = 'AZI'):
+        """
+
+        Parameters
+        __________
+            path : str
+                Path to the deviation file, e.g. ``path='Well_Deviation.csv'``.
+            delimiter : str
+                Delimiter to read the deviation file correctly, e.g. ``delimiter=';'``.
+            step : float
+                    Step for resampling the deviation data, e.g. ``step=5``.
+            md_column : str, default: ``'MD'``
+                    Column containing the measured depths, e.g. ``md_column='MD'``.
+            dip_column : str, default: ``'DIP'``
+                Column containing the dip values, e.g. ``dip_column='DIP'``.
+            azimuth_column : str, default: ``'AZI'``
+                Column containing the azimuth values, e.g. ``azimuth_column='AZI'``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
+            >>> borehole.deviation.deviation_df
+                Measured Depth  Inclination  Azimuth
+            0   0.05            0.0          0.0
+            1   0.10            0.0          0.0
+            2   0.15            0.0          0.0
+
+        .. versionadded:: 0.0.1
+
+        """
+        # Checking that the path is of type str or a Pandas DataFrame
+        if not isinstance(path, (str, pd.DataFrame)):
+            raise TypeError('path must be provided as string or Pandas DataFrame')
+
+        # Checking that the delimiter is of type string
+        if not isinstance(delimiter, str):
+            raise TypeError('delimiter must be of type string')
+
+        # Checking that the step is of type float or int
+        if not isinstance(step, (float, int)):
+            raise TypeError('step must be provided as float or int')
+
+        # Checking that the md_column is of type str
+        if not isinstance(md_column, str):
+            raise TypeError('md_column must be provided as str')
+
+        # Checking that the dip_column is of type str
+        if not isinstance(dip_column, str):
+            raise TypeError('dip_column must be provided as str')
+
+        # Checking that the azimuth_column is of type str
+        if not isinstance(azimuth_column, str):
+            raise TypeError('azimuth_column must be provided as str')
+
+        # Checking that the DataFrame contains the columns
+        if isinstance(path, pd.DataFrame):
+            if not {md_column, dip_column, azimuth_column}.issubset(path.columns):
+                raise ValueError('Provided columns are not within the DataFrame')
 
         # Importing wellpathpy
         try:
@@ -448,22 +588,45 @@ class Deviation(Borehole):
         self.z = borehole.altitude_above_sea_level
 
     def add_origin_to_desurveying(self,
-                                  x: float = None,
-                                  y: float = None,
-                                  z: float = None):
+                                  x: Union[float, int] = None,
+                                  y: Union[float, int] = None,
+                                  z: Union[float, int] = None):
         """Add origin to desurveying.
 
         Parameters
         __________
-            x : float
+            x : Union[float, int]
                 X-Coordinate of the origin, e.g. ``x=1000``.
-            y : float
+            y : Union[float, int]
                 Y-Coordinate of the origin, e.g. ``y=1000``.
-            z : float
+            z : Union[float, int]
                 Altitude of the origin, e.g. ``z=200``.
 
-        """
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
 
+        Examples
+        ________
+            >>> borehole.deviation.add_origin_to_desurveying(x=100, y=100, z=000)
+
+        .. versionadded:: 0.0.1
+
+        """
+        # Checking that the x coordinate is of type float or int
+        if not isinstance(x, (float, int, type(None))):
+            raise TypeError('X coordinate must be provided as float or int')
+
+        # Checking that the y coordinate is of type float or int
+        if not isinstance(y, (float, int, type(None))):
+            raise TypeError('Y coordinate must be provided as float or int')
+
+        # Checking that the z coordinate is of type float or int
+        if not isinstance(z, (float, int, type(None))):
+            raise TypeError('Z coordinate must be provided as float or int')
+
+        # Setting coordinates
         if not x:
             x = self.x
         if not y:
