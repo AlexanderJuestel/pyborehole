@@ -8,17 +8,7 @@ import matplotlib.pyplot as plt
 from typing import Union, List, Tuple
 import geopandas as gpd
 
-
-class Boreholes:
-
-    def __init__(self,
-                 boreholes):
-        self.boreholes = boreholes
-
-        self.gdf = pd.concat([borehole.to_gdf() for borehole in self.boreholes],
-                             axis=0).reset_index(drop=True)
-
-        self.names = [borehole.name for borehole in self.boreholes]
+from pyborehole.deviation import Deviation
 
 
 class Borehole:
@@ -31,7 +21,7 @@ class Borehole:
 
     Returns
     _______
-        Borehole object.
+        Borehole
 
 
     Raises
@@ -47,14 +37,13 @@ class Borehole:
 
 
     .. versionadded:: 0.0.1
-
     """
 
     boreholes = []
 
     def __init__(self,
                  name: str):
-        """Initiate borehole class.
+        """Initiate Borehole class.
 
         Parameters
         __________
@@ -63,8 +52,7 @@ class Borehole:
 
         Returns
         _______
-            Borehole object.
-
+            Borehole
 
         Raises
         ______
@@ -78,7 +66,6 @@ class Borehole:
             >>> borehole
             Borehole: RWE EB1
 
-
         .. versionadded:: 0.0.1
         """
 
@@ -90,6 +77,7 @@ class Borehole:
 
         # Defining attributes
         self.name = name
+        self.has_name = True
 
         # Defining emtpy attributes
         self.address = None
@@ -126,6 +114,9 @@ class Borehole:
         self.has_tvd = None
         self.has_tvdss = None
 
+        self.depth_unit = None
+        self.has_depth_unit = None
+
         self.is_vertical = None
 
         self.contractree = None
@@ -148,7 +139,6 @@ class Borehole:
         self.has_start_logging = None
         self.has_end_logging = None
 
-
         # Adding Deviation, well logs and well tops
         self.deviation = None
         self.logs = None
@@ -163,6 +153,7 @@ class Borehole:
         # Creating borehole (Geo-)DataFrame
         self.df = None
         self.gdf = None
+        self.properties = None
 
     def __str__(self):
         """Return name of borehole
@@ -276,7 +267,6 @@ class Borehole:
                 Altitude above KB                   None
 
         .. versionadded:: 0.0.1
-
         """
 
         # Checking that the address is provided as string
@@ -309,8 +299,10 @@ class Borehole:
 
         # Checking that the borehole_type is one of the possible types
         if borehole_type:
-            if not borehole_type in ['exploration', 'producer', 'injector', 'sidetrack', 'observatory', 'heat exchanger']:
-                raise ValueError('The borehole_type must be one of the following: exploration, producer, injector, sidetrack, observatory, heat exchanger')
+            if borehole_type not in ['exploration', 'producer', 'injector', 'sidetrack', 'observatory',
+                                     'heat exchanger']:
+                raise ValueError(
+                    'The borehole_type must be one of the following: exploration, producer, injector, sidetrack, observatory, heat exchanger')
 
         # Checking that the measured depth is provided as int or float
         if not isinstance(md, (int, float, type(None))):
@@ -326,7 +318,7 @@ class Borehole:
 
         # Checking that the depth unit is one of the possible units
         if depth_unit:
-            if not depth_unit in ['m', 'ft']:
+            if depth_unit not in ['m', 'ft']:
                 raise ValueError('The depth_unit must be one of the following: m, ft')
 
         # Checking that the variable vertical is a bool
@@ -361,6 +353,15 @@ class Borehole:
         if not isinstance(end_drilling, (str, type(None))):
             raise TypeError('The end date of the drilling must be provided as string')
 
+        # Checking that the start date for logging is provided as string
+        if not isinstance(start_logging, (str, type(None))):
+            raise TypeError('The start date of the logging must be provided as string')
+
+        # Checking that the end date for logging is provided as string
+        if not isinstance(end_logging, (str, type(None))):
+            raise TypeError('The end date of the logging must be provided as string')
+
+        # Assigning attributes
         self.address = address
 
         if self.address:
@@ -413,6 +414,13 @@ class Borehole:
         else:
             self.has_id = False
 
+        self.borehole_type = borehole_type
+
+        if self.borehole_type:
+            self.has_borehole_type = True
+        else:
+            self.has_borehole_type = False
+
         self.md = md
         self.tvd = tvd
 
@@ -434,6 +442,13 @@ class Borehole:
             self.tvdss = None
             self.has_tvdss = False
 
+        self.depth_unit = depth_unit
+
+        if self.depth_unit:
+            self.has_depth_unit = True
+        else:
+            self.has_depth_unit = False
+
         if vertical:
             self.is_vertical = True
         else:
@@ -441,9 +456,13 @@ class Borehole:
 
         self.contractee = contractee
         self.drilling_contractor = drilling_contractor
+        self.logging_contractor = logging_contractor
+        self.field = field
         self.project = project
         self.start_drilling = start_drilling
         self.end_drilling = end_drilling
+        self.start_logging = start_logging
+        self.end_logging = end_logging
 
         if contractee:
             self.has_contractree = True
@@ -454,6 +473,16 @@ class Borehole:
             self.has_drilling_contractor = True
         else:
             self.has_drilling_contractor = False
+
+        if self.logging_contractor:
+            self.has_logging_contractor = True
+        else:
+            self.has_logging_contractor = False
+
+        if self.field:
+            self.has_field = True
+        else:
+            self.has_field = False
 
         if self.project:
             self.has_project = True
@@ -470,6 +499,16 @@ class Borehole:
         else:
             self.has_end_drilling = False
 
+        if self.start_logging:
+            self.has_start_logging = True
+        else:
+            self.has_start_logging = False
+
+        if self.end_logging:
+            self.has_end_logging = True
+        else:
+            self.has_end_logging = False
+
         # Add Deviation, well logs and well tops
         self.deviation = None
         self.logs = None
@@ -481,8 +520,9 @@ class Borehole:
         self.has_well_tops = False
         self.has_litholog = False
 
-        # Create borehole DataFrame
+        # Create borehole DataFrames
         self.df = self.create_df()
+        self.properties = self.create_properties_df()
 
     def create_df(self):
         """Create DataFrame from Borehole Object Attributes.
@@ -523,12 +563,79 @@ class Borehole:
                    'Measured Depth': self.md,
                    'True Vertical Depth': self.tvd,
                    'True Vertical Depth Sub Sea': self.tvdss,
+                   'Depth Unit': self.depth_unit,
                    'Well is vertical': self.is_vertical,
                    'Drilling Contractee': self.contractee,
                    'Drilling Contractor': self.drilling_contractor,
+                   'Logging Contractor': self.logging_contractor,
+                   'Field': self.field,
                    'Project': self.project,
                    'Start Drilling': self.start_drilling,
                    'End Drilling': self.end_drilling,
+                   'Start Logging': self.start_logging,
+                   'End Logging': self.end_logging,
+                   'Litholog': self.has_litholog,
+                   'Well Tops': self.has_well_tops,
+                   'Well Deviation': self.has_deviation,
+                   'Well Logs': self.has_logs
+                   }
+
+        # Creating DataFrame from dict
+        df = pd.DataFrame.from_dict(data=df_dict,
+                                    orient='index',
+                                    columns=['Value'])
+
+        return df
+
+    def create_properties_df(self):
+        """Create Properties DataFrame from Borehole Object Attributes.
+
+        Returns
+        _______
+            df : pd.DataFrame
+                DataFrame containing the Borehole Properties.
+
+        Examples
+        ________
+            >>> borehole.create_properties_df()
+            >>> borehole.properties
+                                                Value
+            Name                                True
+            Address                             True
+            Location                            True
+            X                                   True
+            Y                                   True
+            Coordinate Reference System         True
+            Coordinate Reference System PyProj  True
+            Altitude above sea level            True
+            Altitude above KB                   False
+
+        .. versionadded:: 0.0.1
+        """
+        # Creating dict from attributes
+        df_dict = {'ID': self.has_id,
+                   'Name': self.has_name,
+                   'Address': self.has_address,
+                   'Location': self.has_location,
+                   'X': self.has_x,
+                   'Y': self.has_y,
+                   'Coordinate Reference System': self.has_crs,
+                   'Coordinate Reference System PyProj': self.has_crs_pyproj,
+                   'Altitude above sea level': self.has_altitude_above_sea_level,
+                   'Altitude above KB': self.has_altitude_above_kb,
+                   'Measured Depth': self.has_md,
+                   'True Vertical Depth': self.has_tvd,
+                   'True Vertical Depth Sub Sea': self.has_tvdss,
+                   'Depth Unit': self.has_depth_unit,
+                   'Drilling Contractee': self.has_contractree,
+                   'Drilling Contractor': self.has_drilling_contractor,
+                   'Logging Contractor': self.has_logging_contractor,
+                   'Field': self.has_field,
+                   'Project': self.has_project,
+                   'Start Drilling': self.has_start_drilling,
+                   'End Drilling': self.has_end_drilling,
+                   'Start Logging': self.has_start_logging,
+                   'End Logging': self.has_end_logging,
                    'Litholog': self.has_litholog,
                    'Well Tops': self.has_well_tops,
                    'Well Deviation': self.has_deviation,
@@ -587,21 +694,46 @@ class Borehole:
         self.df = pd.concat([self.df,
                              df])
 
-    def to_gdf(self):
+    def update_value(self,
+                     attribute: str,
+                     value: Union[int, float, str]):
+        """Update attribute and DataFrame value.
 
-        df = self.df.T.reset_index(drop=True)
+        Parameters
+        __________
+            attribute : str
+                Borehole object attribute provided as str, e.g. ``attribute='name'``.
+            value : Union[int, float, str]
+                Value of the attribute to be updated, e.g. ``value='RWE EB2'``.
 
-        self.gdf = gpd.GeoDataFrame(geometry=[df['Location'].iloc[0]],
-                                    crs=df['Coordinate Reference System'].iloc[0],
-                                    data=df)
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
 
-        return self.gdf
+        Examples
+        ________
+            >>> borehole.name
+            'RWE EB1'
+            >>> borehole.update_value(attribute='name', value='RWE EB2')
+            >>> borehole.name
+            'RWE EB2'
 
-    def update_value(self, attribute, value):
+        .. versionadded:: 0.0.1
+        """
+        # Checking that the attribute is of type string
+        if not isinstance(attribute, str):
+            raise TypeError('The attribute name must be provided as string')
 
+        # Checking that the value is of type string, int or float
+        if not isinstance(value, (int, float, str)):
+            raise TypeError('The new value must be provided as int, float, or str')
+
+        # Checking that the attribute is part of the borehole object
         if attribute in vars(self).keys():
             vars(self)[attribute] = value
 
+        # Creating attribute dict
         df_indices_dict = {'id': 'ID',
                            'name': 'Name',
                            'address': 'Address',
@@ -612,9 +744,46 @@ class Borehole:
                            'crs_pyproj': 'Coordinate Reference System PyProj',
                            'altitude_above_sea_level': 'Altitude above sea level',
                            'altitude_above_kb': 'Altitude above KB',
+                           'md': 'Measured Depth',
+                           'tvd': 'True Vertical Depth',
+                           'tvdss': 'True Vertical Depth Sub Sea',
+                           'depth_unit': 'Depth Unit',
+                           'vertical': 'Well is vertical',
+                           'contractee': 'Drilling Contractee',
+                           'drilling_contractor': 'Drilling Contractor',
+                           'logging_contractor': 'Logging Contractor',
+                           'field': 'Field',
+                           'project': 'Project',
+                           'start_drilling': 'Start Drilling',
+                           'end_drilling': 'End Drilling',
+                           'start_logging': 'Start Logging',
+                           'end_logging': 'End Logging',
                            }
 
+        # Replace value in DataFrame
         self.df.loc[df_indices_dict[attribute], 'Value'] = value
+
+
+
+    def to_gdf(self):
+        """Create GeoDataFrame from DataFrame.
+
+        Returns
+        _______
+            gpd.GeoDataFrame
+
+        .. versionadded:: 0.0.1
+        """
+
+        # Transposing DataFrame
+        df = self.df.T.reset_index(drop=True)
+
+        # Create GeoDataFrame
+        self.gdf = gpd.GeoDataFrame(geometry=[df['Location'].iloc[0]],
+                                    crs=df['Coordinate Reference System'].iloc[0],
+                                    data=df)
+
+        return self.gdf
 
     def add_deviation(self,
                       path: Union[str, pd.DataFrame],
@@ -757,6 +926,9 @@ class Borehole:
         else:
             raise ValueError('Please provide a LAS file or DLIS file')
 
+        self.has_logs = True
+        self.df.loc['Well Logs', 'Value'] = self.has_logs
+
     def add_well_tops(self,
                       path: str,
                       delimiter: str = ',',
@@ -852,434 +1024,6 @@ class Borehole:
 
         self.has_litholog = True
         self.df.loc['Litholog', 'Value'] = self.has_litholog
-
-
-class Deviation(Borehole):
-    """Class to initiate a Deviation object.
-
-    Parameters
-    __________
-        path : str
-            Path to the deviation file, e.g. ``path='Well_deviation.csv'``.
-        delimiter : str
-            Delimiter to read the deviation file correctly, e.g. ``delimiter=';'``.
-        step : float, default: ``5``
-                Step for resampling the deviation data, e.g. ``step=5``.
-        md_column : str, default: ``'MD'``
-                Column containing the measured depths.
-        dip_column : str, default: ``'DIP'``
-            Column containing the dip values.
-        azimuth_column : str, default: ``'AZI'``
-            Column containing the azimuth values.
-
-    Raises
-    ______
-        TypeError
-            If the wrong input data types are provided.
-
-    Examples
-    ________
-        >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
-        >>> borehole.deviation.deviation_df
-            Measured Depth  Inclination  Azimuth
-        0   0.05            0.0          0.0
-        1   0.10            0.0          0.0
-        2   0.15            0.0          0.0
-
-    .. versionadded:: 0.0.1
-    """
-
-    def __init__(self,
-                 borehole,
-                 path: Union[str, pd.DataFrame],
-                 delimiter: str,
-                 step: Union[float, int] = 5,
-                 md_column: str = 'MD',
-                 dip_column: str = 'DIP',
-                 azimuth_column: str = 'AZI'):
-        """
-
-        Parameters
-        __________
-            path : str
-                Path to the deviation file, e.g. ``path='Well_Deviation.csv'``.
-            delimiter : str
-                Delimiter to read the deviation file correctly, e.g. ``delimiter=';'``.
-            step : float
-                    Step for resampling the deviation data, e.g. ``step=5``.
-            md_column : str, default: ``'MD'``
-                    Column containing the measured depths, e.g. ``md_column='MD'``.
-            dip_column : str, default: ``'DIP'``
-                Column containing the dip values, e.g. ``dip_column='DIP'``.
-            azimuth_column : str, default: ``'AZI'``
-                Column containing the azimuth values, e.g. ``azimuth_column='AZI'``.
-
-        Raises
-        ______
-            TypeError
-                If the wrong input data types are provided.
-
-        Examples
-        ________
-            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
-            >>> borehole.deviation.deviation_df
-                Measured Depth  Inclination  Azimuth
-            0   0.05            0.0          0.0
-            1   0.10            0.0          0.0
-            2   0.15            0.0          0.0
-
-        .. versionadded:: 0.0.1
-
-        """
-        # Checking that the path is of type str or a Pandas DataFrame
-        if not isinstance(path, (str, pd.DataFrame)):
-            raise TypeError('path must be provided as string or Pandas DataFrame')
-
-        # Checking that the delimiter is of type string
-        if not isinstance(delimiter, str):
-            raise TypeError('delimiter must be of type string')
-
-        # Checking that the step is of type float or int
-        if not isinstance(step, (float, int)):
-            raise TypeError('step must be provided as float or int')
-
-        # Checking that the md_column is of type str
-        if not isinstance(md_column, str):
-            raise TypeError('md_column must be provided as str')
-
-        # Checking that the dip_column is of type str
-        if not isinstance(dip_column, str):
-            raise TypeError('dip_column must be provided as str')
-
-        # Checking that the azimuth_column is of type str
-        if not isinstance(azimuth_column, str):
-            raise TypeError('azimuth_column must be provided as str')
-
-        # Checking that the DataFrame contains the columns
-        if isinstance(path, pd.DataFrame):
-            if not {md_column, dip_column, azimuth_column}.issubset(path.columns):
-                raise ValueError('Provided columns are not within the DataFrame')
-
-        # Importing wellpathpy
-        try:
-            import wellpathpy as wp
-        except ModuleNotFoundError:
-            ModuleNotFoundError('wellpathpy package not installed')
-
-        # Opening deviation file
-        if isinstance(path, str):
-            md, inc, azi = wp.read_csv(fname=path,
-                                       delimiter=delimiter)
-
-        # Opening Pandas DataFrame
-        if isinstance(path, pd.DataFrame):
-            md = path[md_column].values
-            inc = path[dip_column].values
-            azi = path[azimuth_column].values
-
-        # Creating deviation
-        dev = wp.deviation(
-            md=md,
-            inc=inc,
-            azi=azi
-        )
-
-        # Assigning attributes
-        self.md = dev.md
-        self.inc = dev.inc
-        self.azi = dev.azi
-
-        # Calculating positions
-        pos = dev.minimum_curvature().resample(depths=list(range(0,
-                                                                 int(dev.md[-1]) + 1,
-                                                                 step)))
-
-        # Assigning attributes
-        self.tvd = pos.depth
-        self.northing_rel = pos.northing
-        self.easting_rel = pos.easting
-
-        self.az = np.arctan2(self.easting_rel,
-                             self.northing_rel)
-        self.radius = np.sqrt(self.northing_rel ** 2 + self.easting_rel ** 2)
-
-        # Creating data dict
-        data_dict = {'Measured Depth': [self.md],
-                     'Inclination': [self.inc],
-                     'Azimuth': [self.azi],
-                     'True Vertical Depth': [self.tvd],
-                     'Northing_rel': [self.northing_rel],
-                     'Easting_rel': [self.easting_rel],
-                     }
-
-        # Assigning data_dict
-        self.data_dict = data_dict
-
-        # Creating DataFrame from deviation data
-        self.deviation_df = pd.DataFrame.from_dict({'Measured Depth': self.md,
-                                                    'Inclination': self.inc,
-                                                    'Azimuth': self.azi},
-                                                   orient='columns',
-                                                   )
-
-        # Creating DataFrame from position data
-        self.desurveyed_df = pd.DataFrame.from_dict({'True Vertical Depth': self.tvd,
-                                                     'Northing_rel': self.northing_rel,
-                                                     'Easting_rel': self.easting_rel},
-                                                    orient='columns',
-                                                    )
-
-        self.x = borehole.x
-        self.y = borehole.y
-        self.z = borehole.altitude_above_sea_level
-
-    def add_origin_to_desurveying(self,
-                                  x: Union[float, int] = None,
-                                  y: Union[float, int] = None,
-                                  z: Union[float, int] = None):
-        """Add origin to desurveying.
-
-        Parameters
-        __________
-            x : Union[float, int]
-                X-Coordinate of the origin, e.g. ``x=1000``.
-            y : Union[float, int]
-                Y-Coordinate of the origin, e.g. ``y=1000``.
-            z : Union[float, int]
-                Altitude of the origin, e.g. ``z=200``.
-
-        Raises
-        ______
-            TypeError
-                If the wrong input data types are provided.
-
-        Examples
-        ________
-            >>> borehole.deviation.add_origin_to_desurveying(x=100, y=100, z=000)
-
-        .. versionadded:: 0.0.1
-
-        """
-        # Checking that the x coordinate is of type float or int
-        if not isinstance(x, (float, int, type(None))):
-            raise TypeError('X coordinate must be provided as float or int')
-
-        # Checking that the y coordinate is of type float or int
-        if not isinstance(y, (float, int, type(None))):
-            raise TypeError('Y coordinate must be provided as float or int')
-
-        # Checking that the z coordinate is of type float or int
-        if not isinstance(z, (float, int, type(None))):
-            raise TypeError('Z coordinate must be provided as float or int')
-
-        # Setting coordinates
-        if not x:
-            x = self.x
-        if not y:
-            y = self.y
-        if not z:
-            z = self.z
-
-        # Adding the X coordinate
-        self.desurveyed_df['Northing'] = self.desurveyed_df['Northing_rel'] + y
-
-        # Adding the Y coordinate
-        self.desurveyed_df['Easting'] = self.desurveyed_df['Easting_rel'] + x
-
-        # Adding the Z coordinate
-        self.desurveyed_df['True Vertical Depth Below Sea Level'] = z - self.desurveyed_df['True Vertical Depth']
-
-    def plot_deviation_polar_plot(self,
-                                  c: np.ndarray = None,
-                                  vmin: Union[float, int] = None,
-                                  vmax: Union[float, int] = None):
-        """Add polar plot representing the deviation of a borehole.
-
-        Parameters
-        __________
-            c : np.ndarray
-                Array for coloring the well path.
-            vmin : Union[float, int]
-                Minimum value for colormap.
-            vmax : Union[float, int]
-                Maximum value for colormap.
-
-        Raises
-        ______
-            TypeError
-                If the wrong input data types are provided.
-
-        Examples
-        ________
-            >>> borehole.deviation.plot_deviation_polar_plot()
-
-        .. versionadded:: 0.0.1
-
-        """
-        # Checking that the colors are provided as arrays
-        if not isinstance(c, np.ndarray):
-            raise TypeError('Color array must be provided as NumPy array')
-
-        # Checking that vmin is provided as float or int
-        if not isinstance(vmin, (float, int)):
-            raise TypeError('vmin must be provided as float or int')
-
-        # Checking that vmax is provided as float or int
-        if not isinstance(vmax, (float, int)):
-            raise TypeError('vmax must be provided as float or int')
-
-        # Creating plot
-        fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-
-        # Setting zero to North
-        ax.set_theta_zero_location('N')
-
-        # Counting clockwise
-        ax.set_theta_direction(-1)
-
-        # Plotting
-        if c is not None:
-            ax.scatter(self.az,
-                       self.radius,
-                       c=c,
-                       vmin=vmin,
-                       vmax=vmax)
-        else:
-            ax.plot(self.az,
-                    self.radius)
-
-        return fig, ax
-
-    def plot_deviation_3d(self,
-                          elev: Union[float, int] = 45,
-                          azim: Union[float, int] = 45,
-                          roll: Union[float, int] = 0):
-        """Create 3D Deviation Plot.
-
-        Parameters
-        __________
-            elev : Union[float, int], default: ``45``
-                Elevation angle for view, e.g. ``elev=45``.
-            azim : Union[float, int], default: ``45``
-                Azimuth angle for view, e.g. ``azim=45``.
-            roll : Union[float, int], default: ``0``
-                Rolling angle for view, e.g. ``roll=0``.
-
-        Raises
-        ______
-            TypeError
-                If the wrong input data types are provided.
-
-        Examples
-        ________
-            >>> borehole.deviation.plot_deviation_3d()
-
-        .. versionadded:: 0.0.1
-
-        """
-        # Checking that the elevation is provided as float or int
-        if not isinstance(elev, (float, int)):
-            raise TypeError('Elevation must be provided as float or int')
-
-        #  Checking that the azimuth is provided as float or int
-        if not isinstance(azim, (float, int)):
-            raise TypeError('Azimuth must be provided as float or int')
-
-        # Checking that the roll is provided as float or int
-        if not isinstance(roll, (float, int)):
-            raise TypeError('Roll must be provided as float or int')
-
-        # Creating figure
-        fig, ax = plt.subplots(subplot_kw={'projection': '3d'})
-
-        # Plotting
-        ax.plot(self.easting_rel,
-                self.northing_rel,
-                -self.tvd)
-
-        # Setting plotting parameters
-        ax.view_init(elev, azim, roll)
-        ax.set_xlabel('Easting')
-        ax.set_ylabel('Northing')
-        ax.set_zlabel('TVD')
-
-        plt.tight_layout()
-
-        return fig, ax
-
-    def get_borehole_tube(self,
-                          radius: Union[float, int] = 10,
-                          x: Union[float, int] = 0,
-                          y: Union[float, int] = 0,
-                          z: Union[float, int] = 0):
-        """Get borehole tube.
-
-        Parameters
-        __________
-            radius : Union[float, int], default: ``10``
-                Radius of the borehole tube, e.g. ``radius=10``.
-            x : Union[float, int], default: ``0``
-                X-coordinate of the borehole, e.g. ``x=1000``.
-            y : Union[float, int], default: ``0``
-                Y-coordinate of the borehole, e.g. ``y=1000``.
-            z : Union[float, int], default: ``0``
-                Z-coordinate of the borehole, e.g. ``y=100``.
-
-        Raises
-        ______
-            TypeError
-                If the wrong input data types are provided.
-
-        Examples
-        ________
-            >>> borehole.deviation.get_borehole_tube(radius=10)
-
-        .. versionadded:: 0.0.1
-        """
-        # Checking that the radius is provided as float or int
-        if not isinstance(radius, (float, int)):
-            raise TypeError('radius must be provided as float or int')
-
-        # Checking that the x coordinate of the borehole is provided as float or int
-        if not isinstance(x, (float, int)):
-            raise TypeError('x coordinate must be provided as float or int')
-
-        # Checking that the y coordinate of the borehole is provided as float or int
-        if not isinstance(y, (float, int)):
-            raise TypeError('y coordinate must be provided as float or int')
-
-        # Checking that the y coordinate of the borehole is provided as float or int
-        if not isinstance(y, (float, int)):
-            raise TypeError('y coordinate must be provided as float or int')
-
-        # Importing pyvista
-        try:
-            import pyvista as pv
-        except ModuleNotFoundError:
-            ModuleNotFoundError('PyVista package not installed')
-
-        # Creating lines from points
-        def lines_from_points(points):
-            """Given an array of points, make a line set"""
-            poly = pv.PolyData()
-            poly.points = points
-            cells = np.full((len(points) - 1, 3), 2, dtype=np.int_)
-            cells[:, 1] = np.arange(0, len(points) - 1, dtype=np.int_)
-            cells[:, 2] = np.arange(1, len(points), dtype=np.int_)
-            poly.lines = cells
-            return poly
-
-        # Creating spline
-        spline = lines_from_points(np.c_[self.easting_rel + x,
-                                         self.northing_rel + y,
-                                         -self.tvd + z])
-        # Creating tube
-        tube = spline.tube(radius=radius)
-
-        # Assigning depth values
-        tube['TVD'] = tube.points[:, 2]
-
-        return tube
 
 
 class WellTops(Borehole):
@@ -1559,6 +1303,7 @@ class LASLogs(Borehole):
 
         return tube_along_spline
 
+
 class DLISLogs(Borehole):
     """Class to initiate a Well Log Object.
 
@@ -1581,7 +1326,7 @@ class DLISLogs(Borehole):
             ModuleNotFoundError('dlisio package not installed')
 
         # Opening DLIS file
-        dlis, *tail =  dlis.load(path)
+        dlis, *tail = dlis.load(path)
 
         # Getting column names
         columns = [channel.name for channel in dlis.channels]
