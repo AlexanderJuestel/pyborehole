@@ -5,8 +5,20 @@ from shapely.geometry import Point, LineString
 from pyproj import CRS
 import pyproj
 import matplotlib.pyplot as plt
-from typing import Union, List
+from typing import Union, List, Tuple
 import geopandas as gpd
+
+
+class Boreholes:
+
+    def __init__(self,
+                 boreholes):
+        self.boreholes = boreholes
+
+        self.gdf = pd.concat([borehole.to_gdf() for borehole in self.boreholes],
+                             axis=0).reset_index(drop=True)
+
+        self.names = [borehole.name for borehole in self.boreholes]
 
 
 class Borehole:
@@ -16,14 +28,6 @@ class Borehole:
     __________
         name : str
             Name of the Borehole, e.g. ``name='Weisweiler R1'``.
-        address : str
-            Address of the Borehole, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
-        location : tuple
-            Coordinates tuple representing the location of the Borehole, e.g. ``location=(6.313031, 50.835676)``.
-        crs : Union[str, pyproj.crs.crs.CRS]
-            Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
-        altitude_above_sea_level : Union[int, float]
-            Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
 
     Returns
     _______
@@ -38,43 +42,24 @@ class Borehole:
     Examples
     ________
         >>> from pyborehole.borehole import Borehole
-        >>> borehole = Borehole(name='Weisweiler R1', address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
-        >>> borehole.df
-                                                Value
-            Name                                RWE EB1
-            Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
-            Location                            POINT (6.313031 50.835676)
-            X                                   6.313031
-            Y                                   50.835676
-            Coordinate Reference System         EPSG:4326
-            Coordinate Reference System PyProj  EPSG:4326
-            Altitude above sea level            136
-            Altitude above KB                   None
+        >>> borehole = Borehole(name='Weisweiler R1')
+        >>> borehole.name
+
 
     .. versionadded:: 0.0.1
 
     """
 
+    boreholes = []
+
     def __init__(self,
-                 name: str,
-                 address: str,
-                 location: tuple,
-                 crs: Union[str, pyproj.crs.crs.CRS],
-                 altitude_above_sea_level: Union[int, float]):
+                 name: str):
         """Initiate borehole class.
 
         Parameters
         __________
             name : str
-                Name of the Borehole, e.g. ``name='Weisweiler R1'``.
-            address : str
-                Address of the Borehole, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
-            location : tuple
-                Coordinates tuple representing the location of the Borehole, e.g. ``location=(6.313031, 50.835676)``.
-            crs : Union[str, pyproj.crs.crs.CRS]
-                Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
-            altitude_above_sea_level : Union[int, float]
-                Altitude above sea level, e.g. ``'altitude_above_sea_level=136``.
+                Name of the Borehole, e.g. ``name='RWE EB1'``.
 
         Returns
         _______
@@ -89,7 +74,195 @@ class Borehole:
         Examples
         ________
             >>> from pyborehole.borehole import Borehole
-            >>> borehole = Borehole(name='Weisweiler R1', address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole = Borehole(name='RWE EB1')
+            >>> borehole
+            Borehole: RWE EB1
+
+
+        .. versionadded:: 0.0.1
+        """
+
+        self.__class__.boreholes.append(self)
+
+        # Checking that the name is provided as string
+        if not isinstance(name, str):
+            raise TypeError('The name of the borehole must be provided as string')
+
+        # Defining attributes
+        self.name = name
+
+        # Defining emtpy attributes
+        self.address = None
+        self.has_address = None
+
+        self.location = None
+        self.has_location = None
+
+        self.x = None
+        self.y = None
+        self.has_x = None
+        self.has_y = None
+
+        self.crs = None
+        self.crs_pyproj = None
+        self.has_crs = None
+        self.has_crs_pyproj = None
+
+        self.altitude_above_sea_level = None
+        self.altitude_above_kb = None
+        self.has_altitude_above_sea_level = None
+        self.has_altitude_above_kb = None
+
+        self.id = None
+        self.has_id = None
+
+        self.borehole_type = None
+        self.has_borehole_type = None
+
+        self.md = None
+        self.tvd = None
+        self.tvdss = None
+        self.has_md = None
+        self.has_tvd = None
+        self.has_tvdss = None
+
+        self.is_vertical = None
+
+        self.contractree = None
+        self.drilling_contractor = None
+        self.logging_contractor = None
+        self.field = None
+        self.project = None
+        self.has_contractree = None
+        self.has_drilling_contractor = None
+        self.has_logging_contractor = None
+        self.has_field = None
+        self.has_project = None
+
+        self.start_drilling = None
+        self.end_drilling = None
+        self.start_logging = None
+        self.end_logging = None
+        self.has_start_drilling = None
+        self.has_end_drilling = None
+        self.has_start_logging = None
+        self.has_end_logging = None
+
+
+        # Adding Deviation, well logs and well tops
+        self.deviation = None
+        self.logs = None
+        self.well_tops = None
+        self.litholog = None
+
+        self.has_deviation = False
+        self.has_logs = False
+        self.has_well_tops = False
+        self.has_litholog = False
+
+        # Creating borehole (Geo-)DataFrame
+        self.df = None
+        self.gdf = None
+
+    def __str__(self):
+        """Return name of borehole
+
+        Returns
+        _______
+            borehole.name : str
+                Name of the borehole.
+
+        .. versionadded:: 0.0.1
+        """
+        return f"{self.name}"
+
+    def __repr__(self):
+        """Return name of borehole
+
+        Returns
+        _______
+            borehole.name : str
+                Name of the borehole.
+
+        .. versionadded:: 0.0.1
+        """
+        return f"Borehole: {self.name}"
+
+    def init_properties(self,
+                        address: str = None,
+                        location: Tuple[float, float] = None,
+                        crs: Union[str, pyproj.crs.crs.CRS] = None,
+                        altitude_above_sea_level: Union[int, float] = None,
+                        altitude_above_kb: Union[int, float] = None,
+                        id: Union[str, int, float] = None,
+                        borehole_type: str = None,
+                        md: Union[int, float] = None,
+                        tvd: Union[int, float] = None,
+                        depth_unit: str = None,
+                        vertical: bool = True,
+                        contractee: str = None,
+                        drilling_contractor: str = None,
+                        logging_contractor: str = None,
+                        field: str = None,
+                        project: str = None,
+                        start_drilling: str = None,
+                        end_drilling: str = None,
+                        start_logging: str = None,
+                        end_logging: str = None):
+        """Initiate Borehole properties.
+
+        Parameters
+        __________
+            address : str
+                Address of the Borehole, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
+            location : tuple
+                Coordinates tuple representing the location of the Borehole, e.g. ``location=(6.313031, 50.835676)``.
+            crs : Union[str, pyproj.crs.crs.CRS]
+                Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
+            altitude_above_sea_level : Union[int, float]
+                Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
+            altitude_above_kb : Union[int, float]
+                Altitude above KB, e.g. ``altitude_above_kb=140``.
+            id : Union[str, int, float]
+                Unique identifier for this borehole, e.g. ``id='DABO123456'``.
+            borehole_type : str
+                Borehole type, e.g. ``borehole_type='exploration'``.
+            md : Union[int, float]
+                Measured depth of the borehole, e.g. ``md=100``.
+            tvd : Union[int, float]
+                True vertical depth of the borehole, e.g. ``tvd=95``.
+            depth_unit : str
+                Unit for the depth values, e.g. ``depth_values='m'``.
+            vertical : bool, default is `True`
+                Variable to state if the borehole is vertical (True) or deviated (False), e.g. ``vertical=True``.
+            contractee : str
+                Contractee of the drilling operation, e.g. ``contractee='Fraunhofer IEG'``.
+            drilling_contractor : str
+                Drilling contractor who performed the drilling, e.g. ``drilling_contractor='RWE BOWA'``.
+            logging_contractor : str
+                Logging contractor who performed the logging, e.g. ``logging_contractor='DMT GmbH'``.
+            field : str
+                Name of the field the well was drilled in, e.g. ``field='Erdwärme Aachen'``.
+            project : str
+                Name of the project the borehole was drilled for, e.g. ``project='DGE Rollout'``.
+            start_drilling : str
+                Start date of the drilling operation, e.g. ``start_drilling='2023-10-18'``.
+            end_drilling : str
+                End date of the drilling operation, e.g. ``end_drilling='2023-10-28'``.
+            start_logging : str
+                Start date of the logging operation, e.g. ``start_logging='2023-10-18'``.
+            end_logging : str
+                End date of the logging operation, e.g. ``end_logging='2023-10-28'``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
             >>> borehole.df
                                                     Value
                 Name                                RWE EB1
@@ -103,57 +276,213 @@ class Borehole:
                 Altitude above KB                   None
 
         .. versionadded:: 0.0.1
+
         """
-        # Checking that the name is provided as string
-        if not isinstance(name, str):
-            raise TypeError('The name of the borehole must be provided as string')
 
         # Checking that the address is provided as string
-        if not isinstance(address, str):
+        if not isinstance(address, (str, type(None))):
             raise TypeError('The address of the borehole must be provided as string')
 
         # Checking that the location is provided as tuple
-        if not isinstance(location, tuple):
+        if not isinstance(location, (tuple, type(None))):
             raise TypeError('The location of the borehole must be provided as tuple')
 
         # Checking that the crs is provided as string or pyproj CRS
-        if not isinstance(crs, (str, pyproj.crs.crs.CRS)):
+        if not isinstance(crs, (str, pyproj.crs.crs.CRS, type(None))):
             raise TypeError('The CRS of the borehole location must be provided as string or pyproject CRS')
 
-        # Checking that the altitude is provided as float
-        if not isinstance(altitude_above_sea_level, (int, float)):
-            raise TypeError('The altitude of the borehole must be provided as float')
+        # Checking that the altitude is provided as int or float
+        if not isinstance(altitude_above_sea_level, (int, float, type(None))):
+            raise TypeError('The altitude of the borehole must be provided as int or float')
 
-        # Define attributes
-        self.name = name
+        # Checking that the altitude is provided as int or float
+        if not isinstance(altitude_above_kb, (int, float, type(None))):
+            raise TypeError('The altitude of the borehole above KB must be provided as int or float')
+
+        # Checking that the id is provided as int, float or string
+        if not isinstance(id, (str, int, float, type(None))):
+            raise TypeError('The ID of the borehole must be provided as str, int, or float')
+
+        # Checking that the borehole_type is of type string
+        if not isinstance(borehole_type, (str, type(None))):
+            raise TypeError('The borehole_type must be provided as string')
+
+        # Checking that the borehole_type is one of the possible types
+        if borehole_type:
+            if not borehole_type in ['exploration', 'producer', 'injector', 'sidetrack', 'observatory', 'heat exchanger']:
+                raise ValueError('The borehole_type must be one of the following: exploration, producer, injector, sidetrack, observatory, heat exchanger')
+
+        # Checking that the measured depth is provided as int or float
+        if not isinstance(md, (int, float, type(None))):
+            raise TypeError('The measured depth of the borehole must be provided as int or float')
+
+        # Checking that the true vertical depth is provided as int or float
+        if not isinstance(tvd, (int, float, type(None))):
+            raise TypeError('The altitude of the borehole must be provided as int or float')
+
+        # Checking that the depth_unit is provided as string
+        if not isinstance(depth_unit, (str, type(None))):
+            raise TypeError('The depth_unit must be provided as string')
+
+        # Checking that the depth unit is one of the possible units
+        if depth_unit:
+            if not depth_unit in ['m', 'ft']:
+                raise ValueError('The depth_unit must be one of the following: m, ft')
+
+        # Checking that the variable vertical is a bool
+        if not isinstance(vertical, (bool, type(None))):
+            raise TypeError('The variable for defining a vertical borehole must be either True or False')
+
+        # Checking that the contractee is provided as string
+        if not isinstance(contractee, (str, type(None))):
+            raise TypeError('The contractee of the borehole must be provided as string')
+
+        # Checking that the drilling contractor is provided as string
+        if not isinstance(drilling_contractor, (str, type(None))):
+            raise TypeError('The drilling contractor of the borehole must be provided as string')
+
+        # Checking that the logging contractor is provided as string
+        if not isinstance(logging_contractor, (str, type(None))):
+            raise TypeError('The logging contractor of the borehole must be provided as string')
+
+        # Checking that the field is provided as string
+        if not isinstance(field, (str, type(None))):
+            raise TypeError('The field of the borehole must be provided as string')
+
+        # Checking that the project is provided as string
+        if not isinstance(project, (str, type(None))):
+            raise TypeError('The project of the borehole must be provided as string')
+
+        # Checking that the start date for drilling is provided as string
+        if not isinstance(start_drilling, (str, type(None))):
+            raise TypeError('The start date of the drilling must be provided as string')
+
+        # Checking that the end date for drilling is provided as string
+        if not isinstance(end_drilling, (str, type(None))):
+            raise TypeError('The end date of the drilling must be provided as string')
+
         self.address = address
-        self.location = Point(location)
-        self.x = list(self.location.coords)[0][0]
-        self.y = list(self.location.coords)[0][1]
+
+        if self.address:
+            self.has_address = True
+        else:
+            self.has_address = False
+
+        if location:
+            self.location = Point(location)
+            self.x = list(self.location.coords)[0][0]
+            self.y = list(self.location.coords)[0][1]
+            self.has_location = True
+            self.has_x = True
+            self.has_y = True
+        else:
+            self.location = location
+            self.x = None
+            self.y = None
+            self.has_location = False
+            self.has_x = False
+            self.has_y = False
+
         self.crs = crs
-        self.crs_pyproj = CRS.from_user_input(self.crs)
+        if crs:
+            self.crs_pyproj = CRS.from_user_input(self.crs)
+            self.has_crs = True
+            self.has_crs_pyproj = True
+        else:
+            self.crs_pyproj = None
+            self.has_crs = False
+            self.has_crs_pyproj = False
+
         self.altitude_above_sea_level = altitude_above_sea_level
         self.altitude_above_kb = None
+
+        if self.altitude_above_sea_level:
+            self.has_altitude_above_sea_level = True
+        else:
+            self.has_altitude_above_sea_level = False
+
+        if self.altitude_above_kb:
+            self.has_altitude_above_kb = True
+        else:
+            self.has_altitude_above_kb = False
+
+        self.id = id
+
+        if self.id:
+            self.has_id = True
+        else:
+            self.has_id = False
+
+        self.md = md
+        self.tvd = tvd
+
+        if self.md:
+            self.has_md = True
+        else:
+            self.has_md = False
+
+        if self.tvd:
+            self.has_tvd = True
+        else:
+            self.has_tvd = False
+
+        if self.tvd:
+            if self.altitude_above_sea_level:
+                self.tvdss = self.tvd - self.altitude_above_sea_level
+                self.has_tvdss = True
+        else:
+            self.tvdss = None
+            self.has_tvdss = False
+
+        if vertical:
+            self.is_vertical = True
+        else:
+            self.is_vertical = False
+
+        self.contractee = contractee
+        self.drilling_contractor = drilling_contractor
+        self.project = project
+        self.start_drilling = start_drilling
+        self.end_drilling = end_drilling
+
+        if contractee:
+            self.has_contractree = True
+        else:
+            self.has_contractree = False
+
+        if self.drilling_contractor:
+            self.has_drilling_contractor = True
+        else:
+            self.has_drilling_contractor = False
+
+        if self.project:
+            self.has_project = True
+        else:
+            self.has_project = False
+
+        if self.start_drilling:
+            self.has_start_drilling = True
+        else:
+            self.has_start_drilling = False
+
+        if self.end_drilling:
+            self.has_end_drilling = True
+        else:
+            self.has_end_drilling = False
 
         # Add Deviation, well logs and well tops
         self.deviation = None
         self.logs = None
         self.well_tops = None
+        self.litholog = None
+
+        self.has_deviation = False
+        self.has_logs = False
+        self.has_well_tops = False
+        self.has_litholog = False
 
         # Create borehole DataFrame
         self.df = self.create_df()
-
-    def __str__(self):
-        """Return name of borehole
-
-        Returns
-        _______
-            borehole.name : str
-                Name of the borehole.
-
-        .. versionadded:: 0.0.1
-        """
-        return f"{self.name}"
 
     def create_df(self):
         """Create DataFrame from Borehole Object Attributes.
@@ -181,7 +510,8 @@ class Borehole:
         .. versionadded:: 0.0.1
         """
         # Creating dict from attributes
-        df_dict = {'Name': self.name,
+        df_dict = {'ID': self.id,
+                   'Name': self.name,
                    'Address': self.address,
                    'Location': self.location,
                    'X': self.x,
@@ -189,7 +519,20 @@ class Borehole:
                    'Coordinate Reference System': self.crs,
                    'Coordinate Reference System PyProj': self.crs_pyproj,
                    'Altitude above sea level': self.altitude_above_sea_level,
-                   'Altitude above KB': self.altitude_above_kb
+                   'Altitude above KB': self.altitude_above_kb,
+                   'Measured Depth': self.md,
+                   'True Vertical Depth': self.tvd,
+                   'True Vertical Depth Sub Sea': self.tvdss,
+                   'Well is vertical': self.is_vertical,
+                   'Drilling Contractee': self.contractee,
+                   'Drilling Contractor': self.drilling_contractor,
+                   'Project': self.project,
+                   'Start Drilling': self.start_drilling,
+                   'End Drilling': self.end_drilling,
+                   'Litholog': self.has_litholog,
+                   'Well Tops': self.has_well_tops,
+                   'Well Deviation': self.has_deviation,
+                   'Well Logs': self.has_logs
                    }
 
         # Creating DataFrame from dict
@@ -243,6 +586,35 @@ class Borehole:
         # Concatenating DataFrames
         self.df = pd.concat([self.df,
                              df])
+
+    def to_gdf(self):
+
+        df = self.df.T.reset_index(drop=True)
+
+        self.gdf = gpd.GeoDataFrame(geometry=[df['Location'].iloc[0]],
+                                    crs=df['Coordinate Reference System'].iloc[0],
+                                    data=df)
+
+        return self.gdf
+
+    def update_value(self, attribute, value):
+
+        if attribute in vars(self).keys():
+            vars(self)[attribute] = value
+
+        df_indices_dict = {'id': 'ID',
+                           'name': 'Name',
+                           'address': 'Address',
+                           'location': 'Location',
+                           'x': 'X',
+                           'y': 'Y',
+                           'crs': 'Coordinate Reference System',
+                           'crs_pyproj': 'Coordinate Reference System PyProj',
+                           'altitude_above_sea_level': 'Altitude above sea level',
+                           'altitude_above_kb': 'Altitude above KB',
+                           }
+
+        self.df.loc[df_indices_dict[attribute], 'Value'] = value
 
     def add_deviation(self,
                       path: Union[str, pd.DataFrame],
@@ -326,18 +698,23 @@ class Borehole:
         self.update_df(data_dict=self.deviation.data_dict)
 
     def add_well_logs(self,
-                      path: str):
+                      path: str,
+                      nodata: Union[int, float] = -9999):
         """Add Well Logs to the Borehole Object.
 
         Parameters
         __________
             path : str
                 Path to the well log file, e.g. ``path='Well_Logs.las'``.
+            nodata : Union[int, float], default: ``-9999``
+                Nodata value to be replaces by `np.NaN`, e.g. ``nodata=-9999``.
 
         Raises
         ______
             TypeError
                 If the wrong input data types are provided.
+            ValueError
+                If neither of the permitted file types are provided.
 
         Examples
         ________
@@ -363,13 +740,27 @@ class Borehole:
         if not isinstance(path, str):
             raise TypeError('path must be provided as str')
 
-        # Creating well logs
-        self.logs = Logs(self,
-                         path=path)
+        # Opening LAS file if provided
+        if path.endswith('.las'):
+
+            # Creating well logs from LAS file
+            self.logs = LASLogs(self,
+                                path=path)
+
+        # Opening DLIS file if provided
+        elif path.endswith('.dlis'):
+            # Creating well logs from DLIS file
+            self.logs = DLISLogs(self,
+                                 path=path,
+                                 nodata=nodata)
+
+        else:
+            raise ValueError('Please provide a LAS file or DLIS file')
 
     def add_well_tops(self,
                       path: str,
-                      delimiter: str = ','):
+                      delimiter: str = ',',
+                      unit: str = 'm'):
         """Add Well Tops to the Borehole Object.
 
         Parameters
@@ -378,6 +769,8 @@ class Borehole:
                 Path to the well top file, e.g. ``path='Well_Tops.csv'``.
             delimiter : str, default: ``'``
                 Delimiter for the well top file, e.g. ``delimiter=','``.
+            unit : str
+                Unit of the depth measurements, e.g. ``unit='m'``.
 
         Raises
         ______
@@ -387,7 +780,56 @@ class Borehole:
         Examples
         ________
             >>> borehole.add_well_tops(path='Well_Tops.csv', delimiter=';')
-            >>> borehole.well_tops
+            >>> borehole.well_tops.df
+                Top              MD
+            0   Infill           3.0
+            1   Base Quaternary  9.5
+            2   Sand 1           28.5
+            3   Clay             32.0
+
+        .. versionadded:: 0.0.1
+        """
+        # Checking that the path is of type string
+        if not isinstance(path, str):
+            raise TypeError('The path must be provided as str')
+
+        # Checking that the delimiter is of type str
+        if not isinstance(delimiter, str):
+            raise TypeError('The delimiter must be of type str')
+
+        # Checking that the unit is provided as string
+        if not isinstance(unit, str):
+            raise TypeError('The unit must be provided as string')
+
+        # Creating well tops
+        self.well_tops = WellTops(path=path,
+                                  delimiter=delimiter,
+                                  unit=unit)
+
+        self.has_well_tops = True
+        self.df.loc['Well Tops', 'Value'] = self.has_well_tops
+
+    def add_litholog(self,
+                     path: str,
+                     delimiter: str = ','):
+        """Add LithoLog to the Borehole Object.
+
+        Parameters
+        __________
+            path : str
+                Path to the LitoLog file, e.g. ``path='LithoLog.csv'``.
+            delimiter : str, default: ``'``
+                Delimiter for the LithoLog file, e.g. ``delimiter=','``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.add_litholog(path='LithoLog.csv', delimiter=';')
+            >>> borehole.litholog.df
                 Top              MD
             0   Infill           3.0
             1   Base Quaternary  9.5
@@ -404,9 +846,12 @@ class Borehole:
         if not isinstance(delimiter, str):
             raise TypeError('delimiter must be of type str')
 
-        # Creating well tops
-        self.well_tops = WellTops(path=path,
-                                  delimiter=delimiter)
+        # Creating Litholog
+        self.litholog = LithoLog(path=path,
+                                 delimiter=delimiter)
+
+        self.has_litholog = True
+        self.df.loc['Litholog', 'Value'] = self.has_litholog
 
 
 class Deviation(Borehole):
@@ -443,6 +888,7 @@ class Deviation(Borehole):
 
     .. versionadded:: 0.0.1
     """
+
     def __init__(self,
                  borehole,
                  path: Union[str, pd.DataFrame],
@@ -645,20 +1091,43 @@ class Deviation(Borehole):
 
     def plot_deviation_polar_plot(self,
                                   c: np.ndarray = None,
-                                  vmin: float = None,
-                                  vmax: float = None):
+                                  vmin: Union[float, int] = None,
+                                  vmax: Union[float, int] = None):
         """Add polar plot representing the deviation of a borehole.
 
         Parameters
         __________
             c : np.ndarray
                 Array for coloring the well path.
-            vmin : float
+            vmin : Union[float, int]
                 Minimum value for colormap.
-            vmax : float
+            vmax : Union[float, int]
                 Maximum value for colormap.
 
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.deviation.plot_deviation_polar_plot()
+
+        .. versionadded:: 0.0.1
+
         """
+        # Checking that the colors are provided as arrays
+        if not isinstance(c, np.ndarray):
+            raise TypeError('Color array must be provided as NumPy array')
+
+        # Checking that vmin is provided as float or int
+        if not isinstance(vmin, (float, int)):
+            raise TypeError('vmin must be provided as float or int')
+
+        # Checking that vmax is provided as float or int
+        if not isinstance(vmax, (float, int)):
+            raise TypeError('vmax must be provided as float or int')
+
         # Creating plot
         fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
 
@@ -682,20 +1151,44 @@ class Deviation(Borehole):
         return fig, ax
 
     def plot_deviation_3d(self,
-                          elev: float = 45,
-                          azim: float = 45,
-                          roll: float = 0):
+                          elev: Union[float, int] = 45,
+                          azim: Union[float, int] = 45,
+                          roll: Union[float, int] = 0):
         """Create 3D Deviation Plot.
 
         Parameters
         __________
-            elev : float
-                Elevation angle for view.
-            azim : float
-                Azimuth angle for view.
-            roll : float
-                Rolling angle for view.
+            elev : Union[float, int], default: ``45``
+                Elevation angle for view, e.g. ``elev=45``.
+            azim : Union[float, int], default: ``45``
+                Azimuth angle for view, e.g. ``azim=45``.
+            roll : Union[float, int], default: ``0``
+                Rolling angle for view, e.g. ``roll=0``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.deviation.plot_deviation_3d()
+
+        .. versionadded:: 0.0.1
+
         """
+        # Checking that the elevation is provided as float or int
+        if not isinstance(elev, (float, int)):
+            raise TypeError('Elevation must be provided as float or int')
+
+        #  Checking that the azimuth is provided as float or int
+        if not isinstance(azim, (float, int)):
+            raise TypeError('Azimuth must be provided as float or int')
+
+        # Checking that the roll is provided as float or int
+        if not isinstance(roll, (float, int)):
+            raise TypeError('Roll must be provided as float or int')
+
         # Creating figure
         fig, ax = plt.subplots(subplot_kw={'projection': '3d'})
 
@@ -715,20 +1208,49 @@ class Deviation(Borehole):
         return fig, ax
 
     def get_borehole_tube(self,
-                          radius: float = 10,
-                          x: float = 0,
-                          y: float = 0):
+                          radius: Union[float, int] = 10,
+                          x: Union[float, int] = 0,
+                          y: Union[float, int] = 0,
+                          z: Union[float, int] = 0):
         """Get borehole tube.
 
         Parameters
         __________
-            radius : float
+            radius : Union[float, int], default: ``10``
                 Radius of the borehole tube, e.g. ``radius=10``.
-            x : float
+            x : Union[float, int], default: ``0``
                 X-coordinate of the borehole, e.g. ``x=1000``.
-            y : float
-                X-coordinate of the borehole, e.g. ``y=1000``.
+            y : Union[float, int], default: ``0``
+                Y-coordinate of the borehole, e.g. ``y=1000``.
+            z : Union[float, int], default: ``0``
+                Z-coordinate of the borehole, e.g. ``y=100``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.deviation.get_borehole_tube(radius=10)
+
+        .. versionadded:: 0.0.1
         """
+        # Checking that the radius is provided as float or int
+        if not isinstance(radius, (float, int)):
+            raise TypeError('radius must be provided as float or int')
+
+        # Checking that the x coordinate of the borehole is provided as float or int
+        if not isinstance(x, (float, int)):
+            raise TypeError('x coordinate must be provided as float or int')
+
+        # Checking that the y coordinate of the borehole is provided as float or int
+        if not isinstance(y, (float, int)):
+            raise TypeError('y coordinate must be provided as float or int')
+
+        # Checking that the y coordinate of the borehole is provided as float or int
+        if not isinstance(y, (float, int)):
+            raise TypeError('y coordinate must be provided as float or int')
 
         # Importing pyvista
         try:
@@ -750,7 +1272,7 @@ class Deviation(Borehole):
         # Creating spline
         spline = lines_from_points(np.c_[self.easting_rel + x,
                                          self.northing_rel + y,
-                                         -self.tvd])
+                                         -self.tvd + z])
         # Creating tube
         tube = spline.tube(radius=radius)
 
@@ -767,16 +1289,63 @@ class WellTops(Borehole):
     __________
         path : str
             Path to the well tops, e.g. ``path='Well_Tops.csv'``.
+        delimiter : str
+            Delimiter to read the well tops file correctly, e.g. ``delimiter=','``.
+        unit : str
+            Unit of the depth measurements, e.g. ``unit='m'``.
 
     """
 
     def __init__(self,
                  path: str,
-                 delimiter: str = ','):
+                 delimiter: str = ',',
+                 unit: str = 'm'):
+
+        # Checking that the path is of type str
+        if not isinstance(path, str):
+            raise TypeError('The path must be provided as string')
+
+        # Checking that the delimiter is of type str
+        if not isinstance(delimiter, str):
+            raise TypeError('The delimiter must be provided as string')
+
+        # Checking that the unit is provided as string
+        if not isinstance(unit, str):
+            raise TypeError('The unit must be provided as string')
+
+        self.df = pd.read_csv(path, delimiter=delimiter)
+
+        self.df['Unit'] = unit
+
+
+class LithoLog(Borehole):
+    """Class to initiate the LithoLog.
+
+    Parameters
+    __________
+        path : str
+            Path to the litholog, e.g. ``path='LithoLog.csv'``.
+        delimiter : str
+            Delimiter to read the litholog file correctly, e.g. ``delimiter=','``.
+
+    """
+
+    def __init__(self,
+                 path: str,
+                 delimiter: str = ',', ):
+
+        # Checking that the path is of type str
+        if not isinstance(path, str):
+            raise TypeError('The path must be provided as string')
+
+        # Checking that the delimiter is of type str
+        if not isinstance(delimiter, str):
+            raise TypeError('The delimiter must be provided as string')
+
         self.df = pd.read_csv(path, delimiter=delimiter)
 
 
-class Logs(Borehole):
+class LASLogs(Borehole):
     """Class to initiate a Well Log Object.
 
     Parameters
@@ -840,7 +1409,7 @@ class Logs(Borehole):
                        colors: Union[str, list] = None,
                        add_well_tops: bool = False,
                        fill_between: int = None):
-        """Plot well logs
+        """Plot well logs.
 
         Parameters
         __________
@@ -990,6 +1559,48 @@ class Logs(Borehole):
 
         return tube_along_spline
 
+class DLISLogs(Borehole):
+    """Class to initiate a Well Log Object.
+
+        Parameters
+        __________
+            path : str
+                Path to the well logs, e.g. ``path='logs.dlis'``.
+
+        """
+
+    def __init__(self,
+                 borehole,
+                 path: str,
+                 nodata: Union[int, float] = -9999):
+
+        # Importing dlisio
+        try:
+            from dlisio import dlis
+        except ModuleNotFoundError:
+            ModuleNotFoundError('dlisio package not installed')
+
+        # Opening DLIS file
+        dlis, *tail =  dlis.load(path)
+
+        # Getting column names
+        columns = [channel.name for channel in dlis.channels]
+
+        # Getting Curves
+        curves = [channel.curves() for channel in dlis.channels]
+
+        # Creating DataFrame from curves
+        df = pd.DataFrame(curves).T
+
+        # Assigning column names
+        df.columns = columns
+
+        # Replace NaN Values
+        df = df.replace(nodata, np.NaN)
+
+        # Extracting DataFrame from LAS file
+        self.df = df
+
 
 def resample_between_well_deviation_points(coordinates: np.ndarray,
                                            spacing: Union[float, int]) -> np.ndarray:
@@ -1040,11 +1651,10 @@ def polyline_from_points(points: np.ndarray):
     __________
 
         points: np.ndarray
-            Points defining the PolyLine
+            Points defining the PolyLine.
 
     Return
     ______
-
         poly: pv.core.pointset.PolyData
 
     .. versionadded:: 1.0.x
@@ -1212,7 +1822,6 @@ def resample_logs(logs: pd.DataFrame,
                   rounding_precision=5,
                   drop_first: bool = True,
                   drop_last: bool = True, ):
-
     # Resampling DataFrames
     dfs = [resample_log(log=logs[['DEPT', column]],
                         resampling=resampling,
