@@ -9,3 +9,8 @@ pyborehole.borehole module
    :members:
    :undoc-members:
    :show-inheritance:
+
+.. automodule:: pyborehole.deviation
+   :members:
+   :undoc-members:
+   :show-inheritance:
