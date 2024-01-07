@@ -3,4 +3,4 @@ try:
 except ImportError:
     __version__ = "unreleased"
 
-import pyborehole.borehole as borehole
+#import pyborehole.borehole as borehole
