@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from typing import Union
 import matplotlib.pyplot as plt
+from matplotlib.collections import LineCollection
 
 
 class Deviation:
@@ -276,7 +277,8 @@ class Deviation:
     def plot_deviation_polar_plot(self,
                                   c: np.ndarray = None,
                                   vmin: Union[float, int] = None,
-                                  vmax: Union[float, int] = None):
+                                  vmax: Union[float, int] = None,
+                                  cmap: str = 'viridis'):
         """Add polar plot representing the deviation of a borehole.
 
         Parameters
@@ -284,9 +286,11 @@ class Deviation:
             c : np.ndarray
                 Array for coloring the well path.
             vmin : Union[float, int]
-                Minimum value for colormap.
+                Minimum value for colormap, e.g. ``vmin=0``.
             vmax : Union[float, int]
-                Maximum value for colormap.
+                Maximum value for colormap, e.g. ``vmax=100``.
+            cmap : str, default: ``'viridis'``
+                Name of the colormap to be used, e.g. ``cmap='viridis'``.
 
         Raises
         ______
@@ -312,6 +316,10 @@ class Deviation:
         if not isinstance(vmax, (float, int, type(None))):
             raise TypeError('vmax must be provided as float or int')
 
+        # Checking that the name of the cmap is provided as string
+        if not isinstance(cmap, (str, type(None))):
+            raise TypeError('The name of the cmap must be provided as string')
+
         # Creating plot
         fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
 
@@ -323,21 +331,45 @@ class Deviation:
 
         # Plotting
         if c is not None:
-            ax.scatter(self.az,
-                       self.radius,
-                       c=c,
-                       vmin=vmin,
-                       vmax=vmax)
+            # Creating the Line Segments
+            xy = np.vstack([self.az,
+                            self.radius]).T.reshape(-1,
+                                                    1,
+                                                    2)
+
+            segments = np.hstack([xy[:-1],
+                                  xy[1:]])
+
+            # Creating LineCollection
+            coll = LineCollection(segments,
+                                  cmap=cmap)
+
+            # Setting the data array
+            coll.set_array(c)
+
+            # Adding collection to axis
+            ax.add_collection(coll)
+
+            # Setting view
+            ax.autoscale_view()
+
+            # Setting rlims
+            ax.set_rlim(0, 1.05*np.max(self.radius))
+
         else:
             ax.plot(self.az,
                     self.radius)
+
+            # Setting rlims
+            ax.set_rlim(0, 1.05 * np.max(self.radius))
 
         return fig, ax
 
     def plot_deviation_3d(self,
                           elev: Union[float, int] = 45,
                           azim: Union[float, int] = 45,
-                          roll: Union[float, int] = 0):
+                          roll: Union[float, int] = 0,
+                          relative: bool = False):
         """Create 3D Deviation Plot.
 
         Parameters
@@ -348,6 +380,8 @@ class Deviation:
                 Azimuth angle for view, e.g. ``azim=45``.
             roll : Union[float, int], default: ``0``
                 Rolling angle for view, e.g. ``roll=0``.
+            relative : bool, default: ``False``
+                Boolean value to plot the plot with relative coordinates.
 
         Raises
         ______
@@ -373,13 +407,24 @@ class Deviation:
         if not isinstance(roll, (float, int)):
             raise TypeError('Roll must be provided as float or int')
 
+        # Checking that the relative value is provided as bool
+        if not isinstance(relative, bool):
+            raise TypeError('The relative value must be provided as bool')
+
         # Creating figure
         fig, ax = plt.subplots(subplot_kw={'projection': '3d'})
 
+        # TODO: Add LineCollection coloring
+
         # Plotting
-        ax.plot(self.easting_rel,
-                self.northing_rel,
-                -self.tvd)
+        if relative:
+            ax.plot(self.easting_rel,
+                    self.northing_rel,
+                    -self.tvd)
+        else:
+            ax.plot(self.easting,
+                    self.northing,
+                    -self.tvd)
 
         # Setting plotting parameters
         ax.view_init(elev, azim, roll)
@@ -395,7 +440,8 @@ class Deviation:
                           radius: Union[float, int] = 10,
                           x: Union[float, int] = 0,
                           y: Union[float, int] = 0,
-                          z: Union[float, int] = 0):
+                          z: Union[float, int] = 0,
+                          relative: bool = False):
         """Get borehole tube.
 
         Parameters
@@ -408,6 +454,8 @@ class Deviation:
                 Y-coordinate of the borehole, e.g. ``y=1000``.
             z : Union[float, int], default: ``0``
                 Z-coordinate of the borehole, e.g. ``y=100``.
+            relative : bool, default: ``False``
+                Boolean value to plot the plot with relative coordinates.
 
         Raises
         ______
@@ -436,6 +484,10 @@ class Deviation:
         if not isinstance(y, (float, int)):
             raise TypeError('y coordinate must be provided as float or int')
 
+        # Checking that the relative value is provided as bool
+        if not isinstance(relative, bool):
+            raise TypeError('The relative value must be provided as bool')
+
         # Importing pyvista
         try:
             import pyvista as pv
@@ -454,9 +506,15 @@ class Deviation:
             return poly
 
         # Creating spline
-        spline = lines_from_points(np.c_[self.easting_rel + x,
-                                         self.northing_rel + y,
-                                         -self.tvd + z])
+        if relative:
+            spline = lines_from_points(np.c_[self.easting_rel + x,
+                                             self.northing_rel + y,
+                                             -self.tvd + z])
+        else:
+            spline = lines_from_points(np.c_[self.easting + x,
+                                             self.northing + y,
+                                             -self.tvd + z])
+
         # Creating tube
         tube = spline.tube(radius=radius)
 
