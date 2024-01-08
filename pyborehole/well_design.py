@@ -8,6 +8,21 @@ class Well_Design:
 
     def __init__(self):
         self.pipes = {}
+        self.cements = {}
+        self.depth_unit = None
+        self.diameter_unit = None
+
+    def __repr__(self):
+        """Return contents of the well design
+
+        Returns
+        _______
+             Contents of the well design.
+
+        .. versionadded:: 0.0.1
+        """
+        return f"Pipes: {self.pipes} \n" \
+               f"Cements: {self.cements}"
 
     def add_pipe(self,
                  name: str,
@@ -22,7 +37,7 @@ class Well_Design:
                  shoe_width: Union[int, float] = None,
                  shoe_unit: str = None
                  ):
-        """Function to add a pip to the well design.
+        """Function to add a pipe to the well design.
 
         Parameters
         __________
@@ -78,7 +93,7 @@ class Well_Design:
 
         # Checking that the pipe type is one of the following
         if pipe_type not in ['conductor casing', 'surface casing', 'intermediate casing', 'production casing',
-                        'production liner']:
+                             'production liner']:
             raise ValueError('The provided pipe type is not valid')
 
         # Checking that the top of the pipe is provided as int or float
@@ -145,10 +160,97 @@ class Well_Design:
         self.depth_unit = pipe.depth_unit
         self.diameter_unit = pipe.diameter_unit
 
+    def add_cement(self,
+                   name: str,
+                   top: Union[int, float],
+                   bottom: Union[int, float],
+                   pipe_inner: str,
+                   pipe_outer: str,
+                   depth_unit: str):
+        """Function to add cement to the well design.
+
+        Parameters
+        __________
+            name : str
+                Name of the cement used as key for the cement dict, e.g. ``name='Cement 1'``.
+            top : Union[int, float]
+                Depth of the top of the cement, e.g. ``top=0``.
+            bottom : Union[int, float]
+                Depth of the bottom of the cement, e.g. ``bottom=-100``.
+            pipe_inner : str
+                Name of the inner pipe, e.g. ``pipe_inner='Production Liner'``.
+            pipe_outer : str
+                Name of the outer pipe, e.g. ``pipe_outer='Production Casing'``.
+            depth_unit : str
+                Unit of the depth values, options include meters (``'m'``) and feet (``'ft'``), e.g. ``depth_unit='m'``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+            ValueError
+                If an invalid name for the inner or outer pipe is provided.
+
+        Examples
+        ________
+            >>>
+
+        .. versionadded:: 0.0.1
+        """
+        # Checking that the name is of type string
+        if not isinstance(name, str):
+            raise TypeError('The cement name must be provided as string')
+
+        # Checking that the top of the pipe is provided as int or float
+        if not isinstance(top, (int, float)):
+            raise TypeError('The top of the pipe must be provided as int or float')
+
+        # Checking that the bottom of the pipe is provided as int or float
+        if not isinstance(bottom, (int, float)):
+            raise TypeError('The bottom of the pipe must be provided as int or float')
+
+        # Checking that the name of the inner pipe is of type string
+        if not isinstance(pipe_inner, str):
+            raise TypeError('The name of the inner pipe must be provided as string')
+
+        # Checking that the key of the inner pipe is valid
+        if pipe_inner not in list(self.pipes.keys()):
+            raise ValueError('Name of the inner pipe invalid ')
+
+        # Checking that the key of the outer pip is valid
+        if pipe_outer not in list(self.pipes.keys()):
+            raise ValueError('Name of the outer pipe invalid ')
+
+        # Checking that the name of the outer pipe is of type string
+        if not isinstance(pipe_outer, str):
+            raise TypeError('The name of the outer pipe must be provided as string')
+
+        # Checking that the depth unit is provided as string
+        if not isinstance(depth_unit, str):
+            raise TypeError('The depth_unit must be provided as string')
+
+        # Checking that the depth unit is either meters or feet
+        if depth_unit not in ['m', 'ft']:
+            raise ValueError('The provided depth unit is not valid')
+
+        # Creating Cement
+        cement = Cement(top=top,
+                        bottom=bottom,
+                        pipe_inner=pipe_inner,
+                        pipe_outer=pipe_outer,
+                        depth_unit=depth_unit,
+                        pipes=self.pipes)
+
+        self.cements[name] = cement
+
     def plot_well_design(self,
-                           figsize: tuple = (6, 9),
-                           xfactor: Union[int, float] = 4,
-                           yfactor: Union[int, float] = 1.05):
+                         figsize: tuple = (6, 9),
+                         xfactor: Union[int, float] = 4,
+                         yfactor: Union[int, float] = 1.1,
+                         show_pipes: bool = True,
+                         show_shoes: bool = True,
+                         show_cements: bool = True,
+                         show_descriptions: bool = True):
 
         """Plot casing scheme/well_design.
 
@@ -160,6 +262,14 @@ class Well_Design:
                 Horizontal stretching factor to rescale the figure, e.g. ``xfactor=4``.
             yfactor : Union[int, float], default: ``1.05``.
                 Vertical stretching factor to rescale the figure, e.g. ``yfactor=1.05``.
+            show_pipes : bool, default: ``True``
+                Boolean value to show the pipes, e.g. ``show_pipes=True``.
+            show_shoes : bool, default: ``True``
+                Boolean value to show the casig shoes, e.g. ``show_shoes=True``.
+            show_cements : bool, default: ``True``
+                Boolean value to show the cements, e.g. ``show_cements=True``.
+            show_descriptions : bool, default: ``True``
+                Boolean value to show the descriptions, e.g. ``show_descriptions=True``.
 
         Returns
         _______
@@ -168,6 +278,16 @@ class Well_Design:
             ax : matplotlib.axes.Axes
                 Matplotlib axis.
 
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.well_design.plot_well_design()
+
+        .. versionadded:: 0.0.1
         """
         # Checking that the figsize is provided as tuple
         if not isinstance(figsize, tuple):
@@ -181,13 +301,63 @@ class Well_Design:
         if not isinstance(xfactor, (int, float)):
             raise TypeError('The xfactor must be provided as int or float')
 
+        # Checking that show_pipes is provided as bool
+        if not isinstance(show_pipes, bool):
+            raise TypeError('Show_pipes must be either True or False')
+
+        # Checking that show_shoes is provided as bool
+        if not isinstance(show_shoes, bool):
+            raise TypeError('Show_shoes must be either True or False')
+
+        # Checking that show_cements is provided as bool
+        if not isinstance(show_cements, bool):
+            raise TypeError('Show_cements must be either True or False')
+
+        # Checking that show_descriptions is provided as bool
+        if not isinstance(show_descriptions, bool):
+            raise TypeError('Show_descriptions must be either True or False')
+
         # Creating figure and axis
         fig, ax = plt.subplots(1, figsize=figsize)
 
         # Adding Pipes to plot
-        for key, elem in self.pipes.items():
-            ax.add_patch(Rectangle(elem.xy, elem.width, elem.height, color="black"))
-            ax.add_patch(Rectangle((-1 * elem.xy[0], elem.xy[1]), -1 * elem.width, elem.height, color="black"))
+        if show_pipes:
+            for key, elem in self.pipes.items():
+                ax.add_patch(Rectangle(elem.xy, elem.width, elem.height, color="black"))
+                ax.add_patch(Rectangle((-1 * elem.xy[0], elem.xy[1]), -1 * elem.width, elem.height, color="black"))
+
+                # Showing Descriptions
+                if show_descriptions:
+                    max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
+                    for key, elem in self.pipes.items():
+                        ax.text(max_diam + 10, elem.bottom - 25, elem, fontsize=8)
+
+        # Adding Casing Shoes
+        if show_shoes:
+            for key, elem in self.pipes.items():
+                if elem.shoe_width is not None:
+                    p0 = [elem.outer_diameter, elem.bottom]
+                    p1 = [elem.outer_diameter, elem.bottom + elem.shoe_height]
+                    p2 = [elem.outer_diameter + elem.shoe_width, elem.bottom]
+                    shoe = plt.Polygon([p0, p1, p2], color="black")
+                    ax.add_patch(shoe)
+                    p0[0] *= -1
+                    p1[0] *= -1
+                    p2 = [-elem.outer_diameter - elem.shoe_width, elem.bottom]
+                    shoe = plt.Polygon([p0, p1, p2], color="black")
+                    ax.add_patch(shoe)
+
+        # Adding Casing Cements
+        if show_cements:
+            for key, elem in self.cements.items():
+                ax.fill_between(elem.xvals, elem.tops, elem.bottoms, color="#6b705c", alpha=0.5)
+                ax.fill_between(-1 * elem.xvals, elem.tops, elem.bottoms, color="#6b705c", alpha=0.5)
+
+            # Showing Descriptions
+            if show_descriptions:
+                max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
+                for key, elem in self.cements.items():
+                    ax.text(-max_diam - 60, elem.bottom - 25, elem, fontsize=8)
 
         # Calculating axes limits
         top = np.max([elem.top for key, elem in self.pipes.items()])
@@ -195,26 +365,12 @@ class Well_Design:
         max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
 
         # Setting axes limits
-        ax.set_ylim(bottom*yfactor, top)
-        ax.set_xlim(-max_diam*xfactor, max_diam*xfactor)
+        ax.set_ylim(bottom * yfactor, top)
+        ax.set_xlim(-max_diam * xfactor, max_diam * xfactor)
 
         # Setting axes labels
         ax.set_ylabel('Depth [%s]' % self.depth_unit)
         ax.set_xlabel('Diameter [%s]' % self.diameter_unit)
-
-        # Adding Casing Shoes
-        for key, elem in self.pipes.items():
-            if elem.shoe_width is not None:
-                p0 = [elem.outer_diameter, elem.bottom]
-                p1 = [elem.outer_diameter, elem.bottom + elem.shoe_height]
-                p2 = [elem.outer_diameter + elem.shoe_width, elem.bottom]
-                shoe = plt.Polygon([p0, p1, p2], color="black")
-                ax.add_patch(shoe)
-                p0[0] *= -1
-                p1[0] *= -1
-                p2 = [-elem.outer_diameter - elem.shoe_width, elem.bottom]
-                shoe = plt.Polygon([p0, p1, p2], color="black")
-                ax.add_patch(shoe)
 
         return fig, ax
 
@@ -331,7 +487,7 @@ class Pipe:
 
         # Checking that the pipe type is one of the following
         if pipe_type not in ['conductor casing', 'surface casing', 'intermediate casing', 'production casing',
-                        'production liner']:
+                             'production liner']:
             raise ValueError('The provided pipe type is not valid')
 
         # Checking that the top of the pipe is provided as int or float
@@ -444,8 +600,7 @@ class Pipe:
 
         Returns
         _______
-            borehole.name : str
-                Name of the borehole.
+             Contents of the pipe.
 
         .. versionadded:: 0.0.1
         """
@@ -453,8 +608,164 @@ class Pipe:
                f"Top: {self.top} {self.depth_unit} \n" \
                f"Bottom: {self.bottom} {self.depth_unit} \n" \
                f"Inner Diameter: {self.inner_diameter} {self.diameter_unit} \n" \
-               f"Outer Diameter: {self.outer_diameter} {self.diameter_unit} \n" \
+               f"Outer Diameter: {self.outer_diameter} {self.diameter_unit}"
 
+
+class Cement:
+    """Class to initiate cement.
+
+    Parameters
+    __________
+        name : str
+            Name of the cement used as key for the cement dict, e.g. ``name='Cement 1'``.
+        top : Union[int, float]
+            Depth of the top of the cement, e.g. ``top=0``.
+        bottom : Union[int, float]
+            Depth of the bottom of the cement, e.g. ``bottom=-100``.
+        pipe_inner : str
+            Name of the inner pipe, e.g. ``pipe_inner='Production Liner'``.
+        pipe_outer : str
+            Name of the outer pipe, e.g. ``pipe_outer='Production Casing'``.
+        depth_unit : str
+            Unit of the depth values, options include meters (``'m'``) and feet (``'ft'``), e.g. ``depth_unit='m'``.
+        pipes : dict
+            Dictionary containting the pipes.
+
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
+        ValueError
+            If an invalid name for the inner or outer pipe is provided.
+
+    Examples
+    ________
+        >>> cement1 = Cement(top=0, bottom=-23, depth_unit='m', pipe_inner='Production Liner', pipe_outer='Production Casing')
+
+
+    .. versionadded:: 0.0.1
+    """
+
+    def __init__(self,
+                 top: Union[int, float],
+                 bottom: Union[int, float],
+                 depth_unit: str,
+                 pipe_inner: str,
+                 pipe_outer: str,
+                 pipes: dict):
+        """Class to initiate cement.
+
+        Parameters
+        __________
+            name : str
+                Name of the cement used as key for the cement dict, e.g. ``name='Cement 1'``.
+            top : Union[int, float]
+                Depth of the top of the cement, e.g. ``top=0``.
+            depth_unit : str
+                Unit of the depth values, options include meters (``'m'``) and feet (``'ft'``), e.g. ``depth_unit='m'``.
+            bottom : Union[int, float]
+                Depth of the bottom of the cement, e.g. ``bottom=-100``.
+            pipe_inner : str
+                Name of the inner pipe, e.g. ``pipe_inner='Production Liner'``.
+            pipe_outer : str
+                Name of the outer pipe, e.g. ``pipe_outer='Production Casing'``.
+            pipes : dict
+                Dictionary containting the pipes.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+            ValueError
+                If an invalid name for the inner or outer pipe is provided.
+
+        Examples
+        ________
+            >>> cement1 = Cement(top=0, bottom=-23, depth_unit='m', pipe_inner='Production Liner', pipe_outer='Production Casing')
+
+        .. versionadded:: 0.0.1
+        """
+
+        # Checking that the top of the pipe is provided as int or float
+        if not isinstance(top, (int, float)):
+            raise TypeError('The top of the pipe must be provided as int or float')
+
+        # Checking that the bottom of the pipe is provided as int or float
+        if not isinstance(bottom, (int, float)):
+            raise TypeError('The bottom of the pipe must be provided as int or float')
+
+        # Checking that the name of the inner pipe is of type string
+        if not isinstance(pipe_inner, str):
+            raise TypeError('The name of the inner pipe must be provided as string')
+
+        # Checking that the pipes are provided as dict
+        if not isinstance(pipes, dict):
+            raise TypeError('The pipes must be provided as dict')
+
+        # Checking that the key of the inner pipe is valid
+        if pipe_inner not in list(pipes.keys()):
+            raise ValueError('Name of the inner pipe invalid ')
+
+        # Checking that the key of the outer pipe is valid
+        if pipe_outer not in list(pipes.keys()):
+            raise ValueError('Name of the outer pipe invalid ')
+
+        # Checking that the name of the outer pipe is of type string
+        if not isinstance(pipe_outer, str):
+            raise TypeError('The name of the outer pipe must be provided as string')
+
+        # Checking that the depth unit is provided as string
+        if not isinstance(depth_unit, str):
+            raise TypeError('The depth_unit must be provided as string')
+
+        # Checking that the depth unit is either meters or feet
+        if depth_unit not in ['m', 'ft']:
+            raise ValueError('The provided depth unit is not valid')
+
+        # Setting attributes
+        self.top = top
+        self.bottom = bottom
+        self.pipe_inner = pipe_inner
+        self.pipe_outer = pipe_outer
+
+        self.depth_unit = depth_unit
+
+        if self.depth_unit == 'm':
+            self.top_m = self.top
+            self.bottom_m = self.bottom
+            self.top_ft = m_to_ft(value=self.top)
+            self.bottom_ft = m_to_ft(value=self.bottom)
+        elif self.depth_unit == 'ft':
+            self.top_m = ft_to_m(value=self.top)
+            self.bottom_m = ft_to_m(value=self.bottom)
+            self.top_ft = self.top
+            self.bottom_ft = self.bottom
+
+        self.thickness = pipes[pipe_outer].inner_diameter - pipes[pipe_inner].outer_diameter
+
+        self.inner = pipes[pipe_inner].outer_diameter
+        self.outer = pipes[pipe_outer].inner_diameter
+
+        self.diameter_unit = pipes[pipe_inner].diameter_unit
+
+        self.xvals = np.array([self.inner, self.outer])
+        self.tops = [self.top, self.top]
+        self.bottoms = [self.bottom, self.bottom]
+
+    def __repr__(self):
+        """Return contents of the cement
+
+        Returns
+        _______
+            Contents of the cement.
+
+        .. versionadded:: 0.0.1
+        """
+        return f"Top: {self.top} {self.depth_unit} \n" \
+               f"Bottom: {self.bottom} {self.depth_unit} \n" \
+               f"Cement Thickness: {self.thickness} {self.diameter_unit}  \n" \
+               f"Inner Pipe: {self.pipe_inner} \n" \
+               f"Outer Pipe: {self.pipe_inner}"
 
 
 def m_to_ft(value: Union[int, float]) -> float:
