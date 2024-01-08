@@ -9,6 +9,7 @@ from typing import Union, List, Tuple
 import geopandas as gpd
 
 from pyborehole.deviation import Deviation
+from pyborehole.well_design import Well_Design
 
 
 class Borehole:
@@ -144,11 +145,13 @@ class Borehole:
         self.logs = None
         self.well_tops = None
         self.litholog = None
+        self.well_design = None
 
         self.has_deviation = False
         self.has_logs = False
         self.has_well_tops = False
         self.has_litholog = False
+        self.has_well_design = False
 
         # Creating borehole (Geo-)DataFrame
         self.df = None
@@ -514,11 +517,13 @@ class Borehole:
         self.logs = None
         self.well_tops = None
         self.litholog = None
+        self.well_design = None
 
         self.has_deviation = False
         self.has_logs = False
         self.has_well_tops = False
         self.has_litholog = False
+        self.has_well_design = False
 
         # Create borehole DataFrames
         self.df = self.create_df()
@@ -577,7 +582,8 @@ class Borehole:
                    'Litholog': self.has_litholog,
                    'Well Tops': self.has_well_tops,
                    'Well Deviation': self.has_deviation,
-                   'Well Logs': self.has_logs
+                   'Well Logs': self.has_logs,
+                   'Well Design': self.has_well_design
                    }
 
         # Creating DataFrame from dict
@@ -639,7 +645,8 @@ class Borehole:
                    'Litholog': self.has_litholog,
                    'Well Tops': self.has_well_tops,
                    'Well Deviation': self.has_deviation,
-                   'Well Logs': self.has_logs
+                   'Well Logs': self.has_logs,
+                   'Well Design': self.has_well_design
                    }
 
         # Creating DataFrame from dict
@@ -1120,10 +1127,13 @@ class Borehole:
         self.litholog = LithoLog(path=path,
                                  delimiter=delimiter)
 
+        # Setting attributes
         self.has_litholog = True
         self.df.loc['Litholog', 'Value'] = self.has_litholog
 
+    def add_well_design(self):
 
+        self.well_design = Well_Design()
 
 
 class WellTops(Borehole):

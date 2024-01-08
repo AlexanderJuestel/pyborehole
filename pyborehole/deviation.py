@@ -383,6 +383,13 @@ class Deviation:
             relative : bool, default: ``False``
                 Boolean value to plot the plot with relative coordinates.
 
+        Returns
+        _______
+            fig : matplotlib.figure
+                Matplotlib figure.
+            ax : matplotlib.axes.Axes
+                Matplotlib axis.
+
         Raises
         ______
             TypeError
