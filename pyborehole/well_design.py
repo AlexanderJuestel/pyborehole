@@ -5,7 +5,7 @@ from matplotlib.patches import Rectangle
 import copy
 
 
-class Well_Design:
+class WellDesign:
 
     def __init__(self):
         self.pipes = {}
@@ -68,7 +68,6 @@ class Well_Design:
         Returns
         _______
             Well_Design
-
 
         Raises
         ______
@@ -235,7 +234,8 @@ class Well_Design:
             raise ValueError('The provided depth unit is not valid')
 
         # Creating Cement
-        cement = Cement(top=top,
+        cement = Cement(name=name,
+                        top=top,
                         bottom=bottom,
                         pipe_inner=pipe_inner,
                         pipe_outer=pipe_outer,
@@ -251,8 +251,10 @@ class Well_Design:
                          show_pipes: bool = True,
                          show_shoes: bool = True,
                          show_cements: bool = True,
-                         show_descriptions: bool = True):
-
+                         show_descriptions: bool = True,
+                         xshift_pipes_description: Union[int, float] = 10,
+                         xshift_cements_description: Union[int, float] = 60,
+                         yshift_description: Union[int, float] = 25):
         """Plot casing scheme/well_design.
 
         Parameters
@@ -271,6 +273,12 @@ class Well_Design:
                 Boolean value to show the cements, e.g. ``show_cements=True``.
             show_descriptions : bool, default: ``True``
                 Boolean value to show the descriptions, e.g. ``show_descriptions=True``.
+            xshift_pipes_description : Union[int, float], default: ``10``
+                Value to shift the descriptions in x-direction, e.g. `xshift_pipes_description=10``.
+            xshift_cements_description : Union[int, float], default: ``60``
+                Value to shift the descriptions in x-direction, e.g. `xshift_cements_description=60``.
+            yshift_description : Union[int, float], default: ``25``
+                Value to shift the descriptions in y-direction, e.g. `yshift_description=10``.
 
         Returns
         _______
@@ -318,6 +326,18 @@ class Well_Design:
         if not isinstance(show_descriptions, bool):
             raise TypeError('Show_descriptions must be either True or False')
 
+        # Checking that the x shift for the pipes if of type int or float
+        if not isinstance(xshift_pipes_description, (int, float)):
+            raise TypeError('The x shift for the pipes must be provided as int or float')
+
+        # Checking that the x shift for the cements if of type int or float
+        if not isinstance(xshift_cements_description, (int, float)):
+            raise TypeError('The x shift for the cements must be provided as int or float')
+
+        # Checking that the y shift for the descriptions if of type int or float
+        if not isinstance(yshift_description, (int, float)):
+            raise TypeError('The y shift for the descriptions must be provided as int or float')
+
         # Creating figure and axis
         fig, ax = plt.subplots(1, figsize=figsize)
 
@@ -325,8 +345,14 @@ class Well_Design:
         if show_pipes:
             for key, elem in self.pipes.items():
                 if elem.pipe_type == 'open hole section':
-                    ax.plot([elem.inner_diameter,elem.inner_diameter], [elem.top,elem.bottom], linestyle='--', color='black')
-                    ax.plot([-elem.inner_diameter, -elem.inner_diameter], [elem.top, elem.bottom], linestyle='--', color='black')
+                    ax.plot([elem.inner_diameter,elem.inner_diameter],
+                            [elem.top,elem.bottom],
+                            linestyle='--',
+                            color='black')
+                    ax.plot([-elem.inner_diameter, -elem.inner_diameter],
+                            [elem.top, elem.bottom],
+                            linestyle='--',
+                            color='black')
                 else:
                     ax.add_patch(Rectangle(elem.xy, elem.width, elem.height, color="black"))
                     ax.add_patch(Rectangle((-1 * elem.xy[0], elem.xy[1]), -1 * elem.width, elem.height, color="black"))
@@ -336,24 +362,32 @@ class Well_Design:
                     max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
                     for key, elem in self.pipes.items():
                         if elem.pipe_type == 'open hole section':
-                            ax.text(max_diam + 10, elem.bottom - 25, elem, fontsize=8)
+                            ax.text(max_diam + xshift_pipes_description,
+                                    elem.bottom - yshift_description,
+                                    elem,
+                                    fontsize=8)
                         else:
-                            ax.text(max_diam + 10, elem.bottom - 25, elem, fontsize=8)
+                            ax.text(max_diam + xshift_pipes_description,
+                                    elem.bottom - yshift_description,
+                                    elem,
+                                    fontsize=8)
+
+            # Deep copy of pipes dict
+            x = copy.deepcopy(self.pipes)
 
             # Popping open hole section
-            x = copy.deepcopy(self.pipes)
-            type_list = [elem.pipe_type for key, elem in x.items()]
-            index_open_hole = type_list.index('open hole section')
-            key_open_hole = list(x.keys())[index_open_hole]
-            x.pop(key_open_hole)
+            try:
+                type_list = [elem.pipe_type for key, elem in x.items()]
+                index_open_hole = type_list.index('open hole section')
+                key_open_hole = list(x.keys())[index_open_hole]
+                x.pop(key_open_hole)
+            except ValueError:
+                pass
 
             # Getting diameters and calculating thickness of cement between each pipe
             outer_diameters = sorted([elem.outer_diameter for key, elem in x.items()], reverse=False)
             inner_diameters = sorted([elem.inner_diameter for key, elem in x.items()], reverse=False)
             thicknesses = [y - x for x, y in zip(outer_diameters[:-1], inner_diameters[1:])]
-            print(outer_diameters)
-            print(inner_diameters)
-            print(thicknesses)
 
             # Sorting pipes
             pipes_sorted = {k: v for k, v in sorted(x.items(), key=lambda item: item[1].outer_diameter)}
@@ -396,7 +430,7 @@ class Well_Design:
             if show_descriptions:
                 max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
                 for key, elem in self.cements.items():
-                    ax.text(-max_diam - 60, elem.bottom - 25, elem, fontsize=8)
+                    ax.text(-max_diam - xshift_cements_description, elem.bottom - yshift_description, elem, fontsize=8)
 
         # Calculating axes limits
         top = np.max([elem.top for key, elem in self.pipes.items()])
@@ -444,7 +478,6 @@ class Pipe:
     _______
         Pipe
 
-
     Raises
     ______
         TypeError
@@ -457,7 +490,6 @@ class Pipe:
     Example
     _______
         >>> pipe1 = Pipe(pipe_type='conductor casing', top=0, bottom=-23, depth_unit='m', inner_diameter=20, outer_diameter=22, diameter_unit='in')
-
 
     .. versionadded:: 0.0.1
     """
@@ -502,7 +534,6 @@ class Pipe:
         _______
             Pipe
 
-
         Raises
         ______
             TypeError
@@ -515,7 +546,6 @@ class Pipe:
         Example
         _______
             >>> pipe1 = Pipe(pipe_type='conductor casing', top=0, bottom=-23, depth_unit='m', inner_diameter=20, outer_diameter=22, diameter_unit='in')
-
 
         .. versionadded:: 0.0.1
         """
@@ -670,6 +700,10 @@ class Cement:
         pipes : dict
             Dictionary containting the pipes.
 
+    Returns
+    _______
+        Cement
+
     Raises
     ______
         TypeError
@@ -686,6 +720,7 @@ class Cement:
     """
 
     def __init__(self,
+                 name: str,
                  top: Union[int, float],
                  bottom: Union[int, float],
                  depth_unit: str,
@@ -711,6 +746,10 @@ class Cement:
             pipes : dict
                 Dictionary containting the pipes.
 
+        Returns
+        _______
+            Cement
+
         Raises
         ______
             TypeError
@@ -724,6 +763,9 @@ class Cement:
 
         .. versionadded:: 0.0.1
         """
+        # Checking that the name of the pipe is provided as str
+        if not isinstance(name, str):
+            raise TypeError('The name of the pipe must be provided as str')
 
         # Checking that the top of the pipe is provided as int or float
         if not isinstance(top, (int, float)):
@@ -762,6 +804,7 @@ class Cement:
             raise ValueError('The provided depth unit is not valid')
 
         # Setting attributes
+        self.name = name
         self.top = top
         self.bottom = bottom
         self.pipe_inner = pipe_inner
@@ -780,14 +823,18 @@ class Cement:
             self.top_ft = self.top
             self.bottom_ft = self.bottom
 
-        self.thickness = pipes[pipe_outer].inner_diameter - pipes[pipe_inner].outer_diameter
-
         self.inner = pipes[pipe_inner].outer_diameter
         self.outer = pipes[pipe_outer].inner_diameter
 
+        if pipes[pipe_inner].pipe_type == 'conductor casing':
+            self.thickness = pipes[pipe_inner].shoe_width
+            self.xvals = np.array([self.inner, self.inner+self.thickness])
+        else:
+            self.thickness = pipes[pipe_outer].inner_diameter - pipes[pipe_inner].outer_diameter
+            self.xvals = np.array([self.inner, self.outer])
+
         self.diameter_unit = pipes[pipe_inner].diameter_unit
 
-        self.xvals = np.array([self.inner, self.outer])
         self.tops = [self.top, self.top]
         self.bottoms = [self.bottom, self.bottom]
 

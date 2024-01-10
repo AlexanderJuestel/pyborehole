@@ -9,7 +9,7 @@ from typing import Union, List, Tuple
 import geopandas as gpd
 
 from pyborehole.deviation import Deviation
-from pyborehole.well_design import Well_Design
+from pyborehole.well_design import WellDesign
 
 
 class Borehole:
@@ -1133,7 +1133,7 @@ class Borehole:
 
     def add_well_design(self):
 
-        self.well_design = Well_Design()
+        self.well_design = WellDesign()
 
 
 class WellTops(Borehole):
