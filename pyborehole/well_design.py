@@ -2,6 +2,7 @@ from typing import Union
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
+import copy
 
 
 class Well_Design:
@@ -93,7 +94,7 @@ class Well_Design:
 
         # Checking that the pipe type is one of the following
         if pipe_type not in ['conductor casing', 'surface casing', 'intermediate casing', 'production casing',
-                             'production liner']:
+                             'production liner', 'open hole section']:
             raise ValueError('The provided pipe type is not valid')
 
         # Checking that the top of the pipe is provided as int or float
@@ -141,7 +142,7 @@ class Well_Design:
             raise TypeError('The shoe unit must be provided as str')
 
         # Checking that the shoe unit is either millimeters or inches
-        if shoe_unit not in ['mm', 'in']:
+        if shoe_unit not in ['mm', 'in', None]:
             raise ValueError('The provided diameter unit is not valid')
 
         # Adding the pipe
@@ -323,14 +324,52 @@ class Well_Design:
         # Adding Pipes to plot
         if show_pipes:
             for key, elem in self.pipes.items():
-                ax.add_patch(Rectangle(elem.xy, elem.width, elem.height, color="black"))
-                ax.add_patch(Rectangle((-1 * elem.xy[0], elem.xy[1]), -1 * elem.width, elem.height, color="black"))
+                if elem.pipe_type == 'open hole section':
+                    ax.plot([elem.inner_diameter,elem.inner_diameter], [elem.top,elem.bottom], linestyle='--', color='black')
+                    ax.plot([-elem.inner_diameter, -elem.inner_diameter], [elem.top, elem.bottom], linestyle='--', color='black')
+                else:
+                    ax.add_patch(Rectangle(elem.xy, elem.width, elem.height, color="black"))
+                    ax.add_patch(Rectangle((-1 * elem.xy[0], elem.xy[1]), -1 * elem.width, elem.height, color="black"))
 
                 # Showing Descriptions
                 if show_descriptions:
                     max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
                     for key, elem in self.pipes.items():
-                        ax.text(max_diam + 10, elem.bottom - 25, elem, fontsize=8)
+                        if elem.pipe_type == 'open hole section':
+                            ax.text(max_diam + 10, elem.bottom - 25, elem, fontsize=8)
+                        else:
+                            ax.text(max_diam + 10, elem.bottom - 25, elem, fontsize=8)
+
+            # Popping open hole section
+            x = copy.deepcopy(self.pipes)
+            type_list = [elem.pipe_type for key, elem in x.items()]
+            index_open_hole = type_list.index('open hole section')
+            key_open_hole = list(x.keys())[index_open_hole]
+            x.pop(key_open_hole)
+
+            # Getting diameters and calculating thickness of cement between each pipe
+            outer_diameters = sorted([elem.outer_diameter for key, elem in x.items()], reverse=False)
+            inner_diameters = sorted([elem.inner_diameter for key, elem in x.items()], reverse=False)
+            thicknesses = [y - x for x, y in zip(outer_diameters[:-1], inner_diameters[1:])]
+            print(outer_diameters)
+            print(inner_diameters)
+            print(thicknesses)
+
+            # Sorting pipes
+            pipes_sorted = {k: v for k, v in sorted(x.items(), key=lambda item: item[1].outer_diameter)}
+
+            # Selecting pies
+            pipes_selected = {k: pipes_sorted[k] for k in list(pipes_sorted)[:len(thicknesses)]}
+
+            # Plotting top of pipe
+            i = 0
+            for key, elem in pipes_selected.items():
+                i = i
+                ax.add_patch(
+                    Rectangle((elem.inner_diameter, elem.top), thicknesses[i] + elem.thickness, 1, color="black"))
+                ax.add_patch(Rectangle((-1 * elem.inner_diameter, elem.top), -1 * thicknesses[0] - elem.thickness, 1,
+                                       color="black"))
+                i = i + 1
 
         # Adding Casing Shoes
         if show_shoes:
@@ -487,7 +526,7 @@ class Pipe:
 
         # Checking that the pipe type is one of the following
         if pipe_type not in ['conductor casing', 'surface casing', 'intermediate casing', 'production casing',
-                             'production liner']:
+                             'production liner', 'open hole section']:
             raise ValueError('The provided pipe type is not valid')
 
         # Checking that the top of the pipe is provided as int or float
@@ -535,7 +574,7 @@ class Pipe:
             raise TypeError('The shoe unit must be provided as str')
 
         # Checking that the shoe unit is either millimeters or inches
-        if shoe_unit not in ['mm', 'in']:
+        if shoe_unit not in ['mm', 'in', None]:
             raise ValueError('The provided diameter unit is not valid')
 
         # Setting attributes
