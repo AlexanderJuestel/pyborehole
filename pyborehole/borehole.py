@@ -9,6 +9,7 @@ from pyborehole.deviation import Deviation
 from pyborehole.design import WellDesign
 from pyborehole.logs import LASLogs, DLISLogs
 from pyborehole.litholog import LithoLog
+from pyborehole.tops import WellTops
 
 
 class Borehole:
@@ -45,9 +46,9 @@ class Borehole:
         create_df : Create DataFrame from Borehole Object Attributes.
         create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
         init_properties : Initiate Borehole properties.
-        to_gdf : Create GeoDataFrame from Well Object DataFrame.
-        update_df : Update Well Object DataFrame with data from data_dict.
-        update_value : Update attribute and value of Well Object DataFrame.
+        to_gdf : Create GeoDataFrame from Borehole Object DataFrame.
+        update_df : Update Borehole Object DataFrame with data from data_dict.
+        update_value : Update attribute and value of Borehole Object DataFrame.
 
 
     .. versionadded:: 0.0.1
@@ -90,9 +91,9 @@ class Borehole:
             create_df : Create DataFrame from Borehole Object Attributes.
             create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
             init_properties : Initiate Borehole properties.
-            to_gdf : Create GeoDataFrame from Well Object DataFrame.
-            update_df : Update Well Object DataFrame with data from data_dict.
-            update_value : Update attribute and value of Well Object DataFrame.
+            to_gdf : Create GeoDataFrame from Borehole Object DataFrame.
+            update_df : Update Borehole Object DataFrame with data from data_dict.
+            update_value : Update attribute and value of Borehole Object DataFrame.
 
 
         .. versionadded:: 0.0.1
@@ -131,8 +132,8 @@ class Borehole:
         self.has_altitude_above_sea_level = None
         self.has_altitude_above_kb = None
 
-        self.id = None
-        self.has_id = None
+        self.borehole_id = None
+        self.has_borehole_id = None
 
         self.borehole_type = None
         self.has_borehole_type = None
@@ -231,7 +232,7 @@ class Borehole:
                         crs: Union[str, pyproj.crs.crs.CRS] = None,
                         altitude_above_sea_level: Union[int, float] = None,
                         altitude_above_kb: Union[int, float] = None,
-                        id: Union[str, int, float] = None,
+                        borehole_id: Union[str, int, float] = None,
                         borehole_type: str = None,
                         md: Union[int, float] = None,
                         tvd: Union[int, float] = None,
@@ -260,8 +261,8 @@ class Borehole:
                 Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
             altitude_above_kb : Union[int, float]
                 Altitude above KB, e.g. ``altitude_above_kb=140``.
-            id : Union[str, int, float]
-                Unique identifier for this borehole, e.g. ``id='DABO123456'``.
+            borehole_id : Union[str, int, float]
+                Unique identifier for this borehole, e.g. ``borehole_id='DABO123456'``.
             borehole_type : str
                 Borehole type, e.g. ``borehole_type='exploration'``.
             md : Union[int, float]
@@ -298,10 +299,13 @@ class Borehole:
 
         Examples
         ________
+            >>> import pyborehole
             >>> from pyborehole.borehole import Borehole
-            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.df
                                                     Value
+                ID                                  DABO123456
                 Name                                RWE EB1
                 Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
                 Location                            POINT (6.313031 50.835676)
@@ -336,7 +340,7 @@ class Borehole:
             raise TypeError('The altitude of the borehole above KB must be provided as int or float')
 
         # Checking that the id is provided as int, float or string
-        if not isinstance(id, (str, int, float, type(None))):
+        if not isinstance(borehole_id, (str, int, float, type(None))):
             raise TypeError('The ID of the borehole must be provided as str, int, or float')
 
         # Checking that the borehole_type is of type string
@@ -453,12 +457,12 @@ class Borehole:
         else:
             self.has_altitude_above_kb = False
 
-        self.id = id
+        self.borehole_id = borehole_id
 
-        if self.id:
-            self.has_id = True
+        if self.borehole_id:
+            self.has_borehole_id = True
         else:
-            self.has_id = False
+            self.has_borehole_id = False
 
         self.borehole_type = borehole_type
 
@@ -578,13 +582,18 @@ class Borehole:
         Returns
         _______
             df : pd.DataFrame
-                DataFrame containing the Borehole Metadata.
+                Borehole Object DataFrame containing the Borehole Metadata.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.create_df()
             >>> borehole.df
                                                 Value
+            ID                                  DABO123456
             Name                                RWE EB1
             Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
             Location                            POINT (6.313031 50.835676)
@@ -595,10 +604,17 @@ class Borehole:
             Altitude above sea level            136
             Altitude above KB                   None
 
+        See Also
+        ________
+            create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
+            to_gdf : Create GeoDataFrame from Borehole Object DataFrame.
+            update_df : Update Borehole Object DataFrame with data from data_dict.
+            update_value : Update attribute and value of Borehole Object DataFrame.
+
         .. versionadded:: 0.0.1
         """
         # Creating dict from attributes
-        df_dict = {'ID': self.id,
+        df_dict = {'ID': self.borehole_id,
                    'Name': self.name,
                    'Address': self.address,
                    'Location': self.location,
@@ -612,7 +628,7 @@ class Borehole:
                    'True Vertical Depth': self.tvd,
                    'True Vertical Depth Sub Sea': self.tvdss,
                    'Depth Unit': self.depth_unit,
-                   'Well is vertical': self.is_vertical,
+                   'Borehole is vertical': self.is_vertical,
                    'Drilling Contractee': self.contractee,
                    'Drilling Contractor': self.drilling_contractor,
                    'Logging Contractor': self.logging_contractor,
@@ -662,7 +678,7 @@ class Borehole:
         .. versionadded:: 0.0.1
         """
         # Creating dict from attributes
-        df_dict = {'ID': self.has_id,
+        df_dict = {'ID': self.has_borehole_id,
                    'Name': self.has_name,
                    'Address': self.has_address,
                    'Location': self.has_location,
@@ -749,7 +765,7 @@ class Borehole:
                      value: Union[int, float, str, tuple],
                      crs: Union[str, pyproj.crs.crs.CRS] = None,
                      transform_coordinates: bool = None):
-        """Update attribute and value of Well Object DataFrame.
+        """Update attribute and value of Borehole Object DataFrame.
 
         Parameters
         __________
@@ -865,7 +881,7 @@ class Borehole:
                            'tvd': 'True Vertical Depth',
                            'tvdss': 'True Vertical Depth Sub Sea',
                            'depth_unit': 'Depth Unit',
-                           'vertical': 'Well is vertical',
+                           'vertical': 'Borehole is vertical',
                            'contractee': 'Drilling Contractee',
                            'drilling_contractor': 'Drilling Contractor',
                            'logging_contractor': 'Logging Contractor',
@@ -884,7 +900,7 @@ class Borehole:
 
     def to_gdf(self,
                crs: Union[str, pyproj.crs.crs.CRS] = None):
-        """Create GeoDataFrame from Well Object DataFrame.
+        """Create GeoDataFrame from Borehole Object DataFrame.
 
         Parameters
         __________
