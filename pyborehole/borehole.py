@@ -22,7 +22,7 @@ class Borehole:
     Returns
     _______
         Borehole
-
+            Borehole Object.
 
     Raises
     ______
@@ -34,6 +34,20 @@ class Borehole:
         >>> from pyborehole.borehole import Borehole
         >>> borehole = Borehole(name='Weisweiler R1')
         >>> borehole.name
+        Weisweiler R1
+
+    See Also
+    ________
+        add_deviation : Add deviation to the Borehole Object.
+        add_litholog : Add LithoLog to the Borehole Object.
+        add_well_logs : Add Well Logs to the Borehole Object.
+        add_well_tops : Add Well Tops to the Borehole Object.
+        create_df : Create DataFrame from Borehole Object Attributes.
+        create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
+        init_properties : Initiate Borehole properties.
+        to_gdf : Create GeoDataFrame from Well Object DataFrame.
+        update_df : Update Well Object DataFrame with data from data_dict.
+        update_value : Update attribute and value of Well Object DataFrame.
 
 
     .. versionadded:: 0.0.1
@@ -43,16 +57,17 @@ class Borehole:
 
     def __init__(self,
                  name: str):
-        """Initiate Borehole class.
+        """Class to initiate a borehole object.
 
         Parameters
         __________
             name : str
-                Name of the Borehole, e.g. ``name='RWE EB1'``.
+                Name of the Borehole, e.g. ``name='Weisweiler R1'``.
 
         Returns
         _______
             Borehole
+                Borehole Object.
 
         Raises
         ______
@@ -62,13 +77,28 @@ class Borehole:
         Examples
         ________
             >>> from pyborehole.borehole import Borehole
-            >>> borehole = Borehole(name='RWE EB1')
-            >>> borehole
-            Borehole: RWE EB1
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.name
+            Weisweiler R1
+
+        See Also
+        ________
+            add_deviation : Add deviation to the Borehole Object.
+            add_litholog : Add LithoLog to the Borehole Object.
+            add_well_logs : Add Well Logs to the Borehole Object.
+            add_well_tops : Add Well Tops to the Borehole Object.
+            create_df : Create DataFrame from Borehole Object Attributes.
+            create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
+            init_properties : Initiate Borehole properties.
+            to_gdf : Create GeoDataFrame from Well Object DataFrame.
+            update_df : Update Well Object DataFrame with data from data_dict.
+            update_value : Update attribute and value of Well Object DataFrame.
+
 
         .. versionadded:: 0.0.1
         """
 
+        # Append Boreholes
         self.__class__.boreholes.append(self)
 
         # Checking that the name is provided as string
@@ -158,24 +188,38 @@ class Borehole:
         self.properties = None
 
     def __str__(self):
-        """Return name of borehole
+        """Return name of borehole.
 
         Returns
         _______
             borehole.name : str
                 Name of the borehole.
+
+        Examples
+        ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole
+            Borehole: Weisweiler R1
 
         .. versionadded:: 0.0.1
         """
-        return f"{self.name}"
+        return f"Borehole: {self.name}"
 
     def __repr__(self):
-        """Return name of borehole
+        """Return name of borehole.
 
         Returns
         _______
             borehole.name : str
                 Name of the borehole.
+
+        Examples
+        ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole
+            Borehole: Weisweiler R1
 
         .. versionadded:: 0.0.1
         """
@@ -657,7 +701,7 @@ class Borehole:
 
     def update_df(self,
                   data_dict: dict):
-        """Update DataFrame with data from data_dict.
+        """Update well Object DataFrame with data from data_dict.
 
         Parameters
         __________
@@ -705,7 +749,7 @@ class Borehole:
                      value: Union[int, float, str, tuple],
                      crs: Union[str, pyproj.crs.crs.CRS] = None,
                      transform_coordinates: bool = None):
-        """Update attribute and DataFrame value.
+        """Update attribute and value of Well Object DataFrame.
 
         Parameters
         __________
@@ -840,7 +884,7 @@ class Borehole:
 
     def to_gdf(self,
                crs: Union[str, pyproj.crs.crs.CRS] = None):
-        """Create GeoDataFrame from DataFrame.
+        """Create GeoDataFrame from Well Object DataFrame.
 
         Parameters
         __________
@@ -1131,7 +1175,7 @@ class Borehole:
         self.df.loc['Litholog', 'Value'] = self.has_litholog
 
     def add_well_design(self):
-        """Add well design object to borehole
+        """Add well design object to borehole.
 
         Examples
         ________
@@ -1144,9 +1188,7 @@ class Borehole:
         """
 
         # Setting has well design variable
-        self.has_well_design
+        self.has_well_design = True
 
         # Adding well design
         self.well_design = WellDesign(borehole=self)
-
-
