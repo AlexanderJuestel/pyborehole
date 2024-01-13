@@ -6,19 +6,39 @@ import copy
 
 
 class WellDesign:
+    """Class to initiate a well design object
 
-    def __init__(self):
+    Parameters
+    __________
+        borehole : Borehole
+            Borehole object.
+
+    Returns
+    _______
+        WellDesign
+            Well design object.
+
+    Examples
+    ________
+        >>> borehole.add_well_design()
+        >>>
+
+    """
+
+    def __init__(self,
+                 borehole):
         self.pipes = {}
         self.cements = {}
         self.depth_unit = None
         self.diameter_unit = None
 
     def __repr__(self):
-        """Return contents of the well design
+        """Return contents of the well design.
 
         Returns
         _______
-             Contents of the well design.
+             WellDesign
+                Contents of the well design.
 
         .. versionadded:: 0.0.1
         """
@@ -68,6 +88,7 @@ class WellDesign:
         Returns
         _______
             Well_Design
+                Well Design object.
 
         Raises
         ______
@@ -80,8 +101,15 @@ class WellDesign:
 
         Example
         _______
-            >>> borehole.well_design.add_pipe(name='Conductor Casing', pipe_type='conductor casing', top=0, bottom=-23, depth_unit='m', inner_diameter=20, outer_diameter=22, diameter_unit='in')
+            >>> borehole.well_design.add_pipe(name='Conductor Casing', pipe_type='conductor casing', top=0, bottom=-35, depth_unit='m', inner_diameter=20, outer_diameter=21, diameter_unit='in')
+            >>> borehole.well_design.pipes['Conductor Casing']
+            Type: conductor casing
+            Top: 0 m
+            Bottom: -35 m
+            Inner Diameter: 20 in
+            Outer Diameter: 21 in
 
+        .. versionadded:: 0.0.1
         """
         # Checking that the name is of type string
         if not isinstance(name, str):
@@ -193,7 +221,10 @@ class WellDesign:
 
         Examples
         ________
-            >>>
+            >>> borehole.add_well_design()
+            >>> borehole.well_design
+            Pipes: {}
+            Cements: {}
 
         .. versionadded:: 0.0.1
         """
@@ -345,14 +376,21 @@ class WellDesign:
         if show_pipes:
             for key, elem in self.pipes.items():
                 if elem.pipe_type == 'open hole section':
-                    ax.plot([elem.inner_diameter,elem.inner_diameter],
-                            [elem.top,elem.bottom],
-                            linestyle='--',
-                            color='black')
-                    ax.plot([-elem.inner_diameter, -elem.inner_diameter],
-                            [elem.top, elem.bottom],
-                            linestyle='--',
-                            color='black')
+                    # Plotting open hole section as wavy line
+                    y = np.linspace(elem.top, elem.bottom, 1000)
+                    x1 = 0.5 * np.sin(y / 2) - elem.inner_diameter + 0.5
+                    x2 = 0.5 * np.cos(y / 2 + np.pi/4) + elem.inner_diameter
+                    ax.plot(x1, y, color='black')
+                    ax.plot(x2, y, color='black')
+                    # Plotting open hole section as dashed line
+                    #ax.plot([elem.inner_diameter,elem.inner_diameter],
+                    #        [elem.top, elem.bottom],
+                    #        linestyle='--',
+                    #        color='black')
+                    #ax.plot([-elem.inner_diameter, -elem.inner_diameter],
+                    #        [elem.top, elem.bottom],
+                    #        linestyle='--',
+                    #        color='black')
                 else:
                     ax.add_patch(Rectangle(elem.xy, elem.width, elem.height, color="black"))
                     ax.add_patch(Rectangle((-1 * elem.xy[0], elem.xy[1]), -1 * elem.width, elem.height, color="black"))
@@ -363,12 +401,12 @@ class WellDesign:
                     for key, elem in self.pipes.items():
                         if elem.pipe_type == 'open hole section':
                             ax.text(max_diam + xshift_pipes_description,
-                                    elem.bottom - yshift_description,
+                                    elem.bottom + yshift_description,
                                     elem,
                                     fontsize=8)
                         else:
                             ax.text(max_diam + xshift_pipes_description,
-                                    elem.bottom - yshift_description,
+                                    elem.bottom + yshift_description,
                                     elem,
                                     fontsize=8)
 
@@ -410,7 +448,7 @@ class WellDesign:
             for key, elem in self.pipes.items():
                 if elem.shoe_width is not None:
                     p0 = [elem.outer_diameter, elem.bottom]
-                    p1 = [elem.outer_diameter, elem.bottom + elem.shoe_height]
+                    p1 = [elem.outer_diameter, elem.bottom - elem.shoe_height]
                     p2 = [elem.outer_diameter + elem.shoe_width, elem.bottom]
                     shoe = plt.Polygon([p0, p1, p2], color="black")
                     ax.add_patch(shoe)
@@ -430,16 +468,17 @@ class WellDesign:
             if show_descriptions:
                 max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
                 for key, elem in self.cements.items():
-                    ax.text(-max_diam - xshift_cements_description, elem.bottom - yshift_description, elem, fontsize=8)
+                    ax.text(-max_diam - xshift_cements_description, elem.bottom + yshift_description, elem, fontsize=8)
 
         # Calculating axes limits
-        top = np.max([elem.top for key, elem in self.pipes.items()])
-        bottom = np.min([elem.bottom for key, elem in self.pipes.items()])
+        top = np.min([elem.top for key, elem in self.pipes.items()])
+        bottom = np.max([elem.bottom for key, elem in self.pipes.items()])
         max_diam = np.max([elem.outer_diameter for key, elem in self.pipes.items()])
 
         # Setting axes limits
         ax.set_ylim(bottom * yfactor, top)
         ax.set_xlim(-max_diam * xfactor, max_diam * xfactor)
+        #ax.invert_yaxis()
 
         # Setting axes labels
         ax.set_ylabel('Depth [%s]' % self.depth_unit)
@@ -477,6 +516,7 @@ class Pipe:
     Returns
     _______
         Pipe
+            Pipe object.
 
     Raises
     ______
@@ -490,6 +530,12 @@ class Pipe:
     Example
     _______
         >>> pipe1 = Pipe(pipe_type='conductor casing', top=0, bottom=-23, depth_unit='m', inner_diameter=20, outer_diameter=22, diameter_unit='in')
+        >>> pipe1
+        Type: conductor casing
+        Top: 0 m
+        Bottom: -35 m
+        Inner Diameter: 20 in
+        Outer Diameter: 21 in
 
     .. versionadded:: 0.0.1
     """
@@ -533,6 +579,7 @@ class Pipe:
         Returns
         _______
             Pipe
+                Pipe object.
 
         Raises
         ______
@@ -545,7 +592,13 @@ class Pipe:
 
         Example
         _______
-            >>> pipe1 = Pipe(pipe_type='conductor casing', top=0, bottom=-23, depth_unit='m', inner_diameter=20, outer_diameter=22, diameter_unit='in')
+            >>> pipe1 = Pipe(pipe_type='conductor casing', top=0, bottom=-35, depth_unit='m', inner_diameter=20, outer_diameter=21, diameter_unit='in')
+            >>> pipe1
+            Type: conductor casing
+            Top: 0 m
+            Bottom: -35 m
+            Inner Diameter: 20 in
+            Outer Diameter: 21 in
 
         .. versionadded:: 0.0.1
         """
@@ -713,8 +766,13 @@ class Cement:
 
     Examples
     ________
-        >>> cement1 = Cement(top=0, bottom=-23, depth_unit='m', pipe_inner='Production Liner', pipe_outer='Production Casing')
-
+        >>> cement1 = Cement(top=-200, bottom=-500, depth_unit='m', pipe_inner='Production Liner', pipe_outer='Production Casing')
+        >>> cement1
+        'Cement 1': Top: -200 m
+        Bottom: -500 m
+        Cement Thickness: 3 in
+        Inner Pipe: Production Liner
+        Outer Pipe: Production Liner
 
     .. versionadded:: 0.0.1
     """
@@ -759,7 +817,13 @@ class Cement:
 
         Examples
         ________
-            >>> cement1 = Cement(top=0, bottom=-23, depth_unit='m', pipe_inner='Production Liner', pipe_outer='Production Casing')
+            >>> cement1 = Cement(top=-200, bottom=-500, depth_unit='m', pipe_inner='Production Liner', pipe_outer='Production Casing')
+            >>> cement1
+            'Cement 1': Top: -200 m
+            Bottom: -500 m
+            Cement Thickness: 3 in
+            Inner Pipe: Production Liner
+            Outer Pipe: Production Liner
 
         .. versionadded:: 0.0.1
         """

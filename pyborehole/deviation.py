@@ -55,6 +55,8 @@ class Deviation:
 
         Parameters
         __________
+            borehole : Borehole
+                Borehole Object.
             path : str
                 Path to the deviation file, e.g. ``path='Well_Deviation.csv'``.
             delimiter : str
