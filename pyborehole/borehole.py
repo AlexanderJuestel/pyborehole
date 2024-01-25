@@ -41,6 +41,7 @@ class Borehole:
     ________
         add_deviation : Add deviation to the Borehole Object.
         add_litholog : Add LithoLog to the Borehole Object.
+        add_well_design : Add Well Design to the Borehole Object.
         add_well_logs : Add Well Logs to the Borehole Object.
         add_well_tops : Add Well Tops to the Borehole Object.
         create_df : Create DataFrame from Borehole Object Attributes.
@@ -86,6 +87,7 @@ class Borehole:
         ________
             add_deviation : Add deviation to the Borehole Object.
             add_litholog : Add LithoLog to the Borehole Object.
+            add_well_design : Add Well Design to the Borehole Object.
             add_well_logs : Add Well Logs to the Borehole Object.
             add_well_tops : Add Well Tops to the Borehole Object.
             create_df : Create DataFrame from Borehole Object Attributes.
@@ -116,6 +118,9 @@ class Borehole:
 
         self.location = None
         self.has_location = None
+
+        self.year = None
+        self.has_year = None
 
         self.x = None
         self.y = None
@@ -150,12 +155,12 @@ class Borehole:
 
         self.is_vertical = None
 
-        self.contractree = None
+        self.contractee = None
         self.drilling_contractor = None
         self.logging_contractor = None
         self.field = None
         self.project = None
-        self.has_contractree = None
+        self.has_contractee = None
         self.has_drilling_contractor = None
         self.has_logging_contractor = None
         self.has_field = None
@@ -182,6 +187,8 @@ class Borehole:
         self.has_well_tops = False
         self.has_litholog = False
         self.has_well_design = False
+
+        self.has_properties = False
 
         # Creating borehole (Geo-)DataFrame
         self.df = None
@@ -229,6 +236,7 @@ class Borehole:
     def init_properties(self,
                         address: str = None,
                         location: Tuple[float, float] = None,
+                        year: int = None,
                         crs: Union[str, pyproj.crs.crs.CRS] = None,
                         altitude_above_sea_level: Union[int, float] = None,
                         altitude_above_kb: Union[int, float] = None,
@@ -255,6 +263,8 @@ class Borehole:
                 Address of the Borehole, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
             location : tuple
                 Coordinates tuple representing the location of the Borehole, e.g. ``location=(6.313031, 50.835676)``.
+            year : int
+                Year the borehole was drilled, e.g. ``year=2024``.
             crs : Union[str, pyproj.crs.crs.CRS]
                 Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
             altitude_above_sea_level : Union[int, float]
@@ -326,6 +336,10 @@ class Borehole:
         # Checking that the location is provided as tuple
         if not isinstance(location, (tuple, type(None))):
             raise TypeError('The location of the borehole must be provided as tuple')
+
+        # Checking that the year is provided as int
+        if not isinstance(year, (int, type(None))):
+            raise TypeError('The year must be provided as int')
 
         # Checking that the crs is provided as string or pyproj CRS
         if not isinstance(crs, (str, pyproj.crs.crs.CRS, type(None))):
@@ -434,6 +448,13 @@ class Borehole:
             self.has_x = False
             self.has_y = False
 
+        if year:
+            self.year = year
+            self.has_year = True
+        else:
+            self.year = year
+            self.has_year = False
+
         self.crs = crs
         if crs:
             self.crs_pyproj = CRS.from_user_input(self.crs)
@@ -445,7 +466,7 @@ class Borehole:
             self.has_crs_pyproj = False
 
         self.altitude_above_sea_level = altitude_above_sea_level
-        self.altitude_above_kb = None
+        self.altitude_above_kb = altitude_above_kb
 
         if self.altitude_above_sea_level:
             self.has_altitude_above_sea_level = True
@@ -515,9 +536,9 @@ class Borehole:
         self.end_logging = end_logging
 
         if contractee:
-            self.has_contractree = True
+            self.has_contractee = True
         else:
-            self.has_contractree = False
+            self.has_contractee = False
 
         if self.drilling_contractor:
             self.has_drilling_contractor = True
@@ -576,6 +597,8 @@ class Borehole:
         self.df = self.create_df()
         self.properties = self.create_properties_df()
 
+        self.has_properties = True
+
     def create_df(self):
         """Create DataFrame from Borehole Object Attributes.
 
@@ -594,7 +617,7 @@ class Borehole:
             >>> borehole.df
                                                 Value
             ID                                  DABO123456
-            Name                                RWE EB1
+            Name                                Weisweiler R1
             Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
             Location                            POINT (6.313031 50.835676)
             X                                   6.313031
@@ -618,6 +641,7 @@ class Borehole:
                    'Name': self.name,
                    'Address': self.address,
                    'Location': self.location,
+                   'Year': self.year,
                    'X': self.x,
                    'Y': self.y,
                    'Coordinate Reference System': self.crs,
@@ -662,9 +686,14 @@ class Borehole:
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.create_properties_df()
             >>> borehole.properties
                                                 Value
+            ID                                  True
             Name                                True
             Address                             True
             Location                            True
@@ -675,6 +704,13 @@ class Borehole:
             Altitude above sea level            True
             Altitude above KB                   False
 
+        See Also
+        ________
+            create_df : Create DataFrame from Borehole Object Attributes.
+            to_gdf : Create GeoDataFrame from Borehole Object DataFrame.
+            update_df : Update Borehole Object DataFrame with data from data_dict.
+            update_value : Update attribute and value of Borehole Object DataFrame.
+
         .. versionadded:: 0.0.1
         """
         # Creating dict from attributes
@@ -682,6 +718,7 @@ class Borehole:
                    'Name': self.has_name,
                    'Address': self.has_address,
                    'Location': self.has_location,
+                   'Year': self.has_year,
                    'X': self.has_x,
                    'Y': self.has_y,
                    'Coordinate Reference System': self.has_crs,
@@ -692,7 +729,7 @@ class Borehole:
                    'True Vertical Depth': self.has_tvd,
                    'True Vertical Depth Sub Sea': self.has_tvdss,
                    'Depth Unit': self.has_depth_unit,
-                   'Drilling Contractee': self.has_contractree,
+                   'Drilling Contractee': self.has_contractee,
                    'Drilling Contractor': self.has_drilling_contractor,
                    'Logging Contractor': self.has_logging_contractor,
                    'Field': self.has_field,
@@ -717,7 +754,7 @@ class Borehole:
 
     def update_df(self,
                   data_dict: dict):
-        """Update well Object DataFrame with data from data_dict.
+        """Update Borehole Object DataFrame with data from data_dict.
 
         Parameters
         __________
@@ -728,13 +765,21 @@ class Borehole:
         ______
             TypeError
                 If the wrong input data types are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
+            >>> borehole.create_df()
             >>> borehole.update_df(data_dict={'Date': 2023})
             >>> borehole.df
                                                 Value
-            Name                                RWE EB1
+            ID                                  DABO123456
+            Name                                Weisweiler R1
             Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
             Location                            POINT (6.313031 50.835676)
             X                                   6.313031
@@ -745,8 +790,19 @@ class Borehole:
             Altitude above KB                   None
             Data                                2023
 
+        See Also
+        ________
+            create_df : Create DataFrame from Borehole Object Attributes.
+            create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
+            to_gdf : Create GeoDataFrame from Borehole Object DataFrame.
+            update_value : Update attribute and value of Borehole Object DataFrame.
+
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
+
         # Checking that the data dict is a dict
         if not isinstance(data_dict, dict):
             raise TypeError('data_dict must be a dict')
@@ -782,17 +838,33 @@ class Borehole:
         ______
             TypeError
                 If the wrong input data types are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='RWE EB1')
             >>> borehole.name
             'RWE EB1'
             >>> borehole.update_value(attribute='name', value='RWE EB2')
             >>> borehole.name
             'RWE EB2'
 
+        See Also
+        ________
+            create_df : Create DataFrame from Borehole Object Attributes.
+            create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
+            to_gdf : Create GeoDataFrame from Borehole Object DataFrame.
+            update_df : Update Borehole Object DataFrame with data from data_dict.
+
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
+
         # Checking that the attribute is of type string
         if not isinstance(attribute, str):
             raise TypeError('The attribute name must be provided as string')
@@ -800,10 +872,6 @@ class Borehole:
         # Checking that the value is of type string, int or float
         if not isinstance(value, (int, float, str, tuple)):
             raise TypeError('The new value must be provided as int, float, or str')
-
-        # Checking that the crs is provided as string or pyproj CRS
-        if not isinstance(crs, (str, pyproj.crs.crs.CRS, type(None))):
-            raise TypeError('The CRS of the borehole location must be provided as string or pyproject CRS')
 
         # Checking that the transform_coordinates is provided as bool
         if not isinstance(transform_coordinates, (bool, type(None))):
@@ -816,6 +884,7 @@ class Borehole:
             vars(self)[attribute] = value
             vars(self)['has_' + attribute] = True
 
+        # Also changing the associated attributes with the location
         if attribute == 'location':
             value = Point(value)
             self.location = value
@@ -827,9 +896,10 @@ class Borehole:
             self.properties.loc['X', 'Value'] = True
             self.properties.loc['Y', 'Value'] = True
 
+            # Also changing the CRS properties
             if crs:
                 # Checking that the crs is provided as string or pyproj CRS
-                if not isinstance(crs, (str, pyproj.crs.crs.CRS, type(None))):
+                if not isinstance(crs, (str, pyproj.crs.crs.CRS)):
                     raise TypeError('The CRS of the borehole location must be provided as string or pyproject CRS')
 
                 self.crs = crs
@@ -840,8 +910,10 @@ class Borehole:
                 self.properties.loc['Coordinate Reference System', 'Value'] = True
                 self.df.loc['Coordinate Reference System PyProj', 'Value'] = self.crs_pyproj
                 self.properties.loc['Coordinate Reference System PyProj', 'Value'] = True
-                self.deviation.crs = self.crs
+                if self.has_deviation:
+                    self.deviation.crs = self.crs
 
+        # Also changing the associated properties with the CRS
         if attribute == 'crs':
             self.crs = value
             self.has_crs = True
@@ -851,8 +923,10 @@ class Borehole:
             self.properties.loc['Coordinate Reference System', 'Value'] = True
             self.df.loc['Coordinate Reference System PyProj', 'Value'] = self.crs_pyproj
             self.properties.loc['Coordinate Reference System PyProj', 'Value'] = True
-            self.deviation.crs = self.crs
+            if self.has_deviation:
+                self.deviation.crs = self.crs
 
+            # Also transforming the coordinates
             if transform_coordinates:
                 coords_new = self.to_gdf(crs=old_crs).to_crs(self.crs)['geometry'].loc[0]
                 self.location = coords_new
@@ -871,6 +945,7 @@ class Borehole:
                            'name': 'Name',
                            'address': 'Address',
                            'location': 'Location',
+                           'year': 'Year',
                            'x': 'X',
                            'y': 'Y',
                            'crs': 'Coordinate Reference System',
@@ -893,7 +968,6 @@ class Borehole:
                            'end_logging': 'End Logging',
                            }
 
-
         # Replace value in DataFrame
         self.df.loc[df_indices_dict[attribute], 'Value'] = value
         self.properties.loc[df_indices_dict[attribute], 'Value'] = True
@@ -910,16 +984,38 @@ class Borehole:
         Returns
         _______
             gpd.GeoDataFrame
+                GeoDataFrame of the Borehole Data Object DataFrame.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
+            >>> borehole.create_df()
             >>> borehole.to_gdf()
                 ID         Name    geometry
             0   DABO123456 RWE EB1 POINT (6.31303 50.83568)
 
+        See Also
+        ________
+            create_df : Create DataFrame from Borehole Object Attributes.
+            create_properties_df : Create Properties DataFrame from Borehole Object Attributes.
+            update_df : Update Borehole Object DataFrame with data from data_dict.
+            update_value : Update attribute and value of Borehole Object DataFrame.
+
         .. versionadded:: 0.0.1
         """
-
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
 
         # Checking that the crs is provided as string or pyproj CRS
         if not isinstance(crs, (str, pyproj.crs.crs.CRS, type(None))):
@@ -932,7 +1028,7 @@ class Borehole:
         if not crs:
             crs = df['Coordinate Reference System'].iloc[0]
 
-        # Create GeoDataFrame
+        # Creating GeoDataFrame
         self.gdf = gpd.GeoDataFrame(geometry=[df['Location'].iloc[0]],
                                     crs=crs,
                                     data=df)
@@ -963,8 +1059,13 @@ class Borehole:
                 Column containing the dip values, e.g. ``dip_column='DIP'``.
             azimuth_column : str, default: ``'AZI'``
                 Column containing the azimuth values, e.g. ``azimuth_column='AZI'``.
-            add_origin: bool, default: ``True``
-                Boolean value to add the location of the borehole to survey DataFrames.
+            add_origin : bool, default: ``True``
+                Boolean value to add the location of the borehole to survey DataFrames, e.g. ``add_origin=True``.
+
+        Returns
+        _______
+            WellDeviation
+                Well Deviation Object.
 
         Raises
         ______
@@ -972,9 +1073,14 @@ class Borehole:
                 If the wrong input data types are provided.
             ValueError
                 If the wrong column names are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.deviation_df
                 Measured Depth  Inclination  Azimuth
@@ -982,8 +1088,19 @@ class Borehole:
             1   0.10            0.0          0.0
             2   0.15            0.0          0.0
 
+        See Also
+        ________
+            add_litholog : Add LithoLog to the Borehole Object.
+            add_well_design : Add Well Design to the Borehole Object.
+            add_well_logs : Add Well Logs to the Borehole Object.
+            add_well_tops : Add Well Tops to the Borehole Object.
+
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
+
         # Checking that the path is of type str or a Pandas DataFrame
         if not isinstance(path, (str, pd.DataFrame)):
             raise TypeError('path must be provided as string or Pandas DataFrame')
@@ -1023,6 +1140,7 @@ class Borehole:
                                    azimuth_column=azimuth_column,
                                    add_origin=add_origin)
 
+        # Setting Attributes
         self.has_deviation = True
         self.df.loc['Well Deviation', 'Value'] = self.has_deviation
         self.properties.loc['Well Deviation', 'Value'] = self.has_deviation
@@ -1040,7 +1158,12 @@ class Borehole:
             path : str
                 Path to the well log file, e.g. ``path='Well_Logs.las'``.
             nodata : Union[int, float], default: ``-9999``
-                Nodata value to be replaces by `np.NaN`, e.g. ``nodata=-9999``.
+                Nodata value to be replaced by `np.NaN`, e.g. ``nodata=-9999``.
+
+        Returns
+        _______
+            WellLogs
+                Well Logs Object.
 
         Raises
         ______
@@ -1048,9 +1171,14 @@ class Borehole:
                 If the wrong input data types are provided.
             ValueError
                 If neither of the permitted file types are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_well_logs(path='Well_logs.las')
             >>> borehole.logs.well_header
                 mnemonic   unit   value               descr
@@ -1067,8 +1195,19 @@ class Borehole:
             10  DATE              26-Oct-2023         Date
             11  UWI                                   Unique Well ID
 
+        See Also
+        ________
+            add_litholog : Add LithoLog to the Borehole Object.
+            add_well_design : Add Well Design to the Borehole Object.
+            add_deviation : Add Well Deviation to the Borehole Object.
+            add_well_tops : Add Well Tops to the Borehole Object.
+
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
+
         # Checking that the path is of type string
         if not isinstance(path, str):
             raise TypeError('path must be provided as str')
@@ -1082,14 +1221,19 @@ class Borehole:
 
         # Opening DLIS file if provided
         elif path.endswith('.dlis'):
+
+            # Checking that the nodata value is of type int or float
+            if not isinstance(nodata, (int, float)):
+                raise TypeError('The nodata value must be of type int or float')
+
             # Creating well logs from DLIS file
             self.logs = DLISLogs(self,
                                  path=path,
                                  nodata=nodata)
-
         else:
             raise ValueError('Please provide a LAS file or DLIS file')
 
+        # Setting attributes
         self.has_logs = True
         self.df.loc['Well Logs', 'Value'] = self.has_logs
 
@@ -1108,13 +1252,23 @@ class Borehole:
             unit : str
                 Unit of the depth measurements, e.g. ``unit='m'``.
 
+        Returns
+        _______
+            WellTops
+                Well Tops Object.
+
         Raises
         ______
             TypeError
                 If the wrong input data types are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_well_tops(path='Well_Tops.csv', delimiter=';')
             >>> borehole.well_tops.df
                 Top              MD
@@ -1123,8 +1277,19 @@ class Borehole:
             2   Sand 1           28.5
             3   Clay             32.0
 
+        See Also
+        ________
+            add_litholog : Add LithoLog to the Borehole Object.
+            add_well_design : Add Well Design to the Borehole Object.
+            add_deviation : Add Well Deviation to the Borehole Object.
+            add_well_logs : Add Well Logs to the Borehole Object.
+
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
+
         # Checking that the path is of type string
         if not isinstance(path, str):
             raise TypeError('The path must be provided as str')
@@ -1142,6 +1307,7 @@ class Borehole:
                                   delimiter=delimiter,
                                   unit=unit)
 
+        # Setting Attributes
         self.has_well_tops = True
         self.df.loc['Well Tops', 'Value'] = self.has_well_tops
 
@@ -1157,13 +1323,23 @@ class Borehole:
             delimiter : str, default: ``','``
                 Delimiter for the LithoLog file, e.g. ``delimiter=','``.
 
+        Returns
+        _______
+            LithoLog
+                Litholog Object.
+
         Raises
         ______
             TypeError
                 If the wrong input data types are provided.
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_litholog(path='LithoLog.csv', delimiter=';')
             >>> borehole.litholog.df
                 Top              MD
@@ -1172,8 +1348,19 @@ class Borehole:
             2   Sand 1           28.5
             3   Clay             32.0
 
+        See Also
+        ________
+            add_well_design : Add Well Design to the Borehole Object.
+            add_deviation : Add Well Deviation to the Borehole Object.
+            add_well_logs : Add Well Logs to the Borehole Object.
+            add_well_tops : Add Well Tops to the Borehole Object
+
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
+
         # Checking that the path is of type string
         if not isinstance(path, str):
             raise TypeError('path must be provided as str')
@@ -1191,10 +1378,23 @@ class Borehole:
         self.df.loc['Litholog', 'Value'] = self.has_litholog
 
     def add_well_design(self):
-        """Add well design object to borehole.
+        """Add Well Design object to Borehole Object.
+
+        Returns
+        _______
+            WellDesign
+                Well Design Object.
+
+        Raises
+        ______
+            ValueError
+                If the Borehole Properties have not been initiated.
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_well_design()
             >>> borehole.well_design
             Pipes: {}
@@ -1202,9 +1402,13 @@ class Borehole:
 
         .. versionadded:: 0.0.1
         """
+        # Checking that the properties have been initiated
+        if not self.has_properties:
+            raise ValueError('Borehole properties not initiated, use init_properties() to initiate properties')
 
         # Setting has well design variable
         self.has_well_design = True
 
         # Adding well design
         self.well_design = WellDesign(borehole=self)
+        self.df.loc['WellDesign', 'Value'] = self.has_well_design
