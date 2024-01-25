@@ -764,6 +764,7 @@ def test_borehole_class_add_well_logs():
     assert borehole.has_logs is True
     assert borehole.df.loc['Well Logs', 'Value'] is True
 
+
 def test_borehole_class_add_well_tops():
     from pyborehole.borehole import Borehole, WellTops
 
