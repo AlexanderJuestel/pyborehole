@@ -8,6 +8,7 @@ from shapely.geometry import Point, LineString
 from matplotlib.patches import Rectangle
 import copy
 
+
 class LASLogs:
     """Class to initiate a Well Log Object.
 
@@ -30,6 +31,10 @@ class LASLogs:
 
     Examples
     ________
+        >>> import pyborehole
+        >>> from pyborehole.borehole import Borehole
+        >>> borehole = Borehole(name='Weisweiler R1')
+        >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
         >>> borehole.add_well_logs(path='Well_logs.las')
         >>> borehole.logs.well_header
             mnemonic   unit   value               descr
@@ -46,8 +51,14 @@ class LASLogs:
         10  DATE              26-Oct-2023         Date
         11  UWI                                   Unique Well ID
 
-    .. versionadded:: 0.0.1
+    See Also
+    ________
+        add_deviation : Add deviation to the Borehole Object.
+        add_litholog : Add LithoLog to the Borehole Object.
+        add_well_design : Add Well Design to the Borehole Object.
+        add_well_tops : Add Well Tops to the Borehole Object.
 
+    .. versionadded:: 0.0.1
     """
 
     def __init__(self,
@@ -74,6 +85,10 @@ class LASLogs:
 
         Examples
         ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
             >>> borehole.add_well_logs(path='Well_logs.las')
             >>> borehole.logs.well_header
                 mnemonic   unit   value               descr
@@ -92,12 +107,15 @@ class LASLogs:
 
         .. versionadded:: 0.0.1
         """
-
         # Importing lasio
         try:
             import lasio
         except ModuleNotFoundError:
             ModuleNotFoundError('lasio package not installed')
+
+        # Checking that the path is provided as string
+        if not isinstance(path, str):
+            raise TypeError('The path must be provided as string')
 
         # Opening LAS file
         las = lasio.read(path)
@@ -150,7 +168,8 @@ class LASLogs:
                        colors: Union[str, list] = None,
                        add_well_tops: bool = False,
                        add_well_design: bool = False,
-                       fill_between: int = None):
+                       fill_between: int = None,
+                       add_net_to_gross: int = None):
         """Plot well logs.
 
         Parameters
@@ -168,15 +187,87 @@ class LASLogs:
             Boolean to add well design to the plot.
         fill_between : int, default: ``None``
             Number of the axis to fill.
+        add_net_to_gross : int, default: ``None``
+            Number of axis to fill with the net to gross values.
+
+        Returns
+        _______
+            fig : matplotlib.figure
+                Matplotlib Figure.
+            ax : matplotlib.axes.Axes
+                Matplotlib Axes.
 
         Raises
         ______
+            TypeError
+                If the wrong input data types are provided.
             ValueError
                 If no well tops are provided but add_well_tops is set to True.
+            ValueError
+                If the wrong column names are provided
+
+        Examples
+        ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.add_well_logs(path='Well_logs.las')
+            >>> borehole.logs.plot_well_logs(tracks=['SGR', 'CAL'], depth_column='DEPTH', colors=['black', 'red'])
+
+        See Also
+        ________
+            plot_well_log_along_path : Plot well log along path.
+            calculate_vshale : Calculate Shale Volume.
+            calculate_vshale_linear : Calculate Shale Volume linear method.
+            calculate_net_to_gross : Calculate net to gross.
+
+        .. versionadded:: 0.0.1
         """
+        # Checking that the tracks are provided as list or string
+        if not isinstance(tracks, (list, str)):
+            raise TypeError('The track/s must bei either provided as str or a list of strings')
+
+        # Checking that the tracks are in the DataFrame
+        if isinstance(tracks, str):
+            if not {tracks}.issubset(self.df.columns):
+                raise ValueError('The track is not part of the curves')
+        elif isinstance(tracks, list):
+            if not all({track}.issubset(self.df.columns) for track in tracks):
+                raise ValueError('Not all tracks are part of the curves')
+
+        # Checking that the depth column is of type string
+        if not isinstance(depth_column, str):
+            raise TypeError('Depth_column must be provided as string')
+
+        # Checking that the depth column is in the DataFrame
+        if not {depth_column}.issubset(self.df):
+            raise ValueError('The depth_column is not part of the curves')
+
+        # Checking that the colors are provided as list or string
+        if not isinstance(colors, (list, str)):
+            raise TypeError('The track/s must bei either provided as str or a list of strings')
+
+        # Checking that the add_well_tops variable is of type bool
+        if not isinstance(add_well_tops, bool):
+            raise TypeError('The add_well_tops variable must be provided as bool')
+
+        # Checking that the add_well_design variable is of type bool
+        if not isinstance(add_well_design, bool):
+            raise TypeError('The add_well_design variable must be provided as bool')
+
+        # Checking that the fill_between variable is of type int
+        if not isinstance(fill_between, (int, type(None))):
+            raise TypeError('The fill_between variable must be provided as int')
+
+        # Checking that the add_net to_gross variable is of type bool
+        if not isinstance(add_net_to_gross, (int, type(None))):
+            raise TypeError('The add_net_to_gross variable must be provided as int')
+
         # Selecting tracks
         df = self.df[tracks + [depth_column]].reset_index()
 
+        # Creating plot if tracks is of type string
         if isinstance(tracks, str):
             # Creating plot
             fig, ax = plt.subplots(1, 1, figsize=(1 * 2, 8))
@@ -193,6 +284,7 @@ class LASLogs:
                               0], color='black')
             ax.set_ylabel(depth_column + ' [m]')
 
+            # Fill between curve
             if fill_between:
                 left_col_value = np.min(df[tracks].dropna().values)
                 right_col_value = np.max(df[tracks].dropna().values)
@@ -208,7 +300,9 @@ class LASLogs:
 
             return fig, ax
 
+        # Creating plot if tracks is of type list
         elif isinstance(tracks, list):
+
             # Helping variable for adding well tops
             if add_well_tops:
                 j = 1
@@ -220,13 +314,14 @@ class LASLogs:
             else:
                 k = 0
 
+            # Setting colors
             if not colors:
                 colors = [None] * len(tracks)
 
             # Creating plot
             fig, ax = plt.subplots(1,
                                    len(tracks) + j + k,
-                                   figsize=((len(tracks) + j + k )* 1.8, 8),
+                                   figsize=((len(tracks) + j + k) * 1.8, 8),
                                    sharey=True)
 
             # Adding well tops
@@ -299,8 +394,8 @@ class LASLogs:
                             Rectangle((elem.inner_diameter, elem.top), thicknesses[i] + elem.thickness, 1,
                                       color="black"))
                         ax[k].add_patch(Rectangle((-1 * elem.inner_diameter, elem.top),
-                                               -1 * thicknesses[0] - elem.thickness, 1,
-                                               color="black"))
+                                                  -1 * thicknesses[0] - elem.thickness, 1,
+                                                  color="black"))
                         i = i + 1
 
                     # Plotting Casing Shoes
@@ -346,24 +441,53 @@ class LASLogs:
                 ax[i + j + k].tick_params(top=True, labeltop=True, bottom=False, labelbottom=False)
                 ax[i + j + k].xaxis.set_label_position('top')
                 ax[i + j + k].set_xlabel(tracks[i] + ' [%s]' %
-                                     self.curves[self.curves['original_mnemonic'] == tracks[i]].reset_index(drop=True)[
-                                         'unit'].iloc[0],
-                                     color='black' if isinstance(colors[i], type(None)) else colors[i])
+                                         self.curves[self.curves['original_mnemonic'] == tracks[i]].reset_index(
+                                             drop=True)[
+                                             'unit'].iloc[0],
+                                         color='black' if isinstance(colors[i], type(None)) else colors[i])
                 ax[0].set_ylabel(depth_column + ' [m]')
 
+            # Fill between curves
             if fill_between is not None:
                 left_col_value = np.min(df[tracks[fill_between]].dropna().values)
                 right_col_value = np.max(df[tracks[fill_between]].dropna().values)
                 span = abs(left_col_value - right_col_value)
                 cmap = plt.get_cmap('hot_r')
                 color_index = np.arange(left_col_value, right_col_value, span / 100)
+
+                # Dropping duplicate columns if the same track is selected twice
+                try:
+                    df1 = df[tracks[fill_between]].copy(deep=True)
+                    df1 = df1.loc[:, ~df1.columns.duplicated()]
+                except AttributeError:
+                    df1 = df[tracks[fill_between]].copy(deep=True)
+
                 # loop through each value in the color_index
                 for index in sorted(color_index):
                     index_value = (index - left_col_value) / span
                     color = cmap(index_value)  # obtain color for color index value
-                    ax[fill_between + j].fill_betweenx(df[depth_column], df[tracks[fill_between]], left_col_value,
-                                                       where=df[tracks[fill_between]] >= index,
+                    ax[fill_between + j].fill_betweenx(df[depth_column],
+                                                       #
+                                                       df1.values.flatten(),
+                                                       left_col_value,
+                                                       where=df1.values.flatten() >= index,
                                                        color=color)
+
+            # Adding net to gross
+            if add_net_to_gross is not None:
+                if 'N/G' not in self.df.columns:
+                    raise ValueError('Net to gross has not been calculated yet')
+
+                ax[add_net_to_gross + j].fill_betweenx(self.df[depth_column],
+                                                               self.df[tracks[add_net_to_gross]],
+                                                               0,
+                                                               where=self.df['N/G'] == 1,
+                                                               color='yellow')
+                ax[add_net_to_gross + j].fill_betweenx(self.df[depth_column],
+                                                               self.df[tracks[add_net_to_gross]],
+                                                               0,
+                                                               where=self.df['N/G'] == 0,
+                                                               color='brown')
 
             plt.tight_layout()
 
@@ -374,7 +498,7 @@ class LASLogs:
                                  coordinates: pd.DataFrame,
                                  spacing: float = 0.5,
                                  radius_factor: float = 75):
-        """
+        """Plot well log along path.
 
         Parameters
         __________
@@ -422,6 +546,265 @@ class LASLogs:
                                                        radius_factor=radius_factor)
 
         return tube_along_spline
+
+    def calculate_vshale(self,
+                         method: str,
+                         column: str,
+                         minz: Union[float, int] = None,
+                         maxz: Union[float, int] = None,
+                         depth_column: str = None):
+        """Calculate Shale Volume.
+
+        Parameters
+        __________
+            method : str
+                Method used to calculate the Shale Volume, e.g. ``method='linear'``.
+            column : str
+                Column of the borehole.logs.df containing the Gamma Ray Value, e.g. ``column='GR'``.
+            minz : Union[float, int], default: ``None``
+                Minimum Z value.
+            maxz : Union[float, int], default: ``None``
+                Maximum Z value.
+            depth_column : str, default: ``None``
+                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+
+        Returns
+        _______
+            borehole.logs.df : pd.DataFrame
+                Log DataFrame with appended Shale Volume.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+            ValueError
+                If a method is chosen that is not available.
+
+        Examples
+        ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.add_well_logs('Well_Logs.las')
+            >>> borehole.logs.calculate_vshale(method='linear', column='GR')
+
+        See Also
+        ________
+            calculate_vshale_linear : Calculate Shale Volume with the linear method.
+            calculate_net_to_gross : Calculate Net to Gross value.
+
+        .. versionadded:: 0.0.1
+        """
+        # Checking that the method is of type str
+        if not isinstance(method, str):
+            raise TypeError('The method must be provided as string')
+
+        # Checking that the provided method is in the list of methods
+        if method not in ['linear']:
+            raise ValueError('Provided method is not implemented')
+
+        # Checking that the column is of type str
+        if not isinstance(column, str):
+            raise TypeError('The column name must be provided as string')
+
+        # Checking that the minz value is of type float or int
+        if not isinstance(minz, (float, int, type(None))):
+            raise TypeError('minz must be provided as float or int')
+
+        # Checking that the maxz value is of type float or int
+        if not isinstance(maxz, (float, int,type(None))):
+            raise TypeError('maxz must be provided as float or int')
+
+        # Selecting method
+        if method == 'linear':
+            self.calculate_vshale_linear(column=column,
+                                         minz=minz,
+                                         maxz=maxz,
+                                         depth_column=depth_column)
+
+        return self.df
+
+    def calculate_vshale_linear(self,
+                                column: str,
+                                minz: Union[float, int] = None,
+                                maxz: Union[float, int] = None,
+                                depth_column: str = None):
+        """Calculate Shale Volume with the linear method.
+
+        Parameters
+        __________
+            column : str
+                Column of the borehole.logs.df containing the Gamma Ray Value, e.g. ``column='GR'``.
+            minz : Union[float, int], default: ``None``
+                Minimum Z value.
+            maxz : Union[float, int], default: ``None``
+                Maximum Z value.
+            depth_column : str, default: ``None``
+                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.add_well_logs('Well_Logs.las')
+            >>> borehole.logs.calculate_vshale_linear(column='GR')
+
+        See Also
+        ________
+            calculate_vshale : Calculate Shale Volume.
+            calculate_net_to_gross : Calculate Net to Gross value.
+
+        .. versionadded:: 0.0.1
+        """
+        # Checking that the column is of type str
+        if not isinstance(column, str):
+            raise TypeError('The column name must be provided as string')
+
+        # Checking that the minz value is of type float or int
+        if not isinstance(minz, (float, int, type(None))):
+            raise TypeError('minz must be provided as float or int')
+
+        # Checking that the maxz value is of type float or int
+        if not isinstance(maxz, (float, int, type(None))):
+            raise TypeError('maxz must be provided as float or int')
+
+        # Checking that the depth column is of type string
+        if not isinstance(depth_column, (str, type(None))):
+            raise TypeError('Depth_column must be provided as string')
+
+        # Cropping DataFrame
+        if None not in (minz, maxz):
+            df = self.df[(self.df[depth_column] >= minz) & (self.df[depth_column] <= maxz)].copy(deep=True)
+        else:
+            df = self.df.copy(deep=True)
+
+        # Obtaining min and max Gamma Ray values
+        gr_max = df[column].max()
+        gr_min = df[column].min()
+
+        # Calculating Shale Volume
+        vshale = (df[column] - gr_min) / (gr_max - gr_min)
+
+        # Appending Shale Volume to Borehole Logs DataFrame
+        self.df['VShale_Linear'] = vshale
+
+    def calculate_net_to_gross(self,
+                               method: str,
+                               column: str,
+                               cutoff: Union[float, int],
+                               minz: Union[float, int] = None,
+                               maxz: Union[float, int] = None,
+                               depth_column: str = None):
+        """Calculate Net to Gross value.
+
+        Parameters
+        __________
+            method : str
+                Method used to calculate the Shale Volume, e.g. ``method='linear'``.
+            column : str
+                Column of the borehole.logs.df containing the Gamma Ray Value, e.g. ``column='GR'``.
+            cutoff : Union[float, int]
+                Cutoff value for net to gross estimation, e.g. ``cutoff=0.3``.
+            minz : Union[float, int], default: ``None``
+                Minimum Z value.
+            maxz : Union[float, int], default: ``None``
+                Maximum Z value.
+            depth_column : str, default: ``None``
+                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+
+        Returns
+        _______
+            net_to_gross : float
+                Net to gross value
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.add_well_logs('Well_Logs.las')
+            >>> borehole.logs.calculate_net_to_gross(method='linear', column='GR', cutoff=0.3)
+
+        See Also
+        ________
+            calculate_vshale : Calculate Shale Volume.
+            calculate_vshale_linear : Calculate Shale Volume with the linear method.
+
+        .. versionadded:: 0.0.1
+
+        """
+        # Checking that the method is of type str
+        if not isinstance(method, str):
+            raise TypeError('The method must be provided as string')
+
+        # Checking that the provided method is in the list of methods
+        if method not in ['linear']:
+            raise ValueError('Provided method is not implemented')
+
+        # Checking that the column is of type str
+        if not isinstance(column, str):
+            raise TypeError('The column name must be provided as string')
+
+        # Checking that the cutoff value is of type float or int
+        if not isinstance(cutoff, (float, int)):
+            raise TypeError('The cutoff value must be provided as float or int')
+
+        # Checking that the minz value is of type float or int
+        if not isinstance(minz, (float, int, type(None))):
+            raise TypeError('minz must be provided as float or int')
+
+        # Checking that the maxz value is of type float or int
+        if not isinstance(maxz, (float, int, type(None))):
+            raise TypeError('maxz must be provided as float or int')
+
+        # Checking that the depth column is of type string
+        if not isinstance(depth_column, (str, type(None))):
+            raise TypeError('Depth_column must be provided as string')
+
+        # Calculating Shale Volume
+        self.calculate_vshale(method=method,
+                              column=column,
+                              minz=minz,
+                              maxz=maxz,
+                              depth_column=depth_column)
+
+        # Setting column name of Shale Volume
+        if method == 'linear':
+            column_vshale = 'VShale_Linear'
+
+        #
+        def calculating_ng(row,
+                           cutoff_value):
+            if row <= cutoff_value:
+                return 1
+            elif cutoff_value < row <= 1:
+                return 0
+            else:
+                return -1
+
+        # Calculating Net to Gross for each Shale Volume value
+        self.df['N/G'] = self.df[column_vshale].apply(lambda row: calculating_ng(row,cutoff))
+        #self.df['N/G'] = self.df[column_vshale].apply(lambda row: 1 if row <= cutoff else 0)
+
+        # Calculating Net to Gross value
+        net_to_gross = self.df['N/G'].value_counts()[0] / (
+                self.df['N/G'].value_counts()[0] + self.df['N/G'].value_counts()[1])
+
+        return net_to_gross
 
 
 class DLISLogs:

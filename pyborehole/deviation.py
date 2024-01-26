@@ -25,6 +25,11 @@ class Deviation:
         add_origin: bool, default: ``True``
                 Boolean value to add the location of the borehole to survey DataFrames.
 
+    Returns
+    _______
+        Deviation
+            Deviation Object.
+
     Raises
     ______
         TypeError
@@ -32,12 +37,22 @@ class Deviation:
 
     Examples
     ________
+        >>> from pyborehole.borehole import Borehole
+        >>> borehole = Borehole(name='Weisweiler R1')
+        >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
         >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
         >>> borehole.deviation.deviation_df
             Measured Depth  Inclination  Azimuth
         0   0.05            0.0          0.0
         1   0.10            0.0          0.0
         2   0.15            0.0          0.0
+
+    See Also
+    ________
+        add_litholog : Add LithoLog to the Borehole Object.
+        add_well_design : Add Well Design to the Borehole Object.
+        add_well_logs : Add Well Logs to the Borehole Object.
+        add_well_tops : Add Well Tops to the Borehole Object.
 
     .. versionadded:: 0.0.1
     """
@@ -51,7 +66,7 @@ class Deviation:
                  dip_column: str = 'DIP',
                  azimuth_column: str = 'AZI',
                  add_origin: bool = True):
-        """
+        """Class to initiate a Deviation object.
 
         Parameters
         __________
@@ -61,7 +76,7 @@ class Deviation:
                 Path to the deviation file, e.g. ``path='Well_Deviation.csv'``.
             delimiter : str
                 Delimiter to read the deviation file correctly, e.g. ``delimiter=';'``.
-            step : float
+            step : float, default: ``5``
                     Step for resampling the deviation data, e.g. ``step=5``.
             md_column : str, default: ``'MD'``
                     Column containing the measured depths, e.g. ``md_column='MD'``.
@@ -72,6 +87,11 @@ class Deviation:
             add_origin: bool, default: ``True``
                 Boolean value to add the location of the borehole to survey DataFrames.
 
+        Returns
+        _______
+            Deviation
+                Deviation Object.
+
         Raises
         ______
             TypeError
@@ -79,6 +99,9 @@ class Deviation:
 
         Examples
         ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.deviation_df
                 Measured Depth  Inclination  Azimuth
@@ -86,8 +109,14 @@ class Deviation:
             1   0.10            0.0          0.0
             2   0.15            0.0          0.0
 
-        .. versionadded:: 0.0.1
+        See Also
+        ________
+            add_origin_to_desurveying : Add origin to desurveying.
+            plot_deviation_polar_plot : Add polar plot representing the deviation of a borehole.
+            plot_deviation_3d : Create 3D Deviation Plot.
+            get_borehole_tube : Get borehole tube.
 
+        .. versionadded:: 0.0.1
         """
         # Checking that the path is of type str or a Pandas DataFrame
         if not isinstance(path, (str, pd.DataFrame)):
@@ -167,6 +196,7 @@ class Deviation:
             self.northing_rel = pos.northing
             self.easting_rel = pos.easting
 
+        # Calculating dip and azimuth
         self.az = np.arctan2(self.easting_rel,
                              self.northing_rel)
         self.radius = np.sqrt(self.northing_rel ** 2 + self.easting_rel ** 2)
@@ -197,6 +227,7 @@ class Deviation:
                                                     orient='columns',
                                                     )
 
+        # Assigning attributes
         self.crs = borehole.crs
         self._borehole = borehole
 
@@ -212,11 +243,11 @@ class Deviation:
 
         Parameters
         __________
-            x : Union[float, int]
+            x : Union[float, int], default: ``None``
                 X-Coordinate of the origin, e.g. ``x=1000``.
-            y : Union[float, int]
+            y : Union[float, int], default: ``None``
                 Y-Coordinate of the origin, e.g. ``y=1000``.
-            z : Union[float, int]
+            z : Union[float, int], default: ``None``
                 Altitude of the origin, e.g. ``z=200``.
 
         Raises
@@ -228,10 +259,19 @@ class Deviation:
 
         Examples
         ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
+            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.add_origin_to_desurveying(x=100, y=100, z=000)
 
-        .. versionadded:: 0.0.1
+        See Also
+        ________
+            plot_deviation_polar_plot : Add polar plot representing the deviation of a borehole.
+            plot_deviation_3d : Create 3D Deviation Plot.
+            get_borehole_tube : Get borehole tube.
 
+        .. versionadded:: 0.0.1
         """
         # Raising a ValueError if the CRS is WGS84
         if self.crs == 'EPSG:4326':
@@ -266,12 +306,14 @@ class Deviation:
         # Adding the Z coordinate
         self.desurveyed_df['True Vertical Depth Below Sea Level'] = z - self.desurveyed_df['True Vertical Depth']
 
+        # Creating Data Dict
         data_dict = {'Northing': [self.desurveyed_df['Northing'].values],
                      'Easting': [self.desurveyed_df['Easting'].values],
                      'True Vertical Depth Below Sea Level': [self.desurveyed_df['True Vertical Depth Below Sea Level'].values],
                      }
         self._borehole.update_df(data_dict=data_dict)
 
+        # Setting attributes
         self.northing = self.desurveyed_df['Northing'].values
         self.easting = self.desurveyed_df['Easting'].values
         self.tvdss = self.desurveyed_df['True Vertical Depth Below Sea Level'].values
@@ -285,11 +327,11 @@ class Deviation:
 
         Parameters
         __________
-            c : np.ndarray
+            c : np.ndarray, default: ``None``.
                 Array for coloring the well path.
-            vmin : Union[float, int]
+            vmin : Union[float, int], default: ``None``.
                 Minimum value for colormap, e.g. ``vmin=0``.
-            vmax : Union[float, int]
+            vmax : Union[float, int], default: ``None``.
                 Maximum value for colormap, e.g. ``vmax=100``.
             cmap : str, default: ``'viridis'``
                 Name of the colormap to be used, e.g. ``cmap='viridis'``.
@@ -301,10 +343,19 @@ class Deviation:
 
         Examples
         ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
+            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.plot_deviation_polar_plot()
 
-        .. versionadded:: 0.0.1
+        See Also
+        ________
+            add_origin_to_desurveying : Add origin to desurveying.
+            plot_deviation_3d : Create 3D Deviation Plot.
+            get_borehole_tube : Get borehole tube.
 
+        .. versionadded:: 0.0.1
         """
         # Checking that the colors are provided as arrays
         if not isinstance(c, (np.ndarray, type(None))):
@@ -401,6 +452,12 @@ class Deviation:
         ________
             >>> borehole.deviation.plot_deviation_3d()
 
+        See Also
+        ________
+            add_origin_to_desurveying : Add origin to desurveying.
+            plot_deviation_polar_plot : Add polar plot representing the deviation of a borehole.
+            get_borehole_tube : Get borehole tube.
+
         .. versionadded:: 0.0.1
 
         """
@@ -474,6 +531,12 @@ class Deviation:
         Examples
         ________
             >>> borehole.deviation.get_borehole_tube(radius=10)
+
+        See Also
+        ________
+            add_origin_to_desurveying : Add origin to desurveying.
+            plot_deviation_polar_plot : Add polar plot representing the deviation of a borehole.
+            plot_deviation_3d : Create 3D Deviation Plot.
 
         .. versionadded:: 0.0.1
         """
