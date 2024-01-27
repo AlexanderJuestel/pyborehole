@@ -210,9 +210,9 @@ class Deviation:
         data_dict = {'Measured Depth': [self.md],
                      'Inclination': [self.inc],
                      'Azimuth': [self.azi],
-                     'True Vertical Depth': [self.tvd],
-                     'Northing_rel': [self.northing_rel],
                      'Easting_rel': [self.easting_rel],
+                     'Northing_rel': [self.northing_rel],
+                     'True Vertical Depth': [self.tvd],
                      }
 
         # Assigning data_dict
@@ -226,9 +226,9 @@ class Deviation:
                                                    )
 
         # Creating DataFrame from position data
-        self.desurveyed_df = pd.DataFrame.from_dict({'True Vertical Depth': self.tvd,
+        self.desurveyed_df = pd.DataFrame.from_dict({'Easting_rel': self.easting_rel,
                                                      'Northing_rel': self.northing_rel,
-                                                     'Easting_rel': self.easting_rel},
+                                                     'True Vertical Depth': self.tvd},
                                                     orient='columns',
                                                     )
 
@@ -357,7 +357,8 @@ class Deviation:
         Parameters
         __________
             c : np.ndarray, default: ``None``.
-                Array for coloring the well path.
+                Array for coloring the well path, e.g. ``c=borehole.deviation.tvd``, or ``c=borehole.deviation.azi``,
+                ``c=borehole.deviation.radius``.
             vmin : Union[float, int], default: ``None``.
                 Minimum value for colormap, e.g. ``vmin=0``.
             vmax : Union[float, int], default: ``None``.
@@ -459,7 +460,7 @@ class Deviation:
                           elev: Union[float, int] = 45,
                           azim: Union[float, int] = 45,
                           roll: Union[float, int] = 0,
-                          relative: bool = False) -> Tuple[matplotlib.figure.Figure, matplotlib.axes.Axes]:
+                          relative: bool = True) -> Tuple[matplotlib.figure.Figure, matplotlib.axes.Axes]:
         """Create 3D Deviation Plot.
 
         Parameters
@@ -470,7 +471,7 @@ class Deviation:
                 Azimuth angle for view, e.g. ``azim=45``.
             roll : Union[float, int], default: ``0``
                 Rolling angle for view, e.g. ``roll=0``.
-            relative : bool, default: ``False``
+            relative : bool, default: ``True``
                 Boolean value to plot the plot with relative coordinates, e.g. ``relative=False``.
 
         Returns
@@ -528,6 +529,11 @@ class Deviation:
                     self.northing_rel,
                     -self.tvd)
         else:
+            if any(value is None for value in [self.easting,
+                                               self.northing,
+                                               -self.tvd]):
+                raise ValueError('Add origin to desurveying before plotting the deviation in 3D')
+
             ax.plot(self.easting,
                     self.northing,
                     -self.tvd)
@@ -547,7 +553,7 @@ class Deviation:
                           x: Union[float, int] = 0,
                           y: Union[float, int] = 0,
                           z: Union[float, int] = 0,
-                          relative: bool = False):
+                          relative: bool = True):
         """Get borehole tube.
 
         Parameters
@@ -560,7 +566,7 @@ class Deviation:
                 Y-coordinate of the borehole, e.g. ``y=1000``.
             z : Union[float, int], default: ``0``
                 Z-coordinate of the borehole, e.g. ``y=100``.
-            relative : bool, default: ``False``
+            relative : bool, default: ``True``
                 Boolean value to plot the plot with relative coordinates, e.g. ``relative=False``.
 
         Returns
@@ -621,10 +627,6 @@ class Deviation:
         if not isinstance(y, (float, int)):
             raise TypeError('y coordinate must be provided as float or int')
 
-        # Checking that the y coordinate of the borehole is provided as float or int
-        if not isinstance(y, (float, int)):
-            raise TypeError('y coordinate must be provided as float or int')
-
         # Checking that the relative value is provided as bool
         if not isinstance(relative, bool):
             raise TypeError('The relative value must be provided as bool')
@@ -652,6 +654,11 @@ class Deviation:
                                              self.northing_rel + y,
                                              -self.tvd + z])
         else:
+            if any(value is None for value in [self.easting,
+                                               self.northing,
+                                               -self.tvd]):
+                raise ValueError('Add origin to desurveying before plotting the deviation in 3D')
+
             spline = lines_from_points(np.c_[self.easting + x,
                                              self.northing + y,
                                              -self.tvd + z])

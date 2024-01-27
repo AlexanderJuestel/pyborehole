@@ -1,10 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from typing import Union, List
+from typing import Union, List, Tuple
 import numpy as np
 import geopandas as gpd
 import shapely
 from shapely.geometry import Point, LineString
+import matplotlib
 from matplotlib.patches import Rectangle
 import copy
 
@@ -37,26 +38,30 @@ class LASLogs:
         >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
         >>> borehole.add_well_logs(path='Well_logs.las')
         >>> borehole.logs.well_header
-            mnemonic   unit   value               descr
-        0   STRT       M      100.0               Log Start Depth
-        1   STOP       M      0.05                Log Stop Depth
-        2   STEP       M      -0.05               Log Increment
-        3   NULL              -999.25             Null Value
-        4   COMP              RWE Power           Company Name
-        5   WELL              EB 1                Well Name
-        6   FLD               KW Weisweiler       Field Name
-        7   LOC                                   Location
-        8   PROV                                  Province
-        9   SRVC                                  Service Company
-        10  DATE              26-Oct-2023         Date
-        11  UWI                                   Unique Well ID
+
+        ======== =========  ====== ================    ===================
+        Index    mnemonic   unit   value               descr
+        ======== =========  ====== ================    ===================
+        0        STRT       M      100.0               Log Start Depth
+        1        STOP       M      0.05                Log Stop Depth
+        2        STEP       M      -0.05               Log Increment
+        3        NULL              -999.25             Null Value
+        4        COMP              RWE Power           Company Name
+        5        WELL              EB 1                Well Name
+        6        FLD               KW Weisweiler       Field Name
+        7        LOC                                   Location
+        8        PROV                                  Province
+        9        SRVC                                  Service Company
+        10       DATE              26-Oct-2023         Date
+        11       UWI                                   Unique Well ID
+        ======== =========  ====== ================    ===================
 
     See Also
     ________
-        add_deviation : Add deviation to the Borehole Object.
-        add_litholog : Add LithoLog to the Borehole Object.
-        add_well_design : Add Well Design to the Borehole Object.
-        add_well_tops : Add Well Tops to the Borehole Object.
+        pyborehole.borehole.Borehole.add_deviation : Add deviation to the Borehole Object.
+        pyborehole.borehole.Borehole.add_litholog : Add LithoLog to the Borehole Object.
+        pyborehole.borehole.Borehole.add_well_design : Add Well Design to the Borehole Object.
+        pyborehole.borehole.Borehole.add_well_tops : Add Well Tops to the Borehole Object.
 
     .. versionadded:: 0.0.1
     """
@@ -91,19 +96,23 @@ class LASLogs:
             >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
             >>> borehole.add_well_logs(path='Well_logs.las')
             >>> borehole.logs.well_header
-                mnemonic   unit   value               descr
-            0   STRT       M      100.0               Log Start Depth
-            1   STOP       M      0.05                Log Stop Depth
-            2   STEP       M      -0.05               Log Increment
-            3   NULL              -999.25             Null Value
-            4   COMP              RWE Power           Company Name
-            5   WELL              EB 1                Well Name
-            6   FLD               KW Weisweiler       Field Name
-            7   LOC                                   Location
-            8   PROV                                  Province
-            9   SRVC                                  Service Company
-            10  DATE              26-Oct-2023         Date
-            11  UWI                                   Unique Well ID
+
+            ======== =========  ====== ================    ===================
+            Index    mnemonic   unit   value               descr
+            ======== =========  ====== ================    ===================
+            0        STRT       M      100.0               Log Start Depth
+            1        STOP       M      0.05                Log Stop Depth
+            2        STEP       M      -0.05               Log Increment
+            3        NULL              -999.25             Null Value
+            4        COMP              RWE Power           Company Name
+            5        WELL              EB 1                Well Name
+            6        FLD               KW Weisweiler       Field Name
+            7        LOC                                   Location
+            8        PROV                                  Province
+            9        SRVC                                  Service Company
+            10       DATE              26-Oct-2023         Date
+            11       UWI                                   Unique Well ID
+            ======== =========  ====== ================    ===================
 
         .. versionadded:: 0.0.1
         """
@@ -157,10 +166,12 @@ class LASLogs:
                                             'value',
                                             'descr'])
 
+        # Assigning attributes
         self.well_tops = borehole.well_tops
         self.has_well_tops = borehole.has_well_tops
         self.has_well_design = borehole.has_well_design
         self.well_design = borehole.well_design
+        self._borehole = borehole
 
     def plot_well_logs(self,
                        tracks: Union[str, list],
@@ -169,7 +180,7 @@ class LASLogs:
                        add_well_tops: bool = False,
                        add_well_design: bool = False,
                        fill_between: int = None,
-                       add_net_to_gross: int = None):
+                       add_net_to_gross: int = None) -> Tuple[matplotlib.figure.Figure, matplotlib.axes.Axes]:
         """Plot well logs.
 
         Parameters
@@ -177,22 +188,22 @@ class LASLogs:
 
         tracks : Union[str, list]
             Name/s of the logs to be plotted, e.g. ``tracks='SGR'`` or ``tracks=['SGR', 'K']``.
-        depth_column : str
+        depth_column : str, default: ``'MD'``
             Name of the column holding the depths, e.g. ``depth_column='MD'``.
-        colors : Union[str, list]
+        colors : Union[str, list], default: ``None``
             Colors of the logs, e.g. ``colors='black'`` or ``colors=['black', 'blue']``.
-        add_well_tops : bool, default = False
-            Boolean to add well tops to the plot.
-        add_well_design : bool, default = False
-            Boolean to add well design to the plot.
+        add_well_tops : bool, default: ``False``
+            Boolean to add well tops to the plot, e.g. ``add_well_tops=True``.
+        add_well_design : bool, default: ``False``
+            Boolean to add well design to the plot, e.g. ``add_well_design=True``.
         fill_between : int, default: ``None``
-            Number of the axis to fill.
+            Number of the axis to fill, e.g. ``fill_between=0``.
         add_net_to_gross : int, default: ``None``
-            Number of axis to fill with the net to gross values.
+            Number of axis to fill with the net to gross values, e.g. ``add_net_to_gross=0``.
 
         Returns
         _______
-            fig : matplotlib.figure
+            fig : matplotlib.figure.Figure
                 Matplotlib Figure.
             ax : matplotlib.axes.Axes
                 Matplotlib Axes.
@@ -202,9 +213,9 @@ class LASLogs:
             TypeError
                 If the wrong input data types are provided.
             ValueError
-                If no well tops are provided but add_well_tops is set to True.
+                If no well tops are provided but ``add_well_tops`` is set to ``True``.
             ValueError
-                If the wrong column names are provided
+                If the wrong column names are provided.
 
         Examples
         ________
@@ -245,7 +256,7 @@ class LASLogs:
             raise ValueError('The depth_column is not part of the curves')
 
         # Checking that the colors are provided as list or string
-        if not isinstance(colors, (list, str)):
+        if not isinstance(colors, (list, str, type(None))):
             raise TypeError('The track/s must bei either provided as str or a list of strings')
 
         # Checking that the add_well_tops variable is of type bool
@@ -495,14 +506,29 @@ class LASLogs:
 
     def plot_well_log_along_path(self,
                                  log: str,
-                                 coordinates: pd.DataFrame,
-                                 spacing: float = 0.5,
-                                 radius_factor: float = 75):
+                                 depth_column: str = 'MD',
+                                 relative: bool = True,
+                                 spacing: Union[float, int] = 0.5,
+                                 radius_factor: Union[float, int] = 75):
         """Plot well log along path.
 
         Parameters
         __________
+            log : str
+                Name of the log, e.g. ``log='GR'``.
+            depth_column : str, default: ``'MD'``
+                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+            relative : bool, default: ``True``
+                Boolean value to plot the tube with relative coordinates, e.g. ``relative=False``.
+            spacing : Union[float, int], default: ``0.5``
+                Spacing for the resampling of the well path, e.g. ``spacing=0.5``.
+            radius_factor : Union[float, int], default: ``75``
+                Factor to scale the radius of the tube, e.g. ``radius_factor=75``.
 
+        Return
+        ______
+            tube : pv.core.pointset.PolyData
+                PyVista Tube of the borehole.
 
         Raises
         ______
@@ -512,7 +538,42 @@ class LASLogs:
                 If the wrong input data types are provided.
             ValueError
                 Raises error if the wrong column names are provided.
+            ValueError
+                Raises error if no ``Deviation`` has been defined.
 
+        Examples
+        ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.add_well_logs(path='Well_logs.las')
+            >>> borehole.logs.plot_well_log_along_path(log='SGR', depth_column='DEPTH', spacing=0.5, radius_factor=10)
+
+            =========== =========================
+            PolyData	Information
+            =========== =========================
+            N Cells	22
+            N Points	40040
+            N Strips	22
+            X Bounds	3.413e+06, 3.413e+06
+            Y Bounds	5.836e+06, 5.836e+06
+            Z Bounds	-9.925e+01, -5.000e-02
+            N Arrays	2
+            =========== =========================
+
+            ============ ======= ======== ======= =========== ==========
+            Name         Field   Type     N Comp  Min         Max
+            ============ ======= ======== ======= =========== ==========
+            values       Points  float64  1       4.342e+00   1.474e+02
+            TubeNormals  Points  float32  3       -1.000e+00  1.000e+00
+            ============ ======= ======== ======= =========== ==========
+
+        See Also
+        ________
+            plot_well_logs : Plot well logs.
+
+        .. versionadded:: 0.0.1
         """
         # Importing pyvista
         try:
@@ -520,28 +581,70 @@ class LASLogs:
         except ModuleNotFoundError:
             ModuleNotFoundError('PyVista package not installed')
 
-        if not {'Northing', 'Easting', 'True Vertical Depth Below Sea Level'}.issubset(coordinates.columns):
-            raise ValueError('The coordinates DataFrame must contain a northing, easting and true vertical depth '
+        # Checking that log is provided as string
+        if not isinstance(log, str):
+            raise TypeError('The name of the log must be provided as str')
+
+        # Checking that the depth column is of type string
+        if not isinstance(depth_column, str):
+            raise TypeError('Depth_column must be provided as string')
+
+        # Checking that the relative value is provided as bool
+        if not isinstance(relative, bool):
+            raise TypeError('The relative value must be provided as bool')
+
+        # Checking that the spacing is of type float or int
+        if not isinstance(spacing, (float, int)):
+            raise TypeError('The spacing for the resampling must be provided as float or int')
+
+        # Checking that the radius_factor is of type float or int
+        if not isinstance(radius_factor, (float, int)):
+            raise TypeError('The radius_factor must be provided as float or int')
+
+        # Checking if the borehole deviation is present
+        if not self._borehole.deviation:
+            raise ValueError('Borehole deviation is needed to create a tube')
+
+        # Extracting the coordinates
+        coordinates = self._borehole.deviation.desurveyed_df.copy(deep=True)
+
+        if relative:
+            if not {'Northing_rel', 'Easting_rel', 'True Vertical Depth'}.issubset(coordinates.columns):
+                raise ValueError('The coordinates DataFrame must contain Northing_rel, Easting_rel and True Vertical Depth '
+                                 'below sea level column')
+
+            coordinates['True Vertical Depth'] = coordinates['True Vertical Depth']*(-1)
+            xyz = coordinates[['Easting_rel', 'Northing_rel', 'True Vertical Depth']].to_numpy()
+
+        else:
+            if not {'Northing', 'Easting', 'True Vertical Depth Below Sea Level'}.issubset(coordinates.columns):
+                raise ValueError('The coordinates DataFrame must contain Northing, Easting and True Vertical Depth Below Sea Level '
                              'below sea level column')
 
-        coordinates = coordinates[['Easting', 'Northing', 'True Vertical Depth Below Sea Level']].to_numpy()
+            coordinates['True Vertical Depth Below Sea Level'] = coordinates['True Vertical Depth Below Sea Level'] * (-1)
+            xyz = coordinates[['Easting', 'Northing', 'True Vertical Depth Below Sea Level']].to_numpy()
 
-        logs = self.df.reset_index()[['MD', log]]
+        # Obtaining log values
+        logs = self.df.reset_index()[[depth_column, log]]
 
-        points = resample_between_well_deviation_points(coordinates=coordinates,
+        # Resample points
+        points = resample_between_well_deviation_points(coordinates=xyz,
                                                         spacing=spacing)
 
-        # polyline_well_path = polyline_from_points(points=coordinates)
-
+        # Creating spline
         polyline_well_path_resampled = pv.Spline(points)
 
+        # Getting points along the spline
         points_along_spline = get_points_along_spline(spline=polyline_well_path_resampled,
-                                                      dist=logs['MD'].values)
+                                                      dist=logs[depth_column].values)
 
+        # Create polyline from points
         polyline_along_spline = polyline_from_points(points=points_along_spline)
 
+        # Assign log values to polyline
         polyline_along_spline['values'] = logs[log].values
 
+        # Create tube from polyline
         tube_along_spline = polyline_along_spline.tube(scalars='values',
                                                        radius_factor=radius_factor)
 
@@ -552,19 +655,29 @@ class LASLogs:
                          column: str,
                          minz: Union[float, int] = None,
                          maxz: Union[float, int] = None,
-                         depth_column: str = None):
+                         depth_column: str = None) -> pd.DataFrame:
         """Calculate Shale Volume.
 
         Parameters
         __________
             method : str
                 Method used to calculate the Shale Volume, e.g. ``method='linear'``.
+                The following methods are available
+
+                ==================== =======================================
+                ``linear``           Linear Gamma Ray Index Shale Volume
+                ``larionov_old``     Larionov Shale volume for old rocks
+                ``larionov_young``   Larionov Shale volume for young rocks
+                ``clavier``          Clavier Shale volume
+                ``stieber``          Stieber Shale volume
+                ==================== =======================================
+
             column : str
                 Column of the borehole.logs.df containing the Gamma Ray Value, e.g. ``column='GR'``.
             minz : Union[float, int], default: ``None``
-                Minimum Z value.
+                Minimum Z value, e.g. ``minz=50``.
             maxz : Union[float, int], default: ``None``
-                Maximum Z value.
+                Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
                 Name of the column holding the depths, e.g. ``depth_column='MD'``.
 
@@ -572,6 +685,12 @@ class LASLogs:
         _______
             borehole.logs.df : pd.DataFrame
                 Log DataFrame with appended Shale Volume.
+
+                ============= ==========================
+                Index         Index of each measurement
+                ----          Remaining columns
+                Vshale_____   Shale volume
+                ============= ==========================
 
         Raises
         ______
@@ -588,6 +707,16 @@ class LASLogs:
             >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
             >>> borehole.add_well_logs('Well_Logs.las')
             >>> borehole.logs.calculate_vshale(method='linear', column='GR')
+            >>> borehole.logs.df
+
+            ======= ====== ==== ==============
+            Index   DEPTH  ---  VShale_Linear
+            ======= ====== ==== ==============
+            0       0.05   ---  0.037104
+            1	    0.10   ---  0.043358
+            2	    0.15   ---  0.049788
+            3	    0.20   ---  0.055837
+            ======= ====== ==== ==============
 
         See Also
         ________
@@ -637,9 +766,9 @@ class LASLogs:
             column : str
                 Column of the borehole.logs.df containing the Gamma Ray Value, e.g. ``column='GR'``.
             minz : Union[float, int], default: ``None``
-                Minimum Z value.
+                Minimum Z value, e.g. ``minz=50``.
             maxz : Union[float, int], default: ``None``
-                Maximum Z value.
+                Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
                 Name of the column holding the depths, e.g. ``depth_column='MD'``.
 
@@ -656,6 +785,16 @@ class LASLogs:
             >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
             >>> borehole.add_well_logs('Well_Logs.las')
             >>> borehole.logs.calculate_vshale_linear(column='GR')
+            >>> borehole.logs.df
+
+            ======= ====== ==== ==============
+            Index   DEPTH  ---  VShale_Linear
+            ======= ====== ==== ==============
+            0       0.05   ---  0.037104
+            1	    0.10   ---  0.043358
+            2	    0.15   ---  0.049788
+            3	    0.20   ---  0.055837
+            ======= ====== ==== ==============
 
         See Also
         ________
@@ -714,9 +853,9 @@ class LASLogs:
             cutoff : Union[float, int]
                 Cutoff value for net to gross estimation, e.g. ``cutoff=0.3``.
             minz : Union[float, int], default: ``None``
-                Minimum Z value.
+                Minimum Z value, e.g. ``minz=50``.
             maxz : Union[float, int], default: ``None``
-                Maximum Z value.
+                Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
                 Name of the column holding the depths, e.g. ``depth_column='MD'``.
 
