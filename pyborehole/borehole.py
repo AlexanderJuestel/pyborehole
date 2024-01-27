@@ -259,47 +259,47 @@ class Borehole:
 
         Parameters
         __________
-            address : str
+            address : str, default: ``None``
                 Address of the Borehole, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
-            location : tuple
+            location : tuple, default: ``None``
                 Coordinates tuple representing the location of the Borehole, e.g. ``location=(6.313031, 50.835676)``.
-            year : int
+            year : int, default: ``None``
                 Year the borehole was drilled, e.g. ``year=2024``.
-            crs : Union[str, pyproj.crs.crs.CRS]
+            crs : Union[str, pyproj.crs.crs.CRS], default: ``None``
                 Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
-            altitude_above_sea_level : Union[int, float]
+            altitude_above_sea_level : Union[int, float], default: ``None``
                 Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
-            altitude_above_kb : Union[int, float]
+            altitude_above_kb : Union[int, float], default: ``None``
                 Altitude above KB, e.g. ``altitude_above_kb=140``.
-            borehole_id : Union[str, int, float]
+            borehole_id : Union[str, int, float], default: ``None``
                 Unique identifier for this borehole, e.g. ``borehole_id='DABO123456'``.
-            borehole_type : str
+            borehole_type : str, default: ``None``
                 Borehole type, e.g. ``borehole_type='exploration'``.
-            md : Union[int, float]
+            md : Union[int, float], default: ``None``
                 Measured depth of the borehole, e.g. ``md=100``.
-            tvd : Union[int, float]
+            tvd : Union[int, float], default: ``None``
                 True vertical depth of the borehole, e.g. ``tvd=95``.
-            depth_unit : str
+            depth_unit : str, default: ``None``
                 Unit for the depth values, e.g. ``depth_values='m'``.
-            vertical : bool, default is ``True``
+            vertical : bool, default: ``True``
                 Variable to state if the borehole is vertical (True) or deviated (False), e.g. ``vertical=True``.
-            contractee : str
+            contractee : str, default: ``None``
                 Contractee of the drilling operation, e.g. ``contractee='Fraunhofer IEG'``.
-            drilling_contractor : str
+            drilling_contractor : str, default: ``None``
                 Drilling contractor who performed the drilling, e.g. ``drilling_contractor='RWE BOWA'``.
-            logging_contractor : str
+            logging_contractor : str, default: ``None``
                 Logging contractor who performed the logging, e.g. ``logging_contractor='DMT GmbH'``.
-            field : str
+            field : str, default: ``None``
                 Name of the field the well was drilled in, e.g. ``field='Erdwärme Aachen'``.
-            project : str
+            project : str, default: ``None``
                 Name of the project the borehole was drilled for, e.g. ``project='DGE Rollout'``.
-            start_drilling : str
+            start_drilling : str, default: ``None``
                 Start date of the drilling operation, e.g. ``start_drilling='2023-10-18'``.
-            end_drilling : str
+            end_drilling : str, default: ``None``
                 End date of the drilling operation, e.g. ``end_drilling='2023-10-28'``.
-            start_logging : str
+            start_logging : str, default: ``None``
                 Start date of the logging operation, e.g. ``start_logging='2023-10-18'``.
-            end_logging : str
+            end_logging : str, default: ``None``
                 End date of the logging operation, e.g. ``end_logging='2023-10-28'``.
 
         Raises
@@ -314,17 +314,21 @@ class Borehole:
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.df
-                                                    Value
-                ID                                  DABO123456
-                Name                                RWE EB1
-                Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
-                Location                            POINT (6.313031 50.835676)
-                X                                   6.313031
-                Y                                   50.835676
-                Coordinate Reference System         EPSG:4326
-                Coordinate Reference System PyProj  EPSG:4326
-                Altitude above sea level            136
-                Altitude above KB                   None
+
+            =====================================  =========================================
+            Index                                  Value
+            =====================================  =========================================
+            ID                                     DABO123456
+            Name                                   RWE EB1
+            Address                                Am Kraftwerk 17, 52249 Eschweiler, Germany
+            Location                               POINT (6.313031 50.835676)
+            X                                      6.313031
+            Y                                      50.835676
+            Coordinate Reference System            EPSG:4326
+            Coordinate Reference System PyProj     EPSG:4326
+            Altitude above sea level               136
+            Altitude above KB                      None
+            =====================================  =========================================
 
         .. versionadded:: 0.0.1
         """
@@ -599,13 +603,18 @@ class Borehole:
 
         self.has_properties = True
 
-    def create_df(self):
+    def create_df(self) -> pd.DataFrame:
         """Create DataFrame from Borehole Object Attributes.
 
         Returns
         _______
             df : pd.DataFrame
-                Borehole Object DataFrame containing the Borehole Metadata.
+                Borehole Object DataFrame containing the Borehole Metadata. Data columns are as follows:
+
+                ======= =====================
+                Index   Index of each entry
+                Value   Value of each entry
+                ======= =====================
 
         Examples
         ________
@@ -615,17 +624,22 @@ class Borehole:
             >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.create_df()
             >>> borehole.df
-                                                Value
-            ID                                  DABO123456
-            Name                                Weisweiler R1
-            Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
-            Location                            POINT (6.313031 50.835676)
-            X                                   6.313031
-            Y                                   50.835676
-            Coordinate Reference System         EPSG:4326
-            Coordinate Reference System PyProj  EPSG:4326
-            Altitude above sea level            136
-            Altitude above KB                   None
+
+            =====================================  =========================================
+            Index                                  Value
+            =====================================  =========================================
+            ID                                     DABO123456
+            Name                                   RWE EB1
+            Address                                Am Kraftwerk 17, 52249 Eschweiler, Germany
+            Location                               POINT (6.313031 50.835676)
+            X                                      6.313031
+            Y                                      50.835676
+            Coordinate Reference System            EPSG:4326
+            Coordinate Reference System PyProj     EPSG:4326
+            Altitude above sea level               136
+            Altitude above KB                      None
+            ...                                    ...
+            =====================================  =========================================
 
         See Also
         ________
@@ -676,13 +690,18 @@ class Borehole:
 
         return df
 
-    def create_properties_df(self):
+    def create_properties_df(self) -> pd.DataFrame:
         """Create Properties DataFrame from Borehole Object Attributes.
 
         Returns
         _______
             df : pd.DataFrame
-                DataFrame containing the Borehole Properties.
+                DataFrame containing the Borehole Properties. Data columns are as follows:
+
+                ======= =====================
+                Index   Index of each entry
+                Value   Value of each entry
+                ======= =====================
 
         Examples
         ________
@@ -692,17 +711,21 @@ class Borehole:
             >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.create_properties_df()
             >>> borehole.properties
-                                                Value
-            ID                                  True
-            Name                                True
-            Address                             True
-            Location                            True
-            X                                   True
-            Y                                   True
-            Coordinate Reference System         True
-            Coordinate Reference System PyProj  True
-            Altitude above sea level            True
-            Altitude above KB                   False
+
+            =====================================  =========================================
+            Index                                  Value
+            =====================================  =========================================
+            ID                                     True
+            Name                                   True
+            Address                                True
+            Location                               True
+            X                                      True
+            Y                                      True
+            Coordinate Reference System            True
+            Coordinate Reference System PyProj     True
+            Altitude above sea level               True
+            Altitude above KB                      False
+            =====================================  =========================================
 
         See Also
         ________
@@ -777,18 +800,22 @@ class Borehole:
             >>> borehole.create_df()
             >>> borehole.update_df(data_dict={'Date': 2023})
             >>> borehole.df
-                                                Value
-            ID                                  DABO123456
-            Name                                Weisweiler R1
-            Address                             Am Kraftwerk 17, 52249 Eschweiler, Germany
-            Location                            POINT (6.313031 50.835676)
-            X                                   6.313031
-            Y                                   50.835676
-            Coordinate Reference System         EPSG:4326
-            Coordinate Reference System PyProj  EPSG:4326
-            Altitude above sea level            136
-            Altitude above KB                   None
-            Data                                2023
+
+            =====================================  =========================================
+            Index                                  Value
+            =====================================  =========================================
+            ID                                     DABO123456
+            Name                                   Weisweiler R1
+            Address                                Am Kraftwerk 17, 52249 Eschweiler, Germany
+            Location                               POINT (6.313031 50.835676)
+            X                                      6.313031
+            Y                                      50.835676
+            Coordinate Reference System            EPSG:4326
+            Coordinate Reference System PyProj     EPSG:4326
+            Altitude above sea level               136
+            Altitude above KB                      None
+            Data                                   2023
+            =====================================  =========================================
 
         See Also
         ________
@@ -829,9 +856,9 @@ class Borehole:
                 Borehole object attribute provided as str, e.g. ``attribute='name'``.
             value : Union[int, float, str]
                 Value of the attribute to be updated, e.g. ``value='RWE EB2'``.
-            crs : Union[str, pyproj.crs.crs.CRS]
+            crs : Union[str, pyproj.crs.crs.CRS], default: ``None``
                 Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
-            transform_coordinates : bool
+            transform_coordinates : bool, default: ``None``
                 Boolean value to transform the coordinates if a new Coordinate Reference System is provided, e.g. ``transform_coordinates=True``.
 
         Raises
@@ -973,18 +1000,25 @@ class Borehole:
         self.properties.loc[df_indices_dict[attribute], 'Value'] = True
 
     def to_gdf(self,
-               crs: Union[str, pyproj.crs.crs.CRS] = None):
+               crs: Union[str, pyproj.crs.crs.CRS] = None) -> gpd.GeoDataFrame:
         """Create GeoDataFrame from Borehole Object DataFrame.
 
         Parameters
         __________
-            crs : Union[str, pyproj.crs.crs.CRS]
+            crs : Union[str, pyproj.crs.crs.CRS], default: ``None``
                 Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
 
         Returns
         _______
             gpd.GeoDataFrame
-                GeoDataFrame of the Borehole Data Object DataFrame.
+                GeoDataFrame of the Borehole Data Object DataFrame. Data columns are as follows:
+
+                ========== =========================
+                Index      Index of each entry
+                ID         ID of each entry
+                Name       Name of each entry
+                geometry   Geometry of each entry
+                ========== =========================
 
         Raises
         ______
@@ -1001,8 +1035,12 @@ class Borehole:
             >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
             >>> borehole.create_df()
             >>> borehole.to_gdf()
-                ID         Name    geometry
-            0   DABO123456 RWE EB1 POINT (6.31303 50.83568)
+
+            =======  ============ ========== ==========================
+            Index    ID           Name       geometry
+            =======  ============ ========== ==========================
+            0        DABO123456   RWE EB1    POINT (6.31303 50.83568)
+            =======  ============ ========== ==========================
 
         See Also
         ________
@@ -1042,7 +1080,7 @@ class Borehole:
                       md_column: str = 'MD',
                       dip_column: str = 'DIP',
                       azimuth_column: str = 'AZI',
-                      add_origin: bool = True):
+                      add_origin: bool = True) -> Deviation:
         """Add deviation to the Borehole Object.
 
         Parameters
@@ -1064,7 +1102,7 @@ class Borehole:
 
         Returns
         _______
-            WellDeviation
+            Deviation
                 Well Deviation Object.
 
         Raises
@@ -1083,10 +1121,14 @@ class Borehole:
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.deviation_df
-                Measured Depth  Inclination  Azimuth
-            0   0.05            0.0          0.0
-            1   0.10            0.0          0.0
-            2   0.15            0.0          0.0
+
+            ======  ================  =============  =========
+            Index   Measured Depth    Inclination    Azimuth
+            ======  ================  =============  =========
+            0       0.05              0.0            0.0
+            1       0.10              0.0            0.0
+            2       0.15              0.0            0.0
+            ======  ================  =============  =========
 
         See Also
         ________
@@ -1150,7 +1192,7 @@ class Borehole:
 
     def add_well_logs(self,
                       path: str,
-                      nodata: Union[int, float] = -9999):
+                      nodata: Union[int, float] = -9999) -> Union[LASLogs, DLISLogs]:
         """Add Well Logs to the Borehole Object.
 
         Parameters
@@ -1162,7 +1204,7 @@ class Borehole:
 
         Returns
         _______
-            WellLogs
+            LASLogs or DLISLogs
                 Well Logs Object.
 
         Raises
@@ -1181,19 +1223,23 @@ class Borehole:
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_well_logs(path='Well_logs.las')
             >>> borehole.logs.well_header
-                mnemonic   unit   value               descr
-            0   STRT       M      100.0               Log Start Depth
-            1   STOP       M      0.05                Log Stop Depth
-            2   STEP       M      -0.05               Log Increment
-            3   NULL              -999.25             Null Value
-            4   COMP              RWE Power           Company Name
-            5   WELL              EB 1                Well Name
-            6   FLD               KW Weisweiler       Field Name
-            7   LOC                                   Location
-            8   PROV                                  Province
-            9   SRVC                                  Service Company
-            10  DATE              26-Oct-2023         Date
-            11  UWI                                   Unique Well ID
+
+            =======  ========== ====== ================    =================
+            Index    mnemonic   unit   value               descr
+            =======  ========== ====== ================    =================
+            0        STRT       M      100.0               Log Start Depth
+            1        STOP       M      0.05                Log Stop Depth
+            2        STEP       M      -0.05               Log Increment
+            3        NULL              -999.25             Null Value
+            4        COMP              RWE Power           Company Name
+            5        WELL              EB 1                Well Name
+            6        FLD               KW Weisweiler       Field Name
+            7        LOC                                   Location
+            8        PROV                                  Province
+            9        SRVC                                  Service Company
+            10       DATE              26-Oct-2023         Date
+            11       UWI                                   Unique Well ID
+            =======  ========== ====== ================    =================
 
         See Also
         ________
@@ -1240,7 +1286,7 @@ class Borehole:
     def add_well_tops(self,
                       path: str,
                       delimiter: str = ',',
-                      unit: str = 'm'):
+                      unit: str = 'm') -> WellTops:
         """Add Well Tops to the Borehole Object.
 
         Parameters
@@ -1249,7 +1295,7 @@ class Borehole:
                 Path to the well top file, e.g. ``path='Well_Tops.csv'``.
             delimiter : str, default: ``','``
                 Delimiter for the well top file, e.g. ``delimiter=','``.
-            unit : str
+            unit : str, default: ``'m'``
                 Unit of the depth measurements, e.g. ``unit='m'``.
 
         Returns
@@ -1271,11 +1317,15 @@ class Borehole:
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_well_tops(path='Well_Tops.csv', delimiter=';')
             >>> borehole.well_tops.df
-                Top              MD
-            0   Infill           3.0
-            1   Base Quaternary  9.5
-            2   Sand 1           28.5
-            3   Clay             32.0
+
+            =======  =================  ======
+            Index    Top                MD
+            =======  =================  ======
+            0        Infill             3.0
+            1        Base Quaternary    9.5
+            2        Sand 1             28.5
+            3        Clay               32.0
+            =======  =================  ======
 
         See Also
         ________
@@ -1313,7 +1363,7 @@ class Borehole:
 
     def add_litholog(self,
                      path: str,
-                     delimiter: str = ','):
+                     delimiter: str = ',') -> LithoLog:
         """Add LithoLog to the Borehole Object.
 
         Parameters
@@ -1342,11 +1392,15 @@ class Borehole:
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_litholog(path='LithoLog.csv', delimiter=';')
             >>> borehole.litholog.df
-                Top              MD
-            0   Infill           3.0
-            1   Base Quaternary  9.5
-            2   Sand 1           28.5
-            3   Clay             32.0
+
+            =======  =================  ======
+            Index    Top                MD
+            =======  =================  ======
+            0        Infill             3.0
+            1        Base Quaternary    9.5
+            2        Sand 1             28.5
+            3        Clay               32.0
+            =======  =================  ======
 
         See Also
         ________
@@ -1377,7 +1431,7 @@ class Borehole:
         self.has_litholog = True
         self.df.loc['Litholog', 'Value'] = self.has_litholog
 
-    def add_well_design(self):
+    def add_well_design(self) -> WellDesign:
         """Add Well Design object to Borehole Object.
 
         Returns
@@ -1397,8 +1451,11 @@ class Borehole:
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.add_well_design()
             >>> borehole.well_design
-            Pipes: {}
-            Cements: {}
+
+            ========= ====
+            Pipes:    {}
+            Cements:  {}
+            ========= ====
 
         .. versionadded:: 0.0.1
         """

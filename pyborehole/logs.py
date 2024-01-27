@@ -176,11 +176,11 @@ class LASLogs:
         __________
 
         tracks : Union[str, list]
-            Name/s of the logs to be plotted, e.g. ``tracks='SGR'`` or ``tracks=['SGR', 'K'].
+            Name/s of the logs to be plotted, e.g. ``tracks='SGR'`` or ``tracks=['SGR', 'K']``.
         depth_column : str
             Name of the column holding the depths, e.g. ``depth_column='MD'``.
         colors : Union[str, list]
-            Colors of the logs, e.g. ``colors='black'`` or ``colors=['black', 'blue'].
+            Colors of the logs, e.g. ``colors='black'`` or ``colors=['black', 'blue']``.
         add_well_tops : bool, default = False
             Boolean to add well tops to the plot.
         add_well_design : bool, default = False

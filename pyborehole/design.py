@@ -23,6 +23,7 @@ class WellDesign:
         >>> borehole.add_well_design()
         >>>
 
+    .. versionadded:: 0.0.1
     """
 
     def __init__(self,
