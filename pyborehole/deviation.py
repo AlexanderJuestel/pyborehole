@@ -390,6 +390,7 @@ class Deviation:
                                                     1,
                                                     2)
 
+            # Stacking Coordinates
             segments = np.hstack([xy[:-1],
                                   xy[1:]])
 
@@ -434,7 +435,7 @@ class Deviation:
             roll : Union[float, int], default: ``0``
                 Rolling angle for view, e.g. ``roll=0``.
             relative : bool, default: ``False``
-                Boolean value to plot the plot with relative coordinates.
+                Boolean value to plot the plot with relative coordinates, e.g. ``relative=False``.
 
         Returns
         _______
@@ -450,6 +451,10 @@ class Deviation:
 
         Examples
         ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
+            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.plot_deviation_3d()
 
         See Also
@@ -459,7 +464,6 @@ class Deviation:
             get_borehole_tube : Get borehole tube.
 
         .. versionadded:: 0.0.1
-
         """
         # Checking that the elevation is provided as float or int
         if not isinstance(elev, (float, int)):
@@ -521,7 +525,12 @@ class Deviation:
             z : Union[float, int], default: ``0``
                 Z-coordinate of the borehole, e.g. ``y=100``.
             relative : bool, default: ``False``
-                Boolean value to plot the plot with relative coordinates.
+                Boolean value to plot the plot with relative coordinates, e.g. ``relative=False``.
+
+        Returns
+        _______
+            tube : pv.Tube
+                PyVista Tube of the borehole.
 
         Raises
         ______
@@ -530,6 +539,10 @@ class Deviation:
 
         Examples
         ________
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland', location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136, borehole_id='DABO123456')
+            >>> borehole.add_deviation(path='Deviation.csv', delimiter=';', md_column='MD', dip_column='DIP', azimuth_column='AZI')
             >>> borehole.deviation.get_borehole_tube(radius=10)
 
         See Also
