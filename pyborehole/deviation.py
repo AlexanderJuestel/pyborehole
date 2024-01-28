@@ -359,9 +359,9 @@ class Deviation:
             c : np.ndarray, default: ``None``.
                 Array for coloring the well path, e.g. ``c=borehole.deviation.tvd``, or ``c=borehole.deviation.azi``,
                 ``c=borehole.deviation.radius``.
-            vmin : Union[float, int], default: ``None``.
+            vmin : Union[float, int], default: ``None``
                 Minimum value for colormap, e.g. ``vmin=0``.
-            vmax : Union[float, int], default: ``None``.
+            vmax : Union[float, int], default: ``None``
                 Maximum value for colormap, e.g. ``vmax=100``.
             cmap : str, default: ``'viridis'``
                 Name of the colormap to be used, e.g. ``cmap='viridis'``.

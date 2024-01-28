@@ -770,7 +770,7 @@ def test_borehole_class_add_well_tops():
 
     with pytest.raises(ValueError):
         borehole = Borehole(name='Weisweiler R1')
-        borehole.add_well_tops(path='Well_Tops.csv')
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';')
 
     with pytest.raises(TypeError):
         borehole = Borehole(name='Weisweiler R1')
@@ -778,7 +778,7 @@ def test_borehole_class_add_well_tops():
                                  location=(6.313031, 50.835676),
                                  year=2024,
                                  crs='EPSG:4326')
-        borehole.add_well_tops(path=['Well_Tops.csv'])
+        borehole.add_well_tops(path=['data/Well_Tops.csv'], delimiter=';')
 
     with pytest.raises(TypeError):
         borehole = Borehole(name='Weisweiler R1')
@@ -786,7 +786,7 @@ def test_borehole_class_add_well_tops():
                                  location=(6.313031, 50.835676),
                                  year=2024,
                                  crs='EPSG:4326')
-        borehole.add_well_tops(path='Well_Tops.csv', delimiter=[','])
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=[';'])
 
     with pytest.raises(TypeError):
         borehole = Borehole(name='Weisweiler R1')
@@ -794,19 +794,56 @@ def test_borehole_class_add_well_tops():
                                  location=(6.313031, 50.835676),
                                  year=2024,
                                  crs='EPSG:4326')
-        borehole.add_well_tops(path='Well_Tops.csv', unit=['m'])
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';', top_column=['Top'])
+
+    with pytest.raises(TypeError):
+        borehole = Borehole(name='Weisweiler R1')
+        borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland',
+                                 location=(6.313031, 50.835676),
+                                 year=2024,
+                                 crs='EPSG:4326')
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';', depth_column=['MD'])
+
+    with pytest.raises(ValueError):
+        borehole = Borehole(name='Weisweiler R1')
+        borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland',
+                                 location=(6.313031, 50.835676),
+                                 year=2024,
+                                 crs='EPSG:4326')
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';', top_column='Tops')
+
+    with pytest.raises(ValueError):
+        borehole = Borehole(name='Weisweiler R1')
+        borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland',
+                                 location=(6.313031, 50.835676),
+                                 year=2024,
+                                 crs='EPSG:4326')
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';', depth_column='Depth')
+
+    with pytest.raises(TypeError):
+        borehole = Borehole(name='Weisweiler R1')
+        borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland',
+                                 location=(6.313031, 50.835676),
+                                 year=2024,
+                                 crs='EPSG:4326')
+        borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';', unit=['m'])
 
     borehole = Borehole(name='Weisweiler R1')
     borehole.init_properties(address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland',
                              location=(6.313031, 50.835676),
                              year=2024,
                              crs='EPSG:4326')
-    borehole.add_well_tops(path='data/Well_Tops.csv')
+    borehole.add_well_tops(path='data/Well_Tops.csv', delimiter=';')
 
     assert borehole.has_properties is True
     assert isinstance(borehole.well_tops, WellTops)
     assert borehole.has_well_tops is True
     assert borehole.df.loc['Well Tops', 'Value'] is True
+    assert isinstance(borehole.well_tops.df, pd.DataFrame)
+    assert isinstance(borehole.well_tops.top_column, str)
+    assert isinstance(borehole.well_tops.depth_column, str)
+    assert borehole.well_tops.top_column == 'Top'
+    assert borehole.well_tops.depth_column == 'MD'
 
 
 def test_borehole_class_add_litholog():

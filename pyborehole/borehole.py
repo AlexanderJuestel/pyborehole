@@ -274,7 +274,19 @@ class Borehole:
             borehole_id : Union[str, int, float], default: ``None``
                 Unique identifier for this borehole, e.g. ``borehole_id='DABO123456'``.
             borehole_type : str, default: ``None``
-                Borehole type, e.g. ``borehole_type='exploration'``.
+                Borehole type, e.g. ``borehole_type='exploration'``. Options include:
+
+                ================= ===================
+                'exploration'     Exploration Well
+                'producer'        Production Well
+                'injector'        Injection Well
+                'sidetrack'       Sidetrack
+                'observatory'     Observatory Well
+                'monitoring'      Sidetrack Well
+                'heat exchanger'  Heat Exchanger
+                'disposal'        Disposal Well
+                ================= ===================
+
             md : Union[int, float], default: ``None``
                 Measured depth of the borehole, e.g. ``md=100``.
             tvd : Union[int, float], default: ``None``
@@ -368,9 +380,10 @@ class Borehole:
         # Checking that the borehole_type is one of the possible types
         if borehole_type:
             if borehole_type not in ['exploration', 'producer', 'injector', 'sidetrack', 'observatory',
-                                     'heat exchanger']:
+                                     'heat exchanger', 'monitoring', 'disposal']:
                 raise ValueError(
-                    'The borehole_type must be one of the following: exploration, producer, injector, sidetrack, observatory, heat exchanger')
+                    'The borehole_type must be one of the following: exploration, producer, injector, sidetrack, '
+                    'observatory, heat exchanger, monitoring, disposal')
 
         # Checking that the measured depth is provided as int or float
         if not isinstance(md, (int, float, type(None))):
@@ -1286,6 +1299,8 @@ class Borehole:
     def add_well_tops(self,
                       path: str,
                       delimiter: str = ',',
+                      top_column: str = 'Top',
+                      depth_column: str = 'MD',
                       unit: str = 'm') -> WellTops:
         """Add Well Tops to the Borehole Object.
 
@@ -1295,6 +1310,10 @@ class Borehole:
                 Path to the well top file, e.g. ``path='Well_Tops.csv'``.
             delimiter : str, default: ``','``
                 Delimiter for the well top file, e.g. ``delimiter=','``.
+            top_column : str, default: ``'Top'``
+                Name of the column that contains the names of the well tops, e.g. ``top_column='Top'``.
+            depth_column : str, default: ``'MD'``
+                Name of the column holding the depths, e.g. ``depth_column='MD'``.
             unit : str, default: ``'m'``
                 Unit of the depth measurements, e.g. ``unit='m'``.
 
@@ -1309,6 +1328,8 @@ class Borehole:
                 If the wrong input data types are provided.
             ValueError
                 If the Borehole Properties have not been initiated.
+            Value Error
+                If the columns are not present in the DataFrame.
 
         Examples
         ________
@@ -1348,6 +1369,14 @@ class Borehole:
         if not isinstance(delimiter, str):
             raise TypeError('The delimiter must be of type str')
 
+        # Checking that the top column is of type string
+        if not isinstance(top_column, str):
+            raise TypeError('Top_column must be provided as string')
+
+        # Checking that the depth column is of type string
+        if not isinstance(depth_column, str):
+            raise TypeError('Depth_column must be provided as string')
+
         # Checking that the unit is provided as string
         if not isinstance(unit, str):
             raise TypeError('The unit must be provided as string')
@@ -1356,6 +1385,14 @@ class Borehole:
         self.well_tops = WellTops(path=path,
                                   delimiter=delimiter,
                                   unit=unit)
+
+        # Checking that the top column is in the DataFrame
+        if not {top_column}.issubset(self.well_tops.df):
+            raise ValueError('The Top_column is not part of the Well Tops')
+
+        # Checking that the depth column is in the DataFrame
+        if not {depth_column}.issubset(self.well_tops.df):
+            raise ValueError('The depth_column is not part of the Well Tops')
 
         # Setting Attributes
         self.has_well_tops = True
