@@ -20,6 +20,172 @@ class Borehole:
         name : str
             Name of the Borehole, e.g. ``name='Weisweiler R1'``.
 
+    Attributes
+    __________
+        name : str
+            Name of the borehole, e.g. ``name='Weisweiler R1'``.
+        address : str, default: ``None``
+            Address of the b, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
+        location : tuple, default: ``None``
+            Coordinates tuple representing the location of the borehole, e.g. ``location=(6.313031, 50.835676)``.
+        x : Union[float, int], default: ``None``
+            X coordinate of the borehole location, e.g. ``x=6.313031``.
+        y : Union[float, int], default: ``None``
+            Y coordinate of the borehole location, e.g. ``y=50.835676``.
+        year : int, default: ``None``
+            Year the borehole was drilled, e.g. ``year=2024``.
+        crs : Union[str, pyproj.crs.crs.CRS], default: ``None``
+            Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
+        crs_pyproj : pyproj.crs.crs.CRS, default: ``None``
+            PyProj Coordinate Reference System.
+        altitude_above_sea_level : Union[int, float], default: ``None``
+            Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
+        altitude_above_kb : Union[int, float], default: ``None``
+            Altitude above KB, e.g. ``altitude_above_kb=140``.
+        borehole_id : Union[str, int, float], default: ``None``
+            Unique identifier for this borehole, e.g. ``borehole_id='DABO123456'``.
+        borehole_type : str, default: ``None``
+            Borehole type, e.g. ``borehole_type='exploration'``. Options include:
+
+            ================= ===================
+            'exploration'     Exploration Well
+            'producer'        Production Well
+            'injector'        Injection Well
+            'sidetrack'       Sidetrack
+            'observatory'     Observatory Well
+            'monitoring'      Sidetrack Well
+            'heat exchanger'  Heat Exchanger
+            'disposal'        Disposal Well
+            ================= ===================
+
+        md : Union[int, float], default: ``None``
+            Measured depth of the borehole, e.g. ``md=100``.
+        tvd : Union[int, float], default: ``None``
+            True vertical depth of the borehole, e.g. ``tvd=95``.
+        tvdss : Union[int, float], default: ``None``
+            True vertical depth sub see of the borehole, e.g. ``tvdss=-100``.
+        depth_unit : str, default: ``None``
+            Unit for the depth values, e.g. ``depth_values='m'``.
+        is_vertical : bool, default: ``None``
+            Variable to state if the borehole is vertical (True) or deviated (False), e.g. ``vertical=True``.
+        contractee : str, default: ``None``
+            Contractee of the drilling operation, e.g. ``contractee='Fraunhofer IEG'``.
+        drilling_contractor : str, default: ``None``
+            Drilling contractor who performed the drilling, e.g. ``drilling_contractor='RWE BOWA'``.
+        logging_contractor : str, default: ``None``
+            Logging contractor who performed the logging, e.g. ``logging_contractor='DMT GmbH'``.
+        field : str, default: ``None``
+            Name of the field the well was drilled in, e.g. ``field='Erdwärme Aachen'``.
+        project : str, default: ``None``
+            Name of the project the borehole was drilled for, e.g. ``project='DGE Rollout'``.
+        start_drilling : str, default: ``None``
+            Start date of the drilling operation, e.g. ``start_drilling='2023-10-18'``.
+        end_drilling : str, default: ``None``
+            End date of the drilling operation, e.g. ``end_drilling='2023-10-28'``.
+        start_logging : str, default: ``None``
+            Start date of the logging operation, e.g. ``start_logging='2023-10-18'``.
+        end_logging : str, default: ``None``
+            End date of the logging operation, e.g. ``end_logging='2023-10-28'``.
+
+        deviation : Deviation, default: ``None``
+            Deviation Object.
+        logs : Union[LASLogs, DLISLogs], default: ``None``
+            Well Log Object.
+        well_tops : Well Tops, default: ``None``
+            Well Tops Object.
+        litholog : LithoLog, default: ``None``
+            LithoLog Object.
+        well_design : WellDesign, default: ``None``
+            Well Design Object.
+
+        df : pd.DataFrame, default: ``None``
+            Pandas DataFrame containing the borehole information. Data columns are as follows:
+
+            ===================== ===================================
+            Index                 Index of each borehole information
+            Borehole Information  Borehole information
+            ===================== ===================================
+
+        gdf : gpd.GeoDataFrame, default: ``None``
+            GeoPandas GeoDataFrame containing the borehole information. Data columns are as follows:
+
+            ===================== ===================================
+            Index                 Index of each borehole information
+            Borehole Information  Borehole information
+            geometry              Geoemtry of the borehole location
+            ===================== ===================================
+
+        properties : pd.DataFrame, default: ``None``
+            Pandas DataFrame containing the borehole properties. Data columns are as follows:
+
+            ===================== ===================================
+            Index                 Index of each borehole information
+            Borehole Information  Borehole information
+            ===================== ===================================
+
+        has_name : bool, default: ``None``
+            Boolean variable for the name of the borehole.
+        has_address : bool, default: ``None``
+            Boolean variable for the address of the borehole.
+        has_location : bool, default: ``None``
+            Boolean variable for the location of the borehole.
+        has_year : bool, default: ``None``
+            Boolean variable for the drilling year of the borehole.
+        has_x : bool, default: ``None``
+            Boolean variable for the x coordinate of the borehole.
+        has_y : bool, default: ``None``
+            Boolean variable for the y coordinate of the borehole.
+        has_crs : bool, default: ``None``
+            Boolean variable for the CRS of the borehole.
+        has_crs_pyproj : bool, default: ``None``
+            Boolean variable for the PyProj CRS of the borehole.
+        has_altitude_above_sea_level : bool, default: ``None``
+            Boolean variable for the altitude above sea level of the borehole.
+        has_altitude_above_kb : bool, default: ``None``
+            Boolean variable for the altitude above KB of the borehole.
+        has_borehole_id : bool, default: ``None``
+            Boolean variable for the borehole ID of the borehole.
+        has_borehole_type : bool, default: ``None``
+            Boolean variable for the borehole type of the borehole.
+        has_md : bool, default: ``None``
+            Boolean variable for the measured depth of the borehole.
+        has_tvd : bool, default: ``None``
+            Boolean variable for the true vertical depth of the borehole.
+        has_tvdss : bool, default: ``None``
+            Boolean variable for the true vertical depth subsea of the borehole.
+        has_depth_unit : bool, default: ``None``
+            Boolean variable for the depth unit of the borehole.
+        has_contractee : bool, default: ``None``
+            Boolean variable for the contractee of the borehole.
+        has_drilling_contractor : bool, default: ``None``
+            Boolean variable for the drilling contractor of the borehole.
+        has_logging_contractor : bool, default: ``None``
+            Boolean variable for the logging contractor of the borehole.
+        has_field : bool, default: ``None``
+            Boolean variable for the field of the borehole.
+        has_project : bool, default: ``None``
+            Boolean variable for the project of the borehole.
+        has_start_drilling : bool, default: ``None``
+            Boolean variable for the start of the drilling of the borehole.
+        has_end_drilling : bool, default: ``None``
+            Boolean variable for the end of the drilling of the borehole.
+        has_start_logging : bool, default: ``None``
+            Boolean variable for the start of the logging of the borehole.
+        has_end_logging : bool, default: ``None``
+            Boolean variable for the end of the logging of the borehole.
+        has_deviation : bool, default: ``None``
+            Boolean variable for the deviation of the borehole.
+        has_logs : bool, default: ``None``
+            Boolean variable for the logs of the borehole.
+        has_well_tops : bool, default: ``None``
+            Boolean variable for the well tops of the borehole.
+        has_litholog : bool, default: ``None``
+            Boolean variable for the litholog of the borehole.
+        has_well_design : bool, default: ``None``
+            Boolean variable for the well design of the borehole.
+        has_properties : bool, default: ``None``
+            Boolean variable for the properties of the borehole.
+
     Returns
     _______
         Borehole
@@ -65,6 +231,172 @@ class Borehole:
         __________
             name : str
                 Name of the Borehole, e.g. ``name='Weisweiler R1'``.
+
+        Attributes
+        __________
+            name : str
+                Name of the borehole, e.g. ``name='Weisweiler R1'``.
+            address : str, default: ``None``
+                Address of the b, e.g. ``address='Am Kraftwerk 17, 52249 Eschweiler, Deutschland'``.
+            location : tuple, default: ``None``
+                Coordinates tuple representing the location of the borehole, e.g. ``location=(6.313031, 50.835676)``.
+            x : Union[float, int], default: ``None``
+                X coordinate of the borehole location, e.g. ``x=6.313031``.
+            y : Union[float, int], default: ``None``
+                Y coordinate of the borehole location, e.g. ``y=50.835676``.
+            year : int, default: ``None``
+                Year the borehole was drilled, e.g. ``year=2024``.
+            crs : Union[str, pyproj.crs.crs.CRS], default: ``None``
+                Coordinate Reference System of the coordinates, e.g. ``crs='EPSG:4326'``.
+            crs_pyproj : pyproj.crs.crs.CRS, default: ``None``
+                PyProj Coordinate Reference System.
+            altitude_above_sea_level : Union[int, float], default: ``None``
+                Altitude above sea level, e.g. ``altitude_above_sea_level=136``.
+            altitude_above_kb : Union[int, float], default: ``None``
+                Altitude above KB, e.g. ``altitude_above_kb=140``.
+            borehole_id : Union[str, int, float], default: ``None``
+                Unique identifier for this borehole, e.g. ``borehole_id='DABO123456'``.
+            borehole_type : str, default: ``None``
+                Borehole type, e.g. ``borehole_type='exploration'``. Options include:
+
+                ================= ===================
+                'exploration'     Exploration Well
+                'producer'        Production Well
+                'injector'        Injection Well
+                'sidetrack'       Sidetrack
+                'observatory'     Observatory Well
+                'monitoring'      Sidetrack Well
+                'heat exchanger'  Heat Exchanger
+                'disposal'        Disposal Well
+                ================= ===================
+
+            md : Union[int, float], default: ``None``
+                Measured depth of the borehole, e.g. ``md=100``.
+            tvd : Union[int, float], default: ``None``
+                True vertical depth of the borehole, e.g. ``tvd=95``.
+            tvdss : Union[int, float], default: ``None``
+                True vertical depth sub see of the borehole, e.g. ``tvdss=-100``.
+            depth_unit : str, default: ``None``
+                Unit for the depth values, e.g. ``depth_values='m'``.
+            is_vertical : bool, default: ``None``
+                Variable to state if the borehole is vertical (True) or deviated (False), e.g. ``vertical=True``.
+            contractee : str, default: ``None``
+                Contractee of the drilling operation, e.g. ``contractee='Fraunhofer IEG'``.
+            drilling_contractor : str, default: ``None``
+                Drilling contractor who performed the drilling, e.g. ``drilling_contractor='RWE BOWA'``.
+            logging_contractor : str, default: ``None``
+                Logging contractor who performed the logging, e.g. ``logging_contractor='DMT GmbH'``.
+            field : str, default: ``None``
+                Name of the field the well was drilled in, e.g. ``field='Erdwärme Aachen'``.
+            project : str, default: ``None``
+                Name of the project the borehole was drilled for, e.g. ``project='DGE Rollout'``.
+            start_drilling : str, default: ``None``
+                Start date of the drilling operation, e.g. ``start_drilling='2023-10-18'``.
+            end_drilling : str, default: ``None``
+                End date of the drilling operation, e.g. ``end_drilling='2023-10-28'``.
+            start_logging : str, default: ``None``
+                Start date of the logging operation, e.g. ``start_logging='2023-10-18'``.
+            end_logging : str, default: ``None``
+                End date of the logging operation, e.g. ``end_logging='2023-10-28'``.
+
+            deviation : Deviation, default: ``None``
+                Deviation Object.
+            logs : Union[LASLogs, DLISLogs], default: ``None``
+                Well Log Object.
+            well_tops : Well Tops, default: ``None``
+                Well Tops Object.
+            litholog : LithoLog, default: ``None``
+                LithoLog Object.
+            well_design : WellDesign, default: ``None``
+                Well Design Object.
+
+            df : pd.DataFrame, default: ``None``
+                Pandas DataFrame containing the borehole information. Data columns are as follows:
+
+                ===================== ===================================
+                Index                 Index of each borehole information
+                Borehole Information  Borehole information
+                ===================== ===================================
+
+            gdf : gpd.GeoDataFrame, default: ``None``
+                GeoPandas GeoDataFrame containing the borehole information. Data columns are as follows:
+
+                ===================== ===================================
+                Index                 Index of each borehole information
+                Borehole Information  Borehole information
+                geometry              Geoemtry of the borehole location
+                ===================== ===================================
+
+            properties : pd.DataFrame, default: ``None``
+                Pandas DataFrame containing the borehole properties. Data columns are as follows:
+
+                ===================== ===================================
+                Index                 Index of each borehole information
+                Borehole Information  Borehole information
+                ===================== ===================================
+
+            has_name : bool, default: ``None``
+                Boolean variable for the name of the borehole.
+            has_address : bool, default: ``None``
+                Boolean variable for the address of the borehole.
+            has_location : bool, default: ``None``
+                Boolean variable for the location of the borehole.
+            has_year : bool, default: ``None``
+                Boolean variable for the drilling year of the borehole.
+            has_x : bool, default: ``None``
+                Boolean variable for the x coordinate of the borehole.
+            has_y : bool, default: ``None``
+                Boolean variable for the y coordinate of the borehole.
+            has_crs : bool, default: ``None``
+                Boolean variable for the CRS of the borehole.
+            has_crs_pyproj : bool, default: ``None``
+                Boolean variable for the PyProj CRS of the borehole.
+            has_altitude_above_sea_level : bool, default: ``None``
+                Boolean variable for the altitude above sea level of the borehole.
+            has_altitude_above_kb : bool, default: ``None``
+                Boolean variable for the altitude above KB of the borehole.
+            has_borehole_id : bool, default: ``None``
+                Boolean variable for the borehole ID of the borehole.
+            has_borehole_type : bool, default: ``None``
+                Boolean variable for the borehole type of the borehole.
+            has_md : bool, default: ``None``
+                Boolean variable for the measured depth of the borehole.
+            has_tvd : bool, default: ``None``
+                Boolean variable for the true vertical depth of the borehole.
+            has_tvdss : bool, default: ``None``
+                Boolean variable for the true vertical depth subsea of the borehole.
+            has_depth_unit : bool, default: ``None``
+                Boolean variable for the depth unit of the borehole.
+            has_contractee : bool, default: ``None``
+                Boolean variable for the contractee of the borehole.
+            has_drilling_contractor : bool, default: ``None``
+                Boolean variable for the drilling contractor of the borehole.
+            has_logging_contractor : bool, default: ``None``
+                Boolean variable for the logging contractor of the borehole.
+            has_field : bool, default: ``None``
+                Boolean variable for the field of the borehole.
+            has_project : bool, default: ``None``
+                Boolean variable for the project of the borehole.
+            has_start_drilling : bool, default: ``None``
+                Boolean variable for the start of the drilling of the borehole.
+            has_end_drilling : bool, default: ``None``
+                Boolean variable for the end of the drilling of the borehole.
+            has_start_logging : bool, default: ``None``
+                Boolean variable for the start of the logging of the borehole.
+            has_end_logging : bool, default: ``None``
+                Boolean variable for the end of the logging of the borehole.
+            has_deviation : bool, default: ``None``
+                Boolean variable for the deviation of the borehole.
+            has_logs : bool, default: ``None``
+                Boolean variable for the logs of the borehole.
+            has_well_tops : bool, default: ``None``
+                Boolean variable for the well tops of the borehole.
+            has_litholog : bool, default: ``None``
+                Boolean variable for the litholog of the borehole.
+            has_well_design : bool, default: ``None``
+                Boolean variable for the well design of the borehole.
+            has_properties : bool, default: ``None``
+                Boolean variable for the properties of the borehole.
 
         Returns
         _______

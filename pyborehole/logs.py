@@ -858,7 +858,6 @@ class LASLogs:
 
         return tube_along_spline
 
-
     def calculate_vshale(self,
                          method: str,
                          column: str,
@@ -870,8 +869,7 @@ class LASLogs:
         Parameters
         __________
             method : str
-                Method used to calculate the Shale Volume, e.g. ``method='linear'``.
-                The following methods are available
+                Method used to calculate the Shale Volume, e.g. ``method='linear'``. Other methods include:
 
                 ==================== =======================================
                 ``linear``           Linear Gamma Ray Index Shale Volume
@@ -969,7 +967,6 @@ class LASLogs:
 
         return self.df
 
-
     def calculate_vshale_linear(self,
                                 column: str,
                                 minz: Union[float, int] = None,
@@ -1051,7 +1048,6 @@ class LASLogs:
         # Appending Shale Volume to Borehole Logs DataFrame
         self.df['VShale_Linear'] = vshale
 
-
     def calculate_net_to_gross(self,
                                method: str,
                                column: str,
@@ -1064,7 +1060,7 @@ class LASLogs:
         Parameters
         __________
             method : str
-                Method used to calculate the Shale Volume, e.g. ``method='linear'``.
+                Method used to calculate the Shale Volume, e.g. ``method='linear'``. Other methods include:
 
                 ==================== =======================================
                 ``linear``           Linear Gamma Ray Index Shale Volume
@@ -1176,27 +1172,166 @@ class LASLogs:
 
         return net_to_gross
 
+
 class DLISLogs:
     """Class to initiate a Well Log Object.
+
+    Parameters
+    __________
+        path : str
+            Path to the well logs, e.g. ``path='logs.dlis'``.
+        nodata : Union[int, float], default: ``-9999``
+            No data value, e.g. ``nodata=-9999``.
+
+    Attributes
+    __________
+        df : pd.DataFrame
+            Pandas DataFrame containing the curves. Data columns are as follows:
+
+            ======= =====================================
+            Index   Index of each measurment
+            DEPTH   Measured depth of each measurment
+            Curves  Columns containing the measurements
+            ======= =====================================
+
+            **Example:**
+
+            ======= ======= =========== ========= ========= ==========
+            Index   DEPTH   SGR.SG      TH.SG     U.SG      K.SG
+            ======= ======= =========== ========= ========= ==========
+            0       0.02    NaN         NaN       NaN       NaN
+            1       0.07    9.997668    1.991596  0.409476  0.247140
+            2       0.12    10.925511   2.279886  0.427854  0.262401
+            3       0.17    11.815056   2.566926  0.447979  0.273815
+            4       0.22    12.674678   2.846440  0.467957  0.284187
+            ======= ======= =========== ========= ========= ==========
+
+    Returns
+    _______
+        DLISLogs
+            Well Log Object.
+
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
+
+    Examples
+    ________
+        >>> import pyborehole
+        >>> from pyborehole.borehole import Borehole
+        >>> borehole = Borehole(name='Weisweiler R1')
+        >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+        >>> borehole.add_well_logs(path='Well_logs.las')
+        >>> borehole.logs.df
+
+        ======= ======= =========== ========= ========= ==========
+        Index	DEPTH   SGR.SG      TH.SG     U.SG      K.SG
+        ======= ======= =========== ========= ========= ==========
+        0       0.02    NaN         NaN       NaN       NaN
+        1       0.07    9.997668    1.991596  0.409476  0.247140
+        2       0.12    10.925511   2.279886  0.427854  0.262401
+        3       0.17    11.815056   2.566926  0.447979  0.273815
+        4       0.22    12.674678   2.846440  0.467957  0.284187
+        ======= ======= =========== ========= ========= ==========
+
+    See Also
+    ________
+        pyborehole.borehole.Borehole.add_deviation : Add deviation to the Borehole Object.
+        pyborehole.borehole.Borehole.add_litholog : Add LithoLog to the Borehole Object.
+        pyborehole.borehole.Borehole.add_well_design : Add Well Design to the Borehole Object.
+        pyborehole.borehole.Borehole.add_well_tops : Add Well Tops to the Borehole Object.
+
+    .. versionadded:: 0.0.1
+    """
+    # Initiate class
+    def __init__(self,
+                 borehole,
+                 path: str,
+                 nodata: Union[int, float] = -9999):
+        """Class to initiate a Well Log Object.
 
         Parameters
         __________
             path : str
                 Path to the well logs, e.g. ``path='logs.dlis'``.
+            nodata : Union[int, float], default: ``-9999``
+                No data value, e.g. ``nodata=-9999``.
 
+        Attributes
+        __________
+            df : pd.DataFrame
+                Pandas DataFrame containing the curves. Data columns are as follows:
 
+            ======= =====================================
+            Index   Index of each measurment
+            DEPTH   Measured depth of each measurment
+            Curves  Columns containing the measurements
+            ======= =====================================
+
+            **Example:**
+
+            ======= ======= =========== ========= ========= ==========
+            Index	DEPTH   SGR.SG      TH.SG     U.SG      K.SG
+            ======= ======= =========== ========= ========= ==========
+            0       0.02    NaN         NaN       NaN       NaN
+            1       0.07    9.997668    1.991596  0.409476  0.247140
+            2       0.12    10.925511   2.279886  0.427854  0.262401
+            3       0.17    11.815056   2.566926  0.447979  0.273815
+            4       0.22    12.674678   2.846440  0.467957  0.284187
+            ======= ======= =========== ========= ========= ==========
+
+        Returns
+        _______
+            DLISLogs
+                Well Log Object.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> import pyborehole
+            >>> from pyborehole.borehole import Borehole
+            >>> borehole = Borehole(name='Weisweiler R1')
+            >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
+            >>> borehole.add_well_logs(path='Well_logs.las')
+            >>> borehole.logs.df
+
+            ======= ======= =========== ========= ========= ==========
+            Index	DEPTH   SGR.SG      TH.SG     U.SG      K.SG
+            ======= ======= =========== ========= ========= ==========
+            0       0.02    NaN         NaN       NaN       NaN
+            1       0.07    9.997668    1.991596  0.409476  0.247140
+            2       0.12    10.925511   2.279886  0.427854  0.262401
+            3       0.17    11.815056   2.566926  0.447979  0.273815
+            4       0.22    12.674678   2.846440  0.467957  0.284187
+            ======= ======= =========== ========= ========= ==========
+
+        See Also
+        ________
+            pyborehole.borehole.Borehole.add_deviation : Add deviation to the Borehole Object.
+            pyborehole.borehole.Borehole.add_litholog : Add LithoLog to the Borehole Object.
+            pyborehole.borehole.Borehole.add_well_design : Add Well Design to the Borehole Object.
+            pyborehole.borehole.Borehole.add_well_tops : Add Well Tops to the Borehole Object.
+
+        .. versionadded:: 0.0.1
         """
-
-    def __init__(self,
-                 borehole,
-                 path: str,
-                 nodata: Union[int, float] = -9999):
-
         # Importing dlisio
         try:
             from dlisio import dlis
         except ModuleNotFoundError:
             ModuleNotFoundError('dlisio package not installed')
+
+        # Checking that the path is provided as string
+        if not isinstance(path, str):
+            raise TypeError('The path must be provided as string')
+
+        # Checking that the nodata is provided as float or int
+        if not isinstance(nodata, (float, int)):
+            raise TypeError('The nodata value must be provided as float or int')
 
         # Opening DLIS file
         dlis, *tail = dlis.load(path)
@@ -1699,7 +1834,6 @@ class DLISLogs:
 
         return tube_along_spline
 
-
     def calculate_vshale(self,
                          method: str,
                          column: str,
@@ -1810,7 +1944,6 @@ class DLISLogs:
 
         return self.df
 
-
     def calculate_vshale_linear(self,
                                 column: str,
                                 minz: Union[float, int] = None,
@@ -1891,7 +2024,6 @@ class DLISLogs:
 
         # Appending Shale Volume to Borehole Logs DataFrame
         self.df['VShale_Linear'] = vshale
-
 
     def calculate_net_to_gross(self,
                                method: str,
@@ -2026,14 +2158,31 @@ def resample_between_well_deviation_points(coordinates: np.ndarray,
     __________
         coordinates: np.ndarray
             Nx3 Numpy array containing the X, Y, and Z coordinates that define the path of a well.
+        spacing : Union[float, int], default: ``0.5``
+                Spacing for the resampling of the well path, e.g. ``spacing=0.5``.
 
     Returns
     _______
-         points_resampled: np.ndarray
+         points_resampled : np.ndarray
             Resampled points along a well.
 
-    .. versionadded:: 1.0.x
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
 
+    Examples
+    ________
+        >>> points = resample_between_well_deviation_points(coordinates=xyz, spacing=spacing)
+
+    See Also
+    ________
+        polyline_from_points : Create PyVista PolyLine from points.
+        get_points_along_spline : Return the closest point on the spline a given a length along a spline.
+        resample_log : Resample one log.
+        resample_logs : Resample logs.
+
+    .. versionadded:: 0.0.1
     """
 
     # Checking that the coordinates are provided as np.ndarray
@@ -2061,7 +2210,7 @@ def resample_between_well_deviation_points(coordinates: np.ndarray,
 
 
 def polyline_from_points(points: np.ndarray):
-    """Create PyVista PolyLine from points
+    """Create PyVista PolyLine from points.
 
     Parameters
     __________
@@ -2073,7 +2222,7 @@ def polyline_from_points(points: np.ndarray):
     ______
         poly: pv.core.pointset.PolyData
 
-    .. versionadded:: 1.0.x
+    .. versionadded:: 0.0.1
 
     """
 
@@ -2122,7 +2271,7 @@ def get_points_along_spline(spline,
         spline.points[idx_list]: pv.core.pyvista_ndarray.pyvista_ndarray
             PyVista Array containing the selected points
 
-    .. versionadded:: 1.0.x
+    .. versionadded:: 0.0.1
 
     """
 
@@ -2238,6 +2387,10 @@ def resample_logs(logs: pd.DataFrame,
                   rounding_precision=5,
                   drop_first: bool = True,
                   drop_last: bool = True, ):
+    """Resample logs.
+
+
+    """
     # Resampling DataFrames
     dfs = [resample_log(log=logs[['DEPTH', column]],
                         resampling=resampling,
