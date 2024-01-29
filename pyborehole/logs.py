@@ -2170,6 +2170,8 @@ def resample_between_well_deviation_points(coordinates: np.ndarray,
     ______
         TypeError
             If the wrong input data types are provided.
+        ValueError
+            If less than two coordinate dimentions (X, Y, Z) are provided.
 
     Examples
     ________
@@ -2181,6 +2183,7 @@ def resample_between_well_deviation_points(coordinates: np.ndarray,
         get_points_along_spline : Return the closest point on the spline a given a length along a spline.
         resample_log : Resample one log.
         resample_logs : Resample logs.
+        merge_logs : Merge multiple logs.
 
     .. versionadded:: 0.0.1
     """
@@ -2193,7 +2196,11 @@ def resample_between_well_deviation_points(coordinates: np.ndarray,
     if coordinates.shape[1] != 3:
         raise ValueError('Three coordinates X, Y, and Z must be provided for each point')
 
-        # Creating list for storing points
+    # Checking that the spacing is of type float or int
+    if not isinstance(spacing, (int, float)):
+        raise TypeError('The spacing must be provided as float or int')
+
+    # Creating list for storing points
     list_points = []
 
     # Iterating over points and creating additional points between all other points
@@ -2215,17 +2222,33 @@ def polyline_from_points(points: np.ndarray):
     Parameters
     __________
 
-        points: np.ndarray
+        points : np.ndarray
             Points defining the PolyLine.
 
     Return
     ______
-        poly: pv.core.pointset.PolyData
+        poly : pv.core.pointset.PolyData
+            PyVista PolyLine.
+
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
+
+    Examples
+    ________
+        >>> polyline = polyline_from_points(points=points)
+
+    See Also
+    ________
+        polyline_from_points : Create PyVista PolyLine from points.
+        get_points_along_spline : Return the closest point on the spline a given a length along a spline.
+        resample_log : Resample one log.
+        resample_logs : Resample logs.
+        merge_logs : Merge multiple logs.
 
     .. versionadded:: 0.0.1
-
     """
-
     # Importing pyvista
     try:
         import pyvista as pv
@@ -2258,21 +2281,34 @@ def get_points_along_spline(spline,
 
     Parameters
     __________
-
-        spline: pv.core.pointset.PolyData
+        spline : pv.core.pointset.PolyData
             Spline with the resampled vertices
-
-        dist: np.ndarray
+        dist : np.ndarray
             np.ndarray containing the measured depths (MD) of values along the well path
 
     Returns
     _______
-
-        spline.points[idx_list]: pv.core.pyvista_ndarray.pyvista_ndarray
+        points : pv.core.pyvista_ndarray.pyvista_ndarray
             PyVista Array containing the selected points
 
-    .. versionadded:: 0.0.1
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
 
+    Examples
+    ________
+        >>> points = get_points_along_spline(spline=spline, dist=dist)
+
+    See Also
+    ________
+        resample_between_well_deviation_points : Resample between points that define the path of a well.
+        polyline_from_points : Create PyVista PolyLine from points.
+        resample_log : Resample one log.
+        resample_logs : Resample logs.
+        merge_logs : Merge multiple logs.
+
+    .. versionadded:: 0.0.1
     """
 
     # Importing pyvista
@@ -2297,33 +2333,103 @@ def get_points_along_spline(spline,
         idx = np.argmin(np.abs(spline.point_data['arc_length'] - distance))
         idx_list.append(idx)
 
+    # Save indexed points in new variable
     points = spline.points[idx_list]
 
     return points
 
 
 def resample_log(log: Union[gpd.GeoDataFrame, LineString, pd.DataFrame],
-                 resampling: int,
+                 resampling: Union[float, int],
                  column_name: str = None,
-                 resampling_start=0,
-                 resampling_end=None,
-                 rounding_precision=5,
+                 resampling_start: Union[float, int] = 0,
+                 resampling_end: Union[float, int] = None,
+                 rounding_precision: int = 5,
                  drop_first: bool = False,
                  drop_last: bool = False,
                  ) -> gpd.GeoDataFrame:
     """Resample one log. Data must be provided as GeoDataFrame with the log Data as Shapely Points.
 
+    Parameters
+    __________
+        log : Union[gpd.GeoDataFrame, LineString, pd.DataFrame]
+            Log data to be resampled.
+        resampling : Union[float, int]
+            Resampling interval, e.g. ``resampling=2``.
+        column_name : str, default: ``None``
+            Column name of the log to be resampled, e.g. ``column_name='GR'``.
+        resampling_start : Union[float, int], default: ``0``
+            Depth were the resampling should start, e.g. ``resampling_start=0``.
+        resampling_end : Union[float, int]
+            Depth were the resampling should end, e.g. ``resampling_end=100``.
+        rounding_precision : int, default: ``5``
+            Rounding precision, e.g. ``rounding_precision=5``.
+        drop_first : bool, default: ``False``
+            Boolean value to drop the first sample, e.g. ``drop_first=False``.
+        drop_last : bool, default: ``False``
+            Boolean value to drop the last sample, e.g. ``drop_last=False``.
 
+    Returns
+    _______
+        gdf_resampled : gpd.GeoDataFrame
+            GeoPandas GeoDataFrame containing the resampled log data.
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
 
+    Examples
+    ________
+        >>> gdf_resampled = resample_log(log=gdf, resampling=2)
+
+    See Also
+    ________
+        resample_between_well_deviation_points : Resample between points that define the path of a well.
+        polyline_from_points : Create PyVista PolyLine from points.
+        get_points_along_spline : Return the closest point on the spline a given a length along a spline.
+        resample_logs : Resample logs.
+        merge_logs : Merge multiple logs.
+
+    .. versionadded:: 0.0.1
     """
+    # Checking that the log is provided as GeoDataFrame, LineString or DataFrame
+    if not isinstance(log, (gpd.GeoDataFrame, LineString, pd.DataFrame)):
+        raise TypeError('The log must be provided as GeoDataFrame, LineString or DataFrame')
+
+    # Checking that the resampling value is provided as int or float
+    if not isinstance(resampling, (float, int)):
+        raise TypeError('The resampling value must be provided as float or int')
+
+    # Checking that the column name is provided as string
+    if not isinstance(column_name, str):
+        raise TypeError('The column name must be provided as string')
+
+    # Checking that the resampling start is provided as float or int
+    if not isinstance(resampling_start, (float, int)):
+        raise TypeError('The start of the resampling interval must be provided as float or int')
+
+    # Checking that the resampling end is provided as float or int
+    if not isinstance(resampling_end, (float, int)):
+        raise TypeError('The end of the resampling interval must be provided as float or int')
+
+    # Checking that the drop first value is provided as bool
+    if not isinstance(drop_first, bool):
+        raise TypeError('The drop_first variable must be provided as bool')
+
+    # Checking that the drop last value is provided as bool
+    if not isinstance(drop_last, bool):
+        raise TypeError('The drop_last variable must be provided as bool')
+
     # Creating gdf from values
     if isinstance(log, pd.DataFrame):
         log = gpd.GeoDataFrame(geometry=[LineString(log[[column_name, 'DEPTH']].values)])
+
     # Extracting LineString from Value and assigning column name
     if isinstance(log, gpd.GeoDataFrame):
         if not column_name:
             column_name = 'X'
         log = log.geometry.iloc[0]
+
     # Assigning column name
     elif isinstance(log, shapely.geometry.LineString):
         if not column_name:
@@ -2385,12 +2491,75 @@ def resample_logs(logs: pd.DataFrame,
                   resampling_start=0,
                   resampling_end=None,
                   rounding_precision=5,
-                  drop_first: bool = True,
-                  drop_last: bool = True, ):
+                  drop_first: bool=True,
+                  drop_last: bool=True) -> pd.DataFrame:
     """Resample logs.
 
+    Parameters
+    __________
+        logs : pd.DataFrame
+            Log data to be resampled.
+        resampling : Union[float, int]
+            Resampling interval, e.g. ``resampling=2``.
+        resampling_start : Union[float, int], default: ``0``
+            Depth were the resampling should start, e.g. ``resampling_start=0``.
+        resampling_end : Union[float, int]
+            Depth were the resampling should end, e.g. ``resampling_end=100``.
+        rounding_precision : int, default: ``5``
+            Rounding precision, e.g. ``rounding_precision=5``.
+        drop_first : bool, default: ``False``
+            Boolean value to drop the first sample, e.g. ``drop_first=False``.
+        drop_last : bool, default: ``False``
+            Boolean value to drop the last sample, e.g. ``drop_last=False``.
 
+    Returns
+    _______
+        df : pd.DataFrame
+            Pandas DataFrame containing the resampled data.
+
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
+
+    Examples
+    ________
+        >>> df_resampled = resample_logs(log=df, resampling=2)
+
+    See Also
+    ________
+        resample_between_well_deviation_points : Resample between points that define the path of a well.
+        polyline_from_points : Create PyVista PolyLine from points.
+        get_points_along_spline : Return the closest point on the spline a given a length along a spline.
+        resample_log : Resample one log.
+        merge_logs : Merge multiple logs.
+
+    .. versionadded:: 0.0.1
     """
+    # Checking that the log is provided as GeoDataFrame, LineString or DataFrame
+    if not isinstance(logs, pd.DataFrame):
+        raise TypeError('The logs must be provided as DataFrame')
+
+    # Checking that the resampling value is provided as int or float
+    if not isinstance(resampling, (float, int)):
+        raise TypeError('The resampling value must be provided as float or int')
+
+    # Checking that the resampling start is provided as float or int
+    if not isinstance(resampling_start, (float, int)):
+        raise TypeError('The start of the resampling interval must be provided as float or int')
+
+    # Checking that the resampling end is provided as float or int
+    if not isinstance(resampling_end, (float, int)):
+        raise TypeError('The end of the resampling interval must be provided as float or int')
+
+    # Checking that the drop first value is provided as bool
+    if not isinstance(drop_first, bool):
+        raise TypeError('The drop_first variable must be provided as bool')
+
+    # Checking that the drop last value is provided as bool
+    if not isinstance(drop_last, bool):
+        raise TypeError('The drop_last variable must be provided as bool')
+
     # Resampling DataFrames
     dfs = [resample_log(log=logs[['DEPTH', column]],
                         resampling=resampling,
@@ -2412,10 +2581,51 @@ def resample_logs(logs: pd.DataFrame,
 
 def merge_logs(paths: List[str],
                resampling: Union[float, int]) -> pd.DataFrame:
+    """Merge multiple logs.
+
+    Parameters
+    __________
+        paths : list
+            List of paths.
+        resampling : Union[float, int]
+            Resampling interval, e.g. ``resampling=2``.
+
+    Returns
+    _______
+        merged_df : pd.DataFrame
+            Pandas DataFrame containing the resampled data.
+
+    Raises
+    ______
+        TypeError
+            If the wrong input data types are provided.
+
+    Examples
+    ________
+        >>> merged_df = merge_logs(paths=['Well_Logs1.las', 'Well_Logs2.las'], resampling=2)
+
+    See Also
+    ________
+        resample_between_well_deviation_points : Resample between points that define the path of a well.
+        polyline_from_points : Create PyVista PolyLine from points.
+        get_points_along_spline : Return the closest point on the spline a given a length along a spline.
+        resample_log : Resample one log.
+        resample_logs : Resample logs.
+
+    .. versionadded:: 0.0.1
+    """
     try:
         import lasio
     except ModuleNotFoundError:
         ModuleNotFoundError('lasio package not installed')
+
+    # Checking that the paths are provided as list
+    if not isinstance(paths, list):
+        raise TypeError('The paths to the well logs must be provided as list of strings')
+
+    # Checking that the resampling value is provided as int or float
+    if not isinstance(resampling, (float, int)):
+        raise TypeError('The resampling value must be provided as float or int')
 
     # Opening LAS Files as DataFrames
     dfs = [lasio.read(path).df().reset_index() for path in paths]
