@@ -4,6 +4,7 @@ from typing import Union, Tuple
 import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
+from matplotlib.ticker import FormatStrFormatter
 
 
 class Deviation:
@@ -194,7 +195,8 @@ class Deviation:
         self.tvd = pos.depth
         if add_origin:
             if borehole.crs == 'EPSG:4326':
-                raise ValueError('Please use location coordinates in a cartesian coordinate system for the borehole when adding the origin to desurveyed borehole')
+                raise ValueError(
+                    'Please use location coordinates in a cartesian coordinate system for the borehole when adding the origin to desurveyed borehole')
             self.northing_rel = pos.northing + borehole.y
             self.easting_rel = pos.easting + borehole.x
         else:
@@ -206,6 +208,32 @@ class Deviation:
                              self.northing_rel)
         self.radius = np.sqrt(self.northing_rel ** 2 + self.easting_rel ** 2)
 
+        # Storing coordinates
+        coords = np.c_[self.easting_rel,
+                       self.northing_rel]
+
+        # Calculating total distance from origin
+        total_distance = [np.linalg.norm(coords[0] - coords[i + 1]) for i in range(len(coords) - 1)]
+        total_distance.insert(0, 0)
+        self.total_distance = total_distance
+
+        # Calculating total direction
+        self.total_angle = []
+        for i in range(len(coords)):
+            if coords[0][0] < coords[i][0] and coords[0][1] >= coords[i][1]:
+                angle = 180 - np.rad2deg(np.arccos((coords[0][1] - coords[i][1]) / total_distance[i]))
+
+            elif coords[0][0] > coords[i][0] and coords[0][1] < coords[i][1]:
+                angle = 180 + np.rad2deg(np.arccos((coords[0][1] - coords[i][1]) / total_distance[i]))
+
+            elif coords[0][0] < coords[i][0] and coords[0][1] < coords[i][1]:
+                angle = 180 - np.rad2deg(np.arccos((coords[0][1] - coords[i][1]) / total_distance[i]))
+
+            else:
+                angle = 180 + np.rad2deg(np.arccos((coords[0][1] - coords[i][1]) / total_distance[i]))
+
+            self.total_angle.append(angle)
+
         # Creating data dict
         data_dict = {'Measured Depth': [self.md],
                      'Inclination': [self.inc],
@@ -213,6 +241,8 @@ class Deviation:
                      'Easting_rel': [self.easting_rel],
                      'Northing_rel': [self.northing_rel],
                      'True Vertical Depth': [self.tvd],
+                     'Total Distance': [self.total_distance],
+                     'Total Direction': [self.total_angle]
                      }
 
         # Assigning data_dict
@@ -228,7 +258,10 @@ class Deviation:
         # Creating DataFrame from position data
         self.desurveyed_df = pd.DataFrame.from_dict({'Easting_rel': self.easting_rel,
                                                      'Northing_rel': self.northing_rel,
-                                                     'True Vertical Depth': self.tvd},
+                                                     'True Vertical Depth': self.tvd,
+                                                     'Total Distance': self.total_distance,
+                                                     'Total Direction': self.total_angle
+                                                     },
                                                     orient='columns',
                                                     )
 
@@ -304,7 +337,8 @@ class Deviation:
         """
         # Raising a ValueError if the CRS is WGS84
         if self.crs == 'EPSG:4326':
-            raise ValueError('Please use location coordinates in a cartesian coordinate system for the borehole when adding the origin to desurveyed borehole')
+            raise ValueError(
+                'Please use location coordinates in a cartesian coordinate system for the borehole when adding the origin to desurveyed borehole')
 
         # Checking that the x coordinate is of type float or int
         if not isinstance(x, (float, int, type(None))):
@@ -338,7 +372,8 @@ class Deviation:
         # Creating Data Dict
         data_dict = {'Northing': [self.desurveyed_df['Northing'].values],
                      'Easting': [self.desurveyed_df['Easting'].values],
-                     'True Vertical Depth Below Sea Level': [self.desurveyed_df['True Vertical Depth Below Sea Level'].values],
+                     'True Vertical Depth Below Sea Level': [
+                         self.desurveyed_df['True Vertical Depth Below Sea Level'].values],
                      }
         self._borehole.update_df(data_dict=data_dict)
 
@@ -445,7 +480,10 @@ class Deviation:
             ax.autoscale_view()
 
             # Setting rlims
-            ax.set_rlim(0, 1.05*np.max(self.radius))
+            ax.set_rlim(0, 1.05 * np.max(self.radius))
+
+            # Adding units to deviation
+            ax.yaxis.set_major_formatter(FormatStrFormatter('%d m'))
 
         else:
             ax.plot(self.az,
@@ -453,6 +491,9 @@ class Deviation:
 
             # Setting rlims
             ax.set_rlim(0, 1.05 * np.max(self.radius))
+
+            # Adding units to deviation
+            ax.yaxis.set_major_formatter(FormatStrFormatter('%d m'))
 
         return fig, ax
 

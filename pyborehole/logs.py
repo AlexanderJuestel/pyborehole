@@ -480,11 +480,20 @@ class LASLogs:
         if not isinstance(add_net_to_gross, (int, type(None))):
             raise TypeError('The add_net_to_gross variable must be provided as int')
 
+        if isinstance(tracks, str):
+            tracks_str = tracks
+            tracks = [tracks]
+
         # Selecting tracks
         df = self.df[tracks + [depth_column]].reset_index()
 
+        # Converting list back to string
+        if len(tracks) == 1:
+            tracks = tracks_str
+
         # Creating plot if tracks is of type string
         if isinstance(tracks, str):
+
             # Creating plot
             fig, ax = plt.subplots(1, 1, figsize=(1 * 2, 8))
 
@@ -1172,6 +1181,194 @@ class LASLogs:
 
         return net_to_gross
 
+    def add_curve_to_curve(self,
+                           original_mnemonic: str,
+                           mnemonic: str,
+                           descr: str,
+                           unit: str):
+        """Add curve to curves DataFrame so it can also be used for plotting.
+
+        Parameters
+        __________
+            original_mnemonic : str
+                Original mnemonic of the track.
+            mnemonic : str
+                Mnemonic of the track.
+            descr : str
+                Description of the track.
+            unit : str
+                Unit of the data of the track.
+
+        Raises
+        ______
+            TypeError
+                If the wrong input data types are provided.
+
+        Examples
+        ________
+            >>> borehole.logs.add_curve_to_curves(original_mnemonic='Velocity',	mnemonic='Velocity', descr='Velocity', unit='m/s')
+            >>> borehole.logs.curves
+
+        .. versionadded:: 0.0.1
+        """
+
+        # Checking that the original mnemonic is provided as string
+        if not isinstance(original_mnemonic, str):
+            raise TypeError('original_mnemonic must be provided as string')
+
+        # Checking that the mnemonic is provided as string
+        if not isinstance(mnemonic, str):
+            raise TypeError('mnemonic must be provided as string')
+
+        # Checking that the description is provided as string
+        if not isinstance(descr, str):
+            raise TypeError('descr must be provided as string')
+
+        # Checking that the unit is provided as string
+        if not isinstance(unit, str):
+            raise TypeError('unit must be provided as string')
+
+        # Checking that track is not available in the curves DataFrame
+        if original_mnemonic in self.curves:
+            raise ValueError('Track is already present in Curve DataFrame')
+
+        # Concatenate new curve to existing curves
+        self.curves = pd.concat([self.curves,
+                                 pd.DataFrame.from_dict(
+                                     {'original_mnemonic': [original_mnemonic],
+                                      'mnemonic': [mnemonic],
+                                      'descr': [descr],
+                                      'unit': [unit]}),
+                                 ],
+                                ignore_index=True)
+
+    def despike_curve(self,
+                      track: str,
+                      window_length: int):
+
+        self.df[track + '_rolling'] = self.df.rolling(window=window_length)[track].mean()
+
+        curve_df = self.curves[self.curves['original_mnemonic'] == track].reset_index(drop=True).iloc[0]
+
+        self.add_curve_to_curve(original_mnemonic=track + '_rolling',
+                                mnemonic=curve_df['mnemonic'] + '_rolling',
+                                descr=curve_df['descr'] + '_rolling',
+                                unit=curve_df['unit'])
+
+    def calculate_time_depth_relationship(self,
+                                          track: str,
+                                          depth_column: str = 'DEPTH',
+                                          replacement_velocity: Union[int, float] = 2000):
+        log_start = self.df[depth_column].iloc[0]
+        altitude = self._borehole.altitude_above_sea_level
+        gap_int = log_start - altitude
+        log_start_time = 2 * gap_int / replacement_velocity
+
+        increment = \
+            self.well_header[self.well_header['mnemonic'] == 'STEP'].reset_index(drop=True)['value'].iloc[0]
+
+        dt_interval = np.nan_to_num(self.df[track].values) * increment / 1e6
+        t_cum = np.cumsum(dt_interval) * 2
+        self.df['TWT'] = t_cum + log_start_time
+
+        self.add_curve_to_curve(original_mnemonic='TWT',
+                                mnemonic='TWT',
+                                descr='TWT',
+                                unit='s')
+
+    def calculate_acoustic_impedance(self,
+                                     velocity_track: Union[str, np.ndarray],
+                                     density_track: Union[str, np.ndarray],
+                                     add_to_well_logs: bool = True):
+
+        if isinstance(velocity_track, str) and isinstance(density_track, str):
+            velocity = self.df[velocity_track].values
+            density = self.df[density_track].values
+
+            values = np.c_[velocity, density]
+
+        if isinstance(velocity_track, np.ndarray) and isinstance(density_track, np.ndarray):
+            values = np.c_[velocity_track, density_track]
+
+        acoustic_impedance = np.apply_along_axis(np.product, -1,
+                                                 values)
+
+        if add_to_well_logs:
+            self.df['Acoustic Impedance'] = acoustic_impedance
+
+            self.add_curve_to_curve(original_mnemonic='Acoustic Impedance',
+                                    mnemonic='Acoustic Impedance',
+                                    descr='Acoustic Impedance',
+                                    unit=' ')
+        else:
+            return acoustic_impedance
+
+    def calculate_reflection_coefficient(self,
+                                         velocity_track: Union[str, np.ndarray],
+                                         density_track: Union[str, np.ndarray],
+                                         add_to_well_logs: bool = True):
+
+        if add_to_well_logs:
+            self.calculate_acoustic_impedance(velocity_track=velocity_track,
+                                              density_track=density_track,
+                                              add_to_well_logs=add_to_well_logs)
+            acoustic_impedance = self.df['Acoustic Impedance'].values
+
+        else:
+            acoustic_impedance = self.calculate_acoustic_impedance(velocity_track=velocity_track,
+                                                                   density_track=density_track,
+                                                                   add_to_well_logs=add_to_well_logs)
+
+        reflection_coefficient = (acoustic_impedance[1:] - acoustic_impedance[:-1]) / (
+                acoustic_impedance[1:] + acoustic_impedance[:-1])
+
+        reflection_coefficient = np.append(reflection_coefficient, 0)
+
+        if add_to_well_logs:
+
+            self.df['Reflection Coefficient'] = reflection_coefficient
+
+            self.add_curve_to_curve(original_mnemonic='Reflection Coefficient',
+                                    mnemonic='Reflection Coefficient',
+                                    descr='Reflection Coefficient',
+                                    unit=' ')
+
+        else:
+            return reflection_coefficient
+
+    def resample_log_from_depth_to_time_domain(self,
+                                               dt: float,
+                                               track: str):
+
+        if 'TWT' not in self.df.columns:
+            raise ValueError(
+                'Please calculate time-depth relationship first before resampling log from depth to the time domain')
+
+        t_max = self.df['TWT'].iloc[-1]
+        t = np.arange(0, t_max, dt)
+
+        log_time_domain = np.interp(x=t,
+                                    xp=self.df['TWT'],
+                                    fp=self.df[track])
+
+        return log_time_domain
+
+    def calculate_ricker_wavelet(self,
+                                 f,
+                                 length,
+                                 dt):
+        t0 = np.arange(-length / 2, (length - dt) / 2, dt)
+        y = (1.0 - 2.0 * (np.pi ** 2) * (f ** 2) * (t0 ** 2)) * np.exp(-(np.pi ** 2) * (f ** 2) * (t0 ** 2))
+        return t0, y
+
+    def calculate_synthetic_seismic(self,
+                                    t0,
+                                    w,
+                                    rc_tdom):
+        synth = np.apply_along_axis(lambda t0: np.convolve(t0, w, mode="same"), axis=0, arr=rc_tdom)
+
+        return synth
+
 
 class DLISLogs:
     """Class to initiate a Well Log Object.
@@ -1244,6 +1441,7 @@ class DLISLogs:
 
     .. versionadded:: 0.0.1
     """
+
     # Initiate class
     def __init__(self,
                  borehole,
@@ -2491,8 +2689,8 @@ def resample_logs(logs: pd.DataFrame,
                   resampling_start=0,
                   resampling_end=None,
                   rounding_precision=5,
-                  drop_first: bool=True,
-                  drop_last: bool=True) -> pd.DataFrame:
+                  drop_first: bool = True,
+                  drop_last: bool = True) -> pd.DataFrame:
     """Resample logs.
 
     Parameters
