@@ -1246,6 +1246,11 @@ class LASLogs:
                       track: str,
                       window_length: int):
 
+        """
+
+
+        """
+
         self.df[track + '_rolling'] = self.df.rolling(window=window_length)[track].mean()
 
         curve_df = self.curves[self.curves['original_mnemonic'] == track].reset_index(drop=True).iloc[0]
