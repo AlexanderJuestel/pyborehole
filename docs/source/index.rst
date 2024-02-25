@@ -13,6 +13,7 @@ Welcome to PyBorehole's documentation!
    about
    installation
    contributing
+   tutorials
    modules
 
 
