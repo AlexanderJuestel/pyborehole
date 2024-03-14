@@ -1604,14 +1604,14 @@ class Borehole:
             raise TypeError('path must be provided as str')
 
         # Opening LAS file if provided
-        if path.endswith('.las'):
+        if path.endswith('.las') or path.endswith('.LAS'):
 
             # Creating well logs from LAS file
             self.logs = LASLogs(self,
                                 path=path)
 
         # Opening DLIS file if provided
-        elif path.endswith('.dlis'):
+        elif path.endswith('.dlis') or path.endswith('.DLIS'):
 
             # Checking that the nodata value is of type int or float
             if not isinstance(nodata, (int, float)):
