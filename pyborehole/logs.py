@@ -380,7 +380,9 @@ class LASLogs:
 
     def plot_well_logs(self,
                        tracks: Union[str, list],
-                       depth_column: str = 'MD',
+                       depth_column: str = 'DEPTH',
+                       depth_min: Union[int, float] = None,
+                       depth_max: Union[int, float] = None,
                        colors: Union[str, list] = None,
                        add_well_tops: bool = False,
                        add_well_design: bool = False,
@@ -393,8 +395,12 @@ class LASLogs:
 
         tracks : Union[str, list]
             Name/s of the logs to be plotted, e.g. ``tracks='SGR'`` or ``tracks=['SGR', 'K']``.
-        depth_column : str, default: ``'MD'``
-            Name of the column holding the depths, e.g. ``depth_column='MD'``.
+        depth_column : str, default: ``'DEPTH'``
+            Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
+        depth_min : Union[int, float]
+            Minimum depth to be plotted, e.g. ``depth_min=0``.
+        depth_max : Union[int, float]
+            Maximum depth to be plotted, e.g. ``depth_max=2000``.
         colors : Union[str, list], default: ``None``
             Colors of the logs, e.g. ``colors='black'`` or ``colors=['black', 'blue']``.
         add_well_tops : bool, default: ``False``
@@ -460,6 +466,14 @@ class LASLogs:
         if not {depth_column}.issubset(self.df):
             raise ValueError('The depth_column is not part of the curves')
 
+        # Checking that depth_min is of type float or int
+        if not isinstance(depth_min, (int, float, type(None))):
+            raise ValueError('The minimum depth must be provided as int or float')
+
+        # Checking that depth_max is of type float or int
+        if not isinstance(depth_max, (int, float, type(None))):
+            raise ValueError('The maximum depth must be provided as int or float')
+
         # Checking that the colors are provided as list or string
         if not isinstance(colors, (list, str, type(None))):
             raise TypeError('The track/s must bei either provided as str or a list of strings')
@@ -500,8 +514,14 @@ class LASLogs:
             ax.plot(df[tracks], df[depth_column], color=colors)
             ax.grid()
             ax.invert_yaxis()
-            buffer = (max(df[depth_column]) - min(df[depth_column])) / 20
-            ax.set_ylim(max(df[depth_column]) + buffer, min(df[depth_column]) - buffer)
+            if not depth_min:
+                depth_min = min(df[depth_column])
+            if not depth_max:
+                depth_max = max(df[depth_column])
+
+            buffer = (depth_max - depth_min) / 20
+
+            ax.set_ylim(depth_max + buffer, depth_min - buffer)
             ax.tick_params(top=True, labeltop=True, bottom=False, labelbottom=False)
             ax.xaxis.set_label_position('top')
             ax.set_xlabel(tracks + ' [%s]' %
@@ -510,7 +530,7 @@ class LASLogs:
             ax.set_ylabel(depth_column + ' [m]')
 
             # Fill between curve
-            if fill_between:
+            if fill_between is not None:
                 left_col_value = np.min(df[tracks].dropna().values)
                 right_col_value = np.max(df[tracks].dropna().values)
                 span = abs(left_col_value - right_col_value)
@@ -556,9 +576,12 @@ class LASLogs:
                 else:
                     for index, row in self.well_tops.df.iterrows():
                         ax[0 + k].axhline(row[self.well_tops.df.columns[1]], 0, 1, color='black')
-                        ax[0 + k].text(0.05, row[self.well_tops.df.columns[1]] - 1, s=row[self.well_tops.df.columns[0]],
-                                       fontsize=6)
+                        ax[0 + k].text(0.05, row[self.well_tops.df.columns[1]] - max(self.df[depth_column]) / 150,
+                                       s=row[self.well_tops.df.columns[0]],
+                                       fontsize=max(df[depth_column]) / 75)
                         ax[0 + k].grid()
+                        ax[0 + k].xaxis.set_label_position('top')
+                        ax[0 + k].set_xlabel('Well Tops')
                         ax[0 + k].axes.get_xaxis().set_ticks([])
 
             # Adding well design
@@ -648,8 +671,14 @@ class LASLogs:
                     max_diam = np.max([elem.outer_diameter for key, elem in self.well_design.pipes.items()])
 
                     # Setting axes limits
-                    buffer = (max(df[depth_column]) - min(df[depth_column])) / 20
-                    ax[k].set_ylim(max(df[depth_column]) + buffer, min(df[depth_column]) - buffer)
+                    if not depth_min:
+                        depth_min = min(df[depth_column])
+                    if not depth_max:
+                        depth_max = max(df[depth_column])
+
+                    buffer = (depth_max - depth_min) / 20
+
+                    ax[k].set_ylim(depth_max + buffer, depth_min - buffer)
                     ax.set_xlim(-max_diam * 1, max_diam * 1)
                     # ax.invert_yaxis()
 
@@ -671,6 +700,15 @@ class LASLogs:
                                              'unit'].iloc[0],
                                          color='black' if isinstance(colors[i], type(None)) else colors[i])
                 ax[0].set_ylabel(depth_column + ' [m]')
+
+                if not depth_min:
+                    depth_min = min(df[depth_column])
+                if not depth_max:
+                    depth_max = max(df[depth_column])
+
+                buffer = (depth_max - depth_min) / 20
+
+                ax[0].set_ylim(depth_max + buffer, depth_min - buffer)
 
             # Fill between curves
             if fill_between is not None:
@@ -720,7 +758,7 @@ class LASLogs:
 
     def plot_well_log_along_path(self,
                                  log: str,
-                                 depth_column: str = 'MD',
+                                 depth_column: str = 'DEPTH',
                                  relative: bool = True,
                                  spacing: Union[float, int] = 0.5,
                                  radius_factor: Union[float, int] = 75):
@@ -730,8 +768,8 @@ class LASLogs:
         __________
             log : str
                 Name of the log, e.g. ``log='GR'``.
-            depth_column : str, default: ``'MD'``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+            depth_column : str, default: ``'DEPTH'``
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
             relative : bool, default: ``True``
                 Boolean value to plot the tube with relative coordinates, e.g. ``relative=False``.
             spacing : Union[float, int], default: ``0.5``
@@ -870,6 +908,7 @@ class LASLogs:
     def calculate_vshale(self,
                          method: str,
                          column: str,
+                         column: str,
                          minz: Union[float, int] = None,
                          maxz: Union[float, int] = None,
                          depth_column: str = None) -> pd.DataFrame:
@@ -895,7 +934,7 @@ class LASLogs:
             maxz : Union[float, int], default: ``None``
                 Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
 
         Returns
         _______
@@ -992,7 +1031,7 @@ class LASLogs:
             maxz : Union[float, int], default: ``None``
                 Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
 
         Raises
         ______
@@ -1088,7 +1127,7 @@ class LASLogs:
             maxz : Union[float, int], default: ``None``
                 Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
 
         Returns
         _______
@@ -1246,7 +1285,7 @@ class LASLogs:
                       track: str,
                       window_length: int):
 
-        """
+        """Despike curve using a rolling window.
 
 
         """
@@ -1500,7 +1539,7 @@ class DLISLogs:
             >>> from pyborehole.borehole import Borehole
             >>> borehole = Borehole(name='Weisweiler R1')
             >>> borehole.init_properties(location=(6.313031, 50.835676), crs='EPSG:4326', altitude_above_sea_level=136)
-            >>> borehole.add_well_logs(path='Well_logs.las')
+            >>> borehole.add_well_logs(path='Well_logs.dlis')
             >>> borehole.logs.df
 
             ======= ======= =========== ========= ========= ==========
@@ -1545,6 +1584,9 @@ class DLISLogs:
         # Getting Curves
         curves = [channel.curves() for channel in dlis.channels]
 
+        # Getting Units
+        units = [channel.units for channel in dlis.channels]
+
         # Creating DataFrame from curves
         df = pd.DataFrame(curves).T
 
@@ -1557,9 +1599,49 @@ class DLISLogs:
         # Extracting DataFrame from DLIS file
         self.df = df
 
+        # Changing the name of the depth column
+        self.df['DEPTH'] = self.df['DEPT']
+        self.df = self.df.drop('DEPT', axis=1)
+
+        # Creating Curves DataFrame
+        self.curves = pd.DataFrame(list(zip(columns, columns, columns, units)),
+                                   columns=['original_mnemonic',
+                                            'mnemonic',
+                                            'descr',
+                                            'unit'])
+
+        # Getting index of depth column
+        depth_column_index = columns.index('DEPT')
+
+        # Defining mnemonics
+        mnemonic = ['STRT', 'STOP', 'STEP', 'NULL']
+
+        # Defining units
+        units = [dlis.channels[depth_column_index].units,
+                 dlis.channels[depth_column_index].units,
+                 dlis.channels[depth_column_index].units,
+                 '']
+
+        # Defining Values
+        value = [dlis.channels[depth_column_index].curves()[0],
+                 dlis.channels[depth_column_index].curves()[-1],
+                 dlis.channels[depth_column_index].frame.spacing,
+                 -999]
+
+        # Defining Description
+        descr = ['', '', '', '']
+
+        self.well_header = pd.DataFrame(list(zip(mnemonic, units, value, descr)),
+                                        columns=['mnemonic',
+                                                 'unit',
+                                                 'value',
+                                                 'descr'])
+
     def plot_well_logs(self,
                        tracks: Union[str, list],
-                       depth_column: str = 'MD',
+                       depth_column: str = 'DEPTH',
+                       depth_min: Union[int, float] = None,
+                       depth_max: Union[int, float] = None,
                        colors: Union[str, list] = None,
                        add_well_tops: bool = False,
                        add_well_design: bool = False,
@@ -1572,8 +1654,12 @@ class DLISLogs:
 
         tracks : Union[str, list]
             Name/s of the logs to be plotted, e.g. ``tracks='SGR'`` or ``tracks=['SGR', 'K']``.
-        depth_column : str, default: ``'MD'``
-            Name of the column holding the depths, e.g. ``depth_column='MD'``.
+        depth_column : str, default: ``'DEPTH'``
+            Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
+        depth_min : Union[int, float]
+            Minimum depth to be plotted, e.g. ``depth_min=0``.
+        depth_max : Union[int, float]
+            Maximum depth to be plotted, e.g. ``depth_max=2000``.
         colors : Union[str, list], default: ``None``
             Colors of the logs, e.g. ``colors='black'`` or ``colors=['black', 'blue']``.
         add_well_tops : bool, default: ``False``
@@ -1635,6 +1721,14 @@ class DLISLogs:
         if not isinstance(depth_column, str):
             raise TypeError('Depth_column must be provided as string')
 
+        # Checking that depth_min is of type float or int
+        if not isinstance(depth_min, (int, float, type(None))):
+            raise ValueError('The minimum depth must be provided as int or float')
+
+        # Checking that depth_max is of type float or int
+        if not isinstance(depth_max, (int, float, type(None))):
+            raise ValueError('The maximum depth must be provided as int or float')
+
         # Checking that the depth column is in the DataFrame
         if not {depth_column}.issubset(self.df):
             raise ValueError('The depth_column is not part of the curves')
@@ -1670,8 +1764,15 @@ class DLISLogs:
             ax.plot(df[tracks], df[depth_column], color=colors)
             ax.grid()
             ax.invert_yaxis()
-            buffer = (max(df[depth_column]) - min(df[depth_column])) / 20
-            ax.set_ylim(max(df[depth_column]) + buffer, min(df[depth_column]) - buffer)
+
+            if not depth_min:
+                depth_min = min(df[depth_column])
+            if not depth_max:
+                depth_max = max(df[depth_column])
+
+            buffer = (depth_max - depth_min) / 20
+
+            ax.set_ylim(depth_max + buffer, depth_min - buffer)
             ax.tick_params(top=True, labeltop=True, bottom=False, labelbottom=False)
             ax.xaxis.set_label_position('top')
             ax.set_xlabel(tracks + ' [%s]' %
@@ -1818,8 +1919,14 @@ class DLISLogs:
                     max_diam = np.max([elem.outer_diameter for key, elem in self.well_design.pipes.items()])
 
                     # Setting axes limits
-                    buffer = (max(df[depth_column]) - min(df[depth_column])) / 20
-                    ax[k].set_ylim(max(df[depth_column]) + buffer, min(df[depth_column]) - buffer)
+                    if not depth_min:
+                        depth_min = min(df[depth_column])
+                    if not depth_max:
+                        depth_max = max(df[depth_column])
+
+                    buffer = (depth_max - depth_min) / 20
+
+                    ax[k].set_ylim(depth_max + buffer, depth_min - buffer)
                     ax.set_xlim(-max_diam * 1, max_diam * 1)
                     # ax.invert_yaxis()
 
@@ -1890,7 +1997,7 @@ class DLISLogs:
 
     def plot_well_log_along_path(self,
                                  log: str,
-                                 depth_column: str = 'MD',
+                                 depth_column: str = 'DEPTH',
                                  relative: bool = True,
                                  spacing: Union[float, int] = 0.5,
                                  radius_factor: Union[float, int] = 75):
@@ -1900,8 +2007,8 @@ class DLISLogs:
         __________
             log : str
                 Name of the log, e.g. ``log='GR'``.
-            depth_column : str, default: ``'MD'``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+            depth_column : str, default: ``'DEPTH'``
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
             relative : bool, default: ``True``
                 Boolean value to plot the tube with relative coordinates, e.g. ``relative=False``.
             spacing : Union[float, int], default: ``0.5``
@@ -2066,7 +2173,7 @@ class DLISLogs:
             maxz : Union[float, int], default: ``None``
                 Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
 
         Returns
         _______
@@ -2163,7 +2270,7 @@ class DLISLogs:
             maxz : Union[float, int], default: ``None``
                 Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
 
         Raises
         ______
@@ -2259,7 +2366,7 @@ class DLISLogs:
             maxz : Union[float, int], default: ``None``
                 Maximum Z value, e.g. ``maxz=100``.
             depth_column : str, default: ``None``
-                Name of the column holding the depths, e.g. ``depth_column='MD'``.
+                Name of the column holding the depths, e.g. ``depth_column='DEPTH'``.
 
         Returns
         _______
@@ -2625,7 +2732,7 @@ def resample_log(log: Union[gpd.GeoDataFrame, LineString, pd.DataFrame],
 
     # Creating gdf from values
     if isinstance(log, pd.DataFrame):
-        log = gpd.GeoDataFrame(geometry=[LineString(log[[column_name, 'DEPTH']].values)])
+        log = gpd.GeoDataFrame(geometry=[LineString(log[[column_name, 'DEPTH']].dropna().values)])
 
     # Extracting LineString from Value and assigning column name
     if isinstance(log, gpd.GeoDataFrame):
